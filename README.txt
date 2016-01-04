@@ -42,3 +42,21 @@ of radius 100m defined for them, and an 'extent' is defined from these points
 assuming constant channel width, and a 'context' and 'context9' defined
 by expanding the extent by factors of 3 and 9 about the centre.
 
+NOTE - some of the zonal statistics scripts were lost...
+
+python_zonalstats_SounessROIsMars2000Eqcyl_lat0_40_MOLA_layerstack.py
+=====================================================================
+Make zonal statistics based on MOLA data for the Souness glacier ROIs
+
+python_zonalstats_RandomDataHRSCDTMtiles_Mars2000Eqcyl_lat0_40.py
+=================================================================
+zonal statistics based on a set of randomised ROIs - this looks like the
+easiest base to rewrite back to the Souness ROIs one
+
+python_zonalstats_MOLA_Mars2000Eqcyl_lat0_40_layerstack_combinefiles.py
+=====================================================================
+Collate the files together for the above zonal statistics
+
+rsgislib_zonalStats_DClewley.py
+================================
+adapted script of Dan Clewley to do the zonal stats
