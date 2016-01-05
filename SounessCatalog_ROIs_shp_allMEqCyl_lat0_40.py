@@ -18,8 +18,21 @@ shpOut_CTX9 = 'SounessROIcontext9_all_Mars2000EqCyl_lat0_40'
 shpOut_H = 'SounessROIheads_all_Mars2000EqCyl_lat0_40'
 shpOut_C = 'SounessROIcentres_all_Mars2000EqCyl_lat0_40'
 shpOut_T = 'SounessROItermini_all_Mars2000EqCyl_lat0_40'
+shpOut_MC = 'SounessROImidchannel_all_Mars2000EqCyl_lat0_40'
 
-def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpOutFileH,shpOutFileC,shpOutFileT,prjString,circradius=100.0, circN=36,skipcircles=False):
+#mid 1 to 4 between head and midchannel centre
+shpOut_mid1 = 'SounessROImidline1_all_Mars2000EqCyl_lat0_40'
+shpOut_mid2 = 'SounessROImidline2_all_Mars2000EqCyl_lat0_40'
+shpOut_mid3 = 'SounessROImidline3_all_Mars2000EqCyl_lat0_40'
+shpOut_mid4 = 'SounessROImidline4_all_Mars2000EqCyl_lat0_40'
+#mid 6 to 9 between midchannel centre and terminus
+shpOut_mid6 = 'SounessROImidline6_all_Mars2000EqCyl_lat0_40'
+shpOut_mid7 = 'SounessROImidline7_all_Mars2000EqCyl_lat0_40'
+shpOut_mid8 = 'SounessROImidline8_all_Mars2000EqCyl_lat0_40'
+shpOut_mid9 = 'SounessROImidline9_all_Mars2000EqCyl_lat0_40'
+
+
+def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpOutFileH,shpOutFileC,shpOutFileT,shpOutFileMCH,shpOutFileM1,shpOutFileM2,shpOutFileM3,shpOutFileM4,shpOutFileM6,shpOutFileM7,shpOutFileM8,shpOutFileM9,prjString,circradius=100.0, circN=36,skipcircles=False):
 
     prjfilename = shpOutFile + ".prj"
     prjfilenameCTX = shpOutFileCTX + ".prj"
@@ -27,6 +40,17 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
     prjfilenameH = shpOutFileH + ".prj"
     prjfilenameC = shpOutFileC + ".prj"
     prjfilenameT = shpOutFileT + ".prj"
+    prjfilenameMCH = shpOutFileMCH + '.prj'
+
+    prjfilenameM1 = shpOutFileM1+".prj"
+    prjfilenameM2 = shpOutFileM2+".prj"
+    prjfilenameM3 = shpOutFileM3+".prj"
+    prjfilenameM4 = shpOutFileM4+".prj"
+    prjfilenameM6 = shpOutFileM6+".prj"
+    prjfilenameM7 = shpOutFileM7+".prj"
+    prjfilenameM8 = shpOutFileM8+".prj"
+    prjfilenameM9 = shpOutFileM9+".prj"
+        
 
     w = shapefile.Writer(shapefile.POLYGON)
     w.autoBalance=0
@@ -103,6 +127,115 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
         w_t.field('HIRISE3D_FN','C','40')
         w_t.field('HIRISEDTM_FN','C','40')
 
+        w_m1 = shapefile.Writer(shapefile.POLYGON)
+        w_m1.autoBalance=0
+        w_m1.field('OBJ_ID','C','40')
+        w_m1.field('MID1_X','C','40')
+        w_m1.field('MID1_Y','C','40')
+        w_m1.field('AREA_kmsq','C','40')
+        w_m1.field('DTM_FIELD','C','40')
+        w_m1.field('DTM_RES','C','40')
+        w_m1.field('HIRISE_FN','C','40')
+        w_m1.field('HIRISE3D_FN','C','40')
+        w_m1.field('HIRISEDTM_FN','C','40')
+
+        
+        w_m2 = shapefile.Writer(shapefile.POLYGON)
+        w_m2.autoBalance=0
+        w_m2.field('OBJ_ID','C','40')
+        w_m2.field('MID2_X','C','40')
+        w_m2.field('MID2_Y','C','40')
+        w_m2.field('AREA_kmsq','C','40')
+        w_m2.field('DTM_FIELD','C','40')
+        w_m2.field('DTM_RES','C','40')
+        w_m2.field('HIRISE_FN','C','40')
+        w_m2.field('HIRISE3D_FN','C','40')
+        w_m2.field('HIRISEDTM_FN','C','40')
+
+        w_m3 = shapefile.Writer(shapefile.POLYGON)
+        w_m3.autoBalance=0
+        w_m3.field('OBJ_ID','C','40')
+        w_m3.field('MID3_X','C','40')
+        w_m3.field('MID3_Y','C','40')
+        w_m3.field('AREA_kmsq','C','40')
+        w_m3.field('DTM_FIELD','C','40')
+        w_m3.field('DTM_RES','C','40')
+        w_m3.field('HIRISE_FN','C','40')
+        w_m3.field('HIRISE3D_FN','C','40')
+        w_m3.field('HIRISEDTM_FN','C','40')
+
+        w_m4 = shapefile.Writer(shapefile.POLYGON)
+        w_m4.autoBalance=0
+        w_m4.field('OBJ_ID','C','40')
+        w_m4.field('MID4_X','C','40')
+        w_m4.field('MID4_Y','C','40')
+        w_m4.field('AREA_kmsq','C','40')
+        w_m4.field('DTM_FIELD','C','40')
+        w_m4.field('DTM_RES','C','40')
+        w_m4.field('HIRISE_FN','C','40')
+        w_m4.field('HIRISE3D_FN','C','40')
+        w_m4.field('HIRISEDTM_FN','C','40')
+
+        w_midch = shapefile.Writer(shapefile.POLYGON)
+        w_midch.autoBalance=0
+        w_midch.field('OBJ_ID','C','40')
+        w_midch.field('MIDCH_X','C','40')
+        w_midch.field('MIDCH_Y','C','40')
+        w_midch.field('AREA_kmsq','C','40')
+        w_midch.field('DTM_FIELD','C','40')
+        w_midch.field('DTM_RES','C','40')
+        w_midch.field('HIRISE_FN','C','40')
+        w_midch.field('HIRISE3D_FN','C','40')
+        w_midch.field('HIRISEDTM_FN','C','40')
+
+        w_m6 = shapefile.Writer(shapefile.POLYGON)
+        w_m6.autoBalance=0
+        w_m6.field('OBJ_ID','C','40')
+        w_m6.field('MID6_X','C','40')
+        w_m6.field('MID6_Y','C','40')
+        w_m6.field('AREA_kmsq','C','40')
+        w_m6.field('DTM_FIELD','C','40')
+        w_m6.field('DTM_RES','C','40')
+        w_m6.field('HIRISE_FN','C','40')
+        w_m6.field('HIRISE3D_FN','C','40')
+        w_m6.field('HIRISEDTM_FN','C','40')
+
+        w_m7 = shapefile.Writer(shapefile.POLYGON)
+        w_m7.autoBalance=0
+        w_m7.field('OBJ_ID','C','40')
+        w_m7.field('MID7_X','C','40')
+        w_m7.field('MID7_Y','C','40')
+        w_m7.field('AREA_kmsq','C','40')
+        w_m7.field('DTM_FIELD','C','40')
+        w_m7.field('DTM_RES','C','40')
+        w_m7.field('HIRISE_FN','C','40')
+        w_m7.field('HIRISE3D_FN','C','40')
+        w_m7.field('HIRISEDTM_FN','C','40')
+
+        w_m8 = shapefile.Writer(shapefile.POLYGON)
+        w_m8.autoBalance=0
+        w_m8.field('OBJ_ID','C','40')
+        w_m8.field('MID8_X','C','40')
+        w_m8.field('MID8_Y','C','40')
+        w_m8.field('AREA_kmsq','C','40')
+        w_m8.field('DTM_FIELD','C','40')
+        w_m8.field('DTM_RES','C','40')
+        w_m8.field('HIRISE_FN','C','40')
+        w_m8.field('HIRISE3D_FN','C','40')
+        w_m8.field('HIRISEDTM_FN','C','40')
+
+        w_m9 = shapefile.Writer(shapefile.POLYGON)
+        w_m9.autoBalance=0
+        w_m9.field('OBJ_ID','C','40')
+        w_m9.field('MID9_X','C','40')
+        w_m9.field('MID9_Y','C','40')
+        w_m9.field('AREA_kmsq','C','40')
+        w_m9.field('DTM_FIELD','C','40')
+        w_m9.field('DTM_RES','C','40')
+        w_m9.field('HIRISE_FN','C','40')
+        w_m9.field('HIRISE3D_FN','C','40')
+        w_m9.field('HIRISEDTM_FN','C','40')
+
     
     csv_reader = csv.reader(csvInFile)
     for row in enumerate(csv_reader):
@@ -119,6 +252,28 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
             LCy = float(row[1][7])
             RCx = float(row[1][8])
             RCy = float(row[1][9])
+
+            MidCHx = LCx + RCx / 2.0
+            MidCHy = LCy + RCy / 2.0
+
+            Mid1x = Hx + 0.2*(MidCHx - Hx)
+            Mid1y = Hy + 0.2*(MidCHy - Hy)
+            Mid2x = Hx + 0.4*(MidCHx - Hx)
+            Mid2y = Hy + 0.4*(MidCHy - Hy)
+            Mid3x = Hx + 0.6*(MidCHx - Hx)
+            Mid3y = Hy + 0.6*(MidCHy - Hy)
+            Mid4x = Hx + 0.8*(MidCHx - Hx)
+            Mid4y = Hy + 0.8*(MidCHy - Hy)
+
+            Mid6x = MidCHx + 0.2*(Tx - MidCHx)
+            Mid6y = MidCHx + 0.2*(Ty - MidCHx)
+            Mid7x = MidCHx + 0.4*(Tx - MidCHx)
+            Mid7y = MidCHx + 0.4*(Ty - MidCHx)
+            Mid8x = MidCHx + 0.6*(Tx - MidCHx)
+            Mid8y = MidCHx + 0.6*(Ty - MidCHx)
+            Mid9x = MidCHx + 0.8*(Tx - MidCHx)
+            Mid9y = MidCHx + 0.8*(Ty - MidCHx)
+            
             catnum = int(row[1][14])
             widthvecRx = RCx - Cx
             widthvecRy = RCy - Cy
@@ -183,13 +338,46 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
                 centres_circ_points = drawCircle.generateCirclePointsZip(Cx,Cy,circradius,circN)
                 termini_circ_points = drawCircle.generateCirclePointsZip(Tx,Ty,circradius,circN)
 
+                mid1_circ_points = drawCircle.generateCirclePointsZip(Mid1x,Mid1y,circradius,circN)
+                mid2_circ_points = drawCircle.generateCirclePointsZip(Mid2x,Mid2y,circradius,circN)
+                mid3_circ_points = drawCircle.generateCirclePointsZip(Mid3x,Mid3y,circradius,circN)
+                mid4_circ_points = drawCircle.generateCirclePointsZip(Mid4x,Mid4y,circradius,circN)
+                midch_circ_points = drawCircle.generateCirclePointsZip(MidCHx,MidCHy,circradius,circN)
+                mid6_circ_points = drawCircle.generateCirclePointsZip(Mid6x,Mid6y,circradius,circN)
+                mid7_circ_points = drawCircle.generateCirclePointsZip(Mid7x,Mid7y,circradius,circN)
+                mid8_circ_points = drawCircle.generateCirclePointsZip(Mid8x,Mid8y,circradius,circN)
+                mid9_circ_points = drawCircle.generateCirclePointsZip(Mid9x,Mid9y,circradius,circN)
+
                 w_h.poly(parts=heads_circ_points)
                 w_c.poly(parts=centres_circ_points)
                 w_t.poly(parts=termini_circ_points)
 
+                w_m1.poly(parts=mid1_circ_points)
+                w_m2.poly(parts=mid2_circ_points)
+                w_m3.poly(parts=mid3_circ_points)
+                w_m4.poly(parts=mid4_circ_points)
+                w_midch.poly(parts=midch_circ_points)
+                w_m6.poly(parts=mid6_circ_points)
+                w_m7.poly(parts=mid7_circ_points)
+                w_m8.poly(parts=mid8_circ_points)
+                w_m9.poly(parts=mid9_circ_points)
+                
+
                 w_h.record(catnum,Hx,Hy,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
                 w_c.record(catnum,Cx,Cy,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
                 w_t.record(catnum,Tx,Ty,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+
+                w_m1.record(catnum,Mid1x,Mid1y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_m2.record(catnum,Mid2x,Mid2y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_m3.record(catnum,Mid3x,Mid3y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_m4.record(catnum,Mid4x,Mid4y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_midch.record(catnum,MidCHx,MidCHy,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_m6.record(catnum,Mid6x,Mid6y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_m7.record(catnum,Mid7x,Mid7y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_m8.record(catnum,Mid8x,Mid8y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_m9.record(catnum,Mid9x,Mid9y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                
+                
 
             w.poly(parts=polygon_points)
             wctx.poly(parts=polygon_points_ctx)
@@ -230,6 +418,51 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
         prj=open(prjfilenameT,"w")
         prj.write(prjString)
         prj.close()
+
+        w_m1.save(shpOutFileM1)
+        prj=open(prjfilenameM1,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_m2.save(shpOutFileM2)
+        prj=open(prjfilenameM2,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_m3.save(shpOutFileM3)
+        prj=open(prjfilenameM3,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_m4.save(shpOutFileM4)
+        prj=open(prjfilenameM4,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_midch.save(shpOutFileMCH)
+        prj=open(prjfilenameMCH,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_m6.save(shpOutFileM6)
+        prj=open(prjfilenameM6,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_m7.save(shpOutFileM7)
+        prj=open(prjfilenameM7,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_m8.save(shpOutFileM8)
+        prj=open(prjfilenameM8,"w")
+        prj.write(prjString)
+        prj.close()
+        w_m9.save(shpOutFileM9)
+        prj=open(prjfilenameM9,"w")
+        prj.write(prjString)
+        prj.close()
+    
     try:
         from StringIO import StringIO
     except ImportError:
@@ -259,8 +492,20 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
 
     shp = shx = dbf = None
 
-writefootprintstoSHP(csvInFile_All, shpOut,shpOut_CTX,shpOut_CTX9,shpOut_H,shpOut_C,shpOut_T,prj_WKT_Mars2000EqCyl_lat0_40)
+writefootprintstoSHP(csvInFile_All, shpOut,shpOut_CTX,shpOut_CTX9,shpOut_H,shpOut_C,shpOut_T,shpOut_MC,shpOut_mid1,shpOut_mid2,shpOut_mid3,shpOut_mid4,shpOut_mid6,shpOut_mid7,shpOut_mid8,shpOut_mid9,prj_WKT_Mars2000EqCyl_lat0_40)
 
+shpOut_MC = 'SounessROImidchannel_all_Mars2000EqCyl_lat0_40'
+
+#mid 1 to 4 between head and midchannel centre
+shpOut_mid1 = 'SounessROImidline1_all_Mars2000EqCyl_lat0_40'
+shpOut_mid2 = 'SounessROImidline2_all_Mars2000EqCyl_lat0_40'
+shpOut_mid3 = 'SounessROImidline3_all_Mars2000EqCyl_lat0_40'
+shpOut_mid4 = 'SounessROImidline4_all_Mars2000EqCyl_lat0_40'
+#mid 6 to 9 between midchannel centre and terminus
+shpOut_mid6 = 'SounessROImidline6_all_Mars2000EqCyl_lat0_40'
+shpOut_mid7 = 'SounessROImidline7_all_Mars2000EqCyl_lat0_40'
+shpOut_mid8 = 'SounessROImidline8_all_Mars2000EqCyl_lat0_40'
+shpOut_mid9 = 'SounessROImidline9_all_Mars2000EqCyl_lat0_40'
 
 csvInFile_All.close()
 
