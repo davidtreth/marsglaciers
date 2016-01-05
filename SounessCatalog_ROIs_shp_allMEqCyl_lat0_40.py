@@ -253,8 +253,8 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
             RCx = float(row[1][8])
             RCy = float(row[1][9])
 
-            MidCHx = LCx + RCx / 2.0
-            MidCHy = LCy + RCy / 2.0
+            MidCHx = (LCx + RCx) / 2.0
+            MidCHy = (LCy + RCy) / 2.0
 
             Mid1x = Hx + 0.2*(MidCHx - Hx)
             Mid1y = Hy + 0.2*(MidCHy - Hy)
@@ -266,13 +266,13 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
             Mid4y = Hy + 0.8*(MidCHy - Hy)
 
             Mid6x = MidCHx + 0.2*(Tx - MidCHx)
-            Mid6y = MidCHx + 0.2*(Ty - MidCHx)
+            Mid6y = MidCHy + 0.2*(Ty - MidCHy)
             Mid7x = MidCHx + 0.4*(Tx - MidCHx)
-            Mid7y = MidCHx + 0.4*(Ty - MidCHx)
+            Mid7y = MidCHy + 0.4*(Ty - MidCHy)
             Mid8x = MidCHx + 0.6*(Tx - MidCHx)
-            Mid8y = MidCHx + 0.6*(Ty - MidCHx)
+            Mid8y = MidCHy + 0.6*(Ty - MidCHy)
             Mid9x = MidCHx + 0.8*(Tx - MidCHx)
-            Mid9y = MidCHx + 0.8*(Ty - MidCHx)
+            Mid9y = MidCHy + 0.8*(Ty - MidCHy)
             
             catnum = int(row[1][14])
             widthvecRx = RCx - Cx
