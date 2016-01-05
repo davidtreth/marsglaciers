@@ -57,6 +57,15 @@ python_zonalstats_MOLA_Mars2000Eqcyl_lat0_40_layerstack_combinefiles.py
 =====================================================================
 Collate the files together for the above zonal statistics
 
+python_zonalstats_SounessROIsHRSCDTMtiles_Mars2000EqCyl_lat0_40.py
+==================================================================
+rewritten Souness ROIs zonal statistics - not tested yet!
+
+
+python_zonalstats_HRSC_Mars2000Eqcyl_lat0_40_layerstack_combinefiles.py
+======================================================================
+rewritten file to collate Souness ROIs zonal statistics - not tested yet!
+
 rsgislib_zonalStats_DClewley.py
 ================================
 adapted script of Dan Clewley to do the zonal stats
