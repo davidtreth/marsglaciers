@@ -3,6 +3,7 @@ import os
 import subprocess
 import glob
 import matplotlib.pyplot as plt
+import numpy
 
 dataPath = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/SounessCatalog3_backup'
 outPath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/ProfilePNGs/'
@@ -10,11 +11,13 @@ globq = "*Layerstack_rawAsp.kea"
 
 csvInFile = 'SounessGLFprofiles.csv'
 
+
+
 with open(csvInFile,"r") as csvfile:
     spamreader = csv.reader(csvfile,delimiter=',',quotechar='"')
     for row in spamreader:
         print("Catalogue number {n}, HRSC tile {h}.".format(n=row[0],h=row[1]))
-        print("Midpoint line coordinates {L}\n".format(L = row[2:]))
+        #print("Midpoint line coordinates {L}\n".format(L = row[2:]))
         if row[1][1:5] == 'none':
             continue
         else:
@@ -38,7 +41,7 @@ with open(csvInFile,"r") as csvfile:
             gdalcmd10 = "gdallocationinfo -valonly -b 2 -geoloc {f} {x} {y}".format(f=KEAfile,x=float(row[32]),y=float(row[33]))
             #os.system("rm "+outFile)
             h = subprocess.check_output(gdalcmd0,shell=True)
-            print("head elev {h}".format(h=h))
+            #print("head elev {h}".format(h=h))
             m1 = subprocess.check_output(gdalcmd1,shell=True) 
             m2 = subprocess.check_output(gdalcmd2,shell=True) 
             m3 = subprocess.check_output(gdalcmd3,shell=True) 
@@ -52,18 +55,32 @@ with open(csvInFile,"r") as csvfile:
             rvect = [float(row[4]),float(row[7]),float(row[10]),float(row[13]),float(row[16]),float(row[19]),float(row[22]),float(row[25]),
                      float(row[28]),float(row[31]),float(row[34])]
             elevvect = [h,m1,m2,m3,m4,m5,m6,m7,m8,m9,t]
-            print(elevvect)
+            #print(elevvect)
             if h == '\n' or t == '\n':
                 continue
             else:
                 elevvect = [int(z[:-1]) for z in elevvect]
-                print(elevvect)
+                #print(elevvect)
+                rvectscaled = [i/numpy.max(rvect) for i in rvect]
                 plt.figure()
                 plt.plot(rvect,elevvect)
                 plt.title("Elevation profile Souness {n:04d}".format(n=int(row[0])))
                 plt.xlabel("Distance along midline (m)")
                 plt.ylabel("Elevation w.r.t Mars datum (m)")
                 plt.savefig(outPNG)
+                #plt.show()
+                minelev = float(numpy.min(elevvect))
+                maxelev = float(numpy.max(elevvect))
+                if minelev > -9999:
+                    elevscaling = maxelev-minelev
+                    scaledelevvect = [(i-minelev)/elevscaling for i in elevvect]
+                    #pass
+                    plt.plot(rvectscaled,scaledelevvect)
+                    plt.title("Elevation profile Souness {n:04d}".format(n=int(row[0])))
+                    plt.xlabel("Distance along midline (scaled 0-1)")
+                    plt.ylabel("Elevation w.r.t Mars datum (scaled 0-1)")
+        os.chdir("../..")
+                    
             #os.system(gdalcmd0+" >"+outFile)
             #os.system(gdalcmd1+" >> "+outFile)
             #os.system(gdalcmd2+" >> "+outFile)
@@ -76,5 +93,10 @@ with open(csvInFile,"r") as csvfile:
             #os.system(gdalcmd9+" >> "+outFile)
             #os.system(gdalcmd10+" >> "+outFile)
             
-            os.chdir("../..")
+
+
+#outPNG = outPath+"allGLFprof.png"
+#plt.savefig(outPNG)
+#outPNG = outPath+"allGLFprofscaled.png"
+#plt.savefig(outPNG)
 #plt.show()
