@@ -27,7 +27,7 @@ def calcAllStats(listDTMfields, heads,m1,m2,m3,m4,mch,m6,m7,m8,m9,termini):
     outfilem7base = m7.split("/")[-1][:-4]+'LandSerf3_stats_test.csv'
     outfilem8base = m8.split("/")[-1][:-4]+'LandSerf3_stats_test.csv'
     outfilem9base = m9.split("/")[-1][:-4]+'LandSerf3_stats_test.csv'
-    outfilemterminibase = termini.split("/")[-1][:-4]+'LandSerf3_stats_test.csv'
+    outfileterminibase = termini.split("/")[-1][:-4]+'LandSerf3_stats_test.csv'
     
     for f in listDTMfields:
         os.chdir(f)
@@ -46,16 +46,16 @@ def calcAllStats(listDTMfields, heads,m1,m2,m3,m4,mch,m6,m7,m8,m9,termini):
         #outstatsfile_layerstack_CTX = 'h'+f+'_layerstack_'+outfileCTXbase
         #outstatsfile_layerstack_CTX9 = 'h'+f+'_layerstack_'+outfileCTX9base
         outstatsfile_layerstack_heads = 'h'+f+'_layerstack_'+outfileheadsbase
-        outstatsfile_layerstack_m1 = 'h'+f+_'layerstack_'+outfilem1base
-        outstatsfile_layerstack_m2 = 'h'+f+_'layerstack_'+outfilem2base
-        outstatsfile_layerstack_m3 = 'h'+f+_'layerstack_'+outfilem3base
-        outstatsfile_layerstack_m4 = 'h'+f+_'layerstack_'+outfilem4base
-        outstatsfile_layerstack_mch = 'h'+f+_'layerstack_'+outfilemchbase
-        outstatsfile_layerstack_m6 = 'h'+f+_'layerstack_'+outfilem6base
-        outstatsfile_layerstack_m7 = 'h'+f+_'layerstack_'+outfilem7base
-        outstatsfile_layerstack_m8 = 'h'+f+_'layerstack_'+outfilem8base
-        outstatsfile_layerstack_m9 = 'h'+f+_'layerstack_'+outfilem9base
-        outstatsfile_layerstack_termini = 'h'+f+_'layerstack_'+outfileterminibase
+        outstatsfile_layerstack_m1 = 'h'+f+'_layerstack_'+outfilem1base
+        outstatsfile_layerstack_m2 = 'h'+f+'_layerstack_'+outfilem2base
+        outstatsfile_layerstack_m3 = 'h'+f+'_layerstack_'+outfilem3base
+        outstatsfile_layerstack_m4 = 'h'+f+'_layerstack_'+outfilem4base
+        outstatsfile_layerstack_mch = 'h'+f+'_layerstack_'+outfilemchbase
+        outstatsfile_layerstack_m6 = 'h'+f+'_layerstack_'+outfilem6base
+        outstatsfile_layerstack_m7 = 'h'+f+'_layerstack_'+outfilem7base
+        outstatsfile_layerstack_m8 = 'h'+f+'_layerstack_'+outfilem8base
+        outstatsfile_layerstack_m9 = 'h'+f+'_layerstack_'+outfilem9base
+        outstatsfile_layerstack_termini = 'h'+f+'_layerstack_'+outfileterminibase
     
         #zonalstats_cmdlayerstack_ext = zonalstats_cmdbase + ' --inimage '+ filename_layerstack + ' --invector '+extents+' --outstats '+ outstatsfile_layerstack_extents +' --min --max --mean --stddev --minThreshold -9998 --force'
         #zonalstats_cmdlayerstack_CTX = zonalstats_cmdbase + ' --inimage '+ filename_layerstack + ' --invector '+CTX+' --outstats '+ outstatsfile_layerstack_CTX +' --min --max --mean --stddev --minThreshold -9998 --force'
