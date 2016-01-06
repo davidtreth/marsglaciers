@@ -41,6 +41,9 @@ The head, terminus, left+right channel points and centre have a circle
 of radius 100m defined for them, and an 'extent' is defined from these points
 assuming constant channel width, and a 'context' and 'context9' defined
 by expanding the extent by factors of 3 and 9 about the centre.
+This also now exports the location of the
+mid-line of each GLF to ''SounessGLFprofiles.csv'
+
 
 NOTE - some of the zonal statistics scripts were lost...
 
@@ -61,6 +64,9 @@ python_zonalstats_SounessROIsHRSCDTMtiles_Mars2000EqCyl_lat0_40.py
 ==================================================================
 rewritten Souness ROIs zonal statistics - not tested yet!
 
+ python_zonalstats_SounessROIs_midpoints_HRSCDTMtiles_Mars2000EqCyl_lat0_40.py
+ =============================================================================
+ Souness ROIs for midpoints zonal statistics
 
 python_zonalstats_HRSC_Mars2000Eqcyl_lat0_40_layerstack_combinefiles.py
 ======================================================================
@@ -69,3 +75,14 @@ rewritten file to collate Souness ROIs zonal statistics - not tested yet!
 rsgislib_zonalStats_DClewley.py
 ================================
 adapted script of Dan Clewley to do the zonal stats
+
+
+
+readGLFprofiles.py
+==================
+reads in the Souness GLF profiles, get elevations with GDAL
+and makes PNG files of their profiles
+
+ProfilePNGs
+===========
+PNG files of the output profiles
