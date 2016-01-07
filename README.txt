@@ -77,7 +77,6 @@ rsgislib_zonalStats_DClewley.py
 adapted script of Dan Clewley to do the zonal stats
 
 
-
 readGLFprofiles.py
 ==================
 reads in the Souness GLF profiles, get elevations with GDAL
@@ -86,3 +85,32 @@ and makes PNG files of their profiles
 ProfilePNGs
 ===========
 PNG files of the output profiles
+
+Segmentation
+============
+
+segmentation_mars_version008b_allLandSerf.py
+============================================
+the main one for the dissertation results
+
+segmentation_mars_version010_rawasp_allLandSerf.py
+=================================================
+a different version which also does an 0.04kmsq size
+for DTM resolutions better than 125m. Also uses raw aspect
+rather than abs(aspect from north)
+
+PopulateStats_HSRC_Mars2000EqCyl_lat0_40_2e5sqm_only_add9999_allLandSerfLayerstacks.py
+================================================================================
+Add the statistics (without +9999) to the clumps file from segmentation
+
+PopulateStats_HSRC_Mars2000EqCyl_lat0_40_rawAsp_add9999_2e4+2e5sqm_allLandSerfLayerstacks.py
+===============================================================================
+same but for segmentation from rawAsp using both 2e5 and 4e4 sizes.
+
+python_gdal_polygonize_Mars2000EqCtl_lat0_40_objectsz_2e5sqm_only_add9999_allLandSerfLayerstacks.py
+===========================================================================
+run gdal_polygonize for all tiles and export RAT to .csv file
+
+python_gdal_polygonize_Mars2000EqCyl_lat0_40_rawAspectLandSerfLayerstacks_objectsz_2e5+4e4sqm.py
+============================================================================
+same as above but for the newer raw-aspect based 2e5 and 4e4 sqm. segmentations
