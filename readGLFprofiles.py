@@ -74,11 +74,11 @@ with open(csvInFile,"r") as csvfile:
                 if minelev > -9999:
                     elevscaling = maxelev-minelev
                     scaledelevvect = [(i-minelev)/elevscaling for i in elevvect]
-                    #pass
-                    plt.plot(rvectscaled,scaledelevvect)
-                    plt.title("Elevation profile Souness {n:04d}".format(n=int(row[0])))
-                    plt.xlabel("Distance along midline (scaled 0-1)")
-                    plt.ylabel("Elevation w.r.t Mars datum (scaled 0-1)")
+                    pass
+                    #plt.plot(rvectscaled,scaledelevvect)
+                    #plt.title("Elevation profile Souness {n:04d}".format(n=int(row[0])))
+                    #plt.xlabel("Distance along midline (scaled 0-1)")
+                    #plt.ylabel("Elevation w.r.t Mars datum (scaled 0-1)")
         os.chdir("../..")
                     
             #os.system(gdalcmd0+" >"+outFile)
