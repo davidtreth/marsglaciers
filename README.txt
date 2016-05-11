@@ -114,3 +114,9 @@ run gdal_polygonize for all tiles and export RAT to .csv file
 python_gdal_polygonize_Mars2000EqCyl_lat0_40_rawAspectLandSerfLayerstacks_objectsz_2e5+4e4sqm.py
 ============================================================================
 same as above but for the newer raw-aspect based 2e5 and 4e4 sqm. segmentations
+
+subset_nd4_test.py
+============================================================================
+Subset the HRSC nadir image files to the bounding box of the context of
+each Souness GLF. Create rasterized images from context, extent and head
+shapefiles.
