@@ -152,10 +152,11 @@ def printHiRISE_kw(bounds=None):
             else:
                 lng, lat = float(row['Dorhys180']), float(row['Dorles'])
                 if checkinbounds(lng, lat, bounds):
+                    print("<div class='HiRISErow'>")
                     print("<div class='HiRISEkw'><a href='{u}'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng)))
                     if row['anaglyphURL'] != "":
                         print("<div class='HiRISE3D'><a href='{u}'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph"))
-    
+                    print("</div>")
 def writeHTMLbuttons(bounds=None):
     """ write out the buttons for the Souness Top Trumps index 
     by default written in rows of 10 buttons """    
