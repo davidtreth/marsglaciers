@@ -20,6 +20,7 @@ HRSCPath = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/Soun
 
 Gfilein = sounessGLFFilePath+sounessGLFFile
 print(Gfilein)
+HiRISE_kw = 'HiRISE_kw.csv'
 
 # the headers in sounessGLFFile
 fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','HiRISE',
@@ -29,6 +30,9 @@ fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','
             'Centlon','Centlon180','Centlat','Length','Width','Area','Orientation',
             'MinElev','MaxElev','MeanElev','StdElev','Elongation','Midchlon',
             'Midchlat','distMidCCent','chanwidth','ratiooffset']
+# headers in HiRISE_kw.csv
+HiRISEkw_headers = ['N', 'imageID', 'URL', 'anaglyphURL', 'Deskrifans', 'Dorhys', 'Dorhys180', 'Dorles']
+
 Sindex = {}
 
 # a few functions for making an HTML colour from a lat, long
@@ -132,6 +136,25 @@ def checkinbounds(lng, lat, bounds):
         return True
     else:
         return False
+def findregion(lng, lat):
+    for r in regiondict.keys():
+        if checkinbounds(lng, lat, regiondict[r]):
+            return r
+    return ''
+
+def printHiRISE_kw(bounds=None):
+    bounds = checkbounds(bounds)
+    with open(HiRISE_kw) as csvfile:
+        spamreader = csv.DictReader(csvfile, fieldnames=HiRISEkw_headers,delimiter=',',quotechar='"')
+        for row in spamreader:
+            if row['N'] == 'N':
+                pass
+            else:
+                lng, lat = float(row['Dorhys180']), float(row['Dorles'])
+                if checkinbounds(lng, lat, bounds):
+                    print("<div class='HiRISEkw'><a href='{u}'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng)))
+                    if row['anaglyphURL'] != "":
+                        print("<div class='HiRISE3D'><a href='{u}'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph"))
     
 def writeHTMLbuttons(bounds=None):
     """ write out the buttons for the Souness Top Trumps index 
@@ -222,6 +245,8 @@ def writeHTML(GLF):
     longit = "<td>Centre longitude:</td><td>{l:.2f}</td>".format(l=float(row['Centlon180']))
     latit = "<td>Centre latitude:</td><td>{t:.2f}</td>".format(t=float(row['Centlat']))
     htmlcolour = html_colour(float(row['Centlat']), float(row['Centlon180']))
+    regionname = findregion(float(row['Centlon180']), float(row['Centlat']))
+    region = "<td>Region:</td><td><a href='{rU}'>{r}</a></td>".format(r=regionname, rU = regionURLdict[regionname])
     # HRSC DTM data
     if row['HRSC_DTM'] == 'none':
         hrsc = "<td>Mars Express DTM coverage:</td><td>{h}</td>".format(h=row['HRSC_DTM'])
@@ -277,7 +302,7 @@ def writeHTML(GLF):
     orientation = "<td>Orientation:</td><td>{r:.2f} degrees.</td>".format(r=float(GLF['Orientation']))
 
     # make the table rows
-    listitems = [theaders,longit,latit,hrsc,hirise,anaglyph,hiriseDTM, length,width,area,meanelev,orientation]
+    listitems = [theaders,longit,latit, region, hrsc,hirise,anaglyph,hiriseDTM, length,width,area,meanelev,orientation]
     listitemsHTML = ["<tr>"+i+"</tr>\n" for i in listitems]
     listHTML = "<table class='toptrumptb'>" +"".join(listitemsHTML) +"</table>"
     
@@ -315,6 +340,7 @@ def writeHTML(GLF):
     #print(listHTML)
     #print(profHTML)
 
+
     
 #with open(Gfilein) as csvfile:
     # write the buttons for the index page
@@ -322,24 +348,43 @@ def writeHTML(GLF):
     # raw_input()
 
 # long+lat bounds for regions
-tharsis = [-180, -60, -70, -20]
-argyre = [-75, 0, -70, -20]
+# regions altered to make them non-overlapping
+# and remove longitude gaps
+#tharsis = [-180, -60, -70, -20]
+tharsis = [-180, -70, -70, -20]
+#argyre = [-75, 0, -70, -20]
+argyre = [-70, 0, -70, -20]
 whellas = [0, 75, -70, -20]
-ehellas = [75, 120, -70, 20]
-sehighland = [120, 180, -70, 20]
+ehellas = [75, 120, -70, -20]
+sehighland = [120, 180, -70, -20]
 olympus = [-180, -100, 10, 70]
-mareotis = [-100, -60, 20, 70]
-deuteron = [-15, 40, 20, 70]
-proton = [35, 60, 20, 70]
-nilosyrtis = [60, 90, 20, 70]
-utopiaphlegra = [110, 180, 20, 70]
+#mareotis = [-100, -60, 20, 70]
+mareotis = [-100, -30, 20, 70]
+#deuteron = [-15, 40, 20, 70]
+deuteron = [-30, 40, 20, 70]
+#proton = [35, 60, 20, 70]
+proton = [40, 60, 20, 70]
+#nilosyrtis = [60, 90, 20, 70]
+nilosyrtis = [60, 100, 20, 70]
+#utopiaphlegra = [110, 180, 20, 70]
+utopiaphlegra = [100, 180, 20, 70]
 regions = [tharsis, argyre, whellas, ehellas, sehighland, olympus, mareotis, deuteron, proton, nilosyrtis, utopiaphlegra]
+regionnames = ["Tharsis", "Argyre", "West of Hellas", "East of Hellas", "SE Highlands", "Olympus Mons and surrounding area", "Mareotis Fossae", "Deuteronilus Mensae", "Protonilus Mensae", "Nilosyrtis Mensae", "Utopia Planitia and Phlegra Montes"]
+regionURLs = ["stharsis.html", "argyre.html", "whellas.html", "ehellas.html", "sehighlands.html", "olympus.html", "mareotis.html",
+              "deuteron.html", "proton.html", "nilosyrtis.html", "elysium.html"]
+regionURLs = ["http://taklowkernewek.neocities.org/mars/"+u for u in regionURLs]
 
+regiondict = {key:value for (key, value) in zip(regionnames, regions)}
+regionURLdict = {key:value for (key, value) in zip(regionnames, regionURLs)}
+        
 for r in regions:
     print(r)
     print('<h2 id="toptrumps">Links to individual pages on Souness GLFs in this region</h2>')
     with open(Gfilein) as csvfile:
         writeHTMLbuttons(r)
+        print('<h3 id="hirisekw">Links to HiRISE images with Cornish titles</h3>')
+        print('<p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p>')
+        printHiRISE_kw(r)
         raw_input()
     
 # start again for pages for each GLF
