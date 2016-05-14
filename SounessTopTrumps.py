@@ -63,8 +63,8 @@ def lng_to_left(lng, width=800,zerop=10):
     return ((180. + lng)/360.)*width - zerop
 
 
-def makeImageFileCrop(n, cropshp):
-    """ crop an image to context shapefile cutline """
+""" def makeImageFileCrop(n, cropshp):
+    # crop an image to context shapefile cutline 
     # nadir image file n
     outfile = 'Souness_'+str(indshp+1)+'_CTX_nd4.kea'
     outfile = sounessGLFFilePath + outfile
@@ -83,7 +83,7 @@ def makeImageFileCrop(n, cropshp):
         os.chdir("..")
         pngout = outfile[:-4]+".png"
         convPNG = "gdal_translate -of PNG "+outfile+ " "+pngout
-        subprocess.call(convPNG,shell=True)
+        subprocess.call(convPNG,shell=True)"""
         
 
 def printButton(GLF,cl="Sbutton"):
@@ -400,7 +400,7 @@ with open(Gfilein) as csvfile:
         else:
             # write the Top trump page
             writeHTML(row)
-            indshp = int(row['CatNum']) - 1     
+"""            indshp = int(row['CatNum']) - 1     
             #print(indshp)
             shapefile = sounessGLFFilePath + CtxSHPsPath + 'context_' + str(indshp)+'.shp'
             # print shapefile
@@ -419,7 +419,7 @@ with open(Gfilein) as csvfile:
                 print(nadirIMGFile)                
                 #for n in nadirIMGFile:
                 #    makeImageFileCrop(n)                    
-                os.chdir(sounessGLFFilePath)
+                os.chdir(sounessGLFFilePath) """
 
 #while(True):
 #    n = raw_input("Please enter your favourite Souness GLF (1-1309)?")
