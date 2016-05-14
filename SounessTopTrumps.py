@@ -101,28 +101,68 @@ def printButtonIndex(cl="Sbutton"):
     buttonHTML = "<div class=\'{cl}\' style=\'background-color:{bcl};\'><a href=\'sounesstoptrumps.html\'>Back to Index</a></div>".format(cl=cl,bcl=html_colour(0,0))
     return buttonHTML
 
-def writeHTMLbuttons():
+def checkbounds(bounds=None):
+    """ check that a lat/long box is valid """
+    try:
+        assert(len(bounds) == 4)
+        longmin, longmax, latmin, latmax = bounds
+        assert (longmin >= -180 and longmin < 180)
+        assert (longmax >= -180 and longmax <= 180)
+        assert (latmin >= -90 and latmin < 90)
+        assert (latmax >= -90 and latmax <= 90)
+        assert (longmin != longmax)
+        assert (latmin != latmax)
+        
+        if longmin > longmax:
+            tmp = longmin
+            longmin = longmax
+            longmax = tmp
+        if latmin > latmax:
+            tmp = longmin
+            longmin = longmax
+            longmax = tmp                                       
+    except:
+        # if invalid bounds, set to whole planet
+        return([-180.0, 180.0, -90.0, 90.0])
+    return [longmin, longmax, latmin, latmax]
+
+def checkinbounds(lng, lat, bounds):
+    longmin, longmax, latmin, latmax = bounds
+    if lng >= longmin and lng <= longmax and lat >= latmin and lat <= latmax:
+        return True
+    else:
+        return False
+    
+def writeHTMLbuttons(bounds=None):
     """ write out the buttons for the Souness Top Trumps index 
     by default written in rows of 10 buttons """    
     print("<div class='GLFrow'>")
     spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
+    Nbuttons_printed = 0
     for row in spamreader:
+        # expect bounds to be a 4 element list [longmin, longmax, latmin, latmax]
+        # if they aren't valid, checkbounds will set to whole planet
+        bounds = checkbounds(bounds)
         #print("Catalogue number {c}".format(c=row['CatNum']))        
         catnum = row['CatNum']
         # the Sindex dictionary of dictionaries will later be used
-        Sindex[catnum] = row
+        Sindex[catnum] = row        
         if catnum == "Catalogue number":
             # ignore the header row
             pass
         else:
-            if row['HiRISE_anaglyph'] != '':
-                # set a different CSS class for GLFs with anaglyphs
-                printButton(row,"Sbutton3D")
-            else:
-                printButton(row)
-            # once every 10, end the row and start another
-            if int(catnum) % 10 == 0:
-                print("</div><div class='GLFrow'>")
+            lng, lat = float(row['Centlon180']), float(row['Centlat'])
+            if checkinbounds(lng, lat, bounds):
+                if row['HiRISE_anaglyph'] != '':
+                    # set a different CSS class for GLFs with anaglyphs
+                    printButton(row,"Sbutton3D")
+                else:
+                    printButton(row)
+                Nbuttons_printed += 1
+                # once every 10, end the row and start another
+                if int(Nbuttons_printed) % 10 == 0:
+                    print("</div><div class='GLFrow'>")
+                
     print("</div>")
         
 def writeHTML(GLF):
@@ -276,11 +316,32 @@ def writeHTML(GLF):
     #print(profHTML)
 
     
-with open(Gfilein) as csvfile:
+#with open(Gfilein) as csvfile:
     # write the buttons for the index page
-    writeHTMLbuttons()
+    # writeHTMLbuttons()
     # raw_input()
 
+# long+lat bounds for regions
+tharsis = [-180, -60, -70, -20]
+argyre = [-75, 0, -70, -20]
+whellas = [0, 75, -70, -20]
+ehellas = [75, 120, -70, 20]
+sehighland = [120, 180, -70, 20]
+olympus = [-180, -100, 10, 70]
+mareotis = [-100, -60, 20, 70]
+deuteron = [-15, 40, 20, 70]
+proton = [35, 60, 20, 70]
+nilosyrtis = [60, 90, 20, 70]
+utopiaphlegra = [110, 180, 20, 70]
+regions = [tharsis, argyre, whellas, ehellas, sehighland, olympus, mareotis, deuteron, proton, nilosyrtis, utopiaphlegra]
+
+for r in regions:
+    print(r)
+    print('<h2 id="toptrumps">Links to individual pages on Souness GLFs in this region</h2>')
+    with open(Gfilein) as csvfile:
+        writeHTMLbuttons(r)
+        raw_input()
+    
 # start again for pages for each GLF
 with open(Gfilein) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
