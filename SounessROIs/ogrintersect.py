@@ -50,7 +50,8 @@ driver = ogr.GetDriverByName("ESRI Shapefile")
 dataSource = driver.Open(sounessCTX9, 0)
 layer = dataSource.GetLayer()
 
-csvmode = True
+#csvmode = True
+csvmode = False
 if csvmode:
     print("CatNum, {p}".format(p="HiRISE_img"))
 for feature in layer:
@@ -60,7 +61,7 @@ for feature in layer:
     prodIDs = []
     # raw_input()
     fid_s = feature.GetFID()
-    dataSource2 = driver.Open(anaglyph, 0)
+    dataSource2 = driver.Open(hirisedtm, 0)
     layer2 = dataSource2.GetLayer()
     for feature2 in layer2:
         fid_h = feature2.GetFID()

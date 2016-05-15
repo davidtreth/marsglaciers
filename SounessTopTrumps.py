@@ -324,26 +324,33 @@ def writeHTML(GLF):
     hiriseDTM2 = HiRISE_DTM_index.get(GLF['CatNum'], [])
     
     hiriseDTMs = [h.strip() for h in hiriseDTMs]
-    hiriseDTM2 = [h.strip() for h in hiriseDTMs]
+    hiriseDTM2 = [h.strip() for h in hiriseDTM2]
     for dimg in hiriseDTM2:
         if dimg not in hiriseDTMs:
             hiriseDTMs.append(dimg)
     hiriseDTM = "<td>HiRISE DTM:</td><td>"
-    if GLF['HiRISE_DTM'] != '':
-        for dimg in hiriseDTMs:
-            print(dimg)
-            DTMurl = "http://www.uahirise.org/dtm/dtm.php?ID="
-            # find the link to the HiRISE website
-            dimg=dimg.lstrip()
-            imgn = dimg[6:12]
-            print(imgn)
-            if  int(imgn) >= 10000:
+    #if GLF['HiRISE_DTM'] != '':
+    # print(hiriseDTMs)
+    if hiriseDTMs == ['']:
+        hiriseDTMs = []
+    for dimg in hiriseDTMs:
+        #print(dimg)
+        DTMurl = "http://www.uahirise.org/dtm/dtm.php?ID="
+        # find the link to the HiRISE website
+        dimg=dimg.lstrip()
+        imgn = dimg[6:12]
+        #print(imgn)
+        #raw_input()
+        try:
+            # if there is no DTM, skip over this code
+            if int(imgn) >= 10000:
                 dtm = dimg[:17].replace("DTEEC","ESP")
             else:
                 dtm = dimg[:17].replace("DTEEC","PSP")
             DTMurl = DTMurl + dtm
             hiriseDTM += "<a href='{dURL}'>{dimg}</a> ".format(dURL=DTMurl, dimg=dimg)
-        
+        except:
+            pass
     hiriseDTM += "</td>"
 
     # parameters from the Souness et al. paper
