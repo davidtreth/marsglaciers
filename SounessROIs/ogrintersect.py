@@ -50,7 +50,9 @@ driver = ogr.GetDriverByName("ESRI Shapefile")
 dataSource = driver.Open(sounessCTX9, 0)
 layer = dataSource.GetLayer()
 
-
+csvmode = True
+if csvmode:
+    print("CatNum, {p}".format(p="HiRISE_img"))
 for feature in layer:
     sounessobj = "Souness {s}".format(s=feature.GetField("OBJ_ID"))
     sounesstoptrump = "http://taklowkernewek.neocities.org/mars/souness{s:04d}.html".format(s=int(feature.GetField("OBJ_ID")))
@@ -58,7 +60,7 @@ for feature in layer:
     prodIDs = []
     # raw_input()
     fid_s = feature.GetFID()
-    dataSource2 = driver.Open(hirisedtm, 0)
+    dataSource2 = driver.Open(anaglyph, 0)
     layer2 = dataSource2.GetLayer()
     for feature2 in layer2:
         fid_h = feature2.GetFID()
@@ -75,11 +77,19 @@ for feature in layer:
                 extURL = feature2.GetField("ExtURL")
             
             linkHTML = "<a href='{e}'>{p}</a>".format(e=extURL, p=prodID)
-            prodIDs.append(linkHTML)
+            if csvmode:
+                prodIDs.append(prodID)
+            else:
+                prodIDs.append(linkHTML)
     if len(prodIDs) > 0:
         #print(sounessobj)
         #print(prodIDs)
         # sounessobjHTML = "<div class='Sbutton'>" + sounessobjHTML + "</div><br>"
-        print(sounessobjHTML)
-        for a in prodIDs:
-            print(a)
+        if csvmode:
+            prodIDstring = ','.join(prodIDs)
+            prodIDstring = '"'+prodIDstring+'"'
+            print("{s},{p}".format(s=feature.GetField("OBJ_ID"), p=prodIDstring))
+        else:
+            print(sounessobjHTML)
+            for a in prodIDs:
+                print(a)

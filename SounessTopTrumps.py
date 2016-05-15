@@ -11,16 +11,22 @@ import sys
 import subprocess
 
 # source files hard-coded
-sounessGLFFilePath = "/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/"
+#sounessGLFFilePath = "/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/"
 sounessGLFFile="mmc1_HRSC+HiRISE_coverage_duplicates_possible_typos.csv"
+#sounessGLFFile="mmc1_HRSC+HiRISE_coverage_forsummarystats_cleaned.csv"
+
 ExtSHPsPath = "SounessROIs_individual/Individual/Extent"
 CtxSHPsPath = "SounessROIs_individual/Individual/Context/"
 # path to root of HRSC images
 HRSCPath = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/SounessCatalog3_backup/'
 
-Gfilein = sounessGLFFilePath+sounessGLFFile
+#Gfilein = sounessGLFFilePath+sounessGLFFile
+Gfilein = sounessGLFFile
 print(Gfilein)
 HiRISE_kw = 'HiRISE_kw.csv'
+HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
+HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
+HiRISE_DTM_CTX9 = 'SounessROIs/hiriseDTMs_ctx9.csv'
 
 # the headers in sounessGLFFile
 fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','HiRISE',
@@ -33,6 +39,7 @@ fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','
 # headers in HiRISE_kw.csv
 HiRISEkw_headers = ['N', 'imageID', 'URL', 'anaglyphURL', 'Deskrifans', 'Dorhys', 'Dorhys180', 'Dorles']
 
+HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img']
 Sindex = {}
 
 # a few functions for making an HTML colour from a lat, long
@@ -144,6 +151,7 @@ def findregion(lng, lat):
 
 def printHiRISE_kw(bounds=None):
     bounds = checkbounds(bounds)
+    output = ""
     with open(HiRISE_kw) as csvfile:
         spamreader = csv.DictReader(csvfile, fieldnames=HiRISEkw_headers,delimiter=',',quotechar='"')
         for row in spamreader:
@@ -152,15 +160,25 @@ def printHiRISE_kw(bounds=None):
             else:
                 lng, lat = float(row['Dorhys180']), float(row['Dorles'])
                 if checkinbounds(lng, lat, bounds):
+                    output += "<div class='HiRISErow'>"
                     print("<div class='HiRISErow'>")
                     print("<div class='HiRISEkw'><a href='{u}'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng)))
+                    output += "<div class='HiRISEkw'><a href='{u}'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng))
                     if row['anaglyphURL'] != "":
                         print("<div class='HiRISE3D'><a href='{u}'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph"))
+                        output += "\n<div class='HiRISE3D'><a href='{u}'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph")
                     print("</div>")
-def writeHTMLbuttons(bounds=None):
+                    output += "</div>\n"
+    return output
+
+def writeHTMLbuttons(bounds=None, outHTML=None):
     """ write out the buttons for the Souness Top Trumps index 
     by default written in rows of 10 buttons """    
     print("<div class='GLFrow'>")
+    if outHTML:
+        outFile = open(outHTML,"w")
+        outFile.write('<h2 id="toptrumps">Links to individual pages on Souness GLFs in this region</h2>')
+        outFile.write("<div class='GLFrow'>")
     spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
     Nbuttons_printed = 0
     for row in spamreader:
@@ -177,16 +195,22 @@ def writeHTMLbuttons(bounds=None):
         else:
             lng, lat = float(row['Centlon180']), float(row['Centlat'])
             if checkinbounds(lng, lat, bounds):
-                if row['HiRISE_anaglyph'] != '':
+                if row['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(catnum):
                     # set a different CSS class for GLFs with anaglyphs
-                    printButton(row,"Sbutton3D")
+                    b = printButton(row,"Sbutton3D")
                 else:
-                    printButton(row)
+                    b = printButton(row)
+                if outHTML:
+                    outFile.write(b)
+                    outFile.write("\n")
                 Nbuttons_printed += 1
                 # once every 10, end the row and start another
                 if int(Nbuttons_printed) % 10 == 0:
+                    if outHTML:
+                        outFile.write("</div><div class='GLFrow'>")
                     print("</div><div class='GLFrow'>")
-                
+    if outHTML:
+        outFile.write("</div>")
     print("</div>")
         
 def writeHTML(GLF):
@@ -203,11 +227,11 @@ def writeHTML(GLF):
         nextn = num+1
     else:
         nextn = num
-    if Sindex[str(prev)]['HiRISE_anaglyph'] != '':
+    if Sindex[str(prev)]['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(str(prev)):
         previous = printButton(Sindex[str(prev)],'Sbutton3D')
     else:
         previous = printButton(Sindex[str(prev)])
-    if Sindex[str(nextn)]['HiRISE_anaglyph'] != '':
+    if Sindex[str(nextn)]['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(str(nextn)):
         nextone = printButton(Sindex[str(nextn)],'Sbutton3D')
     else:        
         nextone = printButton(Sindex[str(nextn)])
@@ -259,14 +283,34 @@ def writeHTML(GLF):
         hrsc = "<td>Mars Express DTM coverage:</td><td> <a href='{hr}'>{h}</a>.\nDTM resolution {r}m</td>".format(hr=linktoextra, h=row['HRSC_DTM'],r=row['DTMres'])
     # HiRISE images
     hiriseimgs = GLF['HiRISE_img'].split(',')
+    hiriseimg2 = HiRISE_index.get(GLF['CatNum'], [])
+    # remove excess whitespace
+    hiriseimgs = [h.strip() for h in hiriseimgs]
+    hiriseimg2 = [h.strip() for h in hiriseimg2]
+    for himg in hiriseimg2:
+        # don't duplicate what was already manually specified
+        # and don't include the COLOR ones since we take the
+        # first 15 characters which are the same
+        # the COLOR image will have the same extent or less
+        if himg not in hiriseimgs and "COLOR" not in himg:
+            hiriseimgs.append(himg)
+            
     hirise = "<td>HiRISE coverage:</td><td>"
     for himg in hiriseimgs:
         himg = himg.lstrip()
         hiriseurl = "http://hirise.lpl.arizona.edu/" + himg[:15] 
-        hirise += "<a href='{hiURL}'>{hi}</a> ".format(hiURL=hiriseurl, hi=himg)
+        hirise += "<a href='{hiURL}'>{hi}</a> ".format(hiURL=hiriseurl, hi=himg[:15])
     hirise += '</td>'
     # HiRISE anaglyphs
     anaglyphimgs = GLF['HiRISE_anaglyph'].split(',')
+    hiriseanag2 = HiRISE_anaglyph_index.get(GLF['CatNum'], [])
+    # remove excess whitespace
+    anaglyphimgs = [h.strip() for h in anaglyphimgs]
+    hiriseanag2 = [h.strip() for h in hiriseanag2]
+    
+    for aimg in hiriseanag2:
+        if aimg not in anaglyphimgs:
+            anaglyphimgs.append(aimg)
     anaglyph = "<td>HiRISE anaglyph:</td><td>"
     for aimg in anaglyphimgs:
         anaglyphurl = "http://hirise.lpl.arizona.edu/anaglyph/singula.php?ID="
@@ -277,6 +321,13 @@ def writeHTML(GLF):
     anaglyph += '</td>'
     # HiRISE DTMs
     hiriseDTMs = GLF['HiRISE_DTM'].split(',')
+    hiriseDTM2 = HiRISE_DTM_index.get(GLF['CatNum'], [])
+    
+    hiriseDTMs = [h.strip() for h in hiriseDTMs]
+    hiriseDTM2 = [h.strip() for h in hiriseDTMs]
+    for dimg in hiriseDTM2:
+        if dimg not in hiriseDTMs:
+            hiriseDTMs.append(dimg)
     hiriseDTM = "<td>HiRISE DTM:</td><td>"
     if GLF['HiRISE_DTM'] != '':
         for dimg in hiriseDTMs:
@@ -342,11 +393,34 @@ def writeHTML(GLF):
     #print(profHTML)
 
 
+# read in files listing HiRISE images, anaglyphs and DTMs
+
+HiRISE_index = {}
+HiRISE_anaglyph_index = {}
+HiRISE_DTM_index = {}
+with open(HiRISE_CTX9) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_index[catnum] = himglist
+with open(HiRISE_anaglyph_CTX9) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_anaglyph_index[catnum] = himglist
+with open(HiRISE_DTM_CTX9) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_DTM_index[catnum] = himglist
     
-#with open(Gfilein) as csvfile:
-    # write the buttons for the index page
-    # writeHTMLbuttons()
-    # raw_input()
+with open(Gfilein) as csvfile:
+     # write the buttons for the index page
+     writeHTMLbuttons(None, "sounessallbuttons.html")
+     raw_input()
 
 # long+lat bounds for regions
 # regions altered to make them non-overlapping
@@ -373,21 +447,25 @@ regions = [tharsis, argyre, whellas, ehellas, sehighland, olympus, mareotis, deu
 regionnames = ["Tharsis", "Argyre", "West of Hellas", "East of Hellas", "SE Highlands", "Olympus Mons and surrounding area", "Mareotis Fossae", "Deuteronilus Mensae", "Protonilus Mensae", "Nilosyrtis Mensae", "Utopia Planitia and Phlegra Montes"]
 regionURLs = ["stharsis.html", "argyre.html", "whellas.html", "ehellas.html", "sehighlands.html", "olympus.html", "mareotis.html",
               "deuteron.html", "proton.html", "nilosyrtis.html", "elysium.html"]
+regions_outHTML = [r.replace(".html","list.html") for r in regionURLs]
 regionURLs = ["http://taklowkernewek.neocities.org/mars/"+u for u in regionURLs]
 
 regiondict = {key:value for (key, value) in zip(regionnames, regions)}
 regionURLdict = {key:value for (key, value) in zip(regionnames, regionURLs)}
         
-for r in regions:
+for r,h in zip(regions,regions_outHTML):
     print(r)
     print('<h2 id="toptrumps">Links to individual pages on Souness GLFs in this region</h2>')
     with open(Gfilein) as csvfile:
-        writeHTMLbuttons(r)
+        writeHTMLbuttons(r, h)
         print('<h3 id="hirisekw">Links to HiRISE images with Cornish titles</h3>')
         print('<p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p>')
-        printHiRISE_kw(r)
-        raw_input()
-    
+        hi_kw = printHiRISE_kw(r)
+        outFile = open(h,"a")
+        outFile.write('\n<h3 id="hirisekw">Links to HiRISE images with Cornish titles</h3><p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p>\n')
+        outFile.write(hi_kw)
+
+        
 # start again for pages for each GLF
 with open(Gfilein) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
