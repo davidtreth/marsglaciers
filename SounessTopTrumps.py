@@ -9,6 +9,7 @@ import glob
 import os.path
 import sys
 import subprocess
+import json
 
 # source files hard-coded
 #sounessGLFFilePath = "/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/"
@@ -399,6 +400,116 @@ def writeHTML(GLF):
     #print(listHTML)
     #print(profHTML)
 
+def createJSONObj(GLF):
+    """ create a JSON object for a GLF """
+    glfJSON = {}
+    # previous and next 
+    num = int(GLF['CatNum'])
+    if num > 1:
+        prev = num-1
+    else:
+        prev = num
+    if num < 1309:
+        nextn = num+1
+    else:
+        nextn = num
+    glfJSON['CatNum'] = num
+    glfJSON['previous'] = prev
+    glfJSON['next'] = nextn
+    glfJSON['Centlon'] = round(float(GLF['Centlon180']),2)
+    glfJSON['Centlat'] = round(float(GLF['Centlat']))
+    glfJSON['htmlcolour'] = html_colour(float(row['Centlat']), float(row['Centlon180']))
+    glfJSON['region'] = findregion(float(row['Centlon180']), float(row['Centlat']))
+    glfJSON['regionURL'] = regionURLdict[glfJSON['region']]
+    # Mars Express DTM
+    if GLF['HRSC_DTM'] == 'none':
+        glfJSON['HRSC_DTM'] = 'none'
+        glfJSON['HRSC_DTM_URL'] = ''
+    else:
+        pdsurl = 'http://pds-geosciences.wustl.edu/mex/mex-m-hrsc-5-refdr-dtm-v1/mexhrs_2001/extras/'
+        dtmdir = 'h{n}xxx'.format(n=GLF['HRSC_DTM'][1])
+        extrafile = '{n}.png'.format(n=GLF['HRSC_DTM'][:10].lower())
+        linktoextra = pdsurl + dtmdir + '/' + extrafile
+        glfJSON['HRSC_DTM'] = GLF['HRSC_DTM']
+        glfJSON['HSRC_DTM_URL'] = linktoextra
+        glfJSON['HRSC_DTM_res'] = GLF['DTMres']
+    # HiRISE
+    hiriseimgs = GLF['HiRISE_img'].split(',')
+    hiriseimg2 = HiRISE_index.get(GLF['CatNum'], [])
+    # remove excess whitespace
+    hiriseimgs = [h.strip() for h in hiriseimgs]
+    hiriseimg2 = [h.strip() for h in hiriseimg2]
+    for himg in hiriseimg2:         
+        if himg not in hiriseimgs and "COLOR" not in himg:
+            hiriseimgs.append(himg)
+    hiriseurls = []
+    for himg in hiriseimgs:
+        himg = himg.lstrip()
+        hiriseurl = "http://hirise.lpl.arizona.edu/" + himg[:15]
+        hiriseurls.append(hiriseurl)
+    hirise_tuples = zip(hiriseimgs, hiriseurls)
+    glfJSON['HiRISE'] = hirise_tuples
+    # HiRISE anaglyphs
+    anaglyphimgs = GLF['HiRISE_anaglyph'].split(',')
+    hiriseanag2 = HiRISE_anaglyph_index.get(GLF['CatNum'], [])
+    # remove excess whitespace
+    anaglyphimgs = [h.strip() for h in anaglyphimgs]
+    hiriseanag2 = [h.strip() for h in hiriseanag2]
+     
+    for aimg in hiriseanag2:
+        if aimg not in anaglyphimgs:
+            anaglyphimgs.append(aimg)
+    anaglyphurls = []
+    for aimg in anaglyphimgs:
+        anaglyphurl = "http://hirise.lpl.arizona.edu/anaglyph/singula.php?ID="
+        aimg = aimg.lstrip()
+        leftobs = aimg[:15]
+        anaglyphurl = anaglyphurl+leftobs
+        anaglyphurls.append(anaglyphurl)
+    anaglyph_tuples = zip(anaglyphimgs, anaglyphurls)
+    glfJSON['anaglyph'] = anaglyph_tuples
+    # HiRISE DTMs
+    hiriseDTMs = GLF['HiRISE_DTM'].split(',')
+    hiriseDTM2 = HiRISE_DTM_index.get(GLF['CatNum'], [])
+    
+    hiriseDTMs = [h.strip() for h in hiriseDTMs]
+    hiriseDTM2 = [h.strip() for h in hiriseDTM2]
+    for dimg in hiriseDTM2:
+        if dimg not in hiriseDTMs:
+            hiriseDTMs.append(dimg)
+    DTMurls = []
+    if hiriseDTMs == ['']:
+        hiriseDTMs = []
+    for dimg in hiriseDTMs:
+        DTMurl = "http://www.uahirise.org/dtm/dtm.php?ID="
+        # find the link to the HiRISE website
+        dimg=dimg.lstrip()
+        imgn = dimg[6:12]
+        try:
+            # if there is no DTM, skip over this code
+            if int(imgn) >= 10000:
+                dtm = dimg[:17].replace("DTEEC","ESP")
+            else:
+                dtm = dimg[:17].replace("DTEEC","PSP")
+            DTMurl = DTMurl + dtm
+        except:
+            DTMurl = ''
+        DTMurls.append(DTMurl)
+    DTM_tuples = zip(hiriseDTMs, DTMurls)
+    glfJSON['HiRISE_DTM'] = DTM_tuples
+    glfJSON['Length'] = "{l:.2f} km".format(l=float(GLF['Length']))
+    glfJSON['Length'] = "{w:.2f} km".format(w=float(GLF['Width']))
+    glfJSON['Length'] = "{A:.2f} sq. km".format(A=float(GLF['Area']))
+    glfJSON['Elevation'] = "{e:.0f}m".format(e=float(GLF['MeanElev']))
+    glfJSON['Orientation'] = "{r:.2f} degrees".format(r=float(GLF['Orientation']))
+    glfJSON['imagefile'] = "context_subsets/Souness{i:04d}_context2.png".format(i=int(GLF['CatNum']))
+    glfJSON['ctxshapefile'] = "context_subsets/Souness{i:04d}_contextSHP2.png".format(i=int(GLF['CatNum']))
+    glfJSON['extshapefile'] = "context_subsets/Souness{i:04d}_extentSHP2.png".format(i=int(GLF['CatNum']))
+    glfJSON['headshapefile'] = "context_subsets/Souness{i:04d}_headSHP2.png".format(i=int(GLF['CatNum']))
+    profiles = glob.glob("ProfilePNGs/*Cat{i:04d}*.png".format(i=int(GLF['CatNum'])))
+    profiles.sort()
+    glfJSON['profilefiles'] = profiles
+    return glfJSON
 
 # read in files listing HiRISE images, anaglyphs and DTMs
 
@@ -474,6 +585,8 @@ for r,h in zip(regions,regions_outHTML):
 
         
 # start again for pages for each GLF
+SounessJSON = {"Souness":[]}
+SounessJSONFile = "souness_glf.json"
 with open(Gfilein) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
     for row in spamreader:
@@ -485,7 +598,9 @@ with open(Gfilein) as csvfile:
             pass
         else:
             # write the Top trump page
-            writeHTML(row)
+            #writeHTML(row)
+            # write to JSON
+            SounessJSON["Souness"].append(createJSONObj(row))
 """            indshp = int(row['CatNum']) - 1     
             #print(indshp)
             shapefile = sounessGLFFilePath + CtxSHPsPath + 'context_' + str(indshp)+'.shp'
@@ -506,6 +621,10 @@ with open(Gfilein) as csvfile:
                 #for n in nadirIMGFile:
                 #    makeImageFileCrop(n)                    
                 os.chdir(sounessGLFFilePath) """
+
+with open(SounessJSONFile, "w") as outFile:
+    SounessJSON = json.dump(SounessJSON, outFile)
+    
 
 #while(True):
 #    n = raw_input("Please enter your favourite Souness GLF (1-1309)?")
