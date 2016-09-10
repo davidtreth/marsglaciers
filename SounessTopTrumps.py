@@ -509,6 +509,11 @@ def createJSONObj(GLF):
     profiles = glob.glob("ProfilePNGs/*Cat{i:04d}*.png".format(i=int(GLF['CatNum'])))
     profiles.sort()
     glfJSON['profilefiles'] = profiles
+    
+    # HTML to overplot on map of Mars
+    backgroundimg =  "OverviewMap800px.png"
+    backgroundHTML = "<div style='background-image: url({bgr}); height: 400px; width: 800px;'><div class='markercont' style='top: {t}px; left: {l}px;'><div id='diamond-narrow'></div></div></div>".format(bgr=backgroundimg,t=int(lat_to_top(float(GLF['Centlat']))), l=int(lng_to_left(float(GLF['Centlon180']))))
+    glfJSON['marsmapHTML'] = backgroundHTML
     return glfJSON
 
 # read in files listing HiRISE images, anaglyphs and DTMs
