@@ -440,7 +440,7 @@ def createJSONObj(GLF):
     hiriseimgs = [h.strip() for h in hiriseimgs]
     hiriseimg2 = [h.strip() for h in hiriseimg2]
     for himg in hiriseimg2:         
-        if himg not in hiriseimgs and "COLOR" not in himg:
+        if himg not in hiriseimgs and himg[:15] not in hiriseimgs and "COLOR" not in himg:
             hiriseimgs.append(himg)
     hiriseurls = []
     for himg in hiriseimgs:
