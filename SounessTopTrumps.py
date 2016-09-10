@@ -498,8 +498,8 @@ def createJSONObj(GLF):
     DTM_tuples = zip(hiriseDTMs, DTMurls)
     glfJSON['HiRISE_DTM'] = DTM_tuples
     glfJSON['Length'] = "{l:.2f} km".format(l=float(GLF['Length']))
-    glfJSON['Length'] = "{w:.2f} km".format(w=float(GLF['Width']))
-    glfJSON['Length'] = "{A:.2f} sq. km".format(A=float(GLF['Area']))
+    glfJSON['Width'] = "{w:.2f} km".format(w=float(GLF['Width']))
+    glfJSON['Area'] = "{A:.2f} sq. km".format(A=float(GLF['Area']))
     glfJSON['Elevation'] = "{e:.0f}m".format(e=float(GLF['MeanElev']))
     glfJSON['Orientation'] = "{r:.2f} degrees".format(r=float(GLF['Orientation']))
     glfJSON['imagefile'] = "context_subsets/Souness{i:04d}_context2.png".format(i=int(GLF['CatNum']))
@@ -585,7 +585,7 @@ for r,h in zip(regions,regions_outHTML):
 
         
 # start again for pages for each GLF
-SounessJSON = {"Souness":[]}
+SounessJSON = {"Souness":{}}
 SounessJSONFile = "souness_glf.json"
 with open(Gfilein) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
@@ -600,7 +600,7 @@ with open(Gfilein) as csvfile:
             # write the Top trump page
             #writeHTML(row)
             # write to JSON
-            SounessJSON["Souness"].append(createJSONObj(row))
+            SounessJSON["Souness"][catnum] = createJSONObj(row)
 """            indshp = int(row['CatNum']) - 1     
             #print(indshp)
             shapefile = sounessGLFFilePath + CtxSHPsPath + 'context_' + str(indshp)+'.shp'
