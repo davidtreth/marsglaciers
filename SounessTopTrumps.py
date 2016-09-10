@@ -447,6 +447,7 @@ def createJSONObj(GLF):
         himg = himg.lstrip()
         hiriseurl = "http://hirise.lpl.arizona.edu/" + himg[:15]
         hiriseurls.append(hiriseurl)
+    hiriseimgs = [h[:15] for h in hiriseimgs]
     hirise_tuples = zip(hiriseimgs, hiriseurls)
     glfJSON['HiRISE'] = hirise_tuples
     # HiRISE anaglyphs
