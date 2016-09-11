@@ -9,6 +9,7 @@ from rsgislib.imagecalc import BandDefn
 import subprocess
 import csv
 import os
+import os.path
 import glob
 
 # file paths hard-coded
@@ -86,14 +87,15 @@ with open(Gfilein) as csvfile:
                         gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inND4.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outND4)
                         print(gdwarpcmd)
                         subprocess.call(gdwarpcmd, shell=True)
-                      #try:
-                      # if possible, work in rsgislib but fall back on gdalwarp if needed
-                      imageutils.selectImageBands(inDTM, DTMband, 'GTiff', rsgislib.TYPE_32FLOAT, [2])
-                      imageutils.subset(DTMband,contextvect,outDTM,'GTiff',rsgislib.TYPE_32FLOAT)
-                      #except:
-                      #  gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inDTM.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
-                      #  print(gdwarpcmd)
-                      #  subprocess.call(gdwarpcmd, shell=True)
+                      try:
+                        # if possible, work in rsgislib but fall back on gdalwarp if needed
+                        if not(os.path.isfile(DTMband)):
+                           imageutils.selectImageBands(inDTM, DTMband, 'GTiff', rsgislib.TYPE_32FLOAT, [2])
+                        imageutils.subset(DTMband,contextvect,outDTM,'GTiff',rsgislib.TYPE_32FLOAT)
+                      except:
+                        gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=DTMband.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
+                        print(gdwarpcmd)
+                        subprocess.call(gdwarpcmd, shell=True)
                         
                       # I had some problems with this so used gdal_rasterize
                       #vectorutils.rasterise2Image(contextvect,outND4, outCTXrast, 'GTiff', 'FID')
@@ -111,11 +113,16 @@ with open(Gfilein) as csvfile:
                               if line[:10] == "Lower Left":
                                       xmin_ymin = line.split("(")[1]
                                       xmin_ymin = xmin_ymin.split(")")[0]
-                                      xmin, ymin = xmin_ymin.split(",")
+                                      xmin, ymin = xmin_ymin.split(",")                                      
                               if line[:11] == "Upper Right":
                                       xmax_ymax = line.split("(")[1]
                                       xmax_ymax = xmax_ymax.split(")")[0]
                                       xmax, ymax = xmax_ymax.split(",")
+                      xmin = xmin.strip()
+                      ymin = ymin.strip()
+                      xmax = xmax.strip()
+                      ymax = ymax.strip()
+                                                                                        
                                               
                       print(x,y)
                       DTMres = float(row['DTMres'])
