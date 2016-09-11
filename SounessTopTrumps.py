@@ -426,12 +426,15 @@ def createJSONObj(GLF):
         glfJSON['HRSC_DTM'] = 'none'
         glfJSON['HRSC_DTM_URL'] = ''
     else:
-        pdsurl = 'http://pds-geosciences.wustl.edu/mex/mex-m-hrsc-5-refdr-dtm-v1/mexhrs_2001/extras/'
-        dtmdir = 'h{n}xxx'.format(n=GLF['HRSC_DTM'][1])
-        extrafile = '{n}.png'.format(n=GLF['HRSC_DTM'][:10].lower())
-        linktoextra = pdsurl + dtmdir + '/' + extrafile
+        #pdsurl = 'http://pds-geosciences.wustl.edu/mex/mex-m-hrsc-5-refdr-dtm-v1/mexhrs_2001/extras/'
+        imageexurlbase = 'http://viewer.mars.asu.edu/viewer/hrsc/'
+        #dtmdir = 'h{n}xxx'.format(n=GLF['HRSC_DTM'][1])
+        #extrafile = '{n}.png'.format(n=GLF['HRSC_DTM'][:10].lower())
+        #linktoextra = pdsurl + dtmdir + '/' + extrafile
+        imageexurl = imageexurlbase + GLF['HRSC_DTM'][:15]
         glfJSON['HRSC_DTM'] = GLF['HRSC_DTM']
-        glfJSON['HSRC_DTM_URL'] = linktoextra
+        #glfJSON['HSRC_DTM_URL'] = linktoextra
+        glfJSON['HSRC_DTM_URL'] = imageexurl
         glfJSON['HRSC_DTM_res'] = GLF['DTMres']
     # HiRISE
     hiriseimgs = GLF['HiRISE_img'].split(',')
@@ -504,6 +507,7 @@ def createJSONObj(GLF):
     glfJSON['Elevation'] = "{e:.0f}m".format(e=float(GLF['MeanElev']))
     glfJSON['Orientation'] = "{r:.2f} degrees".format(r=float(GLF['Orientation']))
     glfJSON['imagefile'] = "context_subsets/Souness{i:04d}_context2.png".format(i=int(GLF['CatNum']))
+    glfJSON['DTMimagefile'] = "context_subsets/Souness{i:04d}DTM_context2.png".format(i=int(GLF['CatNum']))
     glfJSON['ctxshapefile'] = "context_subsets/Souness{i:04d}_contextSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['extshapefile'] = "context_subsets/Souness{i:04d}_extentSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['headshapefile'] = "context_subsets/Souness{i:04d}_headSHP2.png".format(i=int(GLF['CatNum']))
