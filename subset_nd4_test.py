@@ -4,7 +4,8 @@
 # and make rasterized images from context, extent, and head shapefiles
 # for overplotting on the nd image files for example
 import rsgislib
-from rsgislib import imageutils, vectorutils
+from rsgislib import imageutils, vectorutils, imagecalc
+from rsgislib.imagecalc import BandDefn
 import subprocess
 import csv
 import os
@@ -52,6 +53,16 @@ with open(Gfilein) as csvfile:
                       outND4 = outND4path + "Souness{c:04d}_context.tif".format(c=int(catnum))
                       # stretched
                       outND4_s = outND4path + "Souness{c:04d}_context2.tif".format(c=int(catnum))
+
+                      DTMfile = glob.glob(inND4path+HRSCdir+'/LandSerf/'+HRSC_DTMfile[:5]+'*rawAsp.kea')
+                      print(DTMfile[0])
+                      inDTM = DTMfile[0]
+                      DTMband = inDTM.replace(".kea", "_DTM.tif")
+                      outDTM = outND4path + "Souness{c:04d}DTM_context.tif".format(c=int(catnum))
+                      # stretched
+                      outDTM_a = outND4path + "Souness{c:04d}DTM_context1.tif".format(c=int(catnum))
+                      outDTM_s = outND4path + "Souness{c:04d}DTM_context2.tif".format(c=int(catnum))
+                      
                       # context
                       outCTXrast = outND4path + "Souness{c:04d}_contextSHP.tif".format(c=int(catnum))
                       outCTXrast_s = outND4path + "Souness{c:04d}_contextSHP2.tif".format(c=int(catnum))
@@ -75,6 +86,15 @@ with open(Gfilein) as csvfile:
                         gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inND4.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outND4)
                         print(gdwarpcmd)
                         subprocess.call(gdwarpcmd, shell=True)
+                      #try:
+                      # if possible, work in rsgislib but fall back on gdalwarp if needed
+                      imageutils.selectImageBands(inDTM, DTMband, 'GTiff', rsgislib.TYPE_32FLOAT, [2])
+                      imageutils.subset(DTMband,contextvect,outDTM,'GTiff',rsgislib.TYPE_32FLOAT)
+                      #except:
+                      #  gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inDTM.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
+                      #  print(gdwarpcmd)
+                      #  subprocess.call(gdwarpcmd, shell=True)
+                        
                       # I had some problems with this so used gdal_rasterize
                       #vectorutils.rasterise2Image(contextvect,outND4, outCTXrast, 'GTiff', 'FID')
                       # retrieve the nadir image file pixel scale and extents
@@ -98,6 +118,10 @@ with open(Gfilein) as csvfile:
                                       xmax, ymax = xmax_ymax.split(",")
                                               
                       print(x,y)
+                      DTMres = float(row['DTMres'])
+                      scalefactor = DTMres / float(x)
+                      print("DTM resolution is {d}, scalefactor = {s}".format(d=DTMres, s=scalefactor))
+                      
                       # rasterize the shapefile
                       #gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -tr {x} {y} {vc} {vcrst}".format(x=x, y=y, vc = contextvect, vcrst = outCTXrast)
                       #gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extentvect, vcrst = outEXTrast)
@@ -105,6 +129,14 @@ with open(Gfilein) as csvfile:
                       subprocess.call(gdalrastcmd, shell=True)
                       # stretch image to byte 8-bit by linear MinMax
                       imageutils.stretchImage(outND4,outND4_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      # do the same for DTMs
+                      datatype=rsgislib.TYPE_32FLOAT
+                      expression = 'b1+9999'
+                      bandDefns = []
+                      bandDefns.append(BandDefn('b1', outDTM, 1))
+                      
+                      imagecalc.bandMath(outDTM_a, expression, 'GTiff', datatype, bandDefns)
+                      imageutils.stretchImage(outDTM_a,outDTM_s,False,'',True,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       # do the same for shapefile rasters (though may be unnecessary)
                       #imageutils.stretchImage(outCTXrast,outCTXrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       #imageutils.stretchImage(outEXTrast,outEXTrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
@@ -116,6 +148,9 @@ with open(Gfilein) as csvfile:
                       #gdaltranscmd2 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outCTXrast_s,cP = outCTXrast_s.replace(".tif",".png"))
                       #gdaltranscmd2 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTrast_s,cP = outEXTrast_s.replace(".tif",".png"))
                       gdaltranscmd2 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHeadrast_s,cP = outHeadrast_s.replace(".tif",".png"))
+
+                      gdaltranscmd3 = "gdal_translate -of PNG -outsize {scalex:.2}\% {scaley:.2}\% {c} {cP}".format(c=outDTM_s,cP = outDTM_s.replace(".tif",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
                       subprocess.call(gdaltranscmd1,shell=True)
                       subprocess.call(gdaltranscmd2,shell=True)
+                      subprocess.call(gdaltranscmd3,shell=True)
                       
