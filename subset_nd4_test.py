@@ -23,6 +23,12 @@ contextpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_
 extentpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/SounessROIs_individual/Individual/Extent/'
 headpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/SounessROIs_individual/Individual/heads/'
 
+# location of all Souness extents shapefile
+
+extent_allpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIs/'
+extent_allfile = 'SounessROIextents_all_Mars2000EqCyl_lat0_40.shp'
+extent_all = extent_allpath + extent_allfile
+
 Gfilein = sounessGLFFilePath+sounessGLFFile
 print(Gfilein)
 
@@ -55,14 +61,19 @@ with open(Gfilein) as csvfile:
                       # stretched
                       outND4_s = outND4path + "Souness{c:04d}_context2.tif".format(c=int(catnum))
 
+                      # image dimensions
+                      statsND =  outND4path + "Souness{c:04d}_context.txt".format(c=int(catnum))
+
                       DTMfile = glob.glob(inND4path+HRSCdir+'/LandSerf/'+HRSC_DTMfile[:5]+'*rawAsp.kea')
                       print(DTMfile[0])
                       inDTM = DTMfile[0]
                       DTMband = inDTM.replace(".kea", "_DTM.tif")
                       outDTM = outND4path + "Souness{c:04d}DTM_context.tif".format(c=int(catnum))
+                      
                       # stretched
                       outDTM_a = outND4path + "Souness{c:04d}DTM_context1.tif".format(c=int(catnum))
                       outDTM_s = outND4path + "Souness{c:04d}DTM_context2.tif".format(c=int(catnum))
+                      statsDTM = outND4path + "Souness{c:04d}DTM_context.txt".format(c=int(catnum))
                       
                       # context
                       outCTXrast = outND4path + "Souness{c:04d}_contextSHP.tif".format(c=int(catnum))
@@ -74,7 +85,9 @@ with open(Gfilein) as csvfile:
                       outHeadrast = outND4path + "Souness{c:04d}_headSHP.tif".format(c=int(catnum))
                       outHeadrast_s = outND4path + "Souness{c:04d}_headSHP2.tif".format(c=int(catnum))
 
-                      
+                      # extents_all
+                      outEXTALLrast = outND4path + "Souness{c:04d}_extentallSHP.tif".format(c=int(catnum))
+                      outEXTALLrast_s = outND4path + "Souness{c:04d}_extentallSHP2.tif".format(c=int(catnum))
                       
                       contextvect = '{p}context_{c}.shp'.format(p=contextpath, c=int(catnum)-1)
                       extentvect = '{p}extent_{c}.shp'.format(p=extentpath, c=int(catnum)-1)
@@ -123,8 +136,15 @@ with open(Gfilein) as csvfile:
                       xmax = xmax.strip()
                       ymax = ymax.strip()
                                                                                         
-                                              
+                      imgwidth = int(float(xmax) - float(xmin))
+                      imgheight = int(float(ymax) - float(ymin))
+                      with open(statsND, "w") as outF:
+                        outF.write("Width,Height\n")
+                        outF.write("{w},{h}".format(w=imgwidth, h=imgheight))
+                      
                       print(x,y)
+                      print(imgwidth,imgheight)
+                      
                       DTMres = float(row['DTMres'])
                       scalefactor = DTMres / float(x)
                       print("DTM resolution is {d}, scalefactor = {s}".format(d=DTMres, s=scalefactor))
@@ -134,20 +154,30 @@ with open(Gfilein) as csvfile:
                       #gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extentvect, vcrst = outEXTrast)
                       gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = headvect, vcrst = outHeadrast)
                       subprocess.call(gdalrastcmd, shell=True)
+
+                      gdalrastcmd2 = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extent_all, vcrst = outEXTALLrast)
+                      subprocess.call(gdalrastcmd2, shell=True)
+                      
                       # stretch image to byte 8-bit by linear MinMax
                       imageutils.stretchImage(outND4,outND4_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      
                       # do the same for DTMs
+
                       datatype=rsgislib.TYPE_32FLOAT
                       expression = 'b1+9999'
                       bandDefns = []
                       bandDefns.append(BandDefn('b1', outDTM, 1))
+
                       
                       imagecalc.bandMath(outDTM_a, expression, 'GTiff', datatype, bandDefns)
+                      imagecalc.imageStats(outDTM_a, statsDTM, True)
+                      
                       imageutils.stretchImage(outDTM_a,outDTM_s,False,'',True,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       # do the same for shapefile rasters (though may be unnecessary)
                       #imageutils.stretchImage(outCTXrast,outCTXrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       #imageutils.stretchImage(outEXTrast,outEXTrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outHeadrast,outHeadrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      imageutils.stretchImage(outEXTALLrast,outEXTALLrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
 
                       # make png files
                       gdaltranscmd1 = "gdal_translate -of PNG  {c} {cP}".format(c=outND4_s,cP = outND4_s.replace(".tif",".png"))
@@ -157,7 +187,11 @@ with open(Gfilein) as csvfile:
                       gdaltranscmd2 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHeadrast_s,cP = outHeadrast_s.replace(".tif",".png"))
 
                       gdaltranscmd3 = "gdal_translate -of PNG -outsize {scalex:.2}\% {scaley:.2}\% {c} {cP}".format(c=outDTM_s,cP = outDTM_s.replace(".tif",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
+                      # extents of all subsetted to bounding box of each context
+                      gdaltranscmd4 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTALLrast_s,cP = outEXTALLrast_s.replace(".tif",".png"))
+                      
                       subprocess.call(gdaltranscmd1,shell=True)
                       subprocess.call(gdaltranscmd2,shell=True)
                       subprocess.call(gdaltranscmd3,shell=True)
+                      subprocess.call(gdaltranscmd4,shell=True)
                       

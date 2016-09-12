@@ -373,6 +373,11 @@ def writeHTML(GLF):
     headshapefile = "context_subsets/Souness{i:04d}_headSHP2.png".format(i=int(GLF['CatNum']))
     imageHTML = "<figure class='hrscnd' style='background-image: url({nd4}); background-repeat: no-repeat;'><img class=\'CTXshp\' src=\'{s}\'></img><img class=\'Headshp\' src=\'{h}\'></img><figcaption>Part of the High Resolution Stereo Camera nadir image. The image is clipped to the bounding box of the \'context\' shapefile, which is 3 times that of the extent of the GLF in each dimension but centred at the same point. The extent itself is overplotted with partial transparency, with the head marked with a white circle.</figcaption></figure>".format(nd4=imagefile, s=extshapefile,h=headshapefile)
 
+    # DTM stats
+    DTMstatsfile = "context_subsets/Souness{i:04d}DTM_context.txt".format(i=int(GLF['CatNum']))
+    # nadir image dimensions
+    NadirDims = "context_subsets/Souness{i:04d}_context.txt".format(i=int(GLF['CatNum']))
+    
     # elevation and slope profiles
     profiles = glob.glob("ProfilePNGs/*Cat{i:04d}*.png".format(i=int(GLF['CatNum'])))
     profilesHTML = ["<img class =\'profImage\' src=\'{s}\'></img>\n".format(s=p) for p in profiles]
@@ -400,6 +405,40 @@ def writeHTML(GLF):
     #print(listHTML)
     #print(profHTML)
 
+
+def readDTMStats(statsFileName):
+    fieldnames = ['Min', 'Max', 'Mean', 'StdDev', 'Sum']
+    with open(statsFileName, "r") as statsFile:
+        spamreader = csv.DictReader(statsFile, fieldnames=fieldnames)
+        for s in spamreader:
+            if s['Min'] == 'Min':
+                pass
+            else:
+                minDTM = float(s['Min']) - 9999.0
+                maxDTM = float(s['Max']) - 9999.0
+                meanDTM = float(s['Mean']) - 9999.0
+                stdDTM =  float(s['StdDev'])
+    minDTM = "{m:.0f}".format(m=minDTM)
+    maxDTM = "{m:.0f}".format(m=maxDTM)
+    meanDTM = "{m:.01f}".format(m=meanDTM)
+    stdDTM = "{m:.01f}".format(m=stdDTM)
+    stats = {'Min':minDTM, 'Max':maxDTM, 'meanDTM':meanDTM, 'stdDTM':stdDTM}
+    print(stats)
+    return stats
+
+def readNadirDims(NDFileName):
+    fieldnames = ['Width', 'Height']
+    with open(NDFileName, "r") as NDFile:
+        spamreader = csv.DictReader(NDFile, fieldnames=fieldnames)
+        for s in spamreader:
+            if s['Width'] == 'Width':
+                pass
+            else:
+                width = s['Width']
+                height = s['Height']
+    stats = {'Width': width, 'Height': height}
+    return stats
+    
 def createJSONObj(GLF):
     """ create a JSON object for a GLF """
     glfJSON = {}
@@ -508,9 +547,19 @@ def createJSONObj(GLF):
     glfJSON['Orientation'] = "{r:.2f} degrees".format(r=float(GLF['Orientation']))
     glfJSON['imagefile'] = "context_subsets/Souness{i:04d}_context2.png".format(i=int(GLF['CatNum']))
     glfJSON['DTMimagefile'] = "context_subsets/Souness{i:04d}DTM_context2.png".format(i=int(GLF['CatNum']))
+    # DTM stats
+    DTMstatsfile = "context_subsets/Souness{i:04d}DTM_context.txt".format(i=int(GLF['CatNum']))
+    if os.path.exists(DTMstatsfile):
+        glfJSON['DTMstats'] = readDTMStats(DTMstatsfile)
+    # nadir image dimensions
+    NadirDims = "context_subsets/Souness{i:04d}_context.txt".format(i=int(GLF['CatNum']))
+    if os.path.exists(NadirDims):
+        glfJSON['NDdims'] = readNadirDims(NadirDims)
+        
     glfJSON['ctxshapefile'] = "context_subsets/Souness{i:04d}_contextSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['extshapefile'] = "context_subsets/Souness{i:04d}_extentSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['headshapefile'] = "context_subsets/Souness{i:04d}_headSHP2.png".format(i=int(GLF['CatNum']))
+    glfJSON['extallshapefile'] = "context_subsets/Souness{i:04d}_extentallSHP2.png".format(i=int(GLF['CatNum']))
     profiles = glob.glob("ProfilePNGs/*Cat{i:04d}*.png".format(i=int(GLF['CatNum'])))
     profiles.sort()
     glfJSON['profilefiles'] = profiles
