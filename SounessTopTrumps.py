@@ -455,8 +455,8 @@ def createJSONObj(GLF):
     glfJSON['CatNum'] = num
     glfJSON['previous'] = prev
     glfJSON['next'] = nextn
-    glfJSON['Centlon'] = round(float(GLF['Centlon180']),2)
-    glfJSON['Centlat'] = round(float(GLF['Centlat']))
+    glfJSON['Centlon'] = round(float(GLF['Centlon180']),3)
+    glfJSON['Centlat'] = round(float(GLF['Centlat']),3)
     glfJSON['htmlcolour'] = html_colour(float(row['Centlat']), float(row['Centlon180']))
     glfJSON['region'] = findregion(float(row['Centlon180']), float(row['Centlat']))
     glfJSON['regionURL'] = regionURLdict[glfJSON['region']]
@@ -551,10 +551,14 @@ def createJSONObj(GLF):
     DTMstatsfile = "context_subsets/Souness{i:04d}DTM_context.txt".format(i=int(GLF['CatNum']))
     if os.path.exists(DTMstatsfile):
         glfJSON['DTMstats'] = readDTMStats(DTMstatsfile)
+    else:
+        glfJSON['DTMstats'] = {"Max":"","Min":"","stdDTM":"", "meanDTM":""}
     # nadir image dimensions
     NadirDims = "context_subsets/Souness{i:04d}_context.txt".format(i=int(GLF['CatNum']))
     if os.path.exists(NadirDims):
         glfJSON['NDdims'] = readNadirDims(NadirDims)
+    else:
+        glfJSON['NDdims'] = {"Width":"","Height":""}
         
     glfJSON['ctxshapefile'] = "context_subsets/Souness{i:04d}_contextSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['extshapefile'] = "context_subsets/Souness{i:04d}_extentSHP2.png".format(i=int(GLF['CatNum']))
