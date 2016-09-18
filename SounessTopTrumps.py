@@ -562,7 +562,11 @@ def createJSONObj(GLF):
         
     glfJSON['ctxshapefile'] = "context_subsets/Souness{i:04d}_contextSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['extshapefile'] = "context_subsets/Souness{i:04d}_extentSHP2.png".format(i=int(GLF['CatNum']))
-    glfJSON['headshapefile'] = "context_subsets/Souness{i:04d}_headSHP2.png".format(i=int(GLF['CatNum']))
+    glfJSON['headshapefile'] = "context_subsets/Souness{i:04d}_headSHP.png".format(i=int(GLF['CatNum']))
+    glfJSON['termshapefile'] = "context_subsets/Souness{i:04d}_termSHP.png".format(i=int(GLF['CatNum']))
+    glfJSON['centshapefile'] = "context_subsets/Souness{i:04d}_centreSHP.png".format(i=int(GLF['CatNum']))
+    glfJSON['leftMCshapefile'] = "context_subsets/Souness{i:04d}_LMidCSHP.png".format(i=int(GLF['CatNum']))
+    glfJSON['rightMCshapefile'] = "context_subsets/Souness{i:04d}_RMidCSHP.png".format(i=int(GLF['CatNum']))
     glfJSON['extallshapefile'] = "context_subsets/Souness{i:04d}_extentallSHP2.png".format(i=int(GLF['CatNum']))
     profiles = glob.glob("ProfilePNGs/*Cat{i:04d}*.png".format(i=int(GLF['CatNum'])))
     profiles.sort()
