@@ -27,6 +27,10 @@ shpOut_H = 'SounessROIheads_all_Mars2000EqCyl_lat0_40'
 shpOut_C = 'SounessROIcentres_all_Mars2000EqCyl_lat0_40'
 shpOut_T = 'SounessROItermini_all_Mars2000EqCyl_lat0_40'
 shpOut_MC = 'SounessROImidchannel_all_Mars2000EqCyl_lat0_40'
+shpOut_LMC = 'SounessROIleftmidchannel_all_Mars2000EqCyl_lat0_40'
+shpOut_RMC = 'SounessROIrightmidchannel_all_Mars2000EqCyl_lat0_40'
+
+
 
 #mid 1 to 4 between head and midchannel centre
 shpOut_mid1 = 'SounessROImidline1_all_Mars2000EqCyl_lat0_40'
@@ -40,7 +44,11 @@ shpOut_mid8 = 'SounessROImidline8_all_Mars2000EqCyl_lat0_40'
 shpOut_mid9 = 'SounessROImidline9_all_Mars2000EqCyl_lat0_40'
 
 
-def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpOutFileH,shpOutFileC,shpOutFileT,shpOutFileMCH,shpOutFileM1,shpOutFileM2,shpOutFileM3,shpOutFileM4,shpOutFileM6,shpOutFileM7,shpOutFileM8,shpOutFileM9,prjString,circradius=100.0, circN=36,skipcircles=False):
+def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,
+                         shpOutFileH,shpOutFileC,shpOutFileT,
+                         shpOutFileMCH, shpOutFileLMCH, shpOutFileRMCH,
+                         shpOutFileM1,shpOutFileM2,shpOutFileM3,shpOutFileM4,shpOutFileM6,shpOutFileM7,shpOutFileM8,shpOutFileM9,
+                         prjString,circradius=100.0, circN=36,skipcircles=False):
 
     prjfilename = shpPath + shpOutFile + ".prj"
     prjfilenameCTX =  shpPath +shpOutFileCTX + ".prj"
@@ -49,6 +57,9 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
     prjfilenameC = shpPath + shpOutFileC + ".prj"
     prjfilenameT = shpPath + shpOutFileT + ".prj"
     prjfilenameMCH = shpPath + shpOutFileMCH + '.prj'
+    prjfilenameLMCH = shpPath + shpOutFileLMCH + '.prj'
+    prjfilenameRMCH = shpPath + shpOutFileRMCH + '.prj'
+            
 
     prjfilenameM1 = shpPath + shpOutFileM1+".prj"
     prjfilenameM2 = shpPath + shpOutFileM2+".prj"
@@ -195,6 +206,30 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
         w_midch.field('HIRISE_FN','C','40')
         w_midch.field('HIRISE3D_FN','C','40')
         w_midch.field('HIRISEDTM_FN','C','40')
+        
+        w_midchL = shapefile.Writer(shapefile.POLYGON)
+        w_midchL.autoBalance=0
+        w_midchL.field('OBJ_ID','C','40')
+        w_midchL.field('MIDCH_X','C','40')
+        w_midchL.field('MIDCH_Y','C','40')
+        w_midchL.field('AREA_kmsq','C','40')
+        w_midchL.field('DTM_FIELD','C','40')
+        w_midchL.field('DTM_RES','C','40')
+        w_midchL.field('HIRISE_FN','C','40')
+        w_midchL.field('HIRISE3D_FN','C','40')
+        w_midchL.field('HIRISEDTM_FN','C','40')
+        
+        w_midchR = shapefile.Writer(shapefile.POLYGON)
+        w_midchR.autoBalance=0
+        w_midchR.field('OBJ_ID','C','40')
+        w_midchR.field('MIDCH_X','C','40')
+        w_midchR.field('MIDCH_Y','C','40')
+        w_midchR.field('AREA_kmsq','C','40')
+        w_midchR.field('DTM_FIELD','C','40')
+        w_midchR.field('DTM_RES','C','40')
+        w_midchR.field('HIRISE_FN','C','40')
+        w_midchR.field('HIRISE3D_FN','C','40')
+        w_midchR.field('HIRISEDTM_FN','C','40')
 
         w_m6 = shapefile.Writer(shapefile.POLYGON)
         w_m6.autoBalance=0
@@ -379,6 +414,8 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
                 mid3_circ_points = drawCircle.generateCirclePointsZip(Mid3x,Mid3y,circradius,circN)
                 mid4_circ_points = drawCircle.generateCirclePointsZip(Mid4x,Mid4y,circradius,circN)
                 midch_circ_points = drawCircle.generateCirclePointsZip(MidCHx,MidCHy,circradius,circN)
+                midchL_circ_points = drawCircle.generateCirclePointsZip(LCx,LCy,circradius,circN)
+                midchR_circ_points = drawCircle.generateCirclePointsZip(RCx,RCy,circradius,circN)
                 mid6_circ_points = drawCircle.generateCirclePointsZip(Mid6x,Mid6y,circradius,circN)
                 mid7_circ_points = drawCircle.generateCirclePointsZip(Mid7x,Mid7y,circradius,circN)
                 mid8_circ_points = drawCircle.generateCirclePointsZip(Mid8x,Mid8y,circradius,circN)
@@ -393,6 +430,9 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
                 w_m3.poly(parts=mid3_circ_points)
                 w_m4.poly(parts=mid4_circ_points)
                 w_midch.poly(parts=midch_circ_points)
+                w_midchL.poly(parts=midchL_circ_points)
+                w_midchR.poly(parts=midchR_circ_points)
+                                                
                 w_m6.poly(parts=mid6_circ_points)
                 w_m7.poly(parts=mid7_circ_points)
                 w_m8.poly(parts=mid8_circ_points)
@@ -408,6 +448,8 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
                 w_m3.record(catnum,Mid3x,Mid3y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
                 w_m4.record(catnum,Mid4x,Mid4y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
                 w_midch.record(catnum,MidCHx,MidCHy,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_midchL.record(catnum,LCx,LCy,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
+                w_midchR.record(catnum,RCx,RCy,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
                 w_m6.record(catnum,Mid6x,Mid6y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
                 w_m7.record(catnum,Mid7x,Mid7y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
                 w_m8.record(catnum,Mid8x,Mid8y,area,DTMfn,DTMres,HiRISEfn,HiRISE3Dfn,HiRISEDTMfn)
@@ -480,6 +522,16 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
         prj.write(prjString)
         prj.close()
         
+        w_midchL.save(shpPath+shpOutFileLMCH)
+        prj=open(prjfilenameMCH,"w")
+        prj.write(prjString)
+        prj.close()
+        
+        w_midchR.save(shpPath+shpOutFileRMCH)
+        prj=open(prjfilenameMCH,"w")
+        prj.write(prjString)
+        prj.close()
+        
         w_m6.save(shpPath+shpOutFileM6)
         prj=open(prjfilenameM6,"w")
         prj.write(prjString)
@@ -528,7 +580,11 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,shpO
 
     shp = shx = dbf = None
 profiles = []
-writefootprintstoSHP(csvInFile_All, shpOut,shpOut_CTX,shpOut_CTX9,shpOut_H,shpOut_C,shpOut_T,shpOut_MC,shpOut_mid1,shpOut_mid2,shpOut_mid3,shpOut_mid4,shpOut_mid6,shpOut_mid7,shpOut_mid8,shpOut_mid9,prj_WKT_Mars2000EqCyl_lat0_40)
+writefootprintstoSHP(csvInFile_All, shpOut,shpOut_CTX,shpOut_CTX9,
+                     shpOut_H,shpOut_C,shpOut_T,
+                     shpOut_MC, shpOut_LMC, shpOut_RMC,
+                     shpOut_mid1,shpOut_mid2,shpOut_mid3,shpOut_mid4,shpOut_mid6,shpOut_mid7,shpOut_mid8,shpOut_mid9,
+                     prj_WKT_Mars2000EqCyl_lat0_40)
 
 # write out profiles
 with open(profileOutFile,'w') as csvfile:
@@ -540,18 +596,18 @@ with open(profileOutFile,'w') as csvfile:
 
 
 
-shpOut_MC = 'SounessROImidchannel_all_Mars2000EqCyl_lat0_40'
+#shpOut_MC = 'SounessROImidchannel_all_Mars2000EqCyl_lat0_40'
 
 #mid 1 to 4 between head and midchannel centre
-shpOut_mid1 = 'SounessROImidline1_all_Mars2000EqCyl_lat0_40'
-shpOut_mid2 = 'SounessROImidline2_all_Mars2000EqCyl_lat0_40'
-shpOut_mid3 = 'SounessROImidline3_all_Mars2000EqCyl_lat0_40'
-shpOut_mid4 = 'SounessROImidline4_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid1 = 'SounessROImidline1_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid2 = 'SounessROImidline2_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid3 = 'SounessROImidline3_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid4 = 'SounessROImidline4_all_Mars2000EqCyl_lat0_40'
 #mid 6 to 9 between midchannel centre and terminus
-shpOut_mid6 = 'SounessROImidline6_all_Mars2000EqCyl_lat0_40'
-shpOut_mid7 = 'SounessROImidline7_all_Mars2000EqCyl_lat0_40'
-shpOut_mid8 = 'SounessROImidline8_all_Mars2000EqCyl_lat0_40'
-shpOut_mid9 = 'SounessROImidline9_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid6 = 'SounessROImidline6_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid7 = 'SounessROImidline7_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid8 = 'SounessROImidline8_all_Mars2000EqCyl_lat0_40'
+#shpOut_mid9 = 'SounessROImidline9_all_Mars2000EqCyl_lat0_40'
 
 csvInFile_All.close()
 
