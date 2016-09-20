@@ -377,6 +377,8 @@ def writeHTML(GLF):
     DTMstatsfile = "context_subsets/Souness{i:04d}DTM_context.txt".format(i=int(GLF['CatNum']))
     # nadir image dimensions
     NadirDims = "context_subsets/Souness{i:04d}_context.txt".format(i=int(GLF['CatNum']))
+    # LnKHead stats file
+    LnKHeadstatsfile = "context_subsets/Souness{i:04d}LnKhead.txt".format(i=int(GLF['CatNum']))
     
     # elevation and slope profiles
     profiles = glob.glob("ProfilePNGs/*Cat{i:04d}*.png".format(i=int(GLF['CatNum'])))
@@ -438,6 +440,28 @@ def readNadirDims(NDFileName):
                 height = s['Height']
     stats = {'Width': width, 'Height': height}
     return stats
+
+def readLnKStats(statsFileName):
+    fieldnames = ['Min', 'Max', 'Mean', 'StdDev', 'Sum']
+    with open(statsFileName, "r") as statsFile:
+        spamreader = csv.DictReader(statsFile, fieldnames=fieldnames)
+        for s in spamreader:
+            if s['Min'] == 'Min':
+                pass
+            else:
+                minDTM = float(s['Min']) + 12
+                maxDTM = float(s['Max']) + 12 
+                meanDTM = float(s['Mean']) + 12
+                stdDTM =  float(s['StdDev'])
+    minDTM = "{m:.03f}".format(m=minDTM)
+    maxDTM = "{m:.03f}".format(m=maxDTM)
+    meanDTM = "{m:.03f}".format(m=meanDTM)
+    stdDTM = "{m:.03f}".format(m=stdDTM)
+    stats = {'Min':minDTM, 'Max':maxDTM, 'Mean':meanDTM, 'StdDev':stdDTM}
+    print(stats)
+    return stats
+
+    
     
 def createJSONObj(GLF):
     """ create a JSON object for a GLF """
@@ -559,6 +583,15 @@ def createJSONObj(GLF):
         glfJSON['NDdims'] = readNadirDims(NadirDims)
     else:
         glfJSON['NDdims'] = {"Width":"","Height":""}
+        
+    # LnKHead stats
+    # LnKHead stats file
+    LnKHeadstatsfile = "context_subsets/Souness{i:04d}LnKhead.txt".format(i=int(GLF['CatNum']))
+    if os.path.exists(LnKHeadstatsfile):
+        glfJSON['LnKHeadstats'] = readLnKStats(LnKHeadstatsfile)
+    else:
+        glfJSON['LnKHeadstats'] = {"Max":"","Min":"","StdDev":"", "Mean":""}
+    glfJSON['LnKHeadfile'] = "context_subsets/Souness{i:04d}LnKhead.png".format(i=int(GLF['CatNum']))
         
     glfJSON['ctxshapefile'] = "context_subsets/Souness{i:04d}_contextSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['extshapefile'] = "context_subsets/Souness{i:04d}_extentSHP2.png".format(i=int(GLF['CatNum']))

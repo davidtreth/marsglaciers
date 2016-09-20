@@ -79,6 +79,17 @@ with open(Gfilein) as csvfile:
                       inDTM = DTMfile[0]
                       DTMband = inDTM.replace(".kea", "_DTM.tif")
                       outDTM = outND4path + "Souness{c:04d}DTM_context.tif".format(c=int(catnum))
+                      # LnK head vector polygons
+                      vecpolysfiles = glob.glob(inND4path+HRSCdir+'/LandSerf/rsgis_02sqkm/*isectCtx9_joined.shp')
+                      print(vecpolysfiles[0])
+                      inVecPolys = vecpolysfiles[0]
+                      rastVecPolysLnK = outND4path + "Souness{c:04d}LnKhead.tif".format(c=int(catnum))
+                      rastVecPolysLnK_a = outND4path + "Souness{c:04d}LnKhead1.tif".format(c=int(catnum))
+                      rastVecPolysLnK_s = outND4path + "Souness{c:04d}LnKhead2.tif".format(c=int(catnum))
+                      statsLnKHead = outND4path + "Souness{c:04d}LnKhead.txt".format(c=int(catnum))
+                      
+                      
+                      
                       
                       # stretched
                       outDTM_a = outND4path + "Souness{c:04d}DTM_context1.tif".format(c=int(catnum))
@@ -191,6 +202,10 @@ with open(Gfilein) as csvfile:
 
                       gdalrastcmd2 = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extent_all, vcrst = outEXTALLrast)
                       subprocess.call(gdalrastcmd2, shell=True)
+
+                      gdalrastcmd_vpoly = "gdal_rasterize -a LnKHead -of GTiff -init -20 -a_nodata -20 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} '{vc}' {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax=ymax, x=x, y=y, vc = inVecPolys, vcrst = rastVecPolysLnK)
+                      print(gdalrastcmd_vpoly)
+                      subprocess.call(gdalrastcmd_vpoly, shell=True)
                       
                       # stretch image to byte 8-bit by linear MinMax
                       imageutils.stretchImage(outND4,outND4_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
@@ -205,6 +220,15 @@ with open(Gfilein) as csvfile:
                       
                       imagecalc.bandMath(outDTM_a, expression, 'GTiff', datatype, bandDefns)
                       imagecalc.imageStats(outDTM_a, statsDTM, True)
+
+                      
+                      datatype=rsgislib.TYPE_32FLOAT
+                      minLnKH = 12.0
+                      expression = 'max(b1, {m}) - {m}'.format(m=minLnKH)
+                      bandDefns = []
+                      bandDefns.append(BandDefn('b1', rastVecPolysLnK, 1))
+                      imagecalc.bandMath(rastVecPolysLnK_a, expression, 'GTiff', datatype, bandDefns)
+                      imagecalc.imageStats(rastVecPolysLnK_a, statsLnKHead, True)
                       
                       imageutils.stretchImage(outDTM_a,outDTM_s,False,'',True,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       # do the same for shapefile rasters (though may be unnecessary)
@@ -216,6 +240,7 @@ with open(Gfilein) as csvfile:
                       imageutils.stretchImage(outLMidCrast,outLMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outRMidCrast,outRMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outEXTALLrast,outEXTALLrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      imageutils.stretchImage(rastVecPolysLnK_a,rastVecPolysLnK_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
 
                       # make png files
                       gdaltranscmd1 = "gdal_translate -of PNG  {c} {cP}".format(c=outND4_s,cP = outND4_s.replace(".tif",".png"))
@@ -233,11 +258,14 @@ with open(Gfilein) as csvfile:
                       convertT = "convert {i} +level-colors black,DeepSkyBlue {o}".format(i=outTermrast_s.replace(".tif",".png"), o=outTermrast_s.replace("2.tif",".png"))
                       convertL = "convert {i} +level-colors black,yellow {o}".format(i=outLMidCrast_s.replace(".tif",".png"), o=outLMidCrast_s.replace("2.tif",".png"))
                       convertR = "convert {i} +level-colors black,yellow {o}".format(i=outRMidCrast_s.replace(".tif",".png"), o=outRMidCrast_s.replace("2.tif",".png"))
+                      
+                      convertLnKHead = "convert {i} +level-colors black,red {o}".format(i=rastVecPolysLnK_s.replace(".tif",".png"), o=rastVecPolysLnK_s.replace("2.tif",".png"))
                                             
                       
                       gdaltranscmd3 = "gdal_translate -of PNG -outsize {scalex:.2}\% {scaley:.2}\% {c} {cP}".format(c=outDTM_s,cP = outDTM_s.replace(".tif",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
                       # extents of all subsetted to bounding box of each context
                       gdaltranscmd4 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTALLrast_s,cP = outEXTALLrast_s.replace(".tif",".png"))
+                      gdaltranscmd_vpoly = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=rastVecPolysLnK_s,cP = rastVecPolysLnK_s.replace(".tif",".png"))
                       
                       subprocess.call(gdaltranscmd1,shell=True)
                       subprocess.call(gdaltranscmd2H,shell=True)
@@ -250,11 +278,15 @@ with open(Gfilein) as csvfile:
                       subprocess.call(convertT,shell=True)
                       subprocess.call(convertL,shell=True)
                       subprocess.call(convertR,shell=True)
+                      
+                      
 
                       
                                                                                                               
                       subprocess.call(gdaltranscmd3,shell=True)
                       subprocess.call(gdaltranscmd4,shell=True)
+                      subprocess.call(gdaltranscmd_vpoly,shell=True)
+                      subprocess.call(convertLnKHead,shell=True)
                       print("Removing intermediate files.\n")
                       os.remove(outND4)
                       os.remove(outND4_s)
@@ -273,6 +305,9 @@ with open(Gfilein) as csvfile:
                       os.remove(outRMidCrast_s)
                       os.remove(outEXTALLrast)
                       os.remove(outEXTALLrast_s)
+                      os.remove(rastVecPolysLnK)
+                      os.remove(rastVecPolysLnK_a)
+                      os.remove(rastVecPolysLnK_s)
                       
 
                       
