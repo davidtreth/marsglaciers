@@ -571,6 +571,8 @@ def createJSONObj(GLF):
     glfJSON['Orientation'] = "{r:.2f} degrees".format(r=float(GLF['Orientation']))
     glfJSON['imagefile'] = "context_subsets/Souness{i:04d}_context2.png".format(i=int(GLF['CatNum']))
     glfJSON['DTMimagefile'] = "context_subsets/Souness{i:04d}DTM_context2.png".format(i=int(GLF['CatNum']))
+    
+    glfJSON['LyrStackimagefile'] = "context_subsets/Souness{i:04d}LyrStck_contextB132_str.png".format(i=int(GLF['CatNum']))
     # DTM stats
     DTMstatsfile = "context_subsets/Souness{i:04d}DTM_context.txt".format(i=int(GLF['CatNum']))
     if os.path.exists(DTMstatsfile):

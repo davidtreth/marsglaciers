@@ -88,6 +88,18 @@ with open(Gfilein) as csvfile:
                       rastVecPolysLnK_s = outND4path + "Souness{c:04d}LnKhead2.tif".format(c=int(catnum))
                       statsLnKHead = outND4path + "Souness{c:04d}LnKhead.txt".format(c=int(catnum))
                       
+                      # layerstack file
+                      # use same layerstack as DTM for now
+                      inLayerstackFile = glob.glob(inND4path+HRSCdir+'/LandSerf/'+HRSC_DTMfile[:5]+'*_rawAsp_add9999_6band.kea')
+                      inLyrSt = inLayerstackFile[0]
+                      outLyrSt = outND4path + "Souness{c:04d}LyrStck_context.kea".format(c=int(catnum))
+                      outLyrSt2 = outND4path + "Souness{c:04d}LyrStck_contextB132.kea".format(c=int(catnum))
+                      # stretched
+                      outLyrSt_s = outND4path + "Souness{c:04d}LyrStck_contextB132_str.kea".format(c=int(catnum))
+                      
+                      
+                      
+                      
                       
                       
                       
@@ -121,6 +133,8 @@ with open(Gfilein) as csvfile:
                       # extents_all
                       outEXTALLrast = outND4path + "Souness{c:04d}_extentallSHP.tif".format(c=int(catnum))
                       outEXTALLrast_s = outND4path + "Souness{c:04d}_extentallSHP2.tif".format(c=int(catnum))
+
+                      
                       
                       contextvect = '{p}context_{c}.shp'.format(p=contextpath, c=int(catnum)-1)
                       extentvect = '{p}extent_{c}.shp'.format(p=extentpath, c=int(catnum)-1)
@@ -142,7 +156,20 @@ with open(Gfilein) as csvfile:
                         gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=DTMband.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
                         print(gdwarpcmd)
                         subprocess.call(gdwarpcmd, shell=True)
-                        
+
+                      skipLyrSt = False
+                      try:
+                        imageutils.subset(inLyrSt, contextvect, outLyrSt, 'KEA', rsgislib.TYPE_32FLOAT)
+                        imageutils.selectImageBands(outLyrSt, outLyrSt2, 'KEA', rsgislib.TYPE_32FLOAT, [1, 3, 2])
+                        imageutils.popImageStats(outLyrSt, True, 0, True)
+                        imageutils.popImageStats(outLyrSt2, True, 0, True)
+                      except:                        
+                        input("subset not working")
+                        #gdwarpcmd = "gdalwarp -of KEA -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inLyrSt.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outLyrSt)
+                        #print(gdwarpcmd)
+                        #subprocess.call(gdwarpcmd, shell=True)
+                        skipLyrSt = True
+
                       # I had some problems with this so used gdal_rasterize
                       #vectorutils.rasterise2Image(contextvect,outND4, outCTXrast, 'GTiff', 'FID')
                       # retrieve the nadir image file pixel scale and extents
@@ -221,7 +248,10 @@ with open(Gfilein) as csvfile:
                       imagecalc.bandMath(outDTM_a, expression, 'GTiff', datatype, bandDefns)
                       imagecalc.imageStats(outDTM_a, statsDTM, True)
 
+
+
                       
+                      # LnK
                       datatype=rsgislib.TYPE_32FLOAT
                       minLnKH = 12.0
                       expression = 'max(b1, {m}) - {m}'.format(m=minLnKH)
@@ -231,6 +261,8 @@ with open(Gfilein) as csvfile:
                       imagecalc.imageStats(rastVecPolysLnK_a, statsLnKHead, True)
                       
                       imageutils.stretchImage(outDTM_a,outDTM_s,False,'',True,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      if not skipLyrSt:
+                        imageutils.stretchImage(outLyrSt2,outLyrSt_s,False,'',True,True,'KEA',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       # do the same for shapefile rasters (though may be unnecessary)
                       #imageutils.stretchImage(outCTXrast,outCTXrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       #imageutils.stretchImage(outEXTrast,outEXTrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
@@ -266,6 +298,7 @@ with open(Gfilein) as csvfile:
                       # extents of all subsetted to bounding box of each context
                       gdaltranscmd4 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTALLrast_s,cP = outEXTALLrast_s.replace(".tif",".png"))
                       gdaltranscmd_vpoly = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=rastVecPolysLnK_s,cP = rastVecPolysLnK_s.replace(".tif",".png"))
+                      gdaltranscmd_LyrSt = "gdal_translate -of PNG {c} -outsize {scalex:.2}\% {scaley:.2}\% {cP} -a_nodata 0".format(c=outLyrSt_s,cP = outLyrSt_s.replace(".kea",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
                       
                       subprocess.call(gdaltranscmd1,shell=True)
                       subprocess.call(gdaltranscmd2H,shell=True)
@@ -286,6 +319,8 @@ with open(Gfilein) as csvfile:
                       subprocess.call(gdaltranscmd3,shell=True)
                       subprocess.call(gdaltranscmd4,shell=True)
                       subprocess.call(gdaltranscmd_vpoly,shell=True)
+                      if not skipLyrSt:
+                        subprocess.call(gdaltranscmd_LyrSt,shell=True)
                       subprocess.call(convertLnKHead,shell=True)
                       print("Removing intermediate files.\n")
                       os.remove(outND4)
@@ -308,6 +343,11 @@ with open(Gfilein) as csvfile:
                       os.remove(rastVecPolysLnK)
                       os.remove(rastVecPolysLnK_a)
                       os.remove(rastVecPolysLnK_s)
+
+                      if not skipLyrSt:
+                        os.remove(outLyrSt2)                              
+                        os.remove(outLyrSt_s)
+                      
                       
 
                       
