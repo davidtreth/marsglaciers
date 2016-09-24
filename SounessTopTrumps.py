@@ -477,6 +477,7 @@ def createJSONObj(GLF):
     else:
         nextn = num
     glfJSON['CatNum'] = num
+    glfJSON['CTXimgID'] = GLF['CTXimg']
     glfJSON['previous'] = prev
     glfJSON['next'] = nextn
     glfJSON['Centlon'] = round(float(GLF['Centlon180']),3)
@@ -494,7 +495,7 @@ def createJSONObj(GLF):
         #dtmdir = 'h{n}xxx'.format(n=GLF['HRSC_DTM'][1])
         #extrafile = '{n}.png'.format(n=GLF['HRSC_DTM'][:10].lower())
         #linktoextra = pdsurl + dtmdir + '/' + extrafile
-        imageexurl = imageexurlbase + GLF['HRSC_DTM'][:15]
+        imageexurl = imageexurlbase + GLF['HRSC_DTM'][:14]
         glfJSON['HRSC_DTM'] = GLF['HRSC_DTM']
         #glfJSON['HSRC_DTM_URL'] = linktoextra
         glfJSON['HSRC_DTM_URL'] = imageexurl
@@ -571,8 +572,11 @@ def createJSONObj(GLF):
     glfJSON['Orientation'] = "{r:.2f} degrees".format(r=float(GLF['Orientation']))
     glfJSON['imagefile'] = "context_subsets/Souness{i:04d}_context2.png".format(i=int(GLF['CatNum']))
     glfJSON['DTMimagefile'] = "context_subsets/Souness{i:04d}DTM_context2.png".format(i=int(GLF['CatNum']))
-    
-    glfJSON['LyrStackimagefile'] = "context_subsets/Souness{i:04d}LyrStck_contextB132_str.png".format(i=int(GLF['CatNum']))
+    LyrFile = "context_subsets/Souness{i:04d}LyrStck_contextB132_str.png".format(i=int(GLF['CatNum']))
+    if os.path.exists(LyrFile):
+        glfJSON['LyrStackimagefile'] = LyrFile
+    else:
+        glfJSON['LyrStackimagefile'] = ""
     # DTM stats
     DTMstatsfile = "context_subsets/Souness{i:04d}DTM_context.txt".format(i=int(GLF['CatNum']))
     if os.path.exists(DTMstatsfile):

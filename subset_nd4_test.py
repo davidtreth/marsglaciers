@@ -18,6 +18,11 @@ sounessGLFFile="mmc1_HRSC+HiRISE_coverage_duplicates_possible_typos.csv"
 inND4path =  '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/SounessCatalog3_backup/'
 outND4path = 'context_subsets/'
 
+inMOCFile = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/MOLA_128/MOC_wideangle_mosaic_64/lat0_40/msss_atlas.kea'
+inMOLAFile = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/MOLA_128/MOLA_128_eqc_lat0_40.kea'
+inMOLALyrSt_N = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/MOLA_128/MOLA_128_NmidlataspectN.kea'
+inMOLALyrSt_S = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/MOLA_128/MOLA_128_SmidlataspectN.kea'
+
 # locations of Souness GLF individual shapefiles
 contextpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/SounessROIs_individual/Individual/Context/'
 extentpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/SounessROIs_individual/Individual/Extent/'
@@ -50,6 +55,9 @@ fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','
             'MinElev','MaxElev','MeanElev','StdElev','Elongation','Midchlon',
             'Midchlat','distMidCCent','chanwidth','ratiooffset']
 
+# list of Souness objects to use Mars Global Surveyor data instead
+# these are areas where the context bbox falls in a nodata area
+CatNumsForceMGS = [206, 228, 231, 262, 687, 688, 912, 1153]
 
 with open(Gfilein) as csvfile:
         spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
@@ -62,47 +70,51 @@ with open(Gfilein) as csvfile:
             else:
                 print("HRSC_DTM: {d}".format(d=row['HRSC_DTM']))
                 HRSC_DTMfile = row['HRSC_DTM'].lower()
-                if HRSC_DTMfile != 'none':
+                      
+                if True:
+                      if HRSC_DTMfile == 'none' or int(catnum) in CatNumsForceMGS:
+                        MGSmode = True
+                      else:
+                        MGSmode = False
                       HRSCdir = HRSC_DTMfile[1:5]
-                      nd4file = glob.glob(inND4path+HRSCdir+'/'+HRSC_DTMfile[:5]+'*nd4*.kea')
-                      print(nd4file[0])                      
-                      inND4 = nd4file[0]
+                      if MGSmode:
+                        inND4 = inMOCFile
+                      else:
+                        nd4file = glob.glob(inND4path+HRSCdir+'/'+HRSC_DTMfile[:5]+'*nd4*.kea')
+                        print(nd4file[0])
+                        inND4 = nd4file[0]
                       outND4 = outND4path + "Souness{c:04d}_context.tif".format(c=int(catnum))
                       # stretched
                       outND4_s = outND4path + "Souness{c:04d}_context2.tif".format(c=int(catnum))
 
                       # image dimensions
-                      statsND =  outND4path + "Souness{c:04d}_context.txt".format(c=int(catnum))
-
-                      DTMfile = glob.glob(inND4path+HRSCdir+'/LandSerf/'+HRSC_DTMfile[:5]+'*rawAsp.kea')
-                      print(DTMfile[0])
-                      inDTM = DTMfile[0]
-                      DTMband = inDTM.replace(".kea", "_DTM.tif")
+                      statsND = outND4path + "Souness{c:04d}_context.txt".format(c=int(catnum))
+                      if MGSmode:
+                        inDTM = inMOLAFile
+                      else:
+                        DTMfile = glob.glob(inND4path+HRSCdir+'/LandSerf/'+HRSC_DTMfile[:5]+'*rawAsp.kea')
+                        print(DTMfile[0])
+                        inDTM = DTMfile[0]
+                        DTMband = inDTM.replace(".kea", "_DTM.tif")
                       outDTM = outND4path + "Souness{c:04d}DTM_context.tif".format(c=int(catnum))
-                      # LnK head vector polygons
-                      vecpolysfiles = glob.glob(inND4path+HRSCdir+'/LandSerf/rsgis_02sqkm/*isectCtx9_joined.shp')
-                      print(vecpolysfiles[0])
-                      inVecPolys = vecpolysfiles[0]
-                      rastVecPolysLnK = outND4path + "Souness{c:04d}LnKhead.tif".format(c=int(catnum))
-                      rastVecPolysLnK_a = outND4path + "Souness{c:04d}LnKhead1.tif".format(c=int(catnum))
-                      rastVecPolysLnK_s = outND4path + "Souness{c:04d}LnKhead2.tif".format(c=int(catnum))
-                      statsLnKHead = outND4path + "Souness{c:04d}LnKhead.txt".format(c=int(catnum))
+                      if not(MGSmode):
+                        # LnK head vector polygons
+                        vecpolysfiles = glob.glob(inND4path+HRSCdir+'/LandSerf/rsgis_02sqkm/*isectCtx9_joined.shp')
+                        print(vecpolysfiles[0])
+                        inVecPolys = vecpolysfiles[0]
+                        rastVecPolysLnK = outND4path + "Souness{c:04d}LnKhead.tif".format(c=int(catnum))
+                        rastVecPolysLnK_a = outND4path + "Souness{c:04d}LnKhead1.tif".format(c=int(catnum))
+                        rastVecPolysLnK_s = outND4path + "Souness{c:04d}LnKhead2.tif".format(c=int(catnum))
+                        statsLnKHead = outND4path + "Souness{c:04d}LnKhead.txt".format(c=int(catnum))
                       
-                      # layerstack file
-                      # use same layerstack as DTM for now
-                      inLayerstackFile = glob.glob(inND4path+HRSCdir+'/LandSerf/'+HRSC_DTMfile[:5]+'*_rawAsp_add9999_6band.kea')
-                      inLyrSt = inLayerstackFile[0]
-                      outLyrSt = outND4path + "Souness{c:04d}LyrStck_context.kea".format(c=int(catnum))
-                      outLyrSt2 = outND4path + "Souness{c:04d}LyrStck_contextB132.kea".format(c=int(catnum))
-                      # stretched
-                      outLyrSt_s = outND4path + "Souness{c:04d}LyrStck_contextB132_str.kea".format(c=int(catnum))
-                      
-                      
-                      
-                      
-                      
-                      
-                      
+                        # layerstack file
+                        # use same layerstack as DTM for now
+                        inLayerstackFile = glob.glob(inND4path+HRSCdir+'/LandSerf/'+HRSC_DTMfile[:5]+'*_rawAsp_add9999_6band.kea')
+                        inLyrSt = inLayerstackFile[0]
+                        outLyrSt = outND4path + "Souness{c:04d}LyrStck_context.kea".format(c=int(catnum))
+                        outLyrSt2 = outND4path + "Souness{c:04d}LyrStck_contextB132.kea".format(c=int(catnum))
+                        # stretched
+                        outLyrSt_s = outND4path + "Souness{c:04d}LyrStck_contextB132_str.kea".format(c=int(catnum))                                                                                                                                                     
                       # stretched
                       outDTM_a = outND4path + "Souness{c:04d}DTM_context1.tif".format(c=int(catnum))
                       outDTM_s = outND4path + "Souness{c:04d}DTM_context2.tif".format(c=int(catnum))
@@ -147,27 +159,39 @@ with open(Gfilein) as csvfile:
                         gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inND4.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outND4)
                         print(gdwarpcmd)
                         subprocess.call(gdwarpcmd, shell=True)
-                      try:
-                        # if possible, work in rsgislib but fall back on gdalwarp if needed
-                        if not(os.path.isfile(DTMband)):
-                           imageutils.selectImageBands(inDTM, DTMband, 'GTiff', rsgislib.TYPE_32FLOAT, [2])
-                        imageutils.subset(DTMband,contextvect,outDTM,'GTiff',rsgislib.TYPE_32FLOAT)
-                      except:
-                        gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=DTMband.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
-                        print(gdwarpcmd)
-                        subprocess.call(gdwarpcmd, shell=True)
+                      if not(MGSmode):
+                        try:
+                           # if possible, work in rsgislib but fall back on gdalwarp if needed
+                           if not(os.path.isfile(DTMband)):
+                              imageutils.selectImageBands(inDTM, DTMband, 'GTiff', rsgislib.TYPE_32FLOAT, [2])
+                           imageutils.subset(DTMband,contextvect,outDTM,'GTiff',rsgislib.TYPE_32FLOAT)
+                        except:
+                           gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=DTMband.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
+                           print(gdwarpcmd)
+                           subprocess.call(gdwarpcmd, shell=True)
+                      else:
+                         try:
+                            # if possible, work in rsgislib but fall back on gdalwarp if needed
+                            imageutils.subset(inMOLAFile,contextvect,outDTM,'GTiff',rsgislib.TYPE_32FLOAT)
+                         except:
+                            gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inMOLAFile.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
+                            print(gdwarpcmd)
+                            subprocess.call(gdwarpcmd, shell=True)
 
-                      skipLyrSt = False
-                      try:
-                        imageutils.subset(inLyrSt, contextvect, outLyrSt, 'KEA', rsgislib.TYPE_32FLOAT)
-                        imageutils.selectImageBands(outLyrSt, outLyrSt2, 'KEA', rsgislib.TYPE_32FLOAT, [1, 3, 2])
-                        imageutils.popImageStats(outLyrSt, True, 0, True)
-                        imageutils.popImageStats(outLyrSt2, True, 0, True)
-                      except:                        
-                        input("subset not working")
-                        #gdwarpcmd = "gdalwarp -of KEA -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inLyrSt.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outLyrSt)
-                        #print(gdwarpcmd)
-                        #subprocess.call(gdwarpcmd, shell=True)
+                      if not(MGSmode):
+                        skipLyrSt = False
+                        try:
+                           imageutils.subset(inLyrSt, contextvect, outLyrSt, 'KEA', rsgislib.TYPE_32FLOAT)
+                           imageutils.selectImageBands(outLyrSt, outLyrSt2, 'KEA', rsgislib.TYPE_32FLOAT, [1, 3, 2])
+                           imageutils.popImageStats(outLyrSt, True, 0, True)
+                           imageutils.popImageStats(outLyrSt2, True, 0, True)
+                        except:                        
+                           input("subset not working")
+                           #gdwarpcmd = "gdalwarp -of KEA -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inLyrSt.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outLyrSt)
+                           #print(gdwarpcmd)
+                           #subprocess.call(gdwarpcmd, shell=True)
+                           skipLyrSt = True
+                      else:
                         skipLyrSt = True
 
                       # I had some problems with this so used gdal_rasterize
@@ -204,16 +228,19 @@ with open(Gfilein) as csvfile:
                       
                       print(x,y)
                       print(imgwidth,imgheight)
-                      
-                      DTMres = float(row['DTMres'])
-                      scalefactor = DTMres / float(x)
-                      print("DTM resolution is {d}, scalefactor = {s}".format(d=DTMres, s=scalefactor))
+                      if not(MGSmode):
+                        DTMres = float(row['DTMres'])
+                        scalefactor = DTMres / float(x)
+                        print("DTM resolution is {d}, scalefactor = {s}".format(d=DTMres, s=scalefactor))
+                      else:
+                        scalefactor = 1.8331153488468312    
                       
                       # rasterize the shapefile
                       #gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -tr {x} {y} {vc} {vcrst}".format(x=x, y=y, vc = contextvect, vcrst = outCTXrast)
-                      #gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extentvect, vcrst = outEXTrast)
-                      gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = headvect, vcrst = outHeadrast)
+                      gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extentvect, vcrst = outEXTrast)
                       subprocess.call(gdalrastcmd, shell=True)
+                      gdalrastcmdH = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = headvect, vcrst = outHeadrast)
+                      subprocess.call(gdalrastcmdH, shell=True)
                       #centre
                       gdalrastcmdC = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where 'OBJ_ID=\"{cnum}\"' -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = centres_all, vcrst = outCentrast)
                       subprocess.call(gdalrastcmdC, shell=True)
@@ -250,35 +277,36 @@ with open(Gfilein) as csvfile:
 
 
 
-                      
-                      # LnK
-                      datatype=rsgislib.TYPE_32FLOAT
-                      minLnKH = 12.0
-                      expression = 'max(b1, {m}) - {m}'.format(m=minLnKH)
-                      bandDefns = []
-                      bandDefns.append(BandDefn('b1', rastVecPolysLnK, 1))
-                      imagecalc.bandMath(rastVecPolysLnK_a, expression, 'GTiff', datatype, bandDefns)
-                      imagecalc.imageStats(rastVecPolysLnK_a, statsLnKHead, True)
+                      if not(MGSmode):
+                        # LnK
+                        datatype=rsgislib.TYPE_32FLOAT
+                        minLnKH = 12.0
+                        expression = 'max(b1, {m}) - {m}'.format(m=minLnKH)
+                        bandDefns = []
+                        bandDefns.append(BandDefn('b1', rastVecPolysLnK, 1))
+                        imagecalc.bandMath(rastVecPolysLnK_a, expression, 'GTiff', datatype, bandDefns)
+                        imagecalc.imageStats(rastVecPolysLnK_a, statsLnKHead, True)
                       
                       imageutils.stretchImage(outDTM_a,outDTM_s,False,'',True,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       if not skipLyrSt:
                         imageutils.stretchImage(outLyrSt2,outLyrSt_s,False,'',True,True,'KEA',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       # do the same for shapefile rasters (though may be unnecessary)
                       #imageutils.stretchImage(outCTXrast,outCTXrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
-                      #imageutils.stretchImage(outEXTrast,outEXTrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      imageutils.stretchImage(outEXTrast,outEXTrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outHeadrast,outHeadrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outCentrast,outCentrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outTermrast,outTermrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outLMidCrast,outLMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outRMidCrast,outRMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outEXTALLrast,outEXTALLrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
-                      imageutils.stretchImage(rastVecPolysLnK_a,rastVecPolysLnK_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      if not(MGSmode):
+                        imageutils.stretchImage(rastVecPolysLnK_a,rastVecPolysLnK_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
 
                       # make png files
                       gdaltranscmd1 = "gdal_translate -of PNG  {c} {cP}".format(c=outND4_s,cP = outND4_s.replace(".tif",".png"))
                       # the nodata value makes the area outside the shapefile transparent
                       #gdaltranscmd2 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outCTXrast_s,cP = outCTXrast_s.replace(".tif",".png"))
-                      #gdaltranscmd2 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTrast_s,cP = outEXTrast_s.replace(".tif",".png"))
+                      gdaltranscmd2 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTrast_s,cP = outEXTrast_s.replace(".tif",".png"))
                       gdaltranscmd2H = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHeadrast_s,cP = outHeadrast_s.replace(".tif",".png"))
                       gdaltranscmd2C = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outCentrast_s,cP = outCentrast_s.replace(".tif",".png"))
                       gdaltranscmd2T = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outTermrast_s,cP = outTermrast_s.replace(".tif",".png"))
@@ -301,6 +329,7 @@ with open(Gfilein) as csvfile:
                       gdaltranscmd_LyrSt = "gdal_translate -of PNG {c} -outsize {scalex:.2}\% {scaley:.2}\% {cP} -a_nodata 0".format(c=outLyrSt_s,cP = outLyrSt_s.replace(".kea",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
                       
                       subprocess.call(gdaltranscmd1,shell=True)
+                      subprocess.call(gdaltranscmd2,shell=True)
                       subprocess.call(gdaltranscmd2H,shell=True)
                       subprocess.call(gdaltranscmd2C,shell=True)
                       subprocess.call(gdaltranscmd2T,shell=True)
@@ -321,13 +350,17 @@ with open(Gfilein) as csvfile:
                       subprocess.call(gdaltranscmd_vpoly,shell=True)
                       if not skipLyrSt:
                         subprocess.call(gdaltranscmd_LyrSt,shell=True)
-                      subprocess.call(convertLnKHead,shell=True)
+                      if not(MGSmode):
+                        subprocess.call(gdaltranscmd_vpoly,shell=True)
+                        subprocess.call(convertLnKHead,shell=True)
                       print("Removing intermediate files.\n")
                       os.remove(outND4)
                       os.remove(outND4_s)
                       os.remove(outDTM)
                       os.remove(outDTM_a)
                       os.remove(outDTM_s)
+                      os.remove(outEXTrast)
+                      os.remove(outEXTrast_s)
                       os.remove(outHeadrast)
                       os.remove(outHeadrast_s)
                       os.remove(outCentrast)
@@ -340,9 +373,10 @@ with open(Gfilein) as csvfile:
                       os.remove(outRMidCrast_s)
                       os.remove(outEXTALLrast)
                       os.remove(outEXTALLrast_s)
-                      os.remove(rastVecPolysLnK)
-                      os.remove(rastVecPolysLnK_a)
-                      os.remove(rastVecPolysLnK_s)
+                      if not(MGSmode):
+                        os.remove(rastVecPolysLnK)
+                        os.remove(rastVecPolysLnK_a)
+                        os.remove(rastVecPolysLnK_s)
 
                       if not skipLyrSt:
                         os.remove(outLyrSt2)                              
