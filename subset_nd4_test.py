@@ -13,7 +13,7 @@ import os.path
 import glob
 
 # file paths hard-coded
-sounessGLFFilePath = "/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/"
+sounessGLFFilePath = "/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/"
 sounessGLFFile="mmc1_HRSC+HiRISE_coverage_duplicates_possible_typos.csv"
 inND4path =  '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/SounessCatalog3_backup/'
 outND4path = 'context_subsets/'
@@ -57,7 +57,7 @@ fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','
 
 # list of Souness objects to use Mars Global Surveyor data instead
 # these are areas where the context bbox falls in a nodata area
-CatNumsForceMGS = [206, 228, 231, 262, 687, 688, 912, 1153]
+CatNumsForceMGS = []#[206, 228, 231, 262, 687, 688, 912, 1153]
 
 with open(Gfilein) as csvfile:
         spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
