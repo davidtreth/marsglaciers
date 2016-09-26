@@ -28,6 +28,11 @@ HiRISE_kw = 'HiRISE_kw.csv'
 HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
 HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
 HiRISE_DTM_CTX9 = 'SounessROIs/hiriseDTMs_ctx9.csv'
+HiRISE_EXT = 'SounessROIs/hirise_ext.csv'
+HiRISE_anaglyph_EXT = 'SounessROIs/hirise_anaglyph_ext.csv'
+
+HRSC_ND3 = 'SounessROIs/HRSC_ND3_ext.csv'
+HRSC_SR3 = 'SounessROIs/HRSC_SR3_ext.csv'
 
 # the headers in sounessGLFFile
 fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','HiRISE',
@@ -41,6 +46,8 @@ fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','
 HiRISEkw_headers = ['N', 'imageID', 'URL', 'anaglyphURL', 'Deskrifans', 'Dorhys', 'Dorhys180', 'Dorles']
 
 HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img']
+HRSC_ND3_EXT_headers = ['CatNum', 'HRSC_img']
+
 Sindex = {}
 
 # a few functions for making an HTML colour from a lat, long
@@ -172,6 +179,14 @@ def printHiRISE_kw(bounds=None):
                     output += "</div>\n"
     return output
 
+def makeURL(urltype, prodID):
+    if urltype == "b":
+        return "http://hrscview.fu-berlin.de/cgi-bin/ion-p?page=product2.ion&code=&image="+prodID[1:10].lower()
+    elif urltype == "a":
+        return "http://viewer.mars.asu.edu/planetview/inst/hrsc/"+prodID[:14].upper()
+    else:
+        return "http://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id="+prodID.upper()
+
 def writeHTMLbuttons(bounds=None, outHTML=None):
     """ write out the buttons for the Souness Top Trumps index 
     by default written in rows of 10 buttons """    
@@ -282,6 +297,7 @@ def writeHTML(GLF):
         extrafile = '{n}.png'.format(n=row['HRSC_DTM'][:10].lower())
         linktoextra = pdsurl + dtmdir + '/' + extrafile
         hrsc = "<td>Mars Express DTM coverage:</td><td> <a href='{hr}'>{h}</a>.\nDTM resolution {r}m</td>".format(hr=linktoextra, h=row['HRSC_DTM'],r=row['DTMres'])
+
     # HiRISE images
     hiriseimgs = GLF['HiRISE_img'].split(',')
     hiriseimg2 = HiRISE_index.get(GLF['CatNum'], [])
@@ -500,6 +516,34 @@ def createJSONObj(GLF):
         #glfJSON['HSRC_DTM_URL'] = linktoextra
         glfJSON['HSRC_DTM_URL'] = imageexurl
         glfJSON['HRSC_DTM_res'] = GLF['DTMres']
+        
+    # HRSC ND3 images
+    HRSC_ND3imgs = HRSC_ND3_index.get(GLF['CatNum'], [])
+    HRSC_ND3_URLs_ODE = []
+    HRSC_ND3_URLs_ASU = []
+    HRSC_ND3_URLs_BER = []
+    for himg in HRSC_ND3imgs:
+        HRSC_URL_o = makeURL("o", himg)
+        HRSC_URL_a = makeURL("a", himg)
+        HRSC_URL_b = makeURL("b", himg)
+        HRSC_ND3_URLs_ODE.append(HRSC_URL_o)
+        HRSC_ND3_URLs_ASU.append(HRSC_URL_a)
+        HRSC_ND3_URLs_BER.append(HRSC_URL_b)
+    HRSC_tuples = zip(HRSC_ND3imgs, HRSC_ND3_URLs_ODE, HRSC_ND3_URLs_ASU, HRSC_ND3_URLs_BER)
+    glfJSON['HRSC_ND3'] = HRSC_tuples
+                        
+    # HRSC SR3 images
+    HRSC_SR3imgs = HRSC_SR3_index.get(GLF['CatNum'], [])
+    HRSC_SR3_URLs_ODE = []
+    HRSC_SR3_URLs_ASU = []
+    for himg in HRSC_SR3imgs:
+        HRSC_URL_o = makeURL("o", himg)
+        HRSC_URL_a = makeURL("a", himg)
+        HRSC_SR3_URLs_ODE.append(HRSC_URL_o)
+        HRSC_SR3_URLs_ASU.append(HRSC_URL_a)
+    HRSC_tuples = zip(HRSC_SR3imgs, HRSC_SR3_URLs_ODE, HRSC_SR3_URLs_ASU)
+    glfJSON['HRSC_SR3'] = HRSC_tuples    
+    
     # HiRISE
     hiriseimgs = GLF['HiRISE_img'].split(',')
     hiriseimg2 = HiRISE_index.get(GLF['CatNum'], [])
@@ -517,6 +561,13 @@ def createJSONObj(GLF):
     hiriseimgs = [h[:15] for h in hiriseimgs]
     hirise_tuples = zip(hiriseimgs, hiriseurls)
     glfJSON['HiRISE'] = hirise_tuples
+
+    hiriseimgs_ext = HiRISE_ext_index.get(GLF['CatNum'], [])
+    hiriseimgs_ext = [h[:15] for h in hiriseimgs_ext if "COLOR" not in h]
+    hiriseurls2 = ["http://hirise.lpl.arizona.edu/"+h for h in hiriseimgs_ext]
+    hirise_tuples2 = zip(hiriseimgs_ext, hiriseurls2)
+    glfJSON['HiRISE_ext'] = hirise_tuples2
+    
     # HiRISE anaglyphs
     anaglyphimgs = GLF['HiRISE_anaglyph'].split(',')
     hiriseanag2 = HiRISE_anaglyph_index.get(GLF['CatNum'], [])
@@ -536,6 +587,12 @@ def createJSONObj(GLF):
         anaglyphurls.append(anaglyphurl)
     anaglyph_tuples = zip(anaglyphimgs, anaglyphurls)
     glfJSON['anaglyph'] = anaglyph_tuples
+
+    hiriseanags_ext = HiRISE_ext_anaglyph_index.get(GLF['CatNum'], [])
+    anaglyphurls2 = ["http://hirise.lpl.arizona.edu/anaglyph/singula.php?ID="+h[:15] for h in hiriseanags_ext]
+    anaglyph_tuples2 = zip(hiriseanags_ext, anaglyphurls2)
+    glfJSON['anaglyph_ext'] = anaglyph_tuples2
+    
     # HiRISE DTMs
     hiriseDTMs = GLF['HiRISE_DTM'].split(',')
     hiriseDTM2 = HiRISE_DTM_index.get(GLF['CatNum'], [])
@@ -601,12 +658,23 @@ def createJSONObj(GLF):
         
     glfJSON['ctxshapefile'] = "context_subsets/Souness{i:04d}_contextSHP2.png".format(i=int(GLF['CatNum']))
     glfJSON['extshapefile'] = "context_subsets/Souness{i:04d}_extentSHP2.png".format(i=int(GLF['CatNum']))
-    glfJSON['headshapefile'] = "context_subsets/Souness{i:04d}_headSHP.png".format(i=int(GLF['CatNum']))
-    glfJSON['termshapefile'] = "context_subsets/Souness{i:04d}_termSHP.png".format(i=int(GLF['CatNum']))
-    glfJSON['centshapefile'] = "context_subsets/Souness{i:04d}_centreSHP.png".format(i=int(GLF['CatNum']))
-    glfJSON['leftMCshapefile'] = "context_subsets/Souness{i:04d}_LMidCSHP.png".format(i=int(GLF['CatNum']))
-    glfJSON['rightMCshapefile'] = "context_subsets/Souness{i:04d}_RMidCSHP.png".format(i=int(GLF['CatNum']))
+    #glfJSON['headshapefile'] = "context_subsets/Souness{i:04d}_headSHP.png".format(i=int(GLF['CatNum']))
+    #glfJSON['termshapefile'] = "context_subsets/Souness{i:04d}_termSHP.png".format(i=int(GLF['CatNum']))
+    #glfJSON['centshapefile'] = "context_subsets/Souness{i:04d}_centreSHP.png".format(i=int(GLF['CatNum']))
+    #glfJSON['leftMCshapefile'] = "context_subsets/Souness{i:04d}_LMidCSHP.png".format(i=int(GLF['CatNum']))
+    #glfJSON['rightMCshapefile'] = "context_subsets/Souness{i:04d}_RMidCSHP.png".format(i=int(GLF['CatNum']))
+    glfJSON['pointsfile'] = "context_subsets/Souness{i:04d}_points.png".format(i=int(GLF['CatNum']))
+    
     glfJSON['extallshapefile'] = "context_subsets/Souness{i:04d}_extentallSHP2.png".format(i=int(GLF['CatNum']))
+    if len(hiriseimgs[0]) > 0:
+        glfJSON['HiRISEfootfile'] =  "context_subsets/Souness{i:04d}_HiRISESHP.png".format(i=int(GLF['CatNum']))
+    else:
+        glfJSON['HiRISEfootfile'] =  ""
+    if len(anaglyphimgs[0]) > 0:
+        glfJSON['HiRISEAfootfile'] =  "context_subsets/Souness{i:04d}_HiRISEASHP.png".format(i=int(GLF['CatNum']))
+    else:
+        glfJSON['HiRISEAfootfile'] =  ""
+    
     profiles = glob.glob("ProfilePNGs/*Cat{i:04d}*.png".format(i=int(GLF['CatNum'])))
     profiles.sort()
     glfJSON['profilefiles'] = profiles
@@ -620,9 +688,19 @@ def createJSONObj(GLF):
 
 # read in files listing HiRISE images, anaglyphs and DTMs
 
+#ctx9
 HiRISE_index = {}
 HiRISE_anaglyph_index = {}
 HiRISE_DTM_index = {}
+
+#ext
+HiRISE_ext_index = {}
+HiRISE_ext_anaglyph_index = {}
+
+
+HRSC_ND3_index = {}
+HRSC_SR3_index = {}
+
 with open(HiRISE_CTX9) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
     for row in spamreader:
@@ -635,13 +713,39 @@ with open(HiRISE_anaglyph_CTX9) as csvfile:
         catnum, img = row['CatNum'], row['HiRISE_img']
         himglist = img.split(",")
         HiRISE_anaglyph_index[catnum] = himglist
+
+with open(HiRISE_EXT) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_ext_index[catnum] = himglist
+with open(HiRISE_anaglyph_EXT) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_ext_anaglyph_index[catnum] = himglist
+        
 with open(HiRISE_DTM_CTX9) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
     for row in spamreader:
         catnum, img = row['CatNum'], row['HiRISE_img']
         himglist = img.split(",")
         HiRISE_DTM_index[catnum] = himglist
-    
+with open(HRSC_ND3) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HRSC_ND3_EXT_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HRSC_img']
+        himglist = img.split(",")
+        HRSC_ND3_index[catnum] = himglist
+with open(HRSC_SR3) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HRSC_ND3_EXT_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HRSC_img']
+        himglist = img.split(",")
+        HRSC_SR3_index[catnum] = himglist
+        
 with open(Gfilein) as csvfile:
      # write the buttons for the index page
      writeHTMLbuttons(None, "sounessallbuttons.html")

@@ -47,6 +47,14 @@ midchR_all = extent_allpath + midchR_allfile
 Gfilein = sounessGLFFilePath+sounessGLFFile
 print(Gfilein)
 
+# HiRiSE footprints file (in equicylindrical coordinate system with standard paralell 40°
+footprpath = 'hirisecoverage/eqcyl40/'
+HiRISE_foot = 'mars_mro_hirise_rdrv11_eqcyl40.shp'
+HiRISE_anag = 'mars_mro_hirise_anagly_eqcyl40.shp'
+HiRISE_dtm = 'mars_mro_hirise_dtm_eqcyl40.shp'
+Hfilein = footprpath + HiRISE_foot
+HAfilein =footprpath + HiRISE_anag
+
 fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','HiRISE',
             'HiRISE_img','HiRISE_anaglyph','HiRISE_DTM','Hemisph','Headlon','Region','Region2',
             'Headlon180','Headlat','Termlon','Termlon180','Termlat','MidchRlon',
@@ -58,6 +66,27 @@ fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','
 # list of Souness objects to use Mars Global Surveyor data instead
 # these are areas where the context bbox falls in a nodata area
 CatNumsForceMGS = []#[206, 228, 231, 262, 687, 688, 912, 1153]
+
+
+# read in files listing HiRISE images, anaglyphs and DTMs
+#ctx9
+HiRISE_index = {}
+HiRISE_anaglyph_index = {}
+HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
+HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
+HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img']
+with open(HiRISE_CTX9) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_index[catnum] = himglist
+with open(HiRISE_anaglyph_CTX9) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_anaglyph_index[catnum] = himglist
 
 with open(Gfilein) as csvfile:
         spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
@@ -145,8 +174,14 @@ with open(Gfilein) as csvfile:
                       # extents_all
                       outEXTALLrast = outND4path + "Souness{c:04d}_extentallSHP.tif".format(c=int(catnum))
                       outEXTALLrast_s = outND4path + "Souness{c:04d}_extentallSHP2.tif".format(c=int(catnum))
+                      # HiRISE footprints
+                      outHiRISErast = outND4path + "Souness{c:04d}_HiRISESHP.tif".format(c=int(catnum))
+                      outHiRISErast_s = outND4path + "Souness{c:04d}_HiRISESHP2.tif".format(c=int(catnum))
+                      outHiRISEArast = outND4path + "Souness{c:04d}_HiRISEASHP.tif".format(c=int(catnum))
+                      outHiRISEArast_s = outND4path + "Souness{c:04d}_HiRISEASHP2.tif".format(c=int(catnum))                     
 
-                      
+                      # points composite
+                      outPoints = outND4path + "Souness{c:04d}_points.png".format(c=int(catnum))
                       
                       contextvect = '{p}context_{c}.shp'.format(p=contextpath, c=int(catnum)-1)
                       extentvect = '{p}extent_{c}.shp'.format(p=extentpath, c=int(catnum)-1)
@@ -260,6 +295,12 @@ with open(Gfilein) as csvfile:
                       gdalrastcmd_vpoly = "gdal_rasterize -a LnKHead -of GTiff -init -20 -a_nodata -20 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} '{vc}' {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax=ymax, x=x, y=y, vc = inVecPolys, vcrst = rastVecPolysLnK)
                       print(gdalrastcmd_vpoly)
                       subprocess.call(gdalrastcmd_vpoly, shell=True)
+                      if catnum in HiRISE_index:
+                              gdalrastcmd_Hi = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = Hfilein, vcrst = outHiRISErast)
+                              subprocess.call(gdalrastcmd_Hi, shell=True)
+                      if catnum in HiRISE_anaglyph_index:
+                              gdalrastcmd_HiA = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = HAfilein, vcrst = outHiRISEArast)
+                              subprocess.call(gdalrastcmd_HiA, shell=True)
                       
                       # stretch image to byte 8-bit by linear MinMax
                       imageutils.stretchImage(outND4,outND4_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
@@ -299,6 +340,10 @@ with open(Gfilein) as csvfile:
                       imageutils.stretchImage(outLMidCrast,outLMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outRMidCrast,outRMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outEXTALLrast,outEXTALLrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      if catnum in HiRISE_index:
+                              imageutils.stretchImage(outHiRISErast,outHiRISErast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      if catnum in HiRISE_anaglyph_index:
+                              imageutils.stretchImage(outHiRISEArast,outHiRISEArast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       if not(MGSmode):
                         imageutils.stretchImage(rastVecPolysLnK_a,rastVecPolysLnK_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
 
@@ -320,11 +365,15 @@ with open(Gfilein) as csvfile:
                       convertR = "convert {i} +level-colors black,yellow {o}".format(i=outRMidCrast_s.replace(".tif",".png"), o=outRMidCrast_s.replace("2.tif",".png"))
                       
                       convertLnKHead = "convert {i} +level-colors black,red {o}".format(i=rastVecPolysLnK_s.replace(".tif",".png"), o=rastVecPolysLnK_s.replace("2.tif",".png"))
-                                            
+                      convertHi = "convert {i} +level-colors black,yellow {o}".format(i=outHiRISErast_s.replace(".tif",".png"), o=outHiRISErast_s.replace("2.tif",".png"))
+                      convertHiA = "convert {i} +level-colors black,red {o}".format(i=outHiRISEArast_s.replace(".tif",".png"), o=outHiRISEArast_s.replace("2.tif",".png"))
                       
                       gdaltranscmd3 = "gdal_translate -of PNG -outsize {scalex:.2}\% {scaley:.2}\% {c} {cP}".format(c=outDTM_s,cP = outDTM_s.replace(".tif",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
                       # extents of all subsetted to bounding box of each context
                       gdaltranscmd4 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTALLrast_s,cP = outEXTALLrast_s.replace(".tif",".png"))
+                      gdaltranscmdHi = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISErast_s,cP = outHiRISErast_s.replace(".tif",".png"))
+                      gdaltranscmdHiA = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISEArast_s,cP = outHiRISEArast_s.replace(".tif",".png"))
+                      
                       gdaltranscmd_vpoly = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=rastVecPolysLnK_s,cP = rastVecPolysLnK_s.replace(".tif",".png"))
                       gdaltranscmd_LyrSt = "gdal_translate -of PNG {c} -outsize {scalex:.2}\% {scaley:.2}\% {cP} -a_nodata 0".format(c=outLyrSt_s,cP = outLyrSt_s.replace(".kea",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
                       
@@ -341,13 +390,28 @@ with open(Gfilein) as csvfile:
                       subprocess.call(convertL,shell=True)
                       subprocess.call(convertR,shell=True)
                       
-                      
-
+                      # compositing
+                      composcmd1 = "composite {h} {c} {p}".format(h=outHeadrast_s.replace("2.tif",".png"), c=outCentrast_s.replace("2.tif",".png"), p=outPoints)
+                      composcmd2 = "composite {p} {t} {p}".format(p=outPoints, t=outTermrast_s.replace("2.tif",".png"))
+                      composcmd3 = "composite {p} {L} {p}".format(p=outPoints, L = outLMidCrast_s.replace("2.tif",".png"))
+                      composcmd4 = "composite {p} {R} {p}".format(p=outPoints, R = outRMidCrast_s.replace("2.tif",".png"))
+                      subprocess.call(composcmd1,shell=True)
+                      subprocess.call(composcmd2,shell=True)
+                      subprocess.call(composcmd3,shell=True)
+                      subprocess.call(composcmd4,shell=True)
+                                                                                        
                       
                                                                                                               
                       subprocess.call(gdaltranscmd3,shell=True)
                       subprocess.call(gdaltranscmd4,shell=True)
                       subprocess.call(gdaltranscmd_vpoly,shell=True)
+                      if catnum in HiRISE_index:
+                        subprocess.call(gdaltranscmdHi,shell=True)
+                        subprocess.call(convertHi,shell=True)
+                      if catnum in HiRISE_anaglyph_index:
+                        subprocess.call(gdaltranscmdHiA,shell=True)
+                        subprocess.call(convertHiA,shell=True)
+                      
                       if not skipLyrSt:
                         subprocess.call(gdaltranscmd_LyrSt,shell=True)
                       if not(MGSmode):
@@ -373,6 +437,12 @@ with open(Gfilein) as csvfile:
                       os.remove(outRMidCrast_s)
                       os.remove(outEXTALLrast)
                       os.remove(outEXTALLrast_s)
+                      if catnum in HiRISE_index:
+                        os.remove(outHiRISErast)
+                        os.remove(outHiRISErast_s)
+                      if catnum in HiRISE_anaglyph_index:
+                        os.remove(outHiRISEArast)
+                        os.remove(outHiRISEArast_s)
                       if not(MGSmode):
                         os.remove(rastVecPolysLnK)
                         os.remove(rastVecPolysLnK_a)
