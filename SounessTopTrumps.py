@@ -666,11 +666,13 @@ def createJSONObj(GLF):
     glfJSON['pointsfile'] = "context_subsets/Souness{i:04d}_points.png".format(i=int(GLF['CatNum']))
     
     glfJSON['extallshapefile'] = "context_subsets/Souness{i:04d}_extentallSHP2.png".format(i=int(GLF['CatNum']))
-    if len(hiriseimgs[0]) > 0:
+    if len("".join(hiriseimgs)) > 0:
+        #print(hiriseimgs)
         glfJSON['HiRISEfootfile'] =  "context_subsets/Souness{i:04d}_HiRISESHP.png".format(i=int(GLF['CatNum']))
     else:
         glfJSON['HiRISEfootfile'] =  ""
-    if len(anaglyphimgs[0]) > 0:
+    if len("".join(anaglyphimgs)) > 0:
+        #print(anaglyphimgs)
         glfJSON['HiRISEAfootfile'] =  "context_subsets/Souness{i:04d}_HiRISEASHP.png".format(i=int(GLF['CatNum']))
     else:
         glfJSON['HiRISEAfootfile'] =  ""
