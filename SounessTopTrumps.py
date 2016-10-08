@@ -106,7 +106,8 @@ def printButton(GLF,cl="Sbutton"):
     colour of button """
     lat = float(GLF['Centlat'])
     lng = float(GLF['Centlon180'])
-    buttonHTML = "<div class=\'{cl}\' style=\'background-color:{bcl};\'><a href=\'souness{n:04d}.html\'>Souness {n}</a></div>".format(cl=cl,bcl=html_colour(lat,lng),n=int(GLF['CatNum']))
+    #buttonHTML = "<div class=\'{cl}\' style=\'background-color:{bcl};\'><a href=\'souness{n:04d}.html\'>Souness {n}</a></div>".format(cl=cl,bcl=html_colour(lat,lng),n=int(GLF['CatNum']))
+    buttonHTML = "<div class=\'{cl}\' style=\'background-color:{bcl};\'><a href=\'sounesstoptrumps_js.html?S{n:04d}\'>Souness {n}</a></div>".format(cl=cl,bcl=html_colour(lat,lng),n=int(GLF['CatNum']))
     print(buttonHTML)
     return buttonHTML
 
@@ -119,6 +120,28 @@ def printButtonIndex(cl="Sbutton"):
     """" print the button that goes back to the index of Souness top trumps """
     buttonHTML = "<div class=\'{cl}\' style=\'background-color:{bcl};\'><a href=\'sounesstoptrumps.html\'>Back to Index</a></div>".format(cl=cl,bcl=html_colour(0,0))
     return buttonHTML
+
+def printAnaglyphLink(GLF, useCTX9=False):
+    linkHTML = "<div class='anaglink'><h4><a href='sounesstoptrumps_js.html?S{catnum:04d}'>Souness {catnum}</a></h4>".format(catnum=int(GLF['CatNum']))
+    if useCTX9:
+        # the manually specified ones
+        anaglyphimgs = GLF['HiRISE_anaglyph'].split(',')
+        # automatically CTX9 intersected ones
+        aglyphs = HiRISE_anaglyph_index.get(GLF['CatNum'], [])
+        for a in anaglyphimgs:
+            if a not in aglyphs:
+                aglyphs.append(a)
+    else:
+        # automatically EXT intersected ones
+        aglyphs = HiRISE_ext_anaglyph_index.get(GLF['CatNum'], [])
+    for a in aglyphs:
+        link = "<a href='http://www.uahirise.org/anaglyph/singula.php?ID={anagID}'>{anag}</a>".format(anagID=a[:15], anag=a)
+        linkHTML += link
+    linkHTML += "</div>"
+    return linkHTML
+    
+        
+    
 
 def checkbounds(bounds=None):
     """ check that a lat/long box is valid """
@@ -187,14 +210,16 @@ def makeURL(urltype, prodID):
     else:
         return "http://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id="+prodID.upper()
 
-def writeHTMLbuttons(bounds=None, outHTML=None):
+def writeHTMLbuttons(bounds=None, outHTML=None, writeonly3D=True, allowCTX9=False):
     """ write out the buttons for the Souness Top Trumps index 
     by default written in rows of 10 buttons """    
     print("<div class='GLFrow'>")
     if outHTML:
         outFile = open(outHTML,"w")
-        outFile.write('<h2 id="toptrumps">Links to individual pages on Souness GLFs in this region</h2>')
-        outFile.write("<div class='GLFrow'>")
+        if not(writeonly3D):
+            if bounds:
+                outFile.write('<h2 id="toptrumps">Links to individual pages on Souness GLFs in this region</h2>')
+            outFile.write("<div class='GLFrow'>")
     spamreader = csv.DictReader(csvfile, fieldnames=fieldnames,delimiter=';',quotechar='"')
     Nbuttons_printed = 0
     for row in spamreader:
@@ -211,18 +236,33 @@ def writeHTMLbuttons(bounds=None, outHTML=None):
         else:
             lng, lat = float(row['Centlon180']), float(row['Centlat'])
             if checkinbounds(lng, lat, bounds):
-                if row['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(catnum):
-                    # set a different CSS class for GLFs with anaglyphs
-                    b = printButton(row,"Sbutton3D")
+                if writeonly3D:
+                    b = ''
+                    if allowCTX9:
+                        if row['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(catnum):
+                            # set a different CSS class for GLFs with anaglyphs
+                            #b = printButton(row,"anaglink")
+                            b = printAnaglyphLink(row, True)
+                    else:
+                        if HiRISE_ext_anaglyph_index.has_key(catnum):
+                            #b = printButton(row,"anaglink")
+                            b = printAnaglyphLink(row, False)
+                    
                 else:
-                    b = printButton(row)
+                    if HiRISE_ext_anaglyph_index.has_key(catnum):
+                        c = "Sbutton3D"
+                    else:
+                        c = "Sbutton"
+                    b = printButton(row, c)
                 if outHTML:
                     outFile.write(b)
-                    outFile.write("\n")
-                Nbuttons_printed += 1
+                    if b != '':
+                        outFile.write("\n")
+                        Nbuttons_printed += 1
                 # once every 10, end the row and start another
-                if int(Nbuttons_printed) % 10 == 0:
-                    if outHTML:
+                if Nbuttons_printed > 0 and (int(Nbuttons_printed) % 10 == 0):
+                    Nbuttons_printed = 0
+                    if outHTML and not(writeonly3D):
                         outFile.write("</div><div class='GLFrow'>")
                     print("</div><div class='GLFrow'>")
     if outHTML:
@@ -445,7 +485,7 @@ def readDTMStats(statsFileName):
     return stats
 
 def readNadirDims(NDFileName):
-    fieldnames = ['Width', 'Height']
+    fieldnames = ['Width', 'Height', 'PixelScale']
     with open(NDFileName, "r") as NDFile:
         spamreader = csv.DictReader(NDFile, fieldnames=fieldnames)
         for s in spamreader:
@@ -454,7 +494,8 @@ def readNadirDims(NDFileName):
             else:
                 width = s['Width']
                 height = s['Height']
-    stats = {'Width': width, 'Height': height}
+                psize = round(float(s['PixelScale']),2)
+    stats = {'Width': width, 'Height': height, 'PixelScale':psize}
     return stats
 
 def readLnKStats(statsFileName):
@@ -645,7 +686,7 @@ def createJSONObj(GLF):
     if os.path.exists(NadirDims):
         glfJSON['NDdims'] = readNadirDims(NadirDims)
     else:
-        glfJSON['NDdims'] = {"Width":"","Height":""}
+        glfJSON['NDdims'] = {"Width":"","Height":"", "PixelScale":""}
         
     # LnKHead stats
     # LnKHead stats file
@@ -750,7 +791,13 @@ with open(HRSC_SR3) as csvfile:
         
 with open(Gfilein) as csvfile:
      # write the buttons for the index page
-     writeHTMLbuttons(None, "sounessallbuttons.html")
+     writeHTMLbuttons(None, "sounessallbuttons.html", writeonly3D=False, allowCTX9=False)
+     raw_input()
+with open(Gfilein) as csvfile:
+     writeHTMLbuttons(None, "souness_anaglyphbuttons.html", allowCTX9=False)
+     raw_input()
+with open(Gfilein) as csvfile:     
+     writeHTMLbuttons(None, "souness_anaglyph_ctx9buttons.html", allowCTX9=True)
      raw_input()
 
 # long+lat bounds for regions

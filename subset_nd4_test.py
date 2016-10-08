@@ -1,8 +1,11 @@
 # create subsets of the nadir image, and rasterized shapefiles
 # for the Souness GLFs that have HRSC DTM data
+# also create DTM image
+# and layerstacked HRSC image and DTM and slope
 # crop the nadir image to the bounding box of the context shapefile of each Souness GLF
 # and make rasterized images from context, extent, and head shapefiles
 # for overplotting on the nd image files for example
+# where there is no HRSC coverage, use MGS MOC and MOLA data
 import rsgislib
 from rsgislib import imageutils, vectorutils, imagecalc
 from rsgislib.imagecalc import BandDefn
@@ -258,8 +261,8 @@ with open(Gfilein) as csvfile:
                       imgwidth = int(float(xmax) - float(xmin))
                       imgheight = int(float(ymax) - float(ymin))
                       with open(statsND, "w") as outF:
-                        outF.write("Width,Height\n")
-                        outF.write("{w},{h}".format(w=imgwidth, h=imgheight))
+                        outF.write("Width,Height, PixelScale\n")
+                        outF.write("{w},{h},{psize}".format(w=imgwidth, h=imgheight,psize=x))
                       
                       print(x,y)
                       print(imgwidth,imgheight)

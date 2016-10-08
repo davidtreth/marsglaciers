@@ -1,20 +1,28 @@
+.underconstr {
+  margin:25px;
+}
+.underconstr-text{
+  display:inline-block;
+  max-width:400px;}
+.underconstr-gif{
+  display:inline-block;
+  max-width:400px;}
+
+.boldlink {
+  font-weight:bold;
+}
 .map {
 position:relative;
+margin:25px;
 width: 1600px; 
 height: 800px;
 background-color: #009900;
-background-image: url("OverviewMap1600px.jpg");
 border: solid 1px black;
 clear:both;
 }
 div.mapMOLA {
-position:relative;
-width: 1600px; 
-height: 800px;
-background-color: #009900;
 background-image: url("OverviewMap1600px2.jpg");
-border: solid 1px black;
-clear:both;
+
 }
 .region {
 position: absolute;
@@ -39,44 +47,184 @@ border: dashed 1px blue;
                border: solid 2px yellow;
                }
 
-.closetext{position:relative;}
+.closetext{position:relative;
+margin:25px;}
 p {max-width:1600px;}
 .GLFrow {
   display:block;
 }
+
 .Sbutton {
     display: inline-block;
     padding: 5px;
     margin: 6px;
-    width:6.7%;
+    width:6.5%;
     text-align:center;
     border: 2px solid black;
 }
 .Sbutton:hover {
   border: 4px solid gold;
+  font-weight:bold;
 }
+
 .Sbutton3D {
     display: inline-block;
     padding: 5px;
     margin: 3px;
-    width:6.7%;  
+    width:6.5%;  
     text-align:center;
     border: solid 5px LawnGreen;
     border-radius: 5px;
 }
 .Sbutton3D:hover {
   border: solid 5px OrangeRed;
+    font-weight:bold;
+}
+.GLFrow .Sbutton:hover {
+font-weight:normal;
+}
+.GLFrow .Sbutton3D:hover {
+font-weight:normal;
+}
+.Sbuttonblock {
+display: block;
+}
+.prevnext{
+  margin:25px;
+  width:800px;
+  display:block;
+}
+.overlaybuttons{
+  margin:25px;
+  max-width:1200px;
+  display:block;
+}
+.prev {
+  display:block;
+  float:left;
+}
+.next{
+  display:block;
+  float:right;}
+
+div:hover .Sbutton {
+background-color:#ff7f74;
+}
+  div:hover .headingSbutton {
+background-color:#ff9999;
+} 
+.randomSbutton {
+    background-color:#ff7f74;
+    width:250px;
+}
+.overlaySbutton {    
+  background-color:#ff7f74;
+    width:250px;
+}
+.prevnextbutton {
+    background-color:#ff7f74;
+    width:150px;
 }
 
+.selectorSbutton {
+    background-color:#ff7f74;
+    width:250px;
+    font-weight:bold;
+    margin:0;
+}
+.souness-selector {
+  margin:25px;
+  display:inline-block;
+}
+#validnum {
+  font-style:italic;
+  font-size:1.2em;    
+}
+.entrybarlabel{
+  font-size:1.2em;  
+}
+.headingSbutton {
+    background-color:#ff9999;
+    width:800px;
+    margin:25px;
+    font-weight:bold;
+    font-size:1.5em;
+}
+.headingSbutton:hover
+{
+  border:2px solid black;
+}
+.toggleSbutton{
+background-color:#87CEFA;
+border: solid 2px OrangeRed;
+}
+
+.toggleSbutton:hover{
+  background-color:#87CEFA;
+	border: solid 3px LawnGreen;
+}
+div:hover .toggleSbutton {
+  background-color:#87CEFA;
+border: solid 2px OrangeRed;
+}
+.hiddenSbutton {
+  display: none;
+}
+
+h4 {
+    display: block;
+    background-color:#ffc080;
+    padding: 5px;
+    margin: 6px;
+    margin-top:12px;
+    max-width:100%;
+    font-weight:normal;
+    text-align:center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+h4:hover {
+  border: solid 5px OrangeRed;
+}
+.anaglink{
+    display:inline-block;
+    margin:5px;
+    max-width:450px;
+}
+.anaglink a {
+    margin:3px;
+    display:block;    
+}
 .markercont {position: relative;
 	     opacity:0.7;
        }
 
 #diamond-narrow { width: 0; height: 0; border: 10px solid transparent; border-bottom: 16px solid Gold; position: relative; top: -10px; }
 #diamond-narrow:after { content: ''; position: absolute; left: -10px; top: 16px; width: 0; height: 0; border: 10px solid transparent; border-top: 16px solid Gold; }
-.toptrumptb {border: 2px black solid;
+
+.outercontain {
+  clear:both;
+  overflow:auto;
+}
+.innercontain {
+  clear:both;
+  overflow:auto;
+}
+.toptrumpcol{
+float:left;
+  position:relative;
+}
+.marsmapinline {
+   position:relative;
+   float:left;
+}
+.toptrumptb {
+       border: 2px black solid;
 	     border-collapse: collapse;
-	     margin:10px;
+       float:left;
+	     position:relative;
+	     margin:25px;
+	     width:800px;
 	    }
 .toptrumptb tr
 {   
@@ -86,9 +234,14 @@ p {max-width:1600px;}
     border: 1px solid black;
     border-collapse: collapse;
     padding:5px;
+    width:50%;
 }
-.hrscnd {
+.margin25 {
+   margin:25px;
+}
+#HRSCnd {
     position:relative;
+    top:0px;
 }
 .CTXshp{
     position: absolute;
@@ -105,8 +258,119 @@ p {max-width:1600px;}
 .Headshp{
     position:relative;
     z-index:1;
+    top:0px;
+}
+.EXTallshp{
+  position: relative;
+  z-index:3;
+}
+#LnKoverlay{
+  position: absolute;
+	top: 0;
+	left:0;
+	opacity:0.5;
+  z-index:4;
+}
+#shpContain {
+  position:relative;
+
+}
+#extentshp {position:absolute;
+top:0;
+left:0;
+opacity:0.2;
+z-index:5;
+}
+#extentshp:hover{
+  opacity:0.4;
+}
+#extentshp:focus{
+  opacity:0.4;
+}
+#EXTall {position:absolute;
+top:0;
+left:0;
+opacity:0.2;
+z-index:0;
+}
+#HiRISEfoot {position:absolute;
+top:0;
+left:0;
+opacity:0.4;
+z-index:1;
+}
+#HiRISEAfoot {position:absolute;
+top:0;
+left:0;
+opacity:0.4;
+z-index:2;
+}
+#Points {position:absolute;
+top:0;
+left:0;
+z-index:3;
+opacity:0.7;
+}
+#Head {position:absolute;
+top:0;
+left:0;
+z-index:3;
+}
+#Centre {position:absolute;
+top:0;
+left:0;
+z-index:3;
+opacity:0.7;
+}
+#LMid {position:absolute;
+top:0;
+left:0;
+z-index:3;
+opacity:0.5;
+}
+#RMid {position:absolute;
+top:0;
+left:0;
+z-index:3;
+opacity:0.5;
+}
+#Term {position:absolute;
+top:0;
+left:0;
+z-index:3;
+opacity:0.7;
+}
+#hrscfig{
+  position:relative;
+  display:block;
+}
+#hrscfigcap{
+  max-width:800px;
 }
 
+#MGSwarn{
+margin:25px;
+}
+.profImage{
+  margin:25px;
+  display:inline-block;
+}
+.HiRISEkw {
+  margin: 5px;
+  display: block;
+  clear: both;
+  
+}
+.HiRISEkw .latlong {
+display: inline-block;
+text-align: right;
+}
+.HiRISE3D {
+  margin: 5px;
+  margin-bottom: 10px;
+  display: block;
+  clear: both;
+}
 #tharsis {
 width: 470px;
 height: 250px;

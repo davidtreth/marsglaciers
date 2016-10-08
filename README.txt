@@ -15,13 +15,17 @@ approximating the drawing of a circle with an N sided polygon
 mmc1_HRSC+HiRISE_coverage_forsummarystats_cleaned.csv
 =====================================================
 The data file based on the Souness et al. 2012 table as supplementary
-data from the paper with details of HRSC and HiRISE coverage added by hand
+data from the paper with details of HRSC and HiRISE coverage added by hand.
+This has a small number of changes made in Sept 2016 after I discovered
+I had incorrectly assigned a few HRSC tiles
 
 
 mmc1_HRSC+HiRISE_coverage_duplicates_possible_typos.xls
 ======================================================
 A spreadsheet with some updated notes on the data including the
-small number of duplicates and apparent errors in the Souness catalogue
+small number of duplicates and apparent errors in the Souness catalogue.
+This has a small number of changes made in Sept 2016 after I discovered
+I had incorrectly assigned a few HRSC tiles
 
 SounessCatalog_converttoMarsEqCyl_lat0_40.py
 ===========================================
@@ -31,7 +35,9 @@ is hardcoded as input and the below .csv as output
 
 mmc1_Souness_alldata.csv
 ========================
-The Souness objects with locations in the equicylindrical system
+The Souness objects with locations in the equicylindrical system.
+This has a small number of changes made in Sept 2016 after I discovered
+I had incorrectly assigned a few HRSC tiles.
 
 SounessCatalog_ROIs_shp_allMEqCyl_lat0_40.py
 ============================================
@@ -120,11 +126,14 @@ subset_nd4_test.py
 Subset the HRSC nadir image files to the bounding box of the context of
 each Souness GLF. Create rasterized images from context, extent and head
 shapefiles.
+Now also generates DTM images, and layerstacks of HRSC image/DTM/slope.
+These are all locally scaled.
 
 SounessTopTrumps.py
 ============================================================================
 Create the index HTML of buttons for each Souness GLF, and the Top Trumps page
 for each Souness GLF.
+Now also generates a JSON file used by the Javascript version of the Souness Top trumps pages.
 
 marsmap.css
 ============================================================================
@@ -135,3 +144,9 @@ HiRISE_kw.ods
 a spreadsheet listing all the HiRISE images with a Cornish language title
 with their image ID, URL, anaglyphs (as of 14.05.16), description,
 longitude (dorhys) and latitude (dorles)
+
+DTMcmap.py
+============
+converts a series of greyscale images to pseudocolour.
+Used for the output DTM images.
+

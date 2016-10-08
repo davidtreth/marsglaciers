@@ -1,3 +1,7 @@
+# this program finds overlap between the Souness object extents
+# context or context9s and the HiRISE images, anaglyphs, and DTMs
+# and HRSC footprints
+
 from osgeo import ogr
 import os
 
