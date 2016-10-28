@@ -1,0 +1,1856 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="SounessROIs_Reull_Mars2000" id="SounessROIs_Reull_Mars2000">
+	<SimpleField name="OBJ_ID" type="string"></SimpleField>
+	<SimpleField name="CENTRE_X" type="string"></SimpleField>
+	<SimpleField name="CENTRE_Y" type="string"></SimpleField>
+</Schema>
+<Folder><name>SounessROIs_Reull_Mars2000</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">935</SimpleData>
+		<SimpleData name="CENTRE_X">118.0233</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.294</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>117.9794,-39.2883 118.0103,-39.3057 118.0412,-39.3364 118.0542,-39.3247 118.0558,-39.3137 118.0249,-39.283 117.994,-39.2656 117.9924,-39.2766 117.9794,-39.2883</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">936</SimpleData>
+		<SimpleData name="CENTRE_X">115.81935</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.684</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>115.82515,-37.6446 115.8037,-37.677 115.78225,-37.7057 115.7979,-37.7127 115.81545,-37.7189 115.8369,-37.6902 115.85835,-37.6578 115.8408,-37.6516 115.82515,-37.6446</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">937</SimpleData>
+		<SimpleData name="CENTRE_X">115.86035</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.688</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>115.85795,-37.6533 115.8477,-37.6853 115.83745,-37.7222 115.8501,-37.7249 115.86575,-37.7281 115.876,-37.6912 115.88625,-37.6592 115.8706,-37.656 115.85795,-37.6533</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">938</SimpleData>
+		<SimpleData name="CENTRE_X">115.8679</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.09</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>115.8313,-39.056 115.8491,-39.095 115.8669,-39.1303 115.8857,-39.1253 115.9045,-39.12 115.8867,-39.0847 115.8689,-39.0457 115.8501,-39.051 115.8313,-39.056</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">939</SimpleData>
+		<SimpleData name="CENTRE_X">115.68725</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.748</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>115.65215,-39.7588 115.6851,-39.76 115.71805,-39.7657 115.7202,-39.7537 115.72285,-39.7423 115.6899,-39.7366 115.65695,-39.7354 115.6543,-39.7468 115.65215,-39.7588</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">940</SimpleData>
+		<SimpleData name="CENTRE_X">115.9165</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.313</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>115.9092,-41.2759 115.896,-41.3069 115.8828,-41.3355 115.9033,-41.3416 115.917,-41.3467 115.9302,-41.3181 115.9434,-41.2871 115.9297,-41.282 115.9092,-41.2759</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">941</SimpleData>
+		<SimpleData name="CENTRE_X">113.9011</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.574</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.8909,-40.5101 113.8721,-40.5633 113.8533,-40.6072 113.8823,-40.6179 113.9172,-40.6281 113.936,-40.5842 113.9548,-40.531 113.9199,-40.5208 113.8909,-40.5101</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">942</SimpleData>
+		<SimpleData name="CENTRE_X">113.8844</SimpleData>
+		<SimpleData name="CENTRE_Y">-34.256</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.887,-34.2362 113.8818,-34.2544 113.8766,-34.2731 113.8792,-34.2747 113.8881,-34.277 113.8933,-34.2583 113.8985,-34.2401 113.8896,-34.2378 113.887,-34.2362</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">943</SimpleData>
+		<SimpleData name="CENTRE_X">113.9136</SimpleData>
+		<SimpleData name="CENTRE_Y">-34.259</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.9114,-34.233 113.9026,-34.2549 113.8938,-34.2808 113.9048,-34.2849 113.9233,-34.2889 113.9321,-34.263 113.9409,-34.2411 113.9224,-34.2371 113.9114,-34.233</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">944</SimpleData>
+		<SimpleData name="CENTRE_X">112.9138</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.189</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.8957,-38.1713 112.9111,-38.1926 112.9265,-38.2202 112.9292,-38.2166 112.9368,-38.2139 112.9214,-38.1863 112.906,-38.165 112.8984,-38.1677 112.8957,-38.1713</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">945</SimpleData>
+		<SimpleData name="CENTRE_X">112.9375</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.188</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.9248,-38.1738 112.9321,-38.1897 112.9394,-38.2095 112.9448,-38.2078 112.9511,-38.2051 112.9438,-38.1853 112.9365,-38.1694 112.9302,-38.1721 112.9248,-38.1738</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">946</SimpleData>
+		<SimpleData name="CENTRE_X">113.00365</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.162</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.01095,-38.1295 112.9834,-38.1555 112.95585,-38.2042 112.9761,-38.2107 112.96955,-38.2169 112.9971,-38.1682 113.02465,-38.1422 113.0312,-38.136 113.01095,-38.1295</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">947</SimpleData>
+		<SimpleData name="CENTRE_X">113.1023</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.162</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.0979,-38.1227 113.0928,-38.1585 113.0877,-38.1833 113.0972,-38.1868 113.1038,-38.1901 113.1089,-38.1653 113.114,-38.1295 113.1074,-38.1262 113.0979,-38.1227</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">948</SimpleData>
+		<SimpleData name="CENTRE_X">112.95705</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.179</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.94875,-38.1585 112.9478,-38.179 112.94685,-38.1936 112.9561,-38.1936 112.96295,-38.1936 112.9639,-38.179 112.96485,-38.1585 112.958,-38.1585 112.94875,-38.1585</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">949</SimpleData>
+		<SimpleData name="CENTRE_X">113.21975</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.179</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.22905,-38.1609 113.2139,-38.1731 113.19875,-38.1955 113.2046,-38.2014 113.20795,-38.2077 113.2231,-38.1853 113.23825,-38.1731 113.2349,-38.1668 113.22905,-38.1609</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">950</SimpleData>
+		<SimpleData name="CENTRE_X">113.23295</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.195</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.24415,-38.1708 113.23,-38.1912 113.21585,-38.2157 113.2188,-38.2195 113.22605,-38.2225 113.2402,-38.198 113.25435,-38.1776 113.2471,-38.1746 113.24415,-38.1708</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">951</SimpleData>
+		<SimpleData name="CENTRE_X">113.26515</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.223</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.27835,-38.1911 113.2559,-38.2141 113.23345,-38.2306 113.2427,-38.2395 113.25245,-38.2487 113.2749,-38.2322 113.29735,-38.2092 113.2876,-38.2 113.27835,-38.1911</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">952</SimpleData>
+		<SimpleData name="CENTRE_X">113.19705</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.168</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.19995,-38.1274 113.1841,-38.1633 113.16825,-38.1919 113.1812,-38.1966 113.18775,-38.2012 113.2036,-38.1726 113.21945,-38.1367 113.2129,-38.1321 113.19995,-38.1274</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">953</SimpleData>
+		<SimpleData name="CENTRE_X">113.35155</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.28</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.35545,-36.2362 113.3403,-36.2752 113.32515,-36.3094 113.3364,-36.3142 113.36185,-36.3182 113.377,-36.284 113.39215,-36.245 113.3667,-36.241 113.35545,-36.2362</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">954</SimpleData>
+		<SimpleData name="CENTRE_X">113.4199</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.286</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.4116,-36.2473 113.4028,-36.283 113.394,-36.322 113.4111,-36.325 113.4292,-36.3283 113.438,-36.2893 113.4468,-36.2536 113.4287,-36.2503 113.4116,-36.2473</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">955</SimpleData>
+		<SimpleData name="CENTRE_X">114.41</SimpleData>
+		<SimpleData name="CENTRE_Y">-32.632</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>114.3434,-32.6273 114.3826,-32.6604 114.4218,-32.6998 114.4492,-32.6714 114.4813,-32.6422 114.4421,-32.6028 114.4029,-32.5697 114.3708,-32.5989 114.3434,-32.6273</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">956</SimpleData>
+		<SimpleData name="CENTRE_X">113.7069</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.708</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.6798,-38.7085 113.7041,-38.7185 113.7284,-38.7202 113.7312,-38.7097 113.733,-38.6983 113.7087,-38.6966 113.6844,-38.6866 113.6826,-38.698 113.6798,-38.7085</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">957</SimpleData>
+		<SimpleData name="CENTRE_X">113.70665</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.749</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.68365,-38.7623 113.7126,-38.7554 113.74155,-38.7471 113.7356,-38.7407 113.73575,-38.7334 113.7068,-38.7417 113.67785,-38.7486 113.6777,-38.7559 113.68365,-38.7623</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">958</SimpleData>
+		<SimpleData name="CENTRE_X">112.1819</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.436</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.1836,-35.4186 112.1746,-35.4339 112.1656,-35.4471 112.1729,-35.4492 112.1739,-35.451 112.1829,-35.4378 112.1919,-35.4225 112.1909,-35.4207 112.1836,-35.4186</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">959</SimpleData>
+		<SimpleData name="CENTRE_X">112.2114</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.444</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.2214,-35.4206 112.2075,-35.4417 112.1936,-35.4718 112.1975,-35.4741 112.2031,-35.4762 112.217,-35.4461 112.2309,-35.425 112.2253,-35.4229 112.2214,-35.4206</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">960</SimpleData>
+		<SimpleData name="CENTRE_X">112.25145</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.505</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.26875,-35.4672 112.2451,-35.4981 112.22145,-35.5153 112.2278,-35.5222 112.23315,-35.5284 112.2568,-35.5112 112.28045,-35.4803 112.2751,-35.4741 112.26875,-35.4672</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">961</SimpleData>
+		<SimpleData name="CENTRE_X">112.30795</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.552</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.30795,-35.5349 112.301,-35.5493 112.29405,-35.5625 112.301,-35.5652 112.30575,-35.5686 112.3127,-35.5554 112.31965,-35.541 112.3149,-35.5376 112.30795,-35.5349</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">962</SimpleData>
+		<SimpleData name="CENTRE_X">112.35335</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.58</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.37215,-35.5401 112.3503,-35.5752 112.32845,-35.5909 112.3315,-35.5957 112.34065,-35.6012 112.3625,-35.5855 112.38435,-35.5504 112.3752,-35.5449 112.37215,-35.5401</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">963</SimpleData>
+		<SimpleData name="CENTRE_X">112.37565</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.619</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.41685,-35.6 112.3784,-35.6138 112.33995,-35.6264 112.3372,-35.6316 112.34265,-35.6369 112.3811,-35.6243 112.41955,-35.6105 112.4141,-35.6052 112.41685,-35.6</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">964</SimpleData>
+		<SimpleData name="CENTRE_X">112.26125</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.468</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.26855,-35.4503 112.2573,-35.4661 112.24605,-35.4827 112.25,-35.4846 112.25415,-35.4873 112.2654,-35.4707 112.27665,-35.4549 112.2725,-35.4522 112.26855,-35.4503</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">965</SimpleData>
+		<SimpleData name="CENTRE_X">112.15665</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.434</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.15465,-35.4061 112.1477,-35.4304 112.14075,-35.4503 112.1497,-35.4539 112.16025,-35.4574 112.1672,-35.4375 112.17415,-35.4132 112.1636,-35.4097 112.15465,-35.4061</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">966</SimpleData>
+		<SimpleData name="CENTRE_X">112.11535</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.428</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.10015,-35.4011 112.1003,-35.4282 112.10045,-35.4482 112.1155,-35.448 112.11485,-35.447 112.1147,-35.427 112.11455,-35.3999 112.1152,-35.4009 112.10015,-35.4011</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">967</SimpleData>
+		<SimpleData name="CENTRE_X">112.04605</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.428</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.03525,-35.4022 112.0361,-35.4278 112.03695,-35.4554 112.0469,-35.4556 112.05575,-35.4549 112.0549,-35.4273 112.05405,-35.4017 112.0452,-35.4024 112.03525,-35.4022</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">968</SimpleData>
+		<SimpleData name="CENTRE_X">112.0123</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.432</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>111.9909,-35.4191 111.9998,-35.4363 112.0087,-35.4577 112.0212,-35.4534 112.0297,-35.4492 112.0208,-35.4278 112.0119,-35.4106 112.0034,-35.4148 111.9909,-35.4191</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">969</SimpleData>
+		<SimpleData name="CENTRE_X">111.985</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.448</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>111.9655,-35.4275 111.9766,-35.4514 111.9877,-35.4705 111.9961,-35.4671 112.005,-35.463 111.9939,-35.4439 111.9828,-35.42 111.9739,-35.4241 111.9655,-35.4275</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">970</SimpleData>
+		<SimpleData name="CENTRE_X">111.89475</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.461</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>111.86935,-35.4389 111.8857,-35.4651 111.90205,-35.498 111.9111,-35.4939 111.91745,-35.4895 111.9011,-35.4566 111.88475,-35.4304 111.8784,-35.4348 111.86935,-35.4389</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">971</SimpleData>
+		<SimpleData name="CENTRE_X">112.5082</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.297</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.485,-38.289 112.5044,-38.3018 112.5238,-38.3149 112.5276,-38.3101 112.5309,-38.3054 112.5115,-38.2923 112.4921,-38.2795 112.4888,-38.2842 112.485,-38.289</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">972</SimpleData>
+		<SimpleData name="CENTRE_X">112.4054</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.285</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.3744,-38.2824 112.3989,-38.2974 112.4234,-38.3142 112.4299,-38.3018 112.4403,-38.2898 112.4158,-38.273 112.3913,-38.258 112.3809,-38.27 112.3744,-38.2824</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">973</SimpleData>
+		<SimpleData name="CENTRE_X">112.26135</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.493</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.23965,-38.4963 112.2627,-38.4976 112.28575,-38.499 112.2844,-38.4944 112.28625,-38.4902 112.2632,-38.4888 112.24015,-38.4875 112.2383,-38.4917 112.23965,-38.4963</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">974</SimpleData>
+		<SimpleData name="CENTRE_X">112.27345</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.532</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.23845,-38.5345 112.2729,-38.5408 112.30735,-38.5511 112.3079,-38.5423 112.30935,-38.5325 112.2749,-38.5222 112.24045,-38.5159 112.239,-38.5257 112.23845,-38.5345</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">975</SimpleData>
+		<SimpleData name="CENTRE_X">112.4961</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.469</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.457,-42.4563 112.489,-42.4751 112.521,-42.4922 112.5281,-42.4861 112.5337,-42.4795 112.5017,-42.4624 112.4697,-42.4436 112.4641,-42.4502 112.457,-42.4563</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">976</SimpleData>
+		<SimpleData name="CENTRE_X">111.07715</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.84</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>111.05855,-36.8312 111.071,-36.8443 111.08345,-36.8566 111.0896,-36.8523 111.09255,-36.8487 111.0801,-36.8364 111.06765,-36.8233 111.0647,-36.8269 111.05855,-36.8312</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">977</SimpleData>
+		<SimpleData name="CENTRE_X">111.04835</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.86</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>111.02785,-36.852 111.0388,-36.866 111.04975,-36.8791 111.0593,-36.8731 111.06685,-36.8676 111.0559,-36.8545 111.04495,-36.8405 111.0374,-36.846 111.02785,-36.852</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">978</SimpleData>
+		<SimpleData name="CENTRE_X">110.94275</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.834</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>110.94275,-36.8135 110.9268,-36.8291 110.91085,-36.8467 110.9268,-36.8516 110.93155,-36.8572 110.9475,-36.8396 110.96345,-36.824 110.9587,-36.8184 110.94275,-36.8135</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">981</SimpleData>
+		<SimpleData name="CENTRE_X">110.44435</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.235</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>110.33985,-42.2548 110.4297,-42.2605 110.51955,-42.264 110.5342,-42.2385 110.51905,-42.2127 110.4292,-42.2092 110.33935,-42.2035 110.3545,-42.2293 110.33985,-42.2548</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">983</SimpleData>
+		<SimpleData name="CENTRE_X">109.98415</SimpleData>
+		<SimpleData name="CENTRE_Y">-34.781</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.94555,-34.7679 109.9785,-34.7913 110.01145,-34.8104 110.0171,-34.8001 110.02755,-34.7904 109.9946,-34.7713 109.96165,-34.7479 109.9512,-34.7576 109.94555,-34.7679</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">984</SimpleData>
+		<SimpleData name="CENTRE_X">109.2615</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.35</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.2771,-42.3132 109.2578,-42.3382 109.2385,-42.3493 109.2422,-42.3611 109.2512,-42.3727 109.2705,-42.3616 109.2898,-42.3366 109.2808,-42.325 109.2771,-42.3132</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">985</SimpleData>
+		<SimpleData name="CENTRE_X">109.364</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.435</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.3884,-42.4019 109.353,-42.4275 109.3176,-42.4483 109.3286,-42.4558 109.3274,-42.4625 109.3628,-42.4417 109.3982,-42.4161 109.3994,-42.4094 109.3884,-42.4019</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">986</SimpleData>
+		<SimpleData name="CENTRE_X">109.1963</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.875</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.1577,-41.8652 109.187,-41.8889 109.2163,-41.9028 109.2256,-41.8889 109.2363,-41.8755 109.207,-41.8616 109.1777,-41.8379 109.167,-41.8513 109.1577,-41.8652</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">987</SimpleData>
+		<SimpleData name="CENTRE_X">109.4381</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.613</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.4171,-35.6026 109.4277,-35.6196 109.4383,-35.6372 109.4487,-35.6306 109.4593,-35.6248 109.4487,-35.6072 109.4381,-35.5902 109.4275,-35.596 109.4171,-35.6026</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">988</SimpleData>
+		<SimpleData name="CENTRE_X">109.65525</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.591</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.64625,-35.5626 109.6494,-35.5921 109.65255,-35.6193 109.6584,-35.6182 109.66355,-35.618 109.6604,-35.5908 109.65725,-35.5613 109.6521,-35.5615 109.64625,-35.5626</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">989</SimpleData>
+		<SimpleData name="CENTRE_X">109.62195</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.598</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.60855,-35.5725 109.6145,-35.5994 109.62045,-35.6228 109.6279,-35.6214 109.63245,-35.6191 109.6265,-35.5957 109.62055,-35.5688 109.616,-35.5711 109.60855,-35.5725</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">990</SimpleData>
+		<SimpleData name="CENTRE_X">109.3113</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.739</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.2763,-35.721 109.3022,-35.7454 109.3281,-35.7623 109.3372,-35.7559 109.3404,-35.7501 109.3145,-35.7332 109.2886,-35.7088 109.2854,-35.7146 109.2763,-35.721</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">991</SimpleData>
+		<SimpleData name="CENTRE_X">109.42125</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.677</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.39245,-35.6504 109.4104,-35.6807 109.42835,-35.7017 109.4392,-35.698 109.43835,-35.6941 109.4204,-35.6731 109.40245,-35.6428 109.4033,-35.6467 109.39245,-35.6504</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">992</SimpleData>
+		<SimpleData name="CENTRE_X">109.623</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.667,-42.0992 109.6211,-42.093 109.5752,-42.0924 109.5771,-42.0994 109.5742,-42.1056 109.6201,-42.1062 109.666,-42.1124 109.6689,-42.1062 109.667,-42.0992</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">993</SimpleData>
+		<SimpleData name="CENTRE_X">109.57835</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.182</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.61545,-42.1809 109.5781,-42.1756 109.54075,-42.1687 109.541,-42.1751 109.53685,-42.1813 109.5742,-42.1882 109.61155,-42.1935 109.6157,-42.1873 109.61545,-42.1809</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">994</SimpleData>
+		<SimpleData name="CENTRE_X">109.72655</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.328</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.65425,-42.2712 109.6733,-42.3362 109.69235,-42.4215 109.7456,-42.4133 109.78025,-42.4054 109.7612,-42.3201 109.74215,-42.2551 109.7075,-42.263 109.65425,-42.2712</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">995</SimpleData>
+		<SimpleData name="CENTRE_X">109.72925</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.876</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.74335,-42.9082 109.7446,-42.8762 109.74585,-42.8457 109.7305,-42.8455 109.71125,-42.8443 109.71,-42.8748 109.70875,-42.9068 109.728,-42.908 109.74335,-42.9082</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">996</SimpleData>
+		<SimpleData name="CENTRE_X">109.8284</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.86</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.8572,-42.8823 109.8472,-42.8548 109.8372,-42.831 109.8184,-42.8362 109.7991,-42.8407 109.8091,-42.8645 109.8191,-42.892 109.8384,-42.8875 109.8572,-42.8823</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">997</SimpleData>
+		<SimpleData name="CENTRE_X">109.9373</SimpleData>
+		<SimpleData name="CENTRE_Y">-43.713</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.8967,-43.7675 109.9531,-43.7483 110.0095,-43.7372 109.9937,-43.7019 109.988,-43.6669 109.9316,-43.678 109.8752,-43.6972 109.8809,-43.7322 109.8967,-43.7675</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">998</SimpleData>
+		<SimpleData name="CENTRE_X">109.58835</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.035</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.69435,-41.9328 109.5713,-42.0125 109.44825,-42.0735 109.4653,-42.096 109.46975,-42.1184 109.5928,-42.0574 109.71585,-41.9777 109.7114,-41.9553 109.69435,-41.9328</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">999</SimpleData>
+		<SimpleData name="CENTRE_X">108.65625</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.737</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.62255,-41.681 108.6611,-41.7483 108.69965,-41.8109 108.6948,-41.7996 108.74605,-41.788 108.7075,-41.7254 108.66895,-41.6581 108.6177,-41.6697 108.62255,-41.681</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1000</SimpleData>
+		<SimpleData name="CENTRE_X">108.75755</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.681</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.71515,-41.6222 108.731,-41.6853 108.74685,-41.7507 108.7734,-41.7464 108.80545,-41.7414 108.7896,-41.676 108.77375,-41.6129 108.7417,-41.6179 108.71515,-41.6222</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1001</SimpleData>
+		<SimpleData name="CENTRE_X">108.48215</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.418</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.51005,-41.3886 108.4771,-41.4055 108.44415,-41.4228 108.4492,-41.4353 108.45585,-41.4487 108.4888,-41.4314 108.52175,-41.4145 108.5151,-41.4011 108.51005,-41.3886</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1002</SimpleData>
+		<SimpleData name="CENTRE_X">108.10275</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.834</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.08225,-39.8198 108.0908,-39.8386 108.09935,-39.8481 108.1113,-39.8435 108.11985,-39.8394 108.1113,-39.8299 108.10275,-39.8111 108.0942,-39.8152 108.08225,-39.8198</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1003</SimpleData>
+		<SimpleData name="CENTRE_X">108.23385</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.022</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.22115,-40.0078 108.2236,-40.0227 108.22605,-40.039 108.2363,-40.0383 108.24755,-40.0385 108.2451,-40.0222 108.24265,-40.0073 108.2314,-40.0071 108.22115,-40.0078</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1004</SimpleData>
+		<SimpleData name="CENTRE_X">108.9885</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.187</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.0227,-36.1524 108.9912,-36.179 108.9597,-36.2115 108.957,-36.2195 108.9763,-36.2271 109.0078,-36.1946 109.0393,-36.168 109.02,-36.1604 109.0227,-36.1524</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1005</SimpleData>
+		<SimpleData name="CENTRE_X">109.13645</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.29</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.14625,-36.2647 109.1289,-36.282 109.11155,-36.2969 109.1191,-36.3049 109.12275,-36.312 109.1401,-36.2971 109.15745,-36.2798 109.1538,-36.2727 109.14625,-36.2647</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1006</SimpleData>
+		<SimpleData name="CENTRE_X">107.36135</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.183</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>107.31255,-40.1379 107.335,-40.1922 107.35745,-40.257 107.3838,-40.2478 107.40425,-40.2394 107.3818,-40.1746 107.35935,-40.1203 107.3389,-40.1287 107.31255,-40.1379</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1007</SimpleData>
+		<SimpleData name="CENTRE_X">107.83715</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.832</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>107.88545,-42.7897 107.8276,-42.8172 107.76975,-42.8468 107.7793,-42.8616 107.78835,-42.8756 107.8462,-42.846 107.90405,-42.8185 107.895,-42.8045 107.88545,-42.7897</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1008</SimpleData>
+		<SimpleData name="CENTRE_X">107.8445</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.913</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>107.9055,-42.903 107.8442,-42.9036 107.7829,-42.8937 107.7832,-42.9031 107.781,-42.9122 107.8423,-42.9221 107.9036,-42.9215 107.9058,-42.9124 107.9055,-42.903</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1009</SimpleData>
+		<SimpleData name="CENTRE_X">105.15775</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.374</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>105.12055,-41.3843 105.1523,-41.3845 105.18405,-41.3877 105.1895,-41.3772 105.18505,-41.3667 105.1533,-41.3635 105.12155,-41.3633 105.126,-41.3738 105.12055,-41.3843</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1010</SimpleData>
+		<SimpleData name="CENTRE_X">105.37985</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.152</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>105.35255,-41.143 105.3677,-41.159 105.38285,-41.1708 105.395,-41.1638 105.40725,-41.1566 105.3921,-41.1448 105.37695,-41.1288 105.3647,-41.136 105.35255,-41.143</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1011</SimpleData>
+		<SimpleData name="CENTRE_X">105.12255</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.45</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>105.08885,-41.4466 105.1196,-41.4583 105.15035,-41.4646 105.1533,-41.4563 105.15575,-41.4485 105.125,-41.4422 105.09425,-41.4305 105.0918,-41.4383 105.08885,-41.4466</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1012</SimpleData>
+		<SimpleData name="CENTRE_X">105.4585</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.008</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>105.4297,-38.994 105.439,-39.0144 105.4483,-39.0345 105.4678,-39.0281 105.4868,-39.0213 105.4775,-39.0012 105.4682,-38.9808 105.4492,-38.9876 105.4297,-38.994</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1013</SimpleData>
+		<SimpleData name="CENTRE_X">105.66165</SimpleData>
+		<SimpleData name="CENTRE_Y">-44.571</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>105.66455,-44.6097 105.6797,-44.5769 105.69485,-44.5184 105.6768,-44.5125 105.65335,-44.5062 105.6382,-44.5647 105.62305,-44.5975 105.6465,-44.6038 105.66455,-44.6097</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1014</SimpleData>
+		<SimpleData name="CENTRE_X">104.56285</SimpleData>
+		<SimpleData name="CENTRE_Y">-44.763</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.62785,-44.7502 104.5613,-44.7456 104.49475,-44.7385 104.4963,-44.7559 104.49035,-44.7725 104.5569,-44.7796 104.62345,-44.7842 104.6294,-44.7676 104.62785,-44.7502</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1015</SimpleData>
+		<SimpleData name="CENTRE_X">104.67665</SimpleData>
+		<SimpleData name="CENTRE_Y">-44.87</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.73395,-44.8102 104.6611,-44.854 104.58825,-44.8856 104.6038,-44.9016 104.60515,-44.9174 104.678,-44.8858 104.75085,-44.842 104.7495,-44.8262 104.73395,-44.8102</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1016</SimpleData>
+		<SimpleData name="CENTRE_X">104.8335</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.289</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.8843,-41.338 104.8623,-41.2835 104.8403,-41.2531 104.8115,-41.2586 104.8276,-41.2643 104.8496,-41.2947 104.8716,-41.3492 104.8555,-41.3435 104.8843,-41.338</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1017</SimpleData>
+		<SimpleData name="CENTRE_X">104.8091</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.52</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.7764,-41.484 104.7974,-41.5286 104.8184,-41.5806 104.8301,-41.572 104.8491,-41.5635 104.8281,-41.5115 104.8071,-41.4669 104.7881,-41.4754 104.7764,-41.484</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1018</SimpleData>
+		<SimpleData name="CENTRE_X">104.7468</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.587</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.6433,-41.5522 104.7031,-41.6121 104.7629,-41.6797 104.8066,-41.6546 104.824,-41.6294 104.7642,-41.5618 104.7044,-41.5019 104.687,-41.5271 104.6433,-41.5522</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1019</SimpleData>
+		<SimpleData name="CENTRE_X">105.02685</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.513</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.93115,-41.4676 104.9912,-41.534 105.05125,-41.593 105.0869,-41.572 105.13815,-41.551 105.0781,-41.492 105.01805,-41.4256 104.9668,-41.4466 104.93115,-41.4676</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1020</SimpleData>
+		<SimpleData name="CENTRE_X">103.7478</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.751</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.7278,-37.7344 103.7354,-37.7547 103.743,-37.7715 103.7554,-37.7678 103.763,-37.7636 103.7554,-37.7468 103.7478,-37.7265 103.7402,-37.7307 103.7278,-37.7344</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1021</SimpleData>
+		<SimpleData name="CENTRE_X">104.10745</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.601</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.07955,-38.5816 104.0986,-38.6096 104.11765,-38.6226 104.1265,-38.614 104.13865,-38.6051 104.1196,-38.5921 104.10055,-38.5641 104.0884,-38.573 104.07955,-38.5816</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1022</SimpleData>
+		<SimpleData name="CENTRE_X">103.91115</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.761</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.86425,-38.7552 103.9048,-38.7708 103.94535,-38.7825 103.9517,-38.7727 103.95945,-38.762 103.9189,-38.7503 103.87835,-38.7347 103.8706,-38.7454 103.86425,-38.7552</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1023</SimpleData>
+		<SimpleData name="CENTRE_X">103.9736</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.41</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.9419,-39.4074 103.9634,-39.4226 103.9849,-39.4352 103.9951,-39.4226 104.0064,-39.4108 103.9849,-39.3982 103.9634,-39.383 103.9521,-39.3948 103.9419,-39.4074</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1024</SimpleData>
+		<SimpleData name="CENTRE_X">104.5171</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.451</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.542,-41.4875 104.5239,-41.448 104.5058,-41.3991 104.499,-41.4021 104.4887,-41.405 104.5068,-41.4539 104.5249,-41.4934 104.5352,-41.4905 104.542,-41.4875</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1025</SimpleData>
+		<SimpleData name="CENTRE_X">104.6299</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.834</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.5937,-41.8003 104.5986,-41.8372 104.6035,-41.876 104.6348,-41.8728 104.667,-41.8701 104.6621,-41.8313 104.6572,-41.7944 104.625,-41.7971 104.5937,-41.8003</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1026</SimpleData>
+		<SimpleData name="CENTRE_X">104.2644</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.836</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.2116,-41.7886 104.2441,-41.8465 104.2766,-41.9019 104.2969,-41.8914 104.3299,-41.8818 104.2974,-41.8264 104.2649,-41.7685 104.2319,-41.7781 104.2116,-41.7886</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1027</SimpleData>
+		<SimpleData name="CENTRE_X">104.8003</SimpleData>
+		<SimpleData name="CENTRE_Y">-34.696</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.7929,-34.7376 104.8105,-34.7029 104.8281,-34.6707 104.8179,-34.6638 104.7998,-34.6561 104.7822,-34.6883 104.7646,-34.723 104.7827,-34.7307 104.7929,-34.7376</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1028</SimpleData>
+		<SimpleData name="CENTRE_X">104.84545</SimpleData>
+		<SimpleData name="CENTRE_Y">-34.724</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.84835,-34.7541 104.8662,-34.7298 104.88405,-34.7111 104.8633,-34.7053 104.86115,-34.7003 104.8433,-34.719 104.82545,-34.7433 104.8276,-34.7483 104.84835,-34.7541</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1029</SimpleData>
+		<SimpleData name="CENTRE_X">105.0117</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.118</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.9863,-35.0793 104.998,-35.1218 105.0097,-35.1476 105.0234,-35.1438 105.0429,-35.1398 105.0312,-35.114 105.0195,-35.0715 105.0,-35.0755 104.9863,-35.0793</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1030</SimpleData>
+		<SimpleData name="CENTRE_X">104.958</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.139</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.955,-35.092 104.9526,-35.1375 104.9502,-35.1861 104.9556,-35.1876 104.9688,-35.1895 104.9712,-35.1409 104.9736,-35.0954 104.9604,-35.0935 104.955,-35.092</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1031</SimpleData>
+		<SimpleData name="CENTRE_X">103.06345</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.376</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.01715,-40.4014 103.0645,-40.3875 103.11185,-40.3741 103.1108,-40.3626 103.10835,-40.3516 103.061,-40.365 103.01365,-40.3789 103.0161,-40.3899 103.01715,-40.4014</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1032</SimpleData>
+		<SimpleData name="CENTRE_X">102.8098</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.356</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>102.8464,-40.3394 102.8154,-40.3411 102.7844,-40.3403 102.7788,-40.3552 102.7835,-40.3691 102.8145,-40.3699 102.8455,-40.3682 102.8408,-40.3543 102.8464,-40.3394</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1033</SimpleData>
+		<SimpleData name="CENTRE_X">102.9463</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.877</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>102.916,-40.8491 102.9614,-40.8889 103.0068,-40.9482 102.9917,-40.9363 103.0249,-40.9248 102.9795,-40.8655 102.9341,-40.8257 102.9009,-40.8372 102.916,-40.8491</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1034</SimpleData>
+		<SimpleData name="CENTRE_X">103.01785</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.829</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>102.97585,-40.7028 102.9834,-40.8289 102.99095,-40.9279 103.0254,-40.928 103.02515,-40.9274 103.0176,-40.8284 103.01005,-40.7023 103.0103,-40.7029 102.97585,-40.7028</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1035</SimpleData>
+		<SimpleData name="CENTRE_X">103.0947</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.832</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.0523,-40.792 103.0806,-40.8396 103.1089,-40.8917 103.123,-40.8841 103.1406,-40.8771 103.1123,-40.825 103.084,-40.7774 103.0664,-40.7844 103.0523,-40.792</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1036</SimpleData>
+		<SimpleData name="CENTRE_X">103.19505</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.838</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.15455,-40.8198 103.1753,-40.8499 103.19605,-40.8793 103.2158,-40.8674 103.23115,-40.8558 103.2104,-40.8264 103.18965,-40.7963 103.1743,-40.8079 103.15455,-40.8198</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1037</SimpleData>
+		<SimpleData name="CENTRE_X">103.2856</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.713</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.2544,-40.7104 103.2837,-40.7239 103.313,-40.7392 103.3149,-40.7283 103.3228,-40.7167 103.2935,-40.7014 103.2642,-40.6879 103.2563,-40.6995 103.2544,-40.7104</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1038</SimpleData>
+		<SimpleData name="CENTRE_X">103.18505</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.887</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.16945,-39.8684 103.1719,-39.8889 103.17435,-39.9089 103.1875,-39.907 103.20165,-39.906 103.1992,-39.886 103.19675,-39.8655 103.1826,-39.8665 103.16945,-39.8684</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1039</SimpleData>
+		<SimpleData name="CENTRE_X">103.23</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.816</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.2026,-39.8144 103.2285,-39.8186 103.2544,-39.8251 103.2559,-39.8225 103.2564,-39.8198 103.2305,-39.8133 103.2046,-39.8091 103.2041,-39.8118 103.2026,-39.8144</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1040</SimpleData>
+		<SimpleData name="CENTRE_X">103.64035</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.391</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.63985,-37.4186 103.6313,-37.387 103.62275,-37.3835 103.6318,-37.3875 103.60815,-37.3923 103.6167,-37.3958 103.62525,-37.4274 103.6489,-37.4226 103.63985,-37.4186</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1041</SimpleData>
+		<SimpleData name="CENTRE_X">103.625</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.352</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.6523,-37.3595 103.6313,-37.3455 103.6103,-37.3287 103.604,-37.3352 103.5942,-37.3414 103.6152,-37.3582 103.6362,-37.3722 103.646,-37.366 103.6523,-37.3595</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1042</SimpleData>
+		<SimpleData name="CENTRE_X">103.32495</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.864</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.30445,-37.8289 103.312,-37.866 103.31955,-37.8992 103.3325,-37.8972 103.34255,-37.8958 103.335,-37.8626 103.32745,-37.8255 103.3174,-37.8269 103.30445,-37.8289</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1043</SimpleData>
+		<SimpleData name="CENTRE_X">103.3787</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.894</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.3655,-37.8092 103.355,-37.8899 103.3445,-37.9639 103.3682,-37.968 103.3835,-37.9712 103.394,-37.8972 103.4045,-37.8165 103.3892,-37.8133 103.3655,-37.8092</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1044</SimpleData>
+		<SimpleData name="CENTRE_X">103.66845</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.939</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.60105,-38.9311 103.646,-38.9592 103.69095,-38.9838 103.7134,-38.9636 103.72215,-38.9428 103.6772,-38.9182 103.63225,-38.8901 103.6235,-38.9109 103.60105,-38.9311</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1045</SimpleData>
+		<SimpleData name="CENTRE_X">103.5581</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.067</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.5064,-39.079 103.5596,-39.0852 103.6128,-39.0878 103.6113,-39.0696 103.6167,-39.0507 103.5635,-39.0481 103.5103,-39.0419 103.5049,-39.0608 103.5064,-39.079</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1046</SimpleData>
+		<SimpleData name="CENTRE_X">103.6167</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.168</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.5845,-39.1704 103.6172,-39.176 103.6499,-39.1777 103.6494,-39.1697 103.6523,-39.1621 103.6196,-39.1604 103.5869,-39.1548 103.584,-39.1624 103.5845,-39.1704</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1047</SimpleData>
+		<SimpleData name="CENTRE_X">103.1675</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.01</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.2124,-38.9827 103.1738,-38.9983 103.1352,-38.9954 103.1289,-39.0071 103.1421,-39.0188 103.1807,-39.0217 103.2193,-39.0061 103.2061,-38.9944 103.2124,-38.9827</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1048</SimpleData>
+		<SimpleData name="CENTRE_X">103.1665</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.072</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.227,-39.0823 103.1733,-39.0535 103.1196,-39.0076 103.1128,-39.0261 103.1016,-39.0437 103.1553,-39.0896 103.209,-39.1184 103.2202,-39.1008 103.227,-39.0823</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1049</SimpleData>
+		<SimpleData name="CENTRE_X">102.96485</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.21</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.04195,-39.1621 102.9609,-39.2019 102.87985,-39.247 102.8838,-39.2551 102.88575,-39.2622 102.9668,-39.2171 103.04785,-39.1773 103.0459,-39.1702 103.04195,-39.1621</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1050</SimpleData>
+		<SimpleData name="CENTRE_X">102.9546</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.271</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>102.9873,-39.2549 102.9453,-39.2551 102.9033,-39.2593 102.9126,-39.2752 102.9048,-39.2906 102.9468,-39.2864 102.9888,-39.2862 102.9966,-39.2708 102.9873,-39.2549</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1051</SimpleData>
+		<SimpleData name="CENTRE_X">103.03395</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.361</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.05985,-39.2914 103.0132,-39.3377 102.96655,-39.3871 102.9873,-39.4104 103.01295,-39.433 103.0596,-39.3836 103.10625,-39.3373 103.0806,-39.3147 103.05985,-39.2914</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1052</SimpleData>
+		<SimpleData name="CENTRE_X">103.1184</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.386</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.1125,-39.3493 103.0996,-39.3801 103.0867,-39.4153 103.1055,-39.4212 103.1106,-39.428 103.1235,-39.3928 103.1364,-39.362 103.1313,-39.3552 103.1125,-39.3493</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1053</SimpleData>
+		<SimpleData name="CENTRE_X">103.22585</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.399</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.22685,-39.3022 103.1978,-39.3914 103.16875,-39.4746 103.1968,-39.4822 103.19845,-39.4892 103.2275,-39.406 103.25655,-39.3168 103.2549,-39.3098 103.22685,-39.3022</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1054</SimpleData>
+		<SimpleData name="CENTRE_X">102.65905</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.848</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>102.71475,-40.8317 102.6621,-40.8325 102.60945,-40.828 102.6064,-40.8435 102.60795,-40.859 102.6606,-40.8635 102.71325,-40.8627 102.7117,-40.8472 102.71475,-40.8317</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1055</SimpleData>
+		<SimpleData name="CENTRE_X">102.6697</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.007</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>102.6994,-41.974 102.665,-41.9983 102.6306,-42.0331 102.6353,-42.0418 102.6463,-42.0497 102.6807,-42.0149 102.7151,-41.9906 102.7041,-41.9827 102.6994,-41.974</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1056</SimpleData>
+		<SimpleData name="CENTRE_X">101.15015</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.458</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>101.14425,-39.4346 101.1372,-39.4539 101.13015,-39.4757 101.1431,-39.4798 101.14875,-39.483 101.1558,-39.4612 101.16285,-39.4419 101.1572,-39.4387 101.14425,-39.4346</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1057</SimpleData>
+		<SimpleData name="CENTRE_X">100.7582</SimpleData>
+		<SimpleData name="CENTRE_Y">-32.392</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>100.7724,-32.3653 100.7581,-32.3889 100.7438,-32.4046 100.7439,-32.4077 100.7533,-32.4105 100.7676,-32.3948 100.7819,-32.3712 100.7725,-32.3684 100.7724,-32.3653</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1058</SimpleData>
+		<SimpleData name="CENTRE_X">100.85655</SimpleData>
+		<SimpleData name="CENTRE_Y">-32.394</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>100.85145,-32.3714 100.8511,-32.3933 100.85075,-32.4124 100.8562,-32.4131 100.86095,-32.4129 100.8613,-32.3938 100.86165,-32.3719 100.8569,-32.3721 100.85145,-32.3714</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1059</SimpleData>
+		<SimpleData name="CENTRE_X">100.14905</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.564</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>100.17175,-40.5481 100.1475,-40.5581 100.12325,-40.5654 100.1248,-40.5713 100.12805,-40.5769 100.1523,-40.5696 100.17655,-40.5596 100.1733,-40.554 100.17175,-40.5481</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1060</SimpleData>
+		<SimpleData name="CENTRE_X">100.17015</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.762</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>100.15265,-40.7676 100.1707,-40.7676 100.18875,-40.7668 100.1882,-40.7612 100.18915,-40.7553 100.1711,-40.7561 100.15305,-40.7561 100.1521,-40.762 100.15265,-40.7676</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1061</SimpleData>
+		<SimpleData name="CENTRE_X">99.99915</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.055</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>99.99845,-41.0759 100.0103,-41.0608 100.02215,-41.0461 100.011,-41.0403 100.00335,-41.0351 99.9915,-41.0498 99.97965,-41.0649 99.9873,-41.0701 99.99845,-41.0759</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1062</SimpleData>
+		<SimpleData name="CENTRE_X">100.1116</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.097</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>100.0964,-41.1228 100.1157,-41.105 100.135,-41.0791 100.1309,-41.0711 100.1179,-41.0625 100.0986,-41.0884 100.0793,-41.1062 100.0923,-41.1148 100.0964,-41.1228</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1063</SimpleData>
+		<SimpleData name="CENTRE_X">101.2659</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.076</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>101.2585,-36.049 101.2612,-36.0759 101.2639,-36.1095 101.2686,-36.1096 101.2815,-36.1095 101.2788,-36.0759 101.2761,-36.049 101.2632,-36.0491 101.2585,-36.049</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1064</SimpleData>
+		<SimpleData name="CENTRE_X">101.0029</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.939</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>100.9815,-35.9107 100.9937,-35.9417 101.0059,-35.9839 101.0151,-35.9812 101.0273,-35.9775 101.0151,-35.9353 101.0029,-35.9043 100.9907,-35.908 100.9815,-35.9107</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1065</SimpleData>
+		<SimpleData name="CENTRE_X">100.1963</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.261</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>100.1543,-39.2486 100.1887,-39.2735 100.2231,-39.2943 100.2307,-39.2818 100.2397,-39.2684 100.2053,-39.2476 100.1709,-39.2227 100.1619,-39.2361 100.1543,-39.2486</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1066</SimpleData>
+		<SimpleData name="CENTRE_X">99.5657</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.075</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>99.5676,-39.0496 99.5576,-39.0706 99.5476,-39.0877 99.5557,-39.0921 99.5715,-39.096 99.5815,-39.0789 99.5915,-39.0579 99.5757,-39.054 99.5676,-39.0496</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1067</SimpleData>
+		<SimpleData name="CENTRE_X">99.46145</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.05</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>99.45315,-39.0272 99.4473,-39.0476 99.44145,-39.0682 99.4556,-39.0706 99.47025,-39.0726 99.4761,-39.052 99.48195,-39.0316 99.4673,-39.0296 99.45315,-39.0272</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1068</SimpleData>
+		<SimpleData name="CENTRE_X">99.40745</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.053</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>99.39715,-39.0306 99.394,-39.0506 99.39085,-39.0726 99.4043,-39.075 99.41535,-39.0765 99.4185,-39.0545 99.42165,-39.0345 99.4106,-39.033 99.39715,-39.0306</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1069</SimpleData>
+		<SimpleData name="CENTRE_X">99.6968</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.108</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>99.7266,-39.9917 99.6797,-40.0911 99.6328,-40.1694 99.6499,-40.1863 99.706,-40.2031 99.7529,-40.1248 99.7998,-40.0254 99.7437,-40.0086 99.7266,-39.9917</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1070</SimpleData>
+		<SimpleData name="CENTRE_X">99.57155</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.093</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>99.54855,-40.0769 99.5576,-40.0979 99.56665,-40.1136 99.5806,-40.1087 99.59445,-40.1029 99.5854,-40.0872 99.57635,-40.0662 99.5625,-40.072 99.54855,-40.0769</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1071</SimpleData>
+		<SimpleData name="CENTRE_X">97.90285</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.515</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.86625,-38.4836 97.8843,-38.5198 97.90235,-38.5602 97.9209,-38.5554 97.92725,-38.5499 97.9092,-38.5095 97.89115,-38.4733 97.8848,-38.4788 97.86625,-38.4836</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1072</SimpleData>
+		<SimpleData name="CENTRE_X">97.83815</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.544</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.76975,-38.5195 97.8081,-38.554 97.84645,-38.5747 97.8765,-38.5647 97.87335,-38.5547 97.835,-38.534 97.79665,-38.4995 97.7998,-38.5095 97.76975,-38.5195</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1073</SimpleData>
+		<SimpleData name="CENTRE_X">97.8613</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.711</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.835,-38.6894 97.8521,-38.7161 97.8692,-38.7358 97.8784,-38.7307 97.8862,-38.726 97.8691,-38.7063 97.852,-38.6796 97.8442,-38.6843 97.835,-38.6894</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1074</SimpleData>
+		<SimpleData name="CENTRE_X">97.82665</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.713</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.79885,-38.6835 97.8164,-38.7161 97.83395,-38.748 97.8442,-38.7449 97.84865,-38.7416 97.8311,-38.7097 97.81355,-38.6771 97.8091,-38.6804 97.79885,-38.6835</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1075</SimpleData>
+		<SimpleData name="CENTRE_X">98.18825</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.116</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>98.19365,-39.0837 98.1785,-39.1101 98.16335,-39.1262 98.1731,-39.1321 98.17865,-39.1379 98.1938,-39.1218 98.20895,-39.0954 98.2034,-39.0896 98.19365,-39.0837</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1076</SimpleData>
+		<SimpleData name="CENTRE_X">98.9214</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.62</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>98.9468,-38.5822 98.9146,-38.6106 98.8824,-38.6237 98.8892,-38.6331 98.8931,-38.6423 98.9253,-38.6292 98.9575,-38.6008 98.9536,-38.5916 98.9468,-38.5822</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1077</SimpleData>
+		<SimpleData name="CENTRE_X">98.98535</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.668</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>98.98145,-38.6235 98.9717,-38.6638 98.96195,-38.6958 98.9756,-38.7 98.98735,-38.7041 98.9971,-38.6721 99.00685,-38.6318 98.9951,-38.6277 98.98145,-38.6235</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1078</SimpleData>
+		<SimpleData name="CENTRE_X">98.80615</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.498</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>98.83355,-38.4952 98.8101,-38.4885 98.78665,-38.4771 98.7827,-38.4866 98.78075,-38.4952 98.8042,-38.5066 98.82765,-38.5133 98.8296,-38.5047 98.83355,-38.4952</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1079</SimpleData>
+		<SimpleData name="CENTRE_X">98.7888</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.959</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>98.76,-36.9434 98.7739,-36.9646 98.7878,-36.9873 98.8027,-36.9817 98.8132,-36.9766 98.7993,-36.9539 98.7854,-36.9327 98.7749,-36.9378 98.76,-36.9434</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1080</SimpleData>
+		<SimpleData name="CENTRE_X">98.8237</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.98</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>98.8198,-39.9507 98.812,-39.9773 98.8042,-40.0034 98.8159,-40.0061 98.8272,-40.0088 98.835,-39.9827 98.8428,-39.9561 98.8315,-39.9534 98.8198,-39.9507</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1081</SimpleData>
+		<SimpleData name="CENTRE_X">97.00805</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.472</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.04955,-37.4392 97.0088,-37.4705 96.96805,-37.5154 96.9673,-37.5169 96.98415,-37.5188 97.0249,-37.4739 97.06565,-37.4426 97.0488,-37.4407 97.04955,-37.4392</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1082</SimpleData>
+		<SimpleData name="CENTRE_X">97.32715</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.887</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.28655,-37.7942 97.3398,-37.8914 97.39305,-37.9798 97.3804,-37.9754 97.42045,-37.9715 97.3672,-37.8831 97.31395,-37.7859 97.2739,-37.7898 97.28655,-37.7942</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1083</SimpleData>
+		<SimpleData name="CENTRE_X">97.31005</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.918</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.25885,-37.8931 97.2896,-37.9285 97.32035,-37.9561 97.3408,-37.9456 97.35005,-37.9346 97.3193,-37.907 97.28855,-37.8716 97.2793,-37.8826 97.25885,-37.8931</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1084</SimpleData>
+		<SimpleData name="CENTRE_X">97.1316</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.961</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.1556,-37.8423 97.1021,-37.95 97.0486,-38.0322 97.0781,-38.0432 97.0881,-38.0546 97.1416,-37.9724 97.1951,-37.8647 97.1851,-37.8533 97.1556,-37.8423</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1085</SimpleData>
+		<SimpleData name="CENTRE_X">97.6086</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.71</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.5994,-38.6411 97.5762,-38.7039 97.553,-38.7735 97.5854,-38.7796 97.5881,-38.7862 97.6113,-38.7166 97.6345,-38.6538 97.6318,-38.6472 97.5994,-38.6411</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1086</SimpleData>
+		<SimpleData name="CENTRE_X">97.5486</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.736</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.5315,-38.7132 97.5449,-38.74 97.5583,-38.7709 97.562,-38.7669 97.5744,-38.7626 97.561,-38.7317 97.5476,-38.7049 97.5352,-38.7092 97.5315,-38.7132</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1087</SimpleData>
+		<SimpleData name="CENTRE_X">97.4485</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.775</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.4568,-38.7431 97.439,-38.7703 97.4212,-38.7924 97.4307,-38.7971 97.4387,-38.8021 97.4565,-38.78 97.4743,-38.7528 97.4663,-38.7478 97.4568,-38.7431</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1088</SimpleData>
+		<SimpleData name="CENTRE_X">97.4148</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.764</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.425,-38.7415 97.4072,-38.7591 97.3894,-38.7795 97.397,-38.7844 97.4016,-38.7897 97.4194,-38.7693 97.4372,-38.7517 97.4326,-38.7464 97.425,-38.7415</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1089</SimpleData>
+		<SimpleData name="CENTRE_X">96.93285</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.031</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.94895,-38.0072 96.9272,-38.0252 96.90545,-38.0472 96.9111,-38.053 96.91775,-38.0589 96.9395,-38.0369 96.96125,-38.0189 96.9546,-38.013 96.94895,-38.0072</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1090</SimpleData>
+		<SimpleData name="CENTRE_X">97.0088</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.047</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.9956,-38.0268 97.0049,-38.0369 97.0142,-38.0722 97.0181,-38.0823 97.0274,-38.0932 97.0181,-38.0579 97.0088,-38.0478 96.9995,-38.0369 96.9956,-38.0268</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1091</SimpleData>
+		<SimpleData name="CENTRE_X">96.90975</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.417</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.93075,-37.3935 96.9023,-37.4077 96.87385,-37.4214 96.8813,-37.4307 96.88195,-37.4397 96.9104,-37.426 96.93885,-37.4118 96.9382,-37.4028 96.93075,-37.3935</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1092</SimpleData>
+		<SimpleData name="CENTRE_X">96.8241</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.418</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.8175,-37.4097 96.8171,-37.4175 96.8167,-37.428 96.8237,-37.4285 96.8316,-37.4282 96.832,-37.4177 96.8324,-37.4099 96.8245,-37.4102 96.8175,-37.4097</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1093</SimpleData>
+		<SimpleData name="CENTRE_X">96.74155</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.42</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.74305,-37.4096 96.7366,-37.4182 96.73015,-37.4308 96.7351,-37.4326 96.73725,-37.4342 96.7437,-37.4216 96.75015,-37.413 96.748,-37.4114 96.74305,-37.4096</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1094</SimpleData>
+		<SimpleData name="CENTRE_X">96.72055</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.431</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.71355,-37.4215 96.7139,-37.4304 96.71425,-37.4376 96.7209,-37.4382 96.72745,-37.4384 96.7271,-37.4312 96.72675,-37.4223 96.7202,-37.4221 96.71355,-37.4215</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1095</SimpleData>
+		<SimpleData name="CENTRE_X">96.6211</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.452</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.6003,-37.4467 96.6123,-37.458 96.6243,-37.4728 96.6331,-37.4668 96.6353,-37.4616 96.6233,-37.4468 96.6113,-37.4355 96.6091,-37.4407 96.6003,-37.4467</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1096</SimpleData>
+		<SimpleData name="CENTRE_X">96.5846</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.477</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.5721,-37.4706 96.5771,-37.4798 96.5821,-37.4882 96.5896,-37.4854 96.5978,-37.4833 96.5928,-37.4749 96.5878,-37.4657 96.5796,-37.4678 96.5721,-37.4706</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1097</SimpleData>
+		<SimpleData name="CENTRE_X">96.56065</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.494</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.54605,-37.4818 96.553,-37.4956 96.55995,-37.5087 96.5676,-37.5071 96.57215,-37.5053 96.5652,-37.4922 96.55825,-37.4784 96.5537,-37.4802 96.54605,-37.4818</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1098</SimpleData>
+		<SimpleData name="CENTRE_X">95.89965</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.016</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>95.94165,-38.9337 95.9204,-39.0095 95.89915,-39.0587 95.8784,-39.0652 95.92015,-39.0709 95.9414,-39.0217 95.96265,-38.9459 95.9209,-38.9402 95.94165,-38.9337</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1099</SimpleData>
+		<SimpleData name="CENTRE_X">95.95275</SimpleData>
+		<SimpleData name="CENTRE_Y">-43.342</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>95.95815,-43.3043 95.9368,-43.3316 95.91545,-43.3756 95.9314,-43.386 95.95445,-43.3956 95.9758,-43.3516 95.99715,-43.3243 95.9741,-43.3147 95.95815,-43.3043</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1100</SimpleData>
+		<SimpleData name="CENTRE_X">94.6576</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.93</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>94.6164,-37.8796 94.6409,-37.9351 94.6654,-37.9744 94.6821,-37.9693 94.6947,-37.9651 94.6702,-37.9258 94.6457,-37.8703 94.6331,-37.8745 94.6164,-37.8796</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1101</SimpleData>
+		<SimpleData name="CENTRE_X">94.7323</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.916</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>94.7055,-37.8939 94.7212,-37.9212 94.7369,-37.9496 94.748,-37.9444 94.7603,-37.9398 94.7446,-37.9114 94.7289,-37.8841 94.7166,-37.8887 94.7055,-37.8939</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1102</SimpleData>
+		<SimpleData name="CENTRE_X">94.6284</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.105</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>94.6006,-38.1067 94.6226,-38.1162 94.6446,-38.1289 94.6504,-38.1177 94.6592,-38.107 94.6372,-38.0943 94.6152,-38.0848 94.6064,-38.0955 94.6006,-38.1067</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1103</SimpleData>
+		<SimpleData name="CENTRE_X">94.3727</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.544</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>94.3397,-38.5534 94.3728,-38.5488 94.4059,-38.5424 94.4058,-38.5376 94.403,-38.5319 94.3699,-38.5383 94.3368,-38.5429 94.3396,-38.5486 94.3397,-38.5534</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1104</SimpleData>
+		<SimpleData name="CENTRE_X">92.79635</SimpleData>
+		<SimpleData name="CENTRE_Y">-33.258</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>92.78325,-33.2433 92.7913,-33.2608 92.79935,-33.2699 92.8044,-33.2671 92.81445,-33.264 92.8064,-33.2549 92.79835,-33.2374 92.7883,-33.2405 92.78325,-33.2433</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1105</SimpleData>
+		<SimpleData name="CENTRE_X">92.8154</SimpleData>
+		<SimpleData name="CENTRE_Y">-33.275</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>92.7952,-33.2897 92.8184,-33.2866 92.8416,-33.2887 92.8386,-33.2771 92.8418,-33.266 92.8186,-33.2639 92.7954,-33.267 92.7922,-33.2781 92.7952,-33.2897</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1106</SimpleData>
+		<SimpleData name="CENTRE_X">91.6892</SimpleData>
+		<SimpleData name="CENTRE_Y">-34.574</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>91.6238,-34.6331 91.7002,-34.5901 91.7766,-34.5305 91.7656,-34.5144 91.7585,-34.4983 91.6821,-34.5579 91.6057,-34.6009 91.6128,-34.617 91.6238,-34.6331</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1107</SimpleData>
+		<SimpleData name="CENTRE_X">91.15725</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.333</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>91.13965,-35.3082 91.1499,-35.335 91.16015,-35.3582 91.1675,-35.3562 91.17355,-35.3533 91.1633,-35.3301 91.15305,-35.3033 91.147,-35.3062 91.13965,-35.3082</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1108</SimpleData>
+		<SimpleData name="CENTRE_X">91.0807</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.34</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>91.0536,-35.3285 91.0681,-35.3445 91.0826,-35.3685 91.0952,-35.364 91.0987,-35.36 91.0842,-35.336 91.0697,-35.32 91.0662,-35.324 91.0536,-35.3285</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1109</SimpleData>
+		<SimpleData name="CENTRE_X">91.031</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.346</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>91.0158,-35.3293 91.0273,-35.3474 91.0388,-35.3659 91.0425,-35.3645 91.0471,-35.3623 91.0356,-35.3438 91.0241,-35.3257 91.0195,-35.3279 91.0158,-35.3293</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1110</SimpleData>
+		<SimpleData name="CENTRE_X">90.17345</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.511</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>90.17785,-36.4959 90.1731,-36.5103 90.16835,-36.5228 90.1687,-36.5235 90.17885,-36.5242 90.1836,-36.5117 90.18835,-36.4973 90.1782,-36.4966 90.17785,-36.4959</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1111</SimpleData>
+		<SimpleData name="CENTRE_X">90.28175</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.615</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>90.24925,-40.6231 90.2776,-40.625 90.30595,-40.6257 90.3101,-40.6157 90.30815,-40.6055 90.2798,-40.6048 90.25145,-40.6029 90.2534,-40.6131 90.24925,-40.6231</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1112</SimpleData>
+		<SimpleData name="CENTRE_X">90.1647</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.967</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>90.1889,-40.9604 90.1663,-40.9581 90.1437,-40.9556 90.1421,-40.9645 90.1421,-40.9725 90.1647,-40.975 90.1873,-40.9773 90.1873,-40.9693 90.1889,-40.9604</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1113</SimpleData>
+		<SimpleData name="CENTRE_X">90.1611</SimpleData>
+		<SimpleData name="CENTRE_Y">-40.991</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>90.173,-40.9835 90.1606,-40.9861 90.1482,-40.9882 90.1487,-40.9931 90.15,-40.9971 90.1624,-40.995 90.1748,-40.9924 90.1735,-40.9884 90.173,-40.9835</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1271</SimpleData>
+		<SimpleData name="CENTRE_X">113.2384</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.195</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.2499,-38.1683 113.2351,-38.1912 113.2203,-38.2152 113.2236,-38.219 113.2306,-38.2218 113.2454,-38.1978 113.2602,-38.1749 113.2532,-38.1721 113.2499,-38.1683</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1272</SimpleData>
+		<SimpleData name="CENTRE_X">113.27195</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.22</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>113.28515,-38.1862 113.261,-38.2092 113.23685,-38.228 113.2478,-38.2388 113.25855,-38.2486 113.2827,-38.2298 113.30685,-38.2068 113.2961,-38.197 113.28515,-38.1862</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1273</SimpleData>
+		<SimpleData name="CENTRE_X">112.7771</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.239</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>112.7669,-38.2176 112.7681,-38.2381 112.7693,-38.2562 112.7783,-38.2571 112.7839,-38.2581 112.7827,-38.24 112.7815,-38.2195 112.7759,-38.2185 112.7669,-38.2176</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1274</SimpleData>
+		<SimpleData name="CENTRE_X">110.94215</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.841</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>110.94285,-36.816 110.9277,-36.8347 110.91255,-36.8504 110.927,-36.8567 110.93185,-36.8626 110.947,-36.8469 110.96215,-36.8282 110.9573,-36.8223 110.94285,-36.816</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1275</SimpleData>
+		<SimpleData name="CENTRE_X">109.3313</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.898</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.4148,-42.96 109.3706,-42.8875 109.3264,-42.8653 109.2871,-42.8758 109.3147,-42.8872 109.3589,-42.9094 109.4031,-42.9819 109.3755,-42.9705 109.4148,-42.96</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1276</SimpleData>
+		<SimpleData name="CENTRE_X">109.4553</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.901</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>109.531,-42.9349 109.4673,-42.8889 109.4036,-42.8744 109.3916,-42.8865 109.388,-42.8979 109.4517,-42.9124 109.5154,-42.9584 109.519,-42.947 109.531,-42.9349</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1277</SimpleData>
+		<SimpleData name="CENTRE_X">108.7378</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.681</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.6968,-41.6057 108.7168,-41.6863 108.7368,-41.7619 108.7578,-41.7566 108.7973,-41.7512 108.7773,-41.6756 108.7573,-41.595 108.7178,-41.6004 108.6968,-41.6057</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1278</SimpleData>
+		<SimpleData name="CENTRE_X">108.645</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.745</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.6128,-41.6754 108.6504,-41.7517 108.688,-41.8131 108.6826,-41.8064 108.7329,-41.7995 108.6953,-41.7381 108.6577,-41.6618 108.6074,-41.6687 108.6128,-41.6754</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1279</SimpleData>
+		<SimpleData name="CENTRE_X">108.583</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.79</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.542,-41.7915 108.5703,-41.8093 108.5986,-41.8286 108.6113,-41.8093 108.626,-41.7896 108.5977,-41.7703 108.5694,-41.7525 108.5547,-41.7722 108.542,-41.7915</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1280</SimpleData>
+		<SimpleData name="CENTRE_X">108.53515</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.837</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.49415,-41.8442 108.5264,-41.8572 108.55865,-41.8735 108.5674,-41.8533 108.58795,-41.8325 108.5557,-41.8162 108.52345,-41.8032 108.5029,-41.824 108.49415,-41.8442</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1281</SimpleData>
+		<SimpleData name="CENTRE_X">108.58445</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.818</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.55855,-42.8378 108.5903,-42.8279 108.62205,-42.8158 108.6162,-42.8059 108.61525,-42.7963 108.5835,-42.8084 108.55175,-42.8183 108.5527,-42.8279 108.55855,-42.8378</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1282</SimpleData>
+		<SimpleData name="CENTRE_X">108.5559</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.728</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.5222,-42.7471 108.5625,-42.7434 108.6028,-42.7359 108.5962,-42.7205 108.5969,-42.7057 108.5566,-42.7132 108.5163,-42.7169 108.5156,-42.7317 108.5222,-42.7471</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1283</SimpleData>
+		<SimpleData name="CENTRE_X">107.99375</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.54</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.02375,-39.521 107.9919,-39.531 107.96005,-39.5364 107.9619,-39.5454 107.96305,-39.5547 107.9949,-39.5493 108.02675,-39.5393 108.0256,-39.53 108.02375,-39.521</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1284</SimpleData>
+		<SimpleData name="CENTRE_X">108.0027</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.485</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.039,-39.4816 108.0085,-39.4766 107.978,-39.4736 107.9722,-39.482 107.9768,-39.4907 108.0073,-39.4937 108.0378,-39.4987 108.0332,-39.49 108.039,-39.4816</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1285</SimpleData>
+		<SimpleData name="CENTRE_X">106.854</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.176</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>106.8203,-36.1199 106.8389,-36.1804 106.8575,-36.2205 106.8726,-36.2161 106.8882,-36.2108 106.8696,-36.1707 106.851,-36.1102 106.8354,-36.1155 106.8203,-36.1199</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1286</SimpleData>
+		<SimpleData name="CENTRE_X">106.76465</SimpleData>
+		<SimpleData name="CENTRE_Y">-36.158</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>106.78955,-36.1233 106.7617,-36.1487 106.73385,-36.1716 106.7368,-36.1809 106.74705,-36.1911 106.7749,-36.1682 106.80275,-36.1428 106.7925,-36.1326 106.78955,-36.1233</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1287</SimpleData>
+		<SimpleData name="CENTRE_X">108.1499</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.764</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.2051,-42.8112 108.1626,-42.7556 108.1201,-42.6911 108.1074,-42.6995 108.103,-42.7072 108.1455,-42.7717 108.188,-42.8273 108.1924,-42.8196 108.2051,-42.8112</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1288</SimpleData>
+		<SimpleData name="CENTRE_X">107.98605</SimpleData>
+		<SimpleData name="CENTRE_Y">-42.764</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>108.05245,-42.8107 108.0024,-42.7522 107.95235,-42.7077 107.936,-42.7195 107.92115,-42.7316 107.9712,-42.7761 108.02125,-42.8346 108.0361,-42.8225 108.05245,-42.8107</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1289</SimpleData>
+		<SimpleData name="CENTRE_X">105.07995</SimpleData>
+		<SimpleData name="CENTRE_Y">-44.672</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>105.11705,-44.7082 105.0928,-44.6636 105.06855,-44.6181 105.0557,-44.6265 105.03335,-44.634 105.0576,-44.6795 105.08185,-44.7241 105.1042,-44.7166 105.11705,-44.7082</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1290</SimpleData>
+		<SimpleData name="CENTRE_X">104.0493</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.738</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>104.1284,-41.6873 104.0527,-41.7117 103.977,-41.7264 103.9736,-41.7527 103.9878,-41.7781 104.0635,-41.7634 104.1392,-41.739 104.125,-41.7136 104.1284,-41.6873</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1291</SimpleData>
+		<SimpleData name="CENTRE_X">103.9077</SimpleData>
+		<SimpleData name="CENTRE_Y">-41.709</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>103.9859,-41.687 103.9141,-41.6902 103.8423,-41.6939 103.8359,-41.7127 103.8403,-41.732 103.9121,-41.7283 103.9839,-41.7251 103.9795,-41.7058 103.9859,-41.687</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1292</SimpleData>
+		<SimpleData name="CENTRE_X">97.60745</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.708</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.59425,-38.6348 97.5708,-38.7014 97.54735,-38.7705 97.584,-38.7771 97.58935,-38.7842 97.6128,-38.7151 97.63625,-38.6485 97.6309,-38.6414 97.59425,-38.6348</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1293</SimpleData>
+		<SimpleData name="CENTRE_X">97.76315</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.731</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.73635,-38.6831 97.7427,-38.7327 97.74905,-38.7681 97.7695,-38.7664 97.78755,-38.7647 97.7812,-38.7293 97.77485,-38.6797 97.7568,-38.6814 97.73635,-38.6831</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1294</SimpleData>
+		<SimpleData name="CENTRE_X">97.8682</SimpleData>
+		<SimpleData name="CENTRE_Y">-38.718</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>97.8472,-38.7053 97.8599,-38.7219 97.8726,-38.7376 97.8809,-38.7337 97.8853,-38.7289 97.8726,-38.7132 97.8599,-38.6966 97.8555,-38.7014 97.8472,-38.7053</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1295</SimpleData>
+		<SimpleData name="CENTRE_X">96.71935</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.946</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>96.72545,-37.9313 96.7136,-37.94 96.70175,-37.9479 96.7075,-37.9539 96.71005,-37.9593 96.7219,-37.9514 96.73375,-37.9427 96.7312,-37.9373 96.72545,-37.9313</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1296</SimpleData>
+		<SimpleData name="CENTRE_X">96.0195</SimpleData>
+		<SimpleData name="CENTRE_Y">-37.862</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>95.9981,-37.8489 96.0142,-37.8674 96.0303,-37.887 96.0356,-37.8816 96.0454,-37.8768 96.0293,-37.8572 96.0132,-37.8387 96.0034,-37.8435 95.9981,-37.8489</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1297</SimpleData>
+		<SimpleData name="CENTRE_X">95.91455</SimpleData>
+		<SimpleData name="CENTRE_Y">-39.001</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>95.93945,-38.9521 95.9268,-38.9978 95.91415,-39.0459 95.9019,-39.0491 95.93655,-39.0532 95.9492,-39.0051 95.96185,-38.9594 95.9272,-38.9553 95.93945,-38.9521</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1298</SimpleData>
+		<SimpleData name="CENTRE_X">91.15515</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.339</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>91.13585,-35.3129 91.1467,-35.343 91.15755,-35.3603 91.166,-35.3563 91.17365,-35.3518 91.1628,-35.3345 91.15195,-35.3044 91.1443,-35.3089 91.13585,-35.3129</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Reull_Mars2000">
+		<SimpleData name="OBJ_ID">1299</SimpleData>
+		<SimpleData name="CENTRE_X">91.18795</SimpleData>
+		<SimpleData name="CENTRE_Y">-35.322</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>91.17205,-35.3083 91.1821,-35.3255 91.19215,-35.3418 91.198,-35.3383 91.20495,-35.3347 91.1949,-35.3184 91.18485,-35.3012 91.1779,-35.3048 91.17205,-35.3083</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

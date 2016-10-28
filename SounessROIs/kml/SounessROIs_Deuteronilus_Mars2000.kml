@@ -1,0 +1,1541 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="SounessROIs_Deuteronilus_Mars2000" id="SounessROIs_Deuteronilus_Mars2000">
+	<SimpleField name="OBJ_ID" type="string"></SimpleField>
+	<SimpleField name="CENTRE_X" type="string"></SimpleField>
+	<SimpleField name="CENTRE_Y" type="string"></SimpleField>
+</Schema>
+<Folder><name>SounessROIs_Deuteronilus_Mars2000</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">558</SimpleData>
+		<SimpleData name="CENTRE_X">35.1567</SimpleData>
+		<SimpleData name="CENTRE_Y">46.741</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>35.1545,46.7461 35.1545,46.7405 35.1545,46.7341 35.1567,46.7346 35.1619,46.7346 35.1619,46.741 35.1619,46.7466 35.1567,46.7466 35.1545,46.7461</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">559</SimpleData>
+		<SimpleData name="CENTRE_X">35.38145</SimpleData>
+		<SimpleData name="CENTRE_Y">41.816</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>35.40055,41.7937 35.3943,41.8172 35.38805,41.8396 35.3752,41.8384 35.37245,41.8376 35.3787,41.8152 35.38495,41.7917 35.3877,41.7925 35.40055,41.7937</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">560</SimpleData>
+		<SimpleData name="CENTRE_X">35.416</SimpleData>
+		<SimpleData name="CENTRE_Y">41.937</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>35.3855,41.9732 35.3782,41.9466 35.3709,41.9117 35.4087,41.9021 35.4441,41.8926 35.4514,41.9275 35.4587,41.9541 35.4233,41.9636 35.3855,41.9732</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">561</SimpleData>
+		<SimpleData name="CENTRE_X">35.24525</SimpleData>
+		<SimpleData name="CENTRE_Y">42.191</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>35.25595,42.2221 35.2346,42.1978 35.21325,42.1692 35.2239,42.1624 35.23035,42.1555 35.2517,42.1841 35.27305,42.2084 35.2666,42.2153 35.25595,42.2221</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">562</SimpleData>
+		<SimpleData name="CENTRE_X">35.32555</SimpleData>
+		<SimpleData name="CENTRE_Y">42.202</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>35.32285,42.1784 35.3274,42.1995 35.33195,42.2373 35.3301,42.2398 35.31875,42.2417 35.3142,42.2039 35.30965,42.1828 35.321,42.1809 35.32285,42.1784</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">563</SimpleData>
+		<SimpleData name="CENTRE_X">35.34695</SimpleData>
+		<SimpleData name="CENTRE_Y">39.866</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>35.33785,39.8116 35.343,39.8587 35.34815,39.8926 35.3521,39.8999 35.31255,39.907 35.3074,39.8731 35.30225,39.826 35.3418,39.8189 35.33785,39.8116</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">564</SimpleData>
+		<SimpleData name="CENTRE_X">34.93775</SimpleData>
+		<SimpleData name="CENTRE_Y">41.596</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.97395,41.5603 34.9473,41.6045 34.92065,41.6308 34.9111,41.6223 34.90235,41.613 34.929,41.5867 34.95565,41.5425 34.9644,41.5518 34.97395,41.5603</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">565</SimpleData>
+		<SimpleData name="CENTRE_X">35.02515</SimpleData>
+		<SimpleData name="CENTRE_Y">39.435</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>35.05055,39.4176 35.0371,39.4397 35.02365,39.4581 35.0117,39.4534 35.00315,39.4493 35.0166,39.4309 35.03005,39.4088 35.0386,39.4129 35.05055,39.4176</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">566</SimpleData>
+		<SimpleData name="CENTRE_X">34.83435</SimpleData>
+		<SimpleData name="CENTRE_Y">39.814</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.84335,39.7783 34.8369,39.8123 34.83045,39.8445 34.8279,39.8462 34.79655,39.8481 34.803,39.8159 34.80945,39.7819 34.8408,39.78 34.84335,39.7783</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">567</SimpleData>
+		<SimpleData name="CENTRE_X">34.77075</SimpleData>
+		<SimpleData name="CENTRE_Y">39.816</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.77875,39.7825 34.7773,39.8172 34.77585,39.8464 34.7693,39.8452 34.74785,39.8437 34.7493,39.8145 34.75075,39.7798 34.7722,39.7813 34.77875,39.7825</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">568</SimpleData>
+		<SimpleData name="CENTRE_X">34.41405</SimpleData>
+		<SimpleData name="CENTRE_Y">41.315</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.35035,41.3374 34.4175,41.3091 34.48465,41.3264 34.4812,41.3323 34.48075,41.3381 34.4136,41.3208 34.34645,41.3491 34.3469,41.3433 34.35035,41.3374</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">569</SimpleData>
+		<SimpleData name="CENTRE_X">34.3579</SimpleData>
+		<SimpleData name="CENTRE_Y">41.782</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.2915,41.7756 34.3784,41.7722 34.4653,41.7742 34.4448,41.784 34.4619,41.7943 34.375,41.7923 34.2881,41.7957 34.271,41.7854 34.2915,41.7756</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">570</SimpleData>
+		<SimpleData name="CENTRE_X">34.35055</SimpleData>
+		<SimpleData name="CENTRE_Y">41.599</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.26805,41.6174 34.3447,41.5867 34.42135,41.5573 34.4272,41.5696 34.43115,41.5812 34.3545,41.6106 34.27785,41.6413 34.2739,41.6297 34.26805,41.6174</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">571</SimpleData>
+		<SimpleData name="CENTRE_X">34.3362</SimpleData>
+		<SimpleData name="CENTRE_Y">41.483</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.2658,41.4687 34.3437,41.4754 34.4216,41.4878 34.4141,41.4954 34.4192,41.5034 34.3413,41.491 34.2634,41.4843 34.2583,41.4763 34.2658,41.4687</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">572</SimpleData>
+		<SimpleData name="CENTRE_X">33.9502</SimpleData>
+		<SimpleData name="CENTRE_Y">39.285</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.9258,39.2414 33.959,39.2752 33.9922,39.3118 33.9834,39.3216 33.9717,39.3313 33.9385,39.2947 33.9053,39.2609 33.917,39.2512 33.9258,39.2414</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">573</SimpleData>
+		<SimpleData name="CENTRE_X">33.72195</SimpleData>
+		<SimpleData name="CENTRE_Y">39.688</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.64325,39.7285 33.7148,39.6765 33.78635,39.6601 33.7935,39.6716 33.80155,39.6836 33.73,39.7 33.65845,39.752 33.6504,39.74 33.64325,39.7285</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">574</SimpleData>
+		<SimpleData name="CENTRE_X">33.97365</SimpleData>
+		<SimpleData name="CENTRE_Y">39.996</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.94575,39.9997 33.9741,39.9866 34.00245,39.9811 34.002,39.9905 34.00785,40.0001 33.9795,40.0056 33.95115,40.0187 33.9453,40.0091 33.94575,39.9997</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">575</SimpleData>
+		<SimpleData name="CENTRE_X">33.7554</SimpleData>
+		<SimpleData name="CENTRE_Y">40.499</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.6533,40.5069 33.7529,40.4866 33.8525,40.4752 33.855,40.4876 33.8574,40.4996 33.7578,40.511 33.6582,40.5313 33.6558,40.5193 33.6533,40.5069</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">576</SimpleData>
+		<SimpleData name="CENTRE_X">34.68935</SimpleData>
+		<SimpleData name="CENTRE_Y">42.358</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.69445,42.3213 34.7014,42.3538 34.70835,42.383 34.6963,42.3872 34.69275,42.391 34.6858,42.3618 34.67885,42.3293 34.6824,42.3255 34.69445,42.3213</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">577</SimpleData>
+		<SimpleData name="CENTRE_X">34.8289</SimpleData>
+		<SimpleData name="CENTRE_Y">39.817</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.8362,39.789 34.8423,39.8118 34.8484,39.8388 34.835,39.844 34.8171,39.8495 34.811,39.8225 34.8049,39.7997 34.8228,39.7942 34.8362,39.789</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">578</SimpleData>
+		<SimpleData name="CENTRE_X">34.76685</SimpleData>
+		<SimpleData name="CENTRE_Y">39.819</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.77315,39.7934 34.7812,39.8128 34.78925,39.8383 34.7749,39.8445 34.76045,39.8505 34.7524,39.825 34.74435,39.8056 34.7588,39.7996 34.77315,39.7934</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">579</SimpleData>
+		<SimpleData name="CENTRE_X">34.4866</SimpleData>
+		<SimpleData name="CENTRE_Y">39.901</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.5066,39.8857 34.501,39.9046 34.4954,39.9292 34.481,39.9256 34.4705,39.9218 34.4761,39.8972 34.4817,39.8783 34.4922,39.8821 34.5066,39.8857</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">580</SimpleData>
+		<SimpleData name="CENTRE_X">34.38645</SimpleData>
+		<SimpleData name="CENTRE_Y">39.809</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.45285,39.8033 34.3818,39.8191 34.31075,39.8546 34.3154,39.8445 34.30395,39.8336 34.375,39.7981 34.44605,39.7823 34.4575,39.7932 34.45285,39.8033</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">581</SimpleData>
+		<SimpleData name="CENTRE_X">34.33055</SimpleData>
+		<SimpleData name="CENTRE_Y">39.763</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.39745,39.7342 34.3447,39.7757 34.29195,39.8089 34.2778,39.7962 34.26905,39.7835 34.3218,39.7503 34.37455,39.7088 34.3833,39.7215 34.39745,39.7342</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">582</SimpleData>
+		<SimpleData name="CENTRE_X">34.02735</SimpleData>
+		<SimpleData name="CENTRE_Y">46.951</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.01485,46.9687 34.0217,46.949 34.02855,46.9328 34.0342,46.9348 34.04125,46.936 34.0344,46.9522 34.02755,46.9719 34.0205,46.9707 34.01485,46.9687</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">583</SimpleData>
+		<SimpleData name="CENTRE_X">33.9772</SimpleData>
+		<SimpleData name="CENTRE_Y">46.928</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.9472,46.9368 33.9683,46.918 33.9894,46.9014 33.9983,46.9114 34.003,46.9204 33.9819,46.937 33.9608,46.9558 33.9561,46.9468 33.9472,46.9368</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">584</SimpleData>
+		<SimpleData name="CENTRE_X">34.05485</SimpleData>
+		<SimpleData name="CENTRE_Y">40.153</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.00765,40.1874 34.0444,40.1492 34.08115,40.121 34.0916,40.1248 34.08875,40.129 34.052,40.1572 34.01525,40.1954 34.0181,40.1912 34.00765,40.1874</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">585</SimpleData>
+		<SimpleData name="CENTRE_X">34.00365</SimpleData>
+		<SimpleData name="CENTRE_Y">40.164</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.96465,40.1639 34.0032,40.1541 34.04175,40.1346 34.0422,40.1445 34.05025,40.1548 34.0117,40.1743 33.97315,40.1841 33.9651,40.1738 33.96465,40.1639</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">586</SimpleData>
+		<SimpleData name="CENTRE_X">34.0347</SimpleData>
+		<SimpleData name="CENTRE_Y">40.125</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.0,40.1201 34.0266,40.1128 34.0532,40.1031 34.0613,40.1153 34.0642,40.1283 34.0376,40.138 34.011,40.1453 34.0081,40.1323 34.0,40.1201</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">587</SimpleData>
+		<SimpleData name="CENTRE_X">34.0327</SimpleData>
+		<SimpleData name="CENTRE_Y">40.084</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.99,40.0865 34.0254,40.0718 34.0608,40.0615 34.0681,40.0737 34.0735,40.0852 34.0381,40.0955 34.0027,40.1102 33.9973,40.0987 33.99,40.0865</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">588</SimpleData>
+		<SimpleData name="CENTRE_X">34.22055</SimpleData>
+		<SimpleData name="CENTRE_Y">39.714</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>34.22275,39.6925 34.2314,39.7058 34.24005,39.7216 34.2292,39.7298 34.21615,39.7387 34.2075,39.7229 34.19885,39.7096 34.2119,39.7007 34.22275,39.6925</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">589</SimpleData>
+		<SimpleData name="CENTRE_X">33.63785</SimpleData>
+		<SimpleData name="CENTRE_Y">37.337</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.65975,37.3573 33.6318,37.3435 33.60385,37.3166 33.6099,37.3101 33.61145,37.3044 33.6394,37.3313 33.66735,37.3451 33.6658,37.3508 33.65975,37.3573</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">590</SimpleData>
+		<SimpleData name="CENTRE_X">33.52455</SimpleData>
+		<SimpleData name="CENTRE_Y">37.358</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.51605,37.3684 33.5308,37.355 33.54555,37.3254 33.5393,37.3284 33.55285,37.332 33.5381,37.3616 33.52335,37.375 33.5098,37.3714 33.51605,37.3684</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">591</SimpleData>
+		<SimpleData name="CENTRE_X">32.4392</SimpleData>
+		<SimpleData name="CENTRE_Y">41.183</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>32.4988,41.1266 32.4658,41.1941 32.4328,41.2638 32.4062,41.2527 32.406,41.2409 32.439,41.1712 32.472,41.1037 32.4722,41.1155 32.4988,41.1266</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">592</SimpleData>
+		<SimpleData name="CENTRE_X">32.81765</SimpleData>
+		<SimpleData name="CENTRE_Y">36.877</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>32.87625,36.8623 32.8228,36.888 32.76935,36.9126 32.7642,36.9016 32.76005,36.8906 32.8135,36.866 32.86695,36.8403 32.8711,36.8513 32.87625,36.8623</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">593</SimpleData>
+		<SimpleData name="CENTRE_X">32.94235</SimpleData>
+		<SimpleData name="CENTRE_Y">36.891</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.05375,36.757 32.9722,36.9021 32.89065,36.986 32.8608,36.9749 32.87255,36.9636 32.9541,36.8797 33.03565,36.7346 33.0239,36.7459 33.05375,36.757</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">594</SimpleData>
+		<SimpleData name="CENTRE_X">33.0215</SimpleData>
+		<SimpleData name="CENTRE_Y">36.965</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.0698,36.9515 33.0273,36.9724 32.9848,37.015 32.979,37.0076 32.9726,37.0004 33.0151,36.9578 33.0576,36.9369 33.064,36.9441 33.0698,36.9515</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">595</SimpleData>
+		<SimpleData name="CENTRE_X">33.1948</SimpleData>
+		<SimpleData name="CENTRE_Y">37.078</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.23,37.0436 33.2007,37.0852 33.1714,37.1286 33.1655,37.1214 33.1606,37.1145 33.1899,37.0711 33.2192,37.0295 33.2241,37.0364 33.23,37.0436</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">596</SimpleData>
+		<SimpleData name="CENTRE_X">32.8579</SimpleData>
+		<SimpleData name="CENTRE_Y">37.196</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>32.8286,37.2042 32.8535,37.1885 32.8784,37.1654 32.8828,37.1729 32.8923,37.1803 32.8674,37.2034 32.8425,37.2191 32.833,37.2117 32.8286,37.2042</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">597</SimpleData>
+		<SimpleData name="CENTRE_X">33.05125</SimpleData>
+		<SimpleData name="CENTRE_Y">41.139</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.03465,41.1271 33.0615,41.1301 33.08835,41.1564 33.0781,41.1653 33.08155,41.174 33.0547,41.1477 33.02785,41.1447 33.0244,41.136 33.03465,41.1271</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">598</SimpleData>
+		<SimpleData name="CENTRE_X">32.8491</SimpleData>
+		<SimpleData name="CENTRE_Y">41.176</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>32.7412,41.1419 32.8501,41.1653 32.959,41.2054 32.958,41.2161 32.9644,41.2269 32.8555,41.1868 32.7466,41.1634 32.7402,41.1526 32.7412,41.1419</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">599</SimpleData>
+		<SimpleData name="CENTRE_X">33.14725</SimpleData>
+		<SimpleData name="CENTRE_Y">41.139</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>33.13155,41.1171 33.1506,41.1343 33.16965,41.1523 33.1663,41.157 33.16065,41.1621 33.1416,41.1441 33.12255,41.1269 33.1282,41.1218 33.13155,41.1171</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">600</SimpleData>
+		<SimpleData name="CENTRE_X">31.77805</SimpleData>
+		<SimpleData name="CENTRE_Y">39.789</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>31.76635,39.8272 31.7695,39.7888 31.77265,39.7598 31.7812,39.76 31.79275,39.7598 31.7896,39.7888 31.78645,39.8272 31.7749,39.8274 31.76635,39.8272</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">601</SimpleData>
+		<SimpleData name="CENTRE_X">31.3621</SimpleData>
+		<SimpleData name="CENTRE_Y">39.843</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>31.3679,39.8748 31.3535,39.8479 31.3391,39.8294 31.3477,39.8245 31.3596,39.8192 31.374,39.8377 31.3884,39.8646 31.3765,39.8699 31.3679,39.8748</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">602</SimpleData>
+		<SimpleData name="CENTRE_X">31.45615</SimpleData>
+		<SimpleData name="CENTRE_Y">39.514</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>31.46375,39.5382 31.4458,39.52 31.42785,39.4972 31.4382,39.4912 31.44105,39.4848 31.459,39.5076 31.47695,39.5258 31.4741,39.5322 31.46375,39.5382</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">603</SimpleData>
+		<SimpleData name="CENTRE_X">32.18265</SimpleData>
+		<SimpleData name="CENTRE_Y">36.597</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>32.20895,36.5873 32.196,36.604 32.18305,36.6281 32.1697,36.6211 32.16085,36.6144 32.1738,36.5903 32.18675,36.5736 32.1956,36.5803 32.20895,36.5873</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">604</SimpleData>
+		<SimpleData name="CENTRE_X">32.10815</SimpleData>
+		<SimpleData name="CENTRE_Y">36.579</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>32.13035,36.5578 32.1196,36.5828 32.10885,36.6083 32.0974,36.6045 32.08985,36.601 32.1006,36.5755 32.11135,36.5505 32.1189,36.554 32.13035,36.5578</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">605</SimpleData>
+		<SimpleData name="CENTRE_X">31.2125</SimpleData>
+		<SimpleData name="CENTRE_Y">39.881</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>31.2174,39.9012 31.2092,39.8833 31.201,39.8649 31.2043,39.8626 31.2137,39.8598 31.2219,39.8782 31.2301,39.8961 31.2207,39.8989 31.2174,39.9012</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">606</SimpleData>
+		<SimpleData name="CENTRE_X">31.10205</SimpleData>
+		<SimpleData name="CENTRE_Y">39.973</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>31.10085,39.9926 31.094,39.9756 31.08715,39.9584 31.0952,39.9558 31.10085,39.953 31.1077,39.9702 31.11455,39.9872 31.1089,39.99 31.10085,39.9926</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">607</SimpleData>
+		<SimpleData name="CENTRE_X">30.6982</SimpleData>
+		<SimpleData name="CENTRE_Y">40.419</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>30.7261,40.4643 30.6841,40.4275 30.6421,40.3984 30.6562,40.3899 30.6582,40.3818 30.7002,40.4109 30.7422,40.4477 30.7402,40.4558 30.7261,40.4643</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">608</SimpleData>
+		<SimpleData name="CENTRE_X">31.1129</SimpleData>
+		<SimpleData name="CENTRE_Y">41.222</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>31.1632,41.1921 31.1201,41.2337 31.077,41.2754 31.0698,41.2637 31.0546,41.2529 31.0977,41.2112 31.1408,41.1696 31.156,41.1804 31.1632,41.1921</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">609</SimpleData>
+		<SimpleData name="CENTRE_X">31.00655</SimpleData>
+		<SimpleData name="CENTRE_Y">41.24</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>31.02145,41.2308 31.0107,41.2442 30.99995,41.2623 30.9958,41.2581 30.98245,41.2547 30.9932,41.2366 31.00395,41.2232 31.0173,41.2266 31.02145,41.2308</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">610</SimpleData>
+		<SimpleData name="CENTRE_X">30.21715</SimpleData>
+		<SimpleData name="CENTRE_Y">43.753</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>30.21055,43.7358 30.2234,43.7429 30.23625,43.7546 30.23,43.7647 30.22425,43.7739 30.2114,43.7622 30.19855,43.7551 30.2043,43.7459 30.21055,43.7358</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">611</SimpleData>
+		<SimpleData name="CENTRE_X">30.03955</SimpleData>
+		<SimpleData name="CENTRE_Y">43.546</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>30.02885,43.5744 30.0286,43.5454 30.02835,43.5241 30.0393,43.5247 30.04415,43.5244 30.0444,43.5457 30.04465,43.5747 30.0398,43.575 30.02885,43.5744</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">612</SimpleData>
+		<SimpleData name="CENTRE_X">29.9956</SimpleData>
+		<SimpleData name="CENTRE_Y">42.047</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>29.9785,42.0195 30.0029,42.0418 30.0273,42.0629 30.02,42.0681 30.0161,42.0731 29.9917,42.052 29.9673,42.0297 29.9712,42.0247 29.9785,42.0195</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">613</SimpleData>
+		<SimpleData name="CENTRE_X">29.7949</SimpleData>
+		<SimpleData name="CENTRE_Y">42.008</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>29.8174,41.9789 29.8008,42.012 29.7842,42.038 29.7783,42.034 29.7705,42.0297 29.7871,42.0037 29.8037,41.9706 29.8115,41.9749 29.8174,41.9789</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">614</SimpleData>
+		<SimpleData name="CENTRE_X">30.1687</SimpleData>
+		<SimpleData name="CENTRE_Y">40.756</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>30.2085,40.8171 30.1694,40.7608 30.1303,40.7253 30.1296,40.7205 30.1445,40.7165 30.1836,40.752 30.2227,40.8083 30.2078,40.8123 30.2085,40.8171</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">615</SimpleData>
+		<SimpleData name="CENTRE_X">30.2473</SimpleData>
+		<SimpleData name="CENTRE_Y">40.769</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>30.3027,40.8031 30.2458,40.7774 30.1889,40.7457 30.1904,40.7373 30.1982,40.7283 30.2551,40.76 30.312,40.7857 30.3042,40.7947 30.3027,40.8031</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">616</SimpleData>
+		<SimpleData name="CENTRE_X">28.85275</SimpleData>
+		<SimpleData name="CENTRE_Y">44.792</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.87405,44.7969 28.8323,44.7991 28.79055,44.7683 28.811,44.7612 28.80545,44.7534 28.8472,44.7842 28.88895,44.782 28.8945,44.7898 28.87405,44.7969</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">617</SimpleData>
+		<SimpleData name="CENTRE_X">29.21805</SimpleData>
+		<SimpleData name="CENTRE_Y">41.372</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>29.24195,41.4278 29.2544,41.3723 29.26685,41.2896 29.2305,41.2893 29.29805,41.2896 29.2856,41.3723 29.27315,41.4278 29.2056,41.4275 29.24195,41.4278</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">618</SimpleData>
+		<SimpleData name="CENTRE_X">29.4746</SimpleData>
+		<SimpleData name="CENTRE_Y">41.333</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>29.4707,41.4248 29.5161,41.3225 29.5615,41.1919 29.52,41.2024 29.5835,41.2119 29.5381,41.3425 29.4927,41.4448 29.4292,41.4353 29.4707,41.4248</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">619</SimpleData>
+		<SimpleData name="CENTRE_X">29.61575</SimpleData>
+		<SimpleData name="CENTRE_Y">41.339</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>29.63035,41.4686 29.5698,41.3474 29.50925,41.1791 29.5552,41.1707 29.55905,41.1625 29.6196,41.3308 29.68015,41.452 29.6763,41.4602 29.63035,41.4686</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">620</SimpleData>
+		<SimpleData name="CENTRE_X">30.04225</SimpleData>
+		<SimpleData name="CENTRE_Y">39.031</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>30.07495,39.0101 30.0383,39.0364 30.00165,39.0701 30.0056,39.0647 29.98335,39.0596 30.02,39.0259 30.05665,38.9996 30.0789,39.0047 30.07495,39.0101</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">621</SimpleData>
+		<SimpleData name="CENTRE_X">29.0095</SimpleData>
+		<SimpleData name="CENTRE_Y">42.613</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>29.0486,42.574 29.0264,42.6174 29.0042,42.6546 28.9873,42.6502 28.9783,42.6463 29.0005,42.6091 29.0227,42.5657 29.0317,42.5696 29.0486,42.574</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">622</SimpleData>
+		<SimpleData name="CENTRE_X">28.7456</SimpleData>
+		<SimpleData name="CENTRE_Y">42.068</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.7906,42.079 28.7432,42.0764 28.6958,42.079 28.6982,42.0706 28.6948,42.0619 28.7422,42.0593 28.7896,42.0619 28.793,42.0706 28.7906,42.079</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">623</SimpleData>
+		<SimpleData name="CENTRE_X">28.92895</SimpleData>
+		<SimpleData name="CENTRE_Y">41.477</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.96905,41.5267 28.9285,41.4878 28.88795,41.4586 28.8884,41.4478 28.90575,41.4369 28.9463,41.4661 28.98685,41.505 28.9695,41.5159 28.96905,41.5267</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">624</SimpleData>
+		<SimpleData name="CENTRE_X">29.0409</SimpleData>
+		<SimpleData name="CENTRE_Y">41.409</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>29.0572,41.4613 29.041,41.4133 29.0248,41.3666 29.0247,41.3623 29.0378,41.3588 29.054,41.4055 29.0702,41.4535 29.0571,41.457 29.0572,41.4613</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">625</SimpleData>
+		<SimpleData name="CENTRE_X">28.978</SimpleData>
+		<SimpleData name="CENTRE_Y">41.43</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.9993,41.4606 28.9788,41.4326 28.9583,41.4086 28.9575,41.406 28.9653,41.4028 28.9858,41.4268 29.0063,41.4548 28.9985,41.458 28.9993,41.4606</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">626</SimpleData>
+		<SimpleData name="CENTRE_X">28.1282</SimpleData>
+		<SimpleData name="CENTRE_Y">44.231</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.0921,44.2241 28.1353,44.2244 28.1785,44.2324 28.1714,44.239 28.177,44.2456 28.1338,44.2376 28.0906,44.2373 28.085,44.2307 28.0921,44.2241</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">627</SimpleData>
+		<SimpleData name="CENTRE_X">28.15185</SimpleData>
+		<SimpleData name="CENTRE_Y">44.166</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.10985,44.1768 28.1611,44.1594 28.21235,44.1768 28.2031,44.1834 28.20555,44.19 28.1543,44.1726 28.10305,44.19 28.1006,44.1834 28.10985,44.1768</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">628</SimpleData>
+		<SimpleData name="CENTRE_X">28.18105</SimpleData>
+		<SimpleData name="CENTRE_Y">44.058</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.14055,44.0697 28.1829,44.051 28.22525,44.0401 28.2234,44.0471 28.22665,44.0545 28.1843,44.0654 28.14195,44.0841 28.1387,44.0767 28.14055,44.0697</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">629</SimpleData>
+		<SimpleData name="CENTRE_X">28.5188</SimpleData>
+		<SimpleData name="CENTRE_Y">44.106</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.4973,44.1055 28.5181,44.1026 28.5389,44.1028 28.5396,44.1062 28.5398,44.1101 28.519,44.1099 28.4982,44.1128 28.498,44.1089 28.4973,44.1055</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">630</SimpleData>
+		<SimpleData name="CENTRE_X">28.53565</SimpleData>
+		<SimpleData name="CENTRE_Y">46.182</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.52655,46.2118 28.5361,46.1802 28.54565,46.1427 28.5452,46.1445 28.56865,46.1459 28.5591,46.1834 28.54955,46.215 28.5261,46.2136 28.52655,46.2118</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">631</SimpleData>
+		<SimpleData name="CENTRE_X">28.60095</SimpleData>
+		<SimpleData name="CENTRE_Y">41.11</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.56775,41.15 28.5779,41.1084 28.58805,41.0778 28.6111,41.0794 28.61045,41.0815 28.6003,41.1121 28.59015,41.1537 28.5908,41.1516 28.56775,41.15</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">632</SimpleData>
+		<SimpleData name="CENTRE_X">28.5419</SimpleData>
+		<SimpleData name="CENTRE_Y">41.034</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.5079,41.0381 28.5388,41.0257 28.5697,41.0213 28.5728,41.0296 28.5744,41.0386 28.5435,41.043 28.5126,41.0554 28.511,41.0464 28.5079,41.0381</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">633</SimpleData>
+		<SimpleData name="CENTRE_X">28.39355</SimpleData>
+		<SimpleData name="CENTRE_Y">39.458</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.32955,39.4014 28.3901,39.4448 28.45065,39.4294 28.4541,39.4426 28.44435,39.4556 28.3838,39.471 28.32325,39.4276 28.333,39.4146 28.32955,39.4014</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">634</SimpleData>
+		<SimpleData name="CENTRE_X">28.95095</SimpleData>
+		<SimpleData name="CENTRE_Y">35.913</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>28.95935,35.8936 28.9702,35.9129 28.98105,35.9456 28.9618,35.9457 28.97045,35.9463 28.9596,35.9136 28.94875,35.8943 28.9401,35.8937 28.95935,35.8936</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">635</SimpleData>
+		<SimpleData name="CENTRE_X">27.4021</SimpleData>
+		<SimpleData name="CENTRE_Y">46.705</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>27.4336,46.7423 27.4067,46.7112 27.3798,46.704 27.3752,46.6978 27.3879,46.692 27.4148,46.6992 27.4417,46.7303 27.429,46.7361 27.4336,46.7423</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">636</SimpleData>
+		<SimpleData name="CENTRE_X">27.53455</SimpleData>
+		<SimpleData name="CENTRE_Y">46.581</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>27.57855,46.6436 27.5203,46.5908 27.46205,46.5413 27.4763,46.5315 27.47345,46.5218 27.5317,46.5713 27.58995,46.6241 27.5928,46.6338 27.57855,46.6436</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">637</SimpleData>
+		<SimpleData name="CENTRE_X">26.5422</SimpleData>
+		<SimpleData name="CENTRE_Y">41.182</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.635,41.1525 26.5371,41.198 26.4392,41.2438 26.4443,41.2278 26.4319,41.2121 26.5298,41.1663 26.6277,41.1208 26.6401,41.1365 26.635,41.1525</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">638</SimpleData>
+		<SimpleData name="CENTRE_X">26.5981</SimpleData>
+		<SimpleData name="CENTRE_Y">41.302</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.6287,41.2985 26.5952,41.3062 26.5617,41.3159 26.5646,41.3117 26.5599,41.3073 26.5934,41.2976 26.6269,41.2899 26.6316,41.2943 26.6287,41.2985</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">639</SimpleData>
+		<SimpleData name="CENTRE_X">27.6648</SimpleData>
+		<SimpleData name="CENTRE_Y">34.69</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>27.6328,34.7231 27.6548,34.6892 27.6768,34.6628 27.6868,34.6636 27.6902,34.6653 27.6682,34.6917 27.6462,34.7256 27.6428,34.7239 27.6328,34.7231</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">640</SimpleData>
+		<SimpleData name="CENTRE_X">27.6815</SimpleData>
+		<SimpleData name="CENTRE_Y">34.186</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>27.6046,34.1731 27.6843,34.1787 27.764,34.1895 27.7612,34.1968 27.7626,34.2047 27.6829,34.1939 27.6032,34.1883 27.6018,34.1804 27.6046,34.1731</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">641</SimpleData>
+		<SimpleData name="CENTRE_X">26.23805</SimpleData>
+		<SimpleData name="CENTRE_Y">46.769</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.22925,46.7955 26.2246,46.7722 26.21995,46.7525 26.2334,46.7493 26.24265,46.7467 26.2473,46.7664 26.25195,46.7897 26.2427,46.7923 26.22925,46.7955</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">642</SimpleData>
+		<SimpleData name="CENTRE_X">26.0271</SimpleData>
+		<SimpleData name="CENTRE_Y">46.575</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.0493,46.5605 26.0364,46.5801 26.0235,46.594 26.0142,46.5889 26.0105,46.5847 26.0234,46.5708 26.0363,46.5512 26.04,46.5554 26.0493,46.5605</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">643</SimpleData>
+		<SimpleData name="CENTRE_X">26.07825</SimpleData>
+		<SimpleData name="CENTRE_Y">46.578</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.09265,46.5612 26.0884,46.5796 26.08415,46.6024 26.074,46.6008 26.06215,46.5987 26.0664,46.5759 26.07065,46.5575 26.0825,46.5596 26.09265,46.5612</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">644</SimpleData>
+		<SimpleData name="CENTRE_X">26.15295</SimpleData>
+		<SimpleData name="CENTRE_Y">46.573</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.16955,46.544 26.1677,46.5757 26.16585,46.596 26.1511,46.5933 26.15195,46.5899 26.1538,46.5696 26.15565,46.5379 26.1548,46.5413 26.16955,46.544</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">645</SimpleData>
+		<SimpleData name="CENTRE_X">26.41845</SimpleData>
+		<SimpleData name="CENTRE_Y">45.513</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.39595,45.5378 26.4089,45.5105 26.42185,45.4885 26.4314,45.491 26.43675,45.4932 26.4238,45.5152 26.41085,45.5425 26.4055,45.5403 26.39595,45.5378</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">646</SimpleData>
+		<SimpleData name="CENTRE_X">26.365</SimpleData>
+		<SimpleData name="CENTRE_Y">45.477</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.3557,45.4898 26.3608,45.4756 26.3659,45.4576 26.3701,45.459 26.3764,45.4596 26.3713,45.4776 26.3662,45.4918 26.3599,45.4912 26.3557,45.4898</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">647</SimpleData>
+		<SimpleData name="CENTRE_X">26.3379</SimpleData>
+		<SimpleData name="CENTRE_Y">45.475</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.3284,45.4823 26.334,45.4732 26.3396,45.4599 26.3435,45.4617 26.352,45.4625 26.3464,45.4758 26.3408,45.4849 26.3323,45.4841 26.3284,45.4823</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">648</SimpleData>
+		<SimpleData name="CENTRE_X">26.229</SimpleData>
+		<SimpleData name="CENTRE_Y">42.95</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.2476,42.8787 26.2378,42.9456 26.228,43.0061 26.2192,43.0105 26.187,43.0158 26.1968,42.9553 26.2066,42.8884 26.2388,42.8831 26.2476,42.8787</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">649</SimpleData>
+		<SimpleData name="CENTRE_X">26.4492</SimpleData>
+		<SimpleData name="CENTRE_Y">42.924</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.4312,42.8914 26.4512,42.9182 26.4712,42.9403 26.4692,42.9461 26.4599,42.9516 26.4399,42.9295 26.4199,42.9027 26.4292,42.8972 26.4312,42.8914</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">650</SimpleData>
+		<SimpleData name="CENTRE_X">26.3704</SimpleData>
+		<SimpleData name="CENTRE_Y">41.887</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>26.377,41.9145 26.3621,41.8894 26.3472,41.8642 26.3555,41.8618 26.3533,41.8589 26.3682,41.8841 26.3831,41.9092 26.3853,41.9121 26.377,41.9145</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">651</SimpleData>
+		<SimpleData name="CENTRE_X">25.38965</SimpleData>
+		<SimpleData name="CENTRE_Y">44.852</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>25.36425,44.868 25.3845,44.8462 25.40475,44.8311 25.4099,44.8369 25.42115,44.8423 25.4009,44.8574 25.38065,44.8792 25.3694,44.8738 25.36425,44.868</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">652</SimpleData>
+		<SimpleData name="CENTRE_X">25.6372</SimpleData>
+		<SimpleData name="CENTRE_Y">43.024</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>25.5981,43.0039 25.6528,43.013 25.7075,43.0386 25.6919,43.0496 25.6987,43.061 25.644,43.0354 25.5893,43.0263 25.5825,43.0149 25.5981,43.0039</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">653</SimpleData>
+		<SimpleData name="CENTRE_X">24.06555</SimpleData>
+		<SimpleData name="CENTRE_Y">37.957</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.09165,37.9796 24.0466,37.9683 24.00155,37.9327 24.0205,37.9214 24.00915,37.9105 24.0542,37.9461 24.09925,37.9574 24.1106,37.9683 24.09165,37.9796</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">654</SimpleData>
+		<SimpleData name="CENTRE_X">24.51855</SimpleData>
+		<SimpleData name="CENTRE_Y">36.354</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.54245,36.3347 24.5178,36.3567 24.49315,36.3894 24.4939,36.3867 24.48365,36.3845 24.5083,36.3518 24.53295,36.3298 24.5432,36.332 24.54245,36.3347</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">655</SimpleData>
+		<SimpleData name="CENTRE_X">24.99745</SimpleData>
+		<SimpleData name="CENTRE_Y">39.507</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>25.03705,39.514 24.9954,39.5156 24.95375,39.4971 24.9558,39.4885 24.95905,39.4793 25.0007,39.4978 25.04235,39.4962 25.0391,39.5054 25.03705,39.514</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">656</SimpleData>
+		<SimpleData name="CENTRE_X">25.01075</SimpleData>
+		<SimpleData name="CENTRE_Y">39.641</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>25.03935,39.624 25.0193,39.6458 24.99925,39.664 24.9907,39.6592 24.98505,39.6542 25.0051,39.636 25.02515,39.6142 25.0308,39.6192 25.03935,39.624</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">657</SimpleData>
+		<SimpleData name="CENTRE_X">24.6914</SimpleData>
+		<SimpleData name="CENTRE_Y">41.261</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.6911,41.2415 24.7048,41.2564 24.7185,41.273 24.7051,41.2776 24.7017,41.2813 24.688,41.2647 24.6743,41.2498 24.6777,41.2461 24.6911,41.2415</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">658</SimpleData>
+		<SimpleData name="CENTRE_X">24.2576</SimpleData>
+		<SimpleData name="CENTRE_Y">42.642</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.3623,42.5986 24.2893,42.6463 24.2163,42.693 24.1846,42.6887 24.1821,42.6844 24.2551,42.6377 24.3281,42.59 24.3306,42.5943 24.3623,42.5986</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">659</SimpleData>
+		<SimpleData name="CENTRE_X">24.77745</SimpleData>
+		<SimpleData name="CENTRE_Y">37.574</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.81215,37.6101 24.7664,37.5818 24.72065,37.5383 24.7317,37.5305 24.72745,37.5217 24.7732,37.5652 24.81895,37.5935 24.8232,37.6023 24.81215,37.6101</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">660</SimpleData>
+		<SimpleData name="CENTRE_X">24.25735</SimpleData>
+		<SimpleData name="CENTRE_Y">43.778</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.21045,43.745 24.2666,43.7659 24.32275,43.7709 24.3135,43.783 24.31445,43.7948 24.2583,43.7898 24.20215,43.7689 24.2012,43.7571 24.21045,43.745</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">661</SimpleData>
+		<SimpleData name="CENTRE_X">24.26295</SimpleData>
+		<SimpleData name="CENTRE_Y">43.824</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.20535,43.7962 24.2637,43.8113 24.32205,43.8103 24.3213,43.823 24.31715,43.8362 24.2588,43.8372 24.20045,43.8221 24.2046,43.8089 24.20535,43.7962</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">662</SimpleData>
+		<SimpleData name="CENTRE_X">24.37475</SimpleData>
+		<SimpleData name="CENTRE_Y">44.423</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.39035,44.4425 24.3762,44.4265 24.36205,44.4166 24.3606,44.4131 24.36695,44.4086 24.3811,44.4185 24.39525,44.4345 24.3889,44.439 24.39035,44.4425</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">663</SimpleData>
+		<SimpleData name="CENTRE_X">24.60305</SimpleData>
+		<SimpleData name="CENTRE_Y">44.69</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.58685,44.7397 24.5771,44.6909 24.56735,44.6506 24.5933,44.6497 24.59915,44.6492 24.6089,44.6895 24.61865,44.7383 24.6128,44.7388 24.58685,44.7397</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">664</SimpleData>
+		<SimpleData name="CENTRE_X">24.6454</SimpleData>
+		<SimpleData name="CENTRE_Y">45.923</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.6224,45.903 24.6533,45.9141 24.6842,45.9345 24.6763,45.9434 24.6754,45.9516 24.6445,45.9312 24.6136,45.9201 24.6145,45.9119 24.6224,45.903</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">665</SimpleData>
+		<SimpleData name="CENTRE_X">24.6796</SimpleData>
+		<SimpleData name="CENTRE_Y">45.905</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.6615,45.8792 24.687,45.8965 24.7125,45.9144 24.7051,45.9229 24.6984,45.9322 24.6729,45.9143 24.6474,45.897 24.6541,45.8877 24.6615,45.8792</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">666</SimpleData>
+		<SimpleData name="CENTRE_X">25.0176</SimpleData>
+		<SimpleData name="CENTRE_Y">42.657</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>25.0481,42.6601 25.0144,42.6633 24.9807,42.6606 24.9839,42.6543 24.9802,42.6489 25.0139,42.6516 25.0476,42.6484 25.0513,42.6538 25.0481,42.6601</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">667</SimpleData>
+		<SimpleData name="CENTRE_X">24.82485</SimpleData>
+		<SimpleData name="CENTRE_Y">38.721</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.83585,38.6804 24.8323,38.7195 24.82875,38.7519 24.8213,38.7534 24.81135,38.7558 24.8149,38.7234 24.81845,38.6843 24.8284,38.6819 24.83585,38.6804</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">668</SimpleData>
+		<SimpleData name="CENTRE_X">23.8513</SimpleData>
+		<SimpleData name="CENTRE_Y">37.272</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>23.8193,37.2378 23.8461,37.2688 23.8729,37.2731 23.8781,37.2763 23.8644,37.2797 23.8376,37.2754 23.8108,37.2444 23.8245,37.241 23.8193,37.2378</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">669</SimpleData>
+		<SimpleData name="CENTRE_X">24.0031</SimpleData>
+		<SimpleData name="CENTRE_Y">37.308</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>23.974,37.3112 24.0002,37.2996 24.0264,37.2931 24.0293,37.3015 24.0321,37.3097 24.0059,37.3162 23.9797,37.3278 23.9769,37.3196 23.974,37.3112</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">670</SimpleData>
+		<SimpleData name="CENTRE_X">24.09325</SimpleData>
+		<SimpleData name="CENTRE_Y">36.588</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>24.14865,36.5854 24.0981,36.5945 24.04755,36.6059 24.0427,36.5994 24.04515,36.593 24.0957,36.5816 24.14625,36.5725 24.1438,36.5789 24.14865,36.5854</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">671</SimpleData>
+		<SimpleData name="CENTRE_X">23.9343</SimpleData>
+		<SimpleData name="CENTRE_Y">42.998</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>23.8923,42.963 23.9421,42.9854 23.9919,43.0279 23.9841,43.0405 23.9651,43.0537 23.9153,43.0112 23.8655,42.9888 23.8845,42.9756 23.8923,42.963</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">672</SimpleData>
+		<SimpleData name="CENTRE_X">23.02</SimpleData>
+		<SimpleData name="CENTRE_Y">39.856</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.9976,40.0298 22.9937,39.8587 22.9898,39.7647 23.0161,39.762 23.0586,39.7593 23.0625,39.8533 23.0664,40.0244 23.0239,40.0271 22.9976,40.0298</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">673</SimpleData>
+		<SimpleData name="CENTRE_X">22.2622</SimpleData>
+		<SimpleData name="CENTRE_Y">40.062</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.2421,40.045 22.2812,40.0545 22.3203,40.0743 22.3013,40.0818 22.3052,40.0894 22.2661,40.0696 22.227,40.0601 22.2231,40.0525 22.2421,40.045</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">674</SimpleData>
+		<SimpleData name="CENTRE_X">22.36745</SimpleData>
+		<SimpleData name="CENTRE_Y">39.96</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.33325,39.9287 22.374,39.9505 22.41475,39.9629 22.4082,39.9724 22.40405,39.9814 22.3633,39.969 22.32255,39.9472 22.3267,39.9382 22.33325,39.9287</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">675</SimpleData>
+		<SimpleData name="CENTRE_X">22.40725</SimpleData>
+		<SimpleData name="CENTRE_Y">40.162</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.44095,40.175 22.4092,40.1707 22.37745,40.1589 22.3755,40.1502 22.37495,40.1423 22.4067,40.1541 22.43845,40.1584 22.439,40.1663 22.44095,40.175</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">676</SimpleData>
+		<SimpleData name="CENTRE_X">22.33775</SimpleData>
+		<SimpleData name="CENTRE_Y">44.657</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.32605,44.6911 22.323,44.6599 22.31995,44.6335 22.3347,44.6306 22.35195,44.6286 22.355,44.655 22.35805,44.6862 22.3408,44.6882 22.32605,44.6911</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">677</SimpleData>
+		<SimpleData name="CENTRE_X">22.8721</SimpleData>
+		<SimpleData name="CENTRE_Y">44.999</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.8699,45.0055 22.8821,44.992 22.8943,44.9662 22.8843,44.9732 22.8979,44.9796 22.8857,45.0054 22.8735,45.0189 22.8599,45.0125 22.8699,45.0055</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">678</SimpleData>
+		<SimpleData name="CENTRE_X">22.3504</SimpleData>
+		<SimpleData name="CENTRE_Y">31.555</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.3661,31.5375 22.3542,31.5548 22.3423,31.5757 22.3385,31.5759 22.332,31.5752 22.3439,31.5543 22.3558,31.537 22.3623,31.5377 22.3661,31.5375</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">679</SimpleData>
+		<SimpleData name="CENTRE_X">22.3128</SimpleData>
+		<SimpleData name="CENTRE_Y">31.55</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.3279,31.5234 22.3173,31.5508 22.3067,31.578 22.3022,31.5772 22.2949,31.5769 22.3055,31.5497 22.3161,31.5223 22.3234,31.5226 22.3279,31.5234</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">680</SimpleData>
+		<SimpleData name="CENTRE_X">22.1194</SimpleData>
+		<SimpleData name="CENTRE_Y">31.556</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>22.1377,31.5019 22.1406,31.5564 22.1435,31.602 22.1223,31.6016 22.1233,31.602 22.1204,31.5564 22.1175,31.5019 22.1165,31.5015 22.1377,31.5019</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">681</SimpleData>
+		<SimpleData name="CENTRE_X">20.95945</SimpleData>
+		<SimpleData name="CENTRE_Y">39.424</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>20.99395,39.4208 20.97,39.4341 20.94605,39.451 20.9355,39.4409 20.93575,39.43 20.9597,39.4131 20.98365,39.3998 20.9834,39.4107 20.99395,39.4208</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">682</SimpleData>
+		<SimpleData name="CENTRE_X">20.9846</SimpleData>
+		<SimpleData name="CENTRE_Y">39.285</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>21.0174,39.2941 20.9849,39.291 20.9524,39.2956 20.9521,39.2896 20.9521,39.2839 20.9846,39.2793 21.0171,39.2824 21.0171,39.2881 21.0174,39.2941</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">683</SimpleData>
+		<SimpleData name="CENTRE_X">19.8319</SimpleData>
+		<SimpleData name="CENTRE_Y">38.077</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.7834,38.0651 19.8328,38.0679 19.8822,38.0471 19.8813,38.0562 19.8827,38.0659 19.8333,38.0867 19.7839,38.0839 19.7825,38.0742 19.7834,38.0651</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">684</SimpleData>
+		<SimpleData name="CENTRE_X">19.8588</SimpleData>
+		<SimpleData name="CENTRE_Y">38.026</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.8304,38.018 19.8586,38.0144 19.8868,38.0082 19.887,38.0198 19.8886,38.0317 19.8604,38.0379 19.8322,38.0415 19.8306,38.0296 19.8304,38.018</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">685</SimpleData>
+		<SimpleData name="CENTRE_X">19.82115</SimpleData>
+		<SimpleData name="CENTRE_Y">37.977</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.80305,37.9635 19.822,37.9649 19.84095,37.9613 19.8401,37.9734 19.84265,37.9847 19.8237,37.9883 19.80475,37.9869 19.8022,37.9756 19.80305,37.9635</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">686</SimpleData>
+		<SimpleData name="CENTRE_X">19.72765</SimpleData>
+		<SimpleData name="CENTRE_Y">37.769</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.68055,37.7716 19.7363,37.7569 19.79205,37.7697 19.7834,37.7818 19.78135,37.7931 19.7256,37.7803 19.66985,37.795 19.6719,37.7837 19.68055,37.7716</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">687</SimpleData>
+		<SimpleData name="CENTRE_X">19.303</SimpleData>
+		<SimpleData name="CENTRE_Y">42.046</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.3293,42.0063 19.3159,42.0486 19.3025,42.0912 19.2896,42.0886 19.2776,42.0868 19.291,42.0442 19.3044,42.0019 19.3164,42.0037 19.3293,42.0063</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">688</SimpleData>
+		<SimpleData name="CENTRE_X">19.22605</SimpleData>
+		<SimpleData name="CENTRE_Y">42.032</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.24805,42.0095 19.2378,42.0349 19.22755,42.0666 19.2158,42.0637 19.20895,42.0613 19.2192,42.0296 19.22945,42.0042 19.2363,42.0066 19.24805,42.0095</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">689</SimpleData>
+		<SimpleData name="CENTRE_X">20.00855</SimpleData>
+		<SimpleData name="CENTRE_Y">40.863</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.98555,40.826 20.0205,40.8538 20.05545,40.889 20.0435,40.8982 20.04175,40.907 20.0068,40.8718 19.97185,40.844 19.9736,40.8352 19.98555,40.826</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">690</SimpleData>
+		<SimpleData name="CENTRE_X">20.3238</SimpleData>
+		<SimpleData name="CENTRE_Y">39.504</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>20.3008,39.5036 20.3214,39.4971 20.342,39.493 20.3444,39.4999 20.3465,39.5059 20.3259,39.51 20.3053,39.5165 20.3032,39.5105 20.3008,39.5036</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">691</SimpleData>
+		<SimpleData name="CENTRE_X">19.93725</SimpleData>
+		<SimpleData name="CENTRE_Y">39.294</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>19.96415,39.2529 19.9727,39.2913 19.98125,39.3237 19.9458,39.3264 19.95385,39.3286 19.9453,39.2962 19.93675,39.2578 19.9287,39.2556 19.96415,39.2529</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">692</SimpleData>
+		<SimpleData name="CENTRE_X">18.678</SimpleData>
+		<SimpleData name="CENTRE_Y">36.908</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>18.7278,36.8918 18.6846,36.9138 18.6414,36.9206 18.6348,36.9148 18.6326,36.9084 18.6758,36.9016 18.719,36.8796 18.7212,36.886 18.7278,36.8918</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">693</SimpleData>
+		<SimpleData name="CENTRE_X">18.63015</SimpleData>
+		<SimpleData name="CENTRE_Y">36.804</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>18.68085,36.8347 18.6152,36.8128 18.54955,36.8343 18.5645,36.8255 18.54075,36.8172 18.6064,36.7957 18.67205,36.8176 18.6958,36.8259 18.68085,36.8347</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">694</SimpleData>
+		<SimpleData name="CENTRE_X">18.55785</SimpleData>
+		<SimpleData name="CENTRE_Y">36.662</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>18.65455,36.692 18.5576,36.6731 18.46065,36.7443 18.4609,36.7332 18.44265,36.7223 18.5396,36.6511 18.63655,36.67 18.6548,36.6809 18.65455,36.692</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">695</SimpleData>
+		<SimpleData name="CENTRE_X">18.46095</SimpleData>
+		<SimpleData name="CENTRE_Y">36.676</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>18.47365,36.6332 18.4585,36.6756 18.44335,36.7298 18.4458,36.7302 18.42775,36.7307 18.4429,36.6765 18.45805,36.6341 18.4761,36.6336 18.47365,36.6332</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">696</SimpleData>
+		<SimpleData name="CENTRE_X">18.54675</SimpleData>
+		<SimpleData name="CENTRE_Y">41.593</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>18.56965,41.6119 18.5427,41.5979 18.51575,41.5796 18.5198,41.5747 18.52265,41.5703 18.5496,41.5886 18.57655,41.6026 18.5737,41.607 18.56965,41.6119</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">697</SimpleData>
+		<SimpleData name="CENTRE_X">18.4104</SimpleData>
+		<SimpleData name="CENTRE_Y">41.388</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>18.3904,41.363 18.4133,41.3831 18.4362,41.4001 18.4333,41.405 18.4284,41.4106 18.4055,41.3936 18.3826,41.3735 18.3875,41.3679 18.3904,41.363</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">698</SimpleData>
+		<SimpleData name="CENTRE_X">18.4535</SimpleData>
+		<SimpleData name="CENTRE_Y">34.635</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>18.471,34.6343 18.4521,34.6392 18.4332,34.6417 18.4346,34.6375 18.4313,34.6329 18.4502,34.6304 18.4691,34.6255 18.4724,34.6301 18.471,34.6343</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">699</SimpleData>
+		<SimpleData name="CENTRE_X">16.9637</SimpleData>
+		<SimpleData name="CENTRE_Y">37.988</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>16.9529,38.0185 16.9615,37.9868 16.9701,37.9695 16.9723,37.9707 16.9849,37.9726 16.9763,37.9899 16.9677,38.0216 16.9551,38.0197 16.9529,38.0185</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">700</SimpleData>
+		<SimpleData name="CENTRE_X">17.0347</SimpleData>
+		<SimpleData name="CENTRE_Y">37.993</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.0259,38.0167 17.0234,37.9934 17.0209,37.9672 17.0322,37.9668 17.0344,37.9666 17.0369,37.9928 17.0394,38.0161 17.0372,38.0163 17.0259,38.0167</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">701</SimpleData>
+		<SimpleData name="CENTRE_X">17.0552</SimpleData>
+		<SimpleData name="CENTRE_Y">37.989</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.0548,38.0089 17.0527,37.9909 17.0506,37.9741 17.0531,37.9722 17.0628,37.9695 17.0649,37.9863 17.067,38.0043 17.0573,38.007 17.0548,38.0089</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">702</SimpleData>
+		<SimpleData name="CENTRE_X">17.09015</SimpleData>
+		<SimpleData name="CENTRE_Y">37.977</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.08345,37.9909 17.0823,37.978 17.08115,37.9661 17.089,37.9651 17.09945,37.9642 17.1006,37.9761 17.10175,37.989 17.0913,37.9899 17.08345,37.9909</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">703</SimpleData>
+		<SimpleData name="CENTRE_X">17.0034</SimpleData>
+		<SimpleData name="CENTRE_Y">37.597</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.0077,37.5759 17.0099,37.5967 17.0121,37.6132 17.0056,37.6135 16.9988,37.6139 16.9966,37.5974 16.9944,37.5766 17.0012,37.5762 17.0077,37.5759</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">704</SimpleData>
+		<SimpleData name="CENTRE_X">16.9571</SimpleData>
+		<SimpleData name="CENTRE_Y">37.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>16.9711,37.5682 16.9691,37.5987 16.9671,37.6297 16.9551,37.631 16.95,37.6323 16.952,37.6013 16.954,37.5708 16.9591,37.5695 16.9711,37.5682</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">705</SimpleData>
+		<SimpleData name="CENTRE_X">17.0607</SimpleData>
+		<SimpleData name="CENTRE_Y">37.521</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.0487,37.5005 17.0662,37.515 17.0837,37.5299 17.0782,37.5359 17.071,37.5426 17.0535,37.5277 17.036,37.5132 17.0432,37.5065 17.0487,37.5005</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">706</SimpleData>
+		<SimpleData name="CENTRE_X">17.11875</SimpleData>
+		<SimpleData name="CENTRE_Y">37.459</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.11405,37.4469 17.1237,37.4568 17.13335,37.4684 17.1284,37.4706 17.12655,37.4724 17.1169,37.4608 17.10725,37.4509 17.1091,37.4491 17.11405,37.4469</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">707</SimpleData>
+		<SimpleData name="CENTRE_X">17.70505</SimpleData>
+		<SimpleData name="CENTRE_Y">34.009</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.85695,34.0843 17.6958,34.0203 17.53465,33.9359 17.5439,33.9246 17.54635,33.9129 17.7075,33.9973 17.86865,34.0613 17.8662,34.073 17.85695,34.0843</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">708</SimpleData>
+		<SimpleData name="CENTRE_X">17.7571</SimpleData>
+		<SimpleData name="CENTRE_Y">33.499</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.8526,33.5387 17.7249,33.5091 17.5972,33.4994 17.6294,33.4893 17.6033,33.4793 17.731,33.489 17.8587,33.5186 17.8848,33.5286 17.8526,33.5387</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">709</SimpleData>
+		<SimpleData name="CENTRE_X">17.66335</SimpleData>
+		<SimpleData name="CENTRE_Y">34.141</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.63715,34.1326 17.6655,34.1348 17.69385,34.1188 17.6917,34.125 17.69645,34.1311 17.6681,34.1471 17.63975,34.1449 17.635,34.1388 17.63715,34.1326</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">710</SimpleData>
+		<SimpleData name="CENTRE_X">17.6602</SimpleData>
+		<SimpleData name="CENTRE_Y">34.129</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.6462,34.1227 17.6641,34.1257 17.682,34.1201 17.6781,34.1234 17.6827,34.1274 17.6648,34.133 17.6469,34.13 17.6423,34.126 17.6462,34.1227</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">711</SimpleData>
+		<SimpleData name="CENTRE_X">17.3556</SimpleData>
+		<SimpleData name="CENTRE_Y">32.922</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>17.3232,32.9391 17.3477,32.918 17.3722,32.9057 17.3801,32.9097 17.3792,32.9142 17.3547,32.9265 17.3302,32.9476 17.3311,32.9431 17.3232,32.9391</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">712</SimpleData>
+		<SimpleData name="CENTRE_X">16.49685</SimpleData>
+		<SimpleData name="CENTRE_Y">41.263</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>16.50165,41.2302 16.4858,41.2678 16.46995,41.322 16.481,41.3172 16.43725,41.3118 16.4531,41.2576 16.46895,41.22 16.5127,41.2254 16.50165,41.2302</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">713</SimpleData>
+		<SimpleData name="CENTRE_X">16.72865</SimpleData>
+		<SimpleData name="CENTRE_Y">37.957</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>16.69225,37.9642 16.7334,37.95 16.77455,37.9503 16.7698,37.9573 16.77215,37.9649 16.731,37.9646 16.68985,37.9788 16.6875,37.9712 16.69225,37.9642</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">714</SimpleData>
+		<SimpleData name="CENTRE_X">16.56285</SimpleData>
+		<SimpleData name="CENTRE_Y">37.886</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>16.53405,37.9014 16.5586,37.8826 16.58315,37.8723 16.5874,37.8757 16.58775,37.8796 16.5632,37.8899 16.53865,37.9087 16.5383,37.9048 16.53405,37.9014</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">715</SimpleData>
+		<SimpleData name="CENTRE_X">15.2793</SimpleData>
+		<SimpleData name="CENTRE_Y">37.308</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>15.1997,37.3453 15.2651,37.2976 15.3305,37.2457 15.3447,37.2561 15.3413,37.2667 15.2759,37.3186 15.2105,37.3663 15.2139,37.3557 15.1997,37.3453</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">716</SimpleData>
+		<SimpleData name="CENTRE_X">15.06175</SimpleData>
+		<SimpleData name="CENTRE_Y">37.104</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>14.99045,37.1636 15.0737,37.0901 15.15695,37.083 15.145,37.0969 15.15695,37.1099 15.0737,37.117 14.99045,37.1905 14.9785,37.1775 14.99045,37.1636</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">717</SimpleData>
+		<SimpleData name="CENTRE_X">15.5305</SimpleData>
+		<SimpleData name="CENTRE_Y">36.67</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>15.5769,36.6704 15.5337,36.6795 15.4905,36.6948 15.4873,36.6853 15.4866,36.6757 15.5298,36.6604 15.573,36.6513 15.5737,36.6609 15.5769,36.6704</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">718</SimpleData>
+		<SimpleData name="CENTRE_X">15.58305</SimpleData>
+		<SimpleData name="CENTRE_Y">36.633</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>15.66065,36.6502 15.5796,36.6428 15.49855,36.6097 15.502,36.5999 15.51225,36.5902 15.5933,36.6233 15.67435,36.6307 15.6641,36.6404 15.66065,36.6502</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">719</SimpleData>
+		<SimpleData name="CENTRE_X">15.81995</SimpleData>
+		<SimpleData name="CENTRE_Y">39.556</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>15.80775,39.5442 15.822,39.5528 15.83625,39.5571 15.8342,39.5603 15.83305,39.5627 15.8188,39.5584 15.80455,39.5498 15.8057,39.5474 15.80775,39.5442</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">720</SimpleData>
+		<SimpleData name="CENTRE_X">16.0205</SimpleData>
+		<SimpleData name="CENTRE_Y">37.261</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>16.1265,37.2278 16.0469,37.2717 15.9673,37.3142 15.9409,37.3035 15.9707,37.2932 16.0503,37.2507 16.1299,37.2068 16.1001,37.2171 16.1265,37.2278</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">721</SimpleData>
+		<SimpleData name="CENTRE_X">13.98095</SimpleData>
+		<SimpleData name="CENTRE_Y">37.224</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>13.93405,37.4152 13.9336,37.2244 13.93315,36.9963 13.9805,36.9959 14.02105,36.9953 14.0215,37.2234 14.02195,37.4142 13.9814,37.4148 13.93405,37.4152</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">722</SimpleData>
+		<SimpleData name="CENTRE_X">13.8684</SimpleData>
+		<SimpleData name="CENTRE_Y">37.38</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>13.842,37.3419 13.8706,37.3718 13.8992,37.3849 13.897,37.3931 13.8841,37.4011 13.8555,37.388 13.8269,37.3581 13.8398,37.3501 13.842,37.3419</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">723</SimpleData>
+		<SimpleData name="CENTRE_X">13.2385</SimpleData>
+		<SimpleData name="CENTRE_Y">41.604</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>13.2168,41.5816 13.2422,41.5987 13.2676,41.6468 13.2639,41.6521 13.2527,41.658 13.2273,41.6099 13.2019,41.5928 13.2131,41.5869 13.2168,41.5816</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">724</SimpleData>
+		<SimpleData name="CENTRE_X">12.41285</SimpleData>
+		<SimpleData name="CENTRE_Y">36.601</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>12.25805,36.3721 12.375,36.5925 12.49195,36.8028 12.5298,36.8113 12.44115,36.8194 12.3242,36.6091 12.20725,36.3887 12.2959,36.3806 12.25805,36.3721</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">725</SimpleData>
+		<SimpleData name="CENTRE_X">12.53175</SimpleData>
+		<SimpleData name="CENTRE_Y">36.72</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>12.50005,36.6223 12.5259,36.7175 12.55175,36.7893 12.5576,36.7918 12.50095,36.7947 12.4751,36.7229 12.44925,36.6277 12.5059,36.6248 12.50005,36.6223</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">726</SimpleData>
+		<SimpleData name="CENTRE_X">12.68285</SimpleData>
+		<SimpleData name="CENTRE_Y">36.445</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>12.65745,36.4432 12.6831,36.4375 12.70875,36.4295 12.7085,36.437 12.71465,36.4437 12.689,36.4517 12.66335,36.4574 12.6572,36.4507 12.65745,36.4432</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#SounessROIs_Deuteronilus_Mars2000">
+		<SimpleData name="OBJ_ID">727</SimpleData>
+		<SimpleData name="CENTRE_X">12.82705</SimpleData>
+		<SimpleData name="CENTRE_Y">36.508</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>clampToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>clampToGround</altitudeMode><coordinates>12.83855,36.5347 12.8201,36.5105 12.80165,36.483 12.8086,36.4805 12.81115,36.4779 12.8296,36.5054 12.84805,36.5296 12.8455,36.5322 12.83855,36.5347</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>
