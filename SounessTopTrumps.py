@@ -106,6 +106,7 @@ def printButton(GLF,cl="Sbutton"):
     colour of button """
     lat = float(GLF['Centlat'])
     lng = float(GLF['Centlon180'])
+
     #buttonHTML = "<div class=\'{cl}\' style=\'background-color:{bcl};\'><a href=\'souness{n:04d}.html\'>Souness {n}</a></div>".format(cl=cl,bcl=html_colour(lat,lng),n=int(GLF['CatNum']))
     buttonHTML = "<div class=\'{cl}\' style=\'background-color:{bcl};\'><a href=\'sounesstoptrumps_js.html?S{n:04d}\'>Souness {n}</a></div>".format(cl=cl,bcl=html_colour(lat,lng),n=int(GLF['CatNum']))
     print(buttonHTML)
@@ -539,6 +540,8 @@ def createJSONObj(GLF):
     glfJSON['next'] = nextn
     glfJSON['Centlon'] = round(float(GLF['Centlon180']),3)
     glfJSON['Centlat'] = round(float(GLF['Centlat']),3)
+    glfJSON['Headlat'] = round(float(GLF['Headlat']),3)
+    glfJSON['Headlon'] = round(float(GLF['Headlon180']),3)
     glfJSON['htmlcolour'] = html_colour(float(row['Centlat']), float(row['Centlon180']))
     glfJSON['region'] = findregion(float(row['Centlon180']), float(row['Centlat']))
     glfJSON['regionURL'] = regionURLdict[glfJSON['region']]
@@ -555,7 +558,7 @@ def createJSONObj(GLF):
         imageexurl = imageexurlbase + GLF['HRSC_DTM'][:14]
         glfJSON['HRSC_DTM'] = GLF['HRSC_DTM']
         #glfJSON['HSRC_DTM_URL'] = linktoextra
-        glfJSON['HSRC_DTM_URL'] = imageexurl
+        glfJSON['HRSC_DTM_URL'] = imageexurl
         glfJSON['HRSC_DTM_res'] = GLF['DTMres']
         
     # HRSC ND3 images
