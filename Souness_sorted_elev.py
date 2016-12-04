@@ -47,6 +47,10 @@ with open(sounessjson) as json_file:
     json_data = json.load(json_file)
     GLFs = json_data['Souness'].items()
 
+HRSC_DTMres_json = "SounessROIs/HRSC_DTMres_index_extent.json"
+with open(HRSC_DTMres_json) as json_file:
+    HRSC_DTMres = json.load(json_file)
+
 GLFdict = {int(k):v for (k,v) in GLFs}
 
 catnums = [g[0] for g in GLFs]
