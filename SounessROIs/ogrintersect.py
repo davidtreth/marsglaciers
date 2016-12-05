@@ -202,7 +202,12 @@ for feature in layer:
                 a5 = a[:5]
                 if isectlayer == "dtm" and urltype == "b" and a5 not in DTMresDict:
                     DTMres = readBerlin.getAreoidDTMres(extURL)
-                    DTMresDict[a5] = DTMres
+                elif isinstance(DTMresDict[a5], float):
+                    DTMres = DTMresDict.pop(a5)
+                    DTMresDict[a5] = {}
+                    DTMresDict[a5]['resolution'] = DTMres
+                    DTMresDict[a5]['prodID'] = a
+                    DTMresDict[a5]['url'] = extURL
                     
                 if sounessobjID not in isectLayerDict[a5]:
                     isectLayerDict[a5].append(sounessobjID)
@@ -258,5 +263,3 @@ if outputmode == "c":
         prdIDs = [i[:5] for i in prodIDs_all]
         prdIDs = list(set(prdIDs))
         print("number of distinct [:5] tileIDs = {n}".format(n=len(prdIDs)))
-
-        
