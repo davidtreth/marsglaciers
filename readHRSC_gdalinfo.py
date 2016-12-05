@@ -33,6 +33,20 @@ def printgdaljson(gdaljson):
         else:
             print("{i}: {v}".format(i=i,v=gdaljson[i]))
 
+
+def readTileGDAL(tileglobstr, label, verbose=False):
+    files = glob.glob(tileglobstr)
+    # expect one of each da4 file, and nd4 file in the directory
+    assert(len(files)==1)
+    gdalinf = subprocess.check_output("gdalinfo -json {f}".format(f=files[0]), shell=True)
+    gdaljson = json.loads(gdalinf)
+    tileID = gdaljson['description'][:5]
+    print("tileID = {t}".format(t=tileID))
+    print("\n{l} file {d}".format(l=label, d=files[0]))
+    if verbose:
+        print(gdaljson)
+    return gdaljson, tileID
+                 
 def readfromHRSCfiles(HRSC_pathroot):
     os.chdir(HRSC_pathroot)
     dirList = os.listdir(HRSC_pathroot)
@@ -45,7 +59,7 @@ def readfromHRSCfiles(HRSC_pathroot):
         print("all directories under this folder should be {nnnn} for each HRSC tile.")
 
     # DA4 elevation tile
-    HRSCdict = {}
+    HRSC_da4dict = {}
     # ND4 nadir image tile
     HRSC_nd4dict = {}
     # layerstack in equicylindrical projection
@@ -53,56 +67,28 @@ def readfromHRSCfiles(HRSC_pathroot):
     for d in dirList:
         os.chdir(d)
         print("\nReading directory {d}".format(d=d))
-        da4 = glob.glob("h*da4.img")
-        # make sure each directory contains 1 *da4.img file
-        assert(len(da4) ==1)
-    
-
-        #print(da4[0])
-        gdalinf = subprocess.check_output("gdalinfo -json {f}".format(f=da4[0]), shell=True)
-        gdaljson_da4 = json.loads(gdalinf)    
-        tileID = gdaljson_da4['description'][:5]
-        print("tileID = {t}".format(t=tileID))
-        print("\nda4 file {d}".format(d=da4[0]))
-        printgdaljson(gdaljson_da4)
-        
-        HRSCdict[tileID] = gdaljson_da4
-    
+        # the da4 areoid digital terrain model
+        da4json, tileID = readTileGDAL("h*da4.img", "da4")
+        HRSC_da4dict[tileID] = da4json
         # the reprojected nadir image
         # to the Mars equicylindrical system centred at 40 deg
-        nd4 = glob.glob("h*nd4*Mars2000EqCyl_lat0_40.kea")        
-        assert(len(nd4) ==1)
-        gdalinf = subprocess.check_output("gdalinfo -json {f}".format(f=nd4[0]), shell=True)
-        gdaljson_nd4 = json.loads(gdalinf)    
-        tileID = gdaljson_nd4['description'][:5]
-        print("\nnd4 file {n}".format(n=nd4[0]))
-        printgdaljson(gdaljson_nd4)
-        HRSC_nd4dict[tileID] = gdaljson_nd4
-    
+        nd4json, tileID = readTileGDAL("h*nd4*Mars2000EqCyl_lat0_40.kea", "nd4")
+        HRSC_nd4dict[tileID] = nd4json
         os.chdir("LandSerf")
         # the 10 band layerstack with nadir, dtm, derived topographic values
-        Layerstack2 = glob.glob("h*LandSerfLayerstack2.kea")
-        # expect 1 of these files
-        assert(len(Layerstack2)==1)
-        gdalinf = subprocess.check_output("gdalinfo -json {f}".format(f=Layerstack2[0]), shell=True)
-        gdaljson_Lyr2 = json.loads(gdalinf)
-    
-        tileID = gdaljson_Lyr2['description'][:5]
-        print("\nlayerstack file {n}".format(n=nd4[0]))
-        printgdaljson(gdaljson_Lyr2)
-        HRSC_Lyr2dict[tileID] = gdaljson_Lyr2
+        lyrsjson, tileID = readTileGDAL("h*LandSerfLayerstack2.kea", "layerstack file")
+        HRSC_Lyr2dict[tileID] = lyrsjson
         
         os.chdir("../..")
-    return HRSCdict, HRSC_nd4dict, HRSC_Lyr2dict
+    return HRSC_da4dict, HRSC_nd4dict, HRSC_Lyr2dict
 
 
 
 currentdir = os.getcwd()    
 HRSC_pathroot =  '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/SounessCatalog3_backup/'
-HRSCdict, HRSC_nd4dict, HRSC_Lyr2dict = readfromHRSCfiles(HRSC_pathroot)
+HRSC_da4dict, HRSC_nd4dict, HRSC_Lyr2dict = readfromHRSCfiles(HRSC_pathroot)
 os.chdir(currentdir)
-tilenames = HRSCdict.keys()
-HRSCdata = HRSCdict.values()
+
 #print(tilenames)
 
 
@@ -123,24 +109,44 @@ with open(souness_GLFsJSON) as jsonfile:
     sounessGLFs = sounessGLFs["Souness"]
     
 #print(DTMres)
-for t in DTMres:
-    if t.lower() not in tilenames:
-        sounessobjs = HRSC_Souness[t]
-        print("Tile {t}: Resolution {r}m.\nProduct ID: {p}. URL: {b}\nSouness objects: {s}\n".format(t=t,
-                                                                                                   r=DTMres[t]['resolution'],
-                                                                                                   p=DTMres[t]['prodID'],
-                                                                                                   b=DTMres[t]['url'],
-                                                                                                     s=sounessobjs))
-        print("In dissertation, following HRSC DTM tiles used:")
-        for s in sounessobjs:
-            if "HRSC_DTM_res" in sounessGLFs[str(s)]:
-                dtm_res = sounessGLFs[str(s)]["HRSC_DTM_res"]
-            else:
-                dtm_res = "none "
-            print("S{s}: {t}, resolution {r}m.".format(s=s,
-                                                       t=sounessGLFs[str(s)]["HRSC_DTM"],
-                                                       r=dtm_res))
-        print("\n")
+def print_tiles_notused(DTMres, HRSC_DA4_GDALdict, quiet=True):
+    tilenames = HRSC_DA4_GDALdict
+    for t in DTMres:
+        if t.lower() not in tilenames:
+            sounessobjs = HRSC_Souness[t]
+            dtm_res = DTMres[t]['resolution']
+            notfound = "none"
+            minres = 0
+            
+            for s in sounessobjs:
+                if "HRSC_DTM_res" in sounessGLFs[str(s)]:
+                    notfound = ""
+                    if float(sounessGLFs[str(s)]["HRSC_DTM_res"]) > minres:
+                        minres = float(sounessGLFs[str(s)]["HRSC_DTM_res"])
+                else:
+                    minres = 500
+                        
+            #print(dtm_res, minres)
+            bestresused = (dtm_res >= minres) 
+            print("Tile {t}: Resolution {r}m.\nProduct ID: {p}. URL: {b}\nSouness objects: {s}".format(t=t,
+                                                                                                         r=DTMres[t]['resolution'],
+                                                                                                         p=DTMres[t]['prodID'],
+                                                                                                         b=DTMres[t]['url'],
+                                                                                                         s=sounessobjs))
+            if bestresused:
+                print("Best available resolution used for all Souness objects in this tile")
+            if not(bestresused and quiet):
+                print("In dissertation, following HRSC DTM tiles used:")
+                for s in sounessobjs:
+                    tileused = sounessGLFs[str(s)]["HRSC_DTM"]
+                    if "HRSC_DTM_res" in sounessGLFs[str(s)]:
+                        tileres = sounessGLFs[str(s)]["HRSC_DTM_res"]
+                    else:
+                        tileres = "none "
+                    print("S{s}: {t}, resolution {r}m.".format(s=s,
+                                                               t=tileused,
+                                                               r=tileres))
+            print("{n}\n".format(n=notfound))
 
 def plotAll(tilenames, polygons, resolutions):
     for tn, p, r in zip(tilenames, polygons, resolutions):
@@ -149,19 +155,31 @@ def plotAll(tilenames, polygons, resolutions):
         y = [i[1]  for i in p]    
         print(x,y)
         plt.plot(x,y, "k-")
-        plt.title("179 HRSC DTM tiles")
+        plt.title("{n} HRSC DTM tiles".format(n=len(tilenames)))
         plt.xlim([-180,180])
-    
-latlng_coords =  [v['wgs84Extent']['coordinates'][0] for v in HRSCdata]
-upperLefts = [c[0] for c in latlng_coords]
-upperRights = [c[2] for c in latlng_coords]
-lowerLefts = [c[1] for c in latlng_coords]
-lowerRights = [c[3] for c in latlng_coords]
-polygons = zip(upperLefts, upperRights, lowerRights, lowerLefts, upperLefts)
 
-geotransf = [v['geoTransform'] for v in HRSCdata]
-res = [g[1] for g in geotransf]
-#plotAll(tilenames, polygons, res)
+def getPolygons_Res(HRSC_DA4_GDALdict):
+    """ get the coverage polygons and resolutions """
+    tilenames = HRSC_DA4_GDALdict.keys()
+    HRSCdata = HRSC_DA4_GDALdict.values()
+    latlng_coords =  [v['wgs84Extent']['coordinates'][0] for v in HRSCdata]
+    upperLefts = [c[0] for c in latlng_coords]
+    upperRights = [c[2] for c in latlng_coords]
+    lowerLefts = [c[1] for c in latlng_coords]
+    lowerRights = [c[3] for c in latlng_coords]
+    polygons = zip(upperLefts, upperRights, lowerRights, lowerLefts, upperLefts)
+
+    geotransf = [v['geoTransform'] for v in HRSCdata]
+    res = [g[1] for g in geotransf]
+
+    return tilenames, polygons, res
+
+print_tiles_notused(DTMres, HRSC_da4dict, quiet=True)
+
+#tiles, polys, res = getPolygons_Res(HRSC_da4dict)
+#plotAll(tiles, polys, res)
+#plt.show()
+
 """ using original coordinates Mars sinusoidal
 this got somewhat confusing
 # cornercoords = [v['cornerCoordinates'] for v in HRSCdata]
@@ -173,5 +191,3 @@ this got somewhat confusing
 # x_offs = [g[0] for g in geotransf]
 # y_offs = [g[3] for g in geotransf]
 """
-
-plt.show()
