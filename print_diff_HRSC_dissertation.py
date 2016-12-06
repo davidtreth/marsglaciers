@@ -14,7 +14,7 @@ def toptrumpURL(sounessNum):
     return "https://taklowkernewek.neocities.org/mars/sounesstoptrumps_js.html?S{s}".format(s=sounessNum)
 
 def orbitlocationMap(lat, lng):
-    return "http://maps.planet.fu-berlin.de/?zoom=6&lat={lat}&lon={lng}&layers=B0FFFTTT".format(lat=lat, lng=lng)
+    return "http://maps.planet.fu-berlin.de/?zoom=7&lat={lat:.5f}&lon={lng:.5f}&layers=B0FFFTTT".format(lat=lat, lng=lng)
     
 def makelink(url, contenta):
     return "<a href='{url}' target='_blank'>{c}</a>".format(url=url, c=contenta)
@@ -93,12 +93,19 @@ def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_DA4_GDALdict, qu
                 if html: print("<dl>")
                 for s in sounessobjs:
                     tileused = sounessGLFs[str(s)]["HRSC_DTM"][:-4]
+                    tile5 = tileused[:5]
+                    tile5 = tile5.lower()
+                    if tile5 == "":
+                        prodCen = sounessGLFs[str(s)]["Centlat"], sounessGLFs[str(s)]["Centlon"]
+                    else:
+                        prodCen = getCentre(tilenames[tile5])
+                    prodMap = orbitlocationMap(prodCen[0], prodCen[1])
                     if "HRSC_DTM_res" in sounessGLFs[str(s)]:
                         tileres = sounessGLFs[str(s)]["HRSC_DTM_res"]
                     else:
                         tileres = "none "
                     if html:
-                        print("<dt><a href='{sURL}' target='_blank'>Souness {s}</a></dt><dd><a href='{b}' target='_blank'>{t}</a>, resolution {r}m</dd>".format(sURL=toptrumpURL(s), s=s, t=tileused, r=tileres, b=berlinURL(tileused)))
+                        print("<dt><a href='{sURL}' target='_blank'>Souness {s}</a></dt><dd><a href='{b}' target='_blank'>{t}</a> {maplink}, resolution {r}m. Centre location:</dt><dd>Lat: {lt:.2f}°, Long: {lg:.2f}°.</dd>".format(sURL=toptrumpURL(s), s=s, t=tileused, r=tileres, b=berlinURL(tileused), maplink=makelink(prodMap, "show on map"), lt=prodCen[0], lg=prodCen[1]))
                     else:
                         print("S{s}: {t}, resolution {r}m.".format(s=s,
                                                                    t=tileused,
@@ -113,6 +120,6 @@ HRSC_da4dict = readallJSON.HRSC_da4dict
 sounessGLFs = readallJSON.sounessGLFs
 HRSC_Souness = readallJSON.HRSC_Souness
 print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_da4dict, quiet=False, html=True)
-h0037cen = getCentre(HRSC_da4dict['h0037'])
-print(orbitlocationMap(h0037cen[0], h0037cen[1]))
+#h0037cen = getCentre(HRSC_da4dict['h0037'])
+#print(orbitlocationMap(h0037cen[0], h0037cen[1]))
     
