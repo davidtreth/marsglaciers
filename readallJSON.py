@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
-""" this program reads in the various JSON files into dictionaries """
+""" 
+this program reads in the various JSON files into dictionaries 
+and the HRSC DTM coverage .csv 
+"""
 import json
+import csv
 
 # the DTM resolutions of all of the HRSC DTM tiles
 # intersecting the Souness GLF extents
@@ -43,3 +47,14 @@ with open(HRSC_da4_jsonfile) as jsonf:
     HRSC_nd4dict = json.load(jsonf)
 with open(HRSC_da4_jsonfile) as jsonf:
     HRSC_Lyr2dict = json.load(jsonf)
+
+# HRSC DTM coverage .csv (exported from shapefile)
+HRSC_DTM_coverage_file = "HRSCimagecoverage/HRSC_DTM_da4.csv"
+
+HRSC_DTM_coverage = {}
+with open(HRSC_DTM_coverage_file) as csvfile:
+    HRSC_DTM_rows = csv.DictReader(csvfile)
+    for row in HRSC_DTM_rows:
+        idx = row['ProductId'][:10]        
+        HRSC_DTM_coverage[idx] = row
+
