@@ -44,8 +44,32 @@ def intersectL(d1,d2,fid1=0,fid2=0,fileType="shp"):
     if geom1.Intersect(geom2) == 1:
         return True
     else:
-        return False    
+        return False
 
+def partialL(d1,d2,fid1=0,fid2=0,fileType="shp"):
+    """ check for partial coverage """
+    feat1 = d1.GetFeature(fid1)
+    geom1 = feat1.GetGeometryRef()
+
+    feat2 = d2.GetFeature(fid2)
+    geom2 = feat2.GetGeometryRef()
+
+    if geom1.Intersect(geom2) == 1 and geom2.Contains(geom1) == 0:
+        return True
+    else:
+        return False    
+def containsL(d1,d2,fid1=0,fid2=0,fileType="shp"):
+    """ check if geom2 contains geom1 """
+    feat1 = d1.GetFeature(fid1)
+    geom1 = feat1.GetGeometryRef()
+
+    feat2 = d2.GetFeature(fid2)
+    geom2 = feat2.GetGeometryRef()
+
+    if geom2.Contains(geom1) == 1:
+        return True
+    else:
+        return False    
 
 def makeURL(urltype, extURL, prodID):
     if urltype == "b":
@@ -71,6 +95,7 @@ driver = ogr.GetDriverByName("ESRI Shapefile")
 
 SounessDict = defaultdict(dict)
 isectLayerDict = defaultdict(list)
+containsLayerDict = defaultdict(list)
 
 sounesslayer = ""
 while sounesslayer not in ["e", "c", "9"]:
@@ -88,7 +113,11 @@ elif sounesslayer == "9":
     sounesslayer = "context9"
 layer = dataSource.GetLayer()
 
-
+#isectmode = ""
+#while isectmode not in ["i", "c", "p"]:
+#    isectmode = raw_input("Choose intersect mode (i), contains (c), or partial (p) - does the souness object need to be wholly within the coverage geome#try? If 'p' is selected, only partial coverage is returned")
+    
+    
 isectlayer = ""
 while isectlayer not in ["hi", "a", "d", "nd", "sr", "dtm"]:
     isectlayer = raw_input("Choose Mode (intersect with Hirise image (hi), Hirise anaglyph (a), Hirise DTM (d), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).\n")
@@ -154,6 +183,9 @@ for feature in layer:
     sounesstoptrump = "http://taklowkernewek.neocities.org/mars/sounesstoptrumps_js.html?S{s:04d}".format(s=int(sounessobjID))
     sounessobjHTML = "<div><a href='{t}'>{s}</a></div>".format(s=sounessobj, t=sounesstoptrump)
     prodIDs = []
+    prodIDs_partial = []
+    # store 1 for contains, 0 for partial
+    contains = []
     linkHTMLs = []
 
     fid_s = feature.GetFID()
@@ -164,7 +196,13 @@ for feature in layer:
     for feature2 in layer2:        
         fid_h = feature2.GetFID()        
         #print fid_h
-        if intersectL(layer, layer2, fid_s, fid_h):
+
+        fpContainsS = containsL(layer, layer2, fid_s, fid_h)
+
+        fpIntersS = intersectL(layer, layer2, fid_s, fid_h)
+
+        fpPartialS  = partialL(layer, layer2, fid_s, fid_h)
+        if fpIntersS:
             prodID = feature2.GetField("ProductID")
             # use only DA4 from HRSC DTM coverage shapefile
             if prodID[-7:-4] in ["DT4", "GR4", "IR4", "ND4", "RE4", "BL4"]:
@@ -183,22 +221,34 @@ for feature in layer:
                 extURL = feature2.GetField("ExtURL")
             
 
-            if outputmode in ["c", "j"]:
-                prodIDs.append(prodID)
-                linkHTMLs.append(extURL)
+            #if outputmode in ["c", "j"]:
+            
+            prodIDs.append(prodID)
+            linkHTMLs.append(extURL)
+            if not(containsL(layer, layer2, fid_s, fid_h)):
+                prodIDs_partial.append(prodID)
+                contains.append(0)
+            else:
+                contains.append(1)
+            
+
             """
             else:
                 linkHTML = "<a href='{e}'>{p}</a>".format(e=extURL, p=prodID)
                 linkHTMLs.append(linkHTML)
             """
-            if verbose:
-                print(prodIDs)
+    if verbose:
+        print(zip(prodIDs, contains))
+        print(prodIDs_partial)
 
     if len(prodIDs) > 0:
         if outputmode in ["j", "c"]:
             SounessDict[sounessobjID]['prodIDs'] = prodIDs
-            SounessDict[sounessobjID]['extURLs'] = linkHTMLs            
-            for a, extURL in zip(prodIDs, linkHTMLs):
+            SounessDict[sounessobjID]['containsArr'] = contains
+            SounessDict[sounessobjID]['extURLs'] = linkHTMLs
+            #if len(prodIDs_partial)>0:
+            #    SounessDict[sounessobjID]['prodIDs_partial'] = prodIDs_partial
+            for a, c, extURL in zip(prodIDs, contains, linkHTMLs):
                 a5 = a[:5]
                 if isectlayer == "dtm" and urltype == "b" and a5 not in DTMresDict:
                     DTMres = readBerlin.getAreoidDTMres(extURL)
@@ -211,6 +261,8 @@ for feature in layer:
                     
                 if sounessobjID not in isectLayerDict[a5]:
                     isectLayerDict[a5].append(sounessobjID)
+                if c and (sounessobjID not in containsLayerDict[a5]):
+                    containsLayerDict[a5].append(sounessobjID)
                     
                     
     """
@@ -222,6 +274,7 @@ for feature in layer:
 
 souness_outfn = "souness_{e}_{fp}_tiles".format(e=sounesslayer, fp=intsecnameDict[isectlayer])                
 isectLayer_outfn = "{fp}_tiles_isect_{e}_sounessobjs".format(e=sounesslayer, fp=intsecnameDict[isectlayer])
+containsLayer_outfn = "{fp}_tiles_contains_{e}_sounessobjs".format(e=sounesslayer, fp=intsecnameDict[isectlayer])
 
     
 if outputmode == "j":
@@ -234,6 +287,10 @@ if outputmode == "j":
     print(isectLayerDict)
     with open(isectLayer_outfn, "w") as outFile:
         isectJSON = json.dump(isectLayerDict, outFile)
+    print(containsLayerDict)
+    with open(containsLayer_outfn, "w") as outFile:
+        containsJSON = json.dump(containsLayerDict, outFile)
+        
     print(DTMresDict)
     with open(HRSCDTMres_fn, "w") as outFile:
         HRSCDTMRES = json.dump(DTMresDict, outFile)
@@ -243,7 +300,7 @@ if outputmode == "c":
     with open(souness_outfn, "w") as outFile:
         spamwriter = csv.writer(outFile, delimiter=",")
         for s in SounessDict:
-            outRow =[s, SounessDict[s]['prodIDs']]
+            outRow =[s, SounessDict[s]['prodIDs'], SounessDict[s]['containsArr']]
             spamwriter.writerow(outRow)
     with open(isectLayer_outfn, "w") as outFile:
         spamwriter = csv.writer(outFile, delimiter=",")

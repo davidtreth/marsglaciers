@@ -13,6 +13,9 @@ isect_DTMresJSON = "SounessROIs/HRSC_DTMres_index_extent.json"
 # a list of intersecting Souness GLFs for each HRSC DTM tile
 isect_DTMSounesslistJSON = "SounessROIs/HRSCdtm_tiles_isect_extent_sounessobjs.json"
 
+# a list of Souness GLFs contained in each each HRSC DTM tile
+contains_DTMSounesslistJSON = "SounessROIs/HRSCdtm_tiles_contains_extent_sounessobjs.json"
+
 # a list of intersecting HRSC DTM tiles for each Souness GLF extent
 souness_DTMtiles = "SounessROIs/souness_extent_HRSCdtm_tiles.json"
 
@@ -35,6 +38,10 @@ with open(isect_DTMresJSON) as jsonf:
     DTMres = json.load(jsonf)
 with open(isect_DTMSounesslistJSON) as jsonf:
     HRSC_Souness = json.load(jsonf)
+
+with open(contains_DTMSounesslistJSON) as jsonf:
+    HRSC_Souness_contains = json.load(jsonf)
+    
 with open(souness_DTMtiles) as jsonf:
     souness_DTMs = json.load(jsonf)
 with open(souness_GLFsJSON) as jsonf:

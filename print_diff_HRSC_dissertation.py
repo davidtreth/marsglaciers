@@ -33,7 +33,7 @@ def getCentre(HRSCda4_dictval):
     centreLng = numpy.mean([x[0] for x in latlng_coords[0][:4]])
     centreLat = numpy.mean([x[1] for x in latlng_coords[0][:4]])
     return centreLat, centreLng
-def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_DA4_GDALdict, HRSC_DTM_coverage, quiet=True, html=False):
+def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_Souness_contains, HRSC_DA4_GDALdict, HRSC_DTM_coverage, quiet=True, html=False):
     if html:
         startp = "<p>"
         endp = "</p>"
@@ -55,7 +55,15 @@ def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_DA4_GDALdict, HR
     DTMtiles_intersect = sorted(list(DTMres))
     for t in DTMtiles_intersect:
         if t.lower() not in tilenames:
-            sounessobjs = HRSC_Souness[t]
+            sounessobjs = HRSC_Souness[t]            
+            try:
+                sounessobjs_contains = HRSC_Souness_contains[t]
+            except KeyError:
+                #a = raw_input("tile {t} not found".format(t=t.lower()))
+                sounessobjs_contains = []
+
+
+            #sounessobjs_flag = [1 if s in sounessobjs_contains else 0 for s in sounessobjs]
             dtm_res = DTMres[t]['resolution']
             prodID = DTMres[t]['prodID'][:10]
             prodURL = DTMres[t]['url']
@@ -79,8 +87,9 @@ def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_DA4_GDALdict, HR
                         
             bestresused = (dtm_res >= maxpixelsize)
             if html:
-                sounesslistitems = "".join(["<span><a href='{sURL}' target='_blank'>{s}</a> </span>".format(sURL=toptrumpURL(s),
-                                                                                                           s=s) for s in sounessobjs])
+                sounesslinkcontents = [s if s in sounessobjs_contains else "<em>{s}(partial)</em>".format(s=s) for s in sounessobjs]
+                sounesslistitems = "".join(["<span><a href='{sURL}' target='_blank'>{linkcont}</a> </span>".format(sURL=toptrumpURL(s),
+                                                                                                                   s=s, linkcont = l) for s,l in zip(sounessobjs, sounesslinkcontents)])
                                                                                                            
                 #print("<h4>Tile {t}</h4><dl><dt>Resolution:</dt><dd>{r}m</dd><dt>Product ID:</dt><dd><a href='{b}' target='_blank'>{p}</a> {maplink}</dd><dt>Centre location:</dt><dd>Lat: {lt:.2f}°, Long:{lg:.2f}°.</dd><dt>Souness GLFs:</dt><dd>{GLFs}</dd></dl>".format(t=t, r=dtm_res, p=prodID, b=prodURL, GLFs=sounesslistitems)
                 print("<div class='hrsctile'><h4>HRSC tile {t}</h4><table class='newtiletable'><tr><th>Resolution (m)</th><th>Product ID</th><th>Centre location</th><th>Souness GLFs</th></tr><tr><td>{r:.0f}</td><td><a href='{b}' target='_blank'>{p}</a> {maplink}</td><td>Lat: {lt:.1f}°, Long: {lg:.1f}°</td><td>{GLFs}</td></tr></table>".format(t=t, r=float(dtm_res), p=prodID, b=prodURL, maplink=makelink(prodMap, "show on map"), GLFs=sounesslistitems, lt=float(prodCenLat), lg=float(prodCenLon)))
@@ -90,7 +99,7 @@ def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_DA4_GDALdict, HR
                                                                                                          p=prodID,
                                                                                                          b=prodURL,
                                                                                                          s=" ".join(sounessobjs)))
-
+                
             if bestresused:                
                 print("{sp}Best available resolution used for all Souness objects in this tile{ep}".format(sp=startp, ep=endp))
             else:
@@ -100,11 +109,14 @@ def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_DA4_GDALdict, HR
                 if html: 
                     print("<table class='dissertable'><tr><th>Souness GLF</th><th>Product ID</th><th>Resolution (m)</th><th>Centre location</th></tr>")
                     #print("<dl>")
+
+                #a = raw_input("len(sounessobjs), len(sounesslinkcontents) = {s1}, {s2}".format(s1=len(sounessobjs), s2=len(sounesslinkcontents)))
                 for s in sounessobjs:
                     tileused = sounessGLFs[str(s)]["HRSC_DTM"][:-4]
                     tile5 = tileused[:5]
                     tile5 = tile5.lower()
-                    if tile5 == "":
+                    # skip h5231 since it was not used in the actual dissertation
+                    if tile5 == "" or tile5 == "h5231":
                         prodCen = sounessGLFs[str(s)]["Centlat"], sounessGLFs[str(s)]["Centlon"]
                     else:
                         prodCen = getCentre(tilenames[tile5])
@@ -114,8 +126,17 @@ def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_DA4_GDALdict, HR
                     else:
                         tileres = "none "
                     if html:
+                        try:
+                            sounessobjs_contains_diss = HRSC_Souness_contains[tile5.upper()]
+                        except KeyError:
+                            sounessobjs_contains_diss = []
+                        if s in sounessobjs_contains_diss:
+                            linkcont = s
+                        else:
+                            linkcont = "<em>{s} (partial)</em>".format(s=s)
+                        
                         #print("<dt><a href='{sURL}' target='_blank'>Souness {s}</a></dt><dd><a href='{b}' target='_blank'>{t}</a> {maplink}, resolution {r}m. Centre location:</dt><dd>Lat: {lt:.2f}°, Long: {lg:.2f}°.</dd>".format(sURL=toptrumpURL(s), s=s, t=tileused, r=tileres, b=berlinURL(tileused), maplink=makelink(prodMap, "show on map"), lt=prodCen[0], lg=prodCen[1]))
-                        print("<tr><td><a href='{sURL}' target='_blank'>{s}</a></td><td><a href='{b}' target='_blank'>{t}</a> {maplink}</td><td>{r}</td><td>Lat: {lt:.1f}°, Long: {lg:.1f}°</td></tr>".format(sURL=toptrumpURL(s), s=s, t=tileused, r=tileres, b=berlinURL(tileused), maplink=makelink(prodMap, "show on map"), lt=prodCen[0], lg=prodCen[1]))
+                        print("<tr><td><a href='{sURL}' target='_blank'>{l}</a></td><td><a href='{b}' target='_blank'>{t}</a> {maplink}</td><td>{r}</td><td>Lat: {lt:.1f}°, Long: {lg:.1f}°</td></tr>".format(sURL=toptrumpURL(s), l=linkcont, t=tileused, r=tileres, b=berlinURL(tileused), maplink=makelink(prodMap, "show on map"), lt=prodCen[0], lg=prodCen[1]))
                     else:
                         print("S{s}: {t}, resolution {r}m.".format(s=s,
                                                                    t=tileused,
@@ -130,8 +151,9 @@ DTMres = readallJSON.DTMres
 HRSC_da4dict = readallJSON.HRSC_da4dict
 sounessGLFs = readallJSON.sounessGLFs
 HRSC_Souness = readallJSON.HRSC_Souness
+HRSC_Souness_contains = readallJSON.HRSC_Souness_contains
 HRSC_DTM_coverage = readallJSON.HRSC_DTM_coverage
-print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_da4dict, HRSC_DTM_coverage, quiet=False, html=True)
+print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_Souness_contains, HRSC_da4dict, HRSC_DTM_coverage, quiet=False, html=True)
 #h0037cen = getCentre(HRSC_da4dict['h0037'])
 #print(orbitlocationMap(h0037cen[0], h0037cen[1]))
     

@@ -66,7 +66,7 @@ with open(csvInFile,"r") as csvfile:
                 if minslope > -9999:
                     plt.figure()
                     plt.plot(rvect,slopevect)
-                    plt.title("Slope profile Souness {n:04d}".format(n=int(row[0])))
+                    plt.title("Slope profile Souness {n:04d}, HRSC tile h{tnum}".format(n=int(row[0]), tnum=HRSCtile))
                     plt.xlabel("Distance along midline (m)")
                     plt.ylabel("Slope (degrees)")
                     plt.savefig(outPNG)

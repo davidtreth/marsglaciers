@@ -64,7 +64,7 @@ with open(csvInFile,"r") as csvfile:
                 rvectscaled = [i/numpy.max(rvect) for i in rvect]
                 plt.figure()
                 plt.plot(rvect,elevvect)
-                plt.title("Elevation profile Souness {n:04d}".format(n=int(row[0])))
+                plt.title("Elevation profile Souness {n:04d}, HRSC tile h{tnum}".format(n=int(row[0]), tnum=HRSCtile))
                 plt.xlabel("Distance along midline (m)")
                 plt.ylabel("Elevation w.r.t Mars datum (m)")
                 plt.savefig(outPNG)

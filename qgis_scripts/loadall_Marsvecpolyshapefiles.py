@@ -27,10 +27,10 @@ SouHead5kms = QgsVectorLayer(Souness_head5kmshp,'SounessHead5kms','ogr')
 SouCtxs = QgsVectorLayer(Souness_ctxshp,'SounessCtxs','ogr')
 SouCtx9s = QgsVectorLayer(Souness_ctx9shp,'SounessCtx9s','ogr')
 
-#dirList0 = ['0022']
+dirList0 = ['5231']
 #iface.addVectorLayer(shp,shpfile,'ogr')
 #isect = iface.addVectorLayer(p['OUTPUT'],shpoutfile,'ogr')
-for d in dirList:
+for d in dirList0:
     os.chdir(d)
     os.chdir(pathtoshp)
     currentdir = os.getcwd()

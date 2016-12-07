@@ -112,7 +112,7 @@ with open(Gfilein) as csvfile:
                       if MGSmode:
                         inND4 = inMOCFile
                       else:
-                        nd4file = glob.glob(inND4path+HRSCdir+'/'+HRSC_DTMfile[:5]+'*nd4*.kea')
+                        nd4file = glob.glob(inND4path+HRSCdir+'/'+HRSC_DTMfile[:5]+'*nd4_Mars2000EqCyl_lat0_40.kea')
                         print(nd4file[0])
                         inND4 = nd4file[0]
                       outND4 = outND4path + "Souness{c:04d}_context.tif".format(c=int(catnum))
