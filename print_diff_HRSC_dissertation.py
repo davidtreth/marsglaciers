@@ -147,13 +147,50 @@ def print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_Souness_contains
             else:
                 print("{n}\n".format(n=notfound))
 
+def print_souness_partial(sounessGLFs, DTMres, HRSC_Souness, HRSC_Souness_contains, HRSC_DA4_GDALdict, HRSC_DTM_coverage, souness_DTMs):
+    for s in sorted(int(s) for s in souness_DTMs):
+        s = str(s)
+        coverage = souness_DTMs[s]['prodIDs']
+        coverage_indiss = [c[:5].lower() in HRSC_DA4_GDALdict for c in coverage]
+        coveragetype = souness_DTMs[s]['containsArr']
+        res = [DTMres[tile[:5]]['resolution'] for tile in coverage]
+        disscoverage = sounessGLFs[s]['HRSC_DTM']
+        try:
+            dissres = DTMres[disscoverage[:5]]['resolution']
+        except KeyError:
+            dissres = "none"
+        z = list(zip(coverage, coveragetype, res))
+        
+        partial = [i[0][:-4]  for i in z if i[1] == 0]
+        complete = [i[0][:-4] for i in z if i[1] == 1]
+        complete_indiss = [c[:5].lower() in HRSC_DA4_GDALdict for c in complete]
+        rescomplete = [DTMres[tile[:5]]['resolution'] for tile in complete]
+        respartial = [DTMres[tile[:5]]['resolution'] for tile in partial]
+        
+        if (disscoverage[:14] in partial or disscoverage == "none") and (len(complete)>0):
+            print("Souness {s}:".format(s=s))
+            print("Has partial coverage in {p}".format(p=partial))
+            print("Tile used in dissertation was {d} with resolution {r}".format(d=disscoverage, r=dissres))
+            print("(Complete coverage, resolution) is available in {c}".format(c=zip(complete, rescomplete)))
+            print("Tiles already used in dissertation: {c}\n".format(c=zip(complete, complete_indiss)))
+            
+        if (disscoverage == "none") and len(coverage)>0:
+            print("Souness {s}:".format(s=s))
+            print("No HRSC used in dissertation")
+            print("(Complete coverage, resolution) is available in {c}".format(c=zip(complete, rescomplete)))
+            print("(Partial coverage, resolution) is available in {c}".format(c=zip(partial, respartial)))
+            print("Tiles already used in dissertation: {c}\n".format(c=zip(coverage, coverage_indiss)))
+            
 DTMres = readallJSON.DTMres
 HRSC_da4dict = readallJSON.HRSC_da4dict
 sounessGLFs = readallJSON.sounessGLFs
 HRSC_Souness = readallJSON.HRSC_Souness
 HRSC_Souness_contains = readallJSON.HRSC_Souness_contains
 HRSC_DTM_coverage = readallJSON.HRSC_DTM_coverage
+souness_DTMs = readallJSON.souness_DTMs
+
+
 print_tiles_notused(sounessGLFs, DTMres, HRSC_Souness, HRSC_Souness_contains, HRSC_da4dict, HRSC_DTM_coverage, quiet=False, html=True)
-#h0037cen = getCentre(HRSC_da4dict['h0037'])
-#print(orbitlocationMap(h0037cen[0], h0037cen[1]))
-    
+
+print_souness_partial(sounessGLFs, DTMres, HRSC_Souness, HRSC_Souness_contains, HRSC_da4dict, HRSC_DTM_coverage, souness_DTMs)
+

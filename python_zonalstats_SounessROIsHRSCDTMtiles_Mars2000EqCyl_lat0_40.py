@@ -47,10 +47,10 @@ def calcAllStats(listDTMfields, extents, CTX, CTX9, heads):
 
 zonalstats_cmdbase = 'python /home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/rsgislib_zonalStats_DClewley.py'
 
-extents = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIextents_all_Mars2000EqCyl_lat0_40.shp'
-CTX = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIcontext_all_Mars2000EqCyl_lat0_40.shp'
-CTX9 = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIcontext9_all_Mars2000EqCyl_lat0_40.shp'
-heads = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIheads_all_Mars2000EqCyl_lat0_40.shp'
+extents = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIs/SounessROIextents_all_Mars2000EqCyl_lat0_40.shp'
+CTX = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIs/SounessROIcontext_all_Mars2000EqCyl_lat0_40.shp'
+CTX9 = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIs/SounessROIcontext9_all_Mars2000EqCyl_lat0_40.shp'
+heads = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIs/SounessROIheads_all_Mars2000EqCyl_lat0_40.shp'
 
 #extents_randomEqCyl = '../../../../SounessROIs/RandomExtents_HRSCtiles_Mars2000EqCyl_lat0_40.shp'
 #CTX_randomEqCyl = '../../../../SounessROIs/RandomContext_HRSCtiles_Mars2000EqCyl_lat0_40.shp'
@@ -63,8 +63,9 @@ heads = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPy
 # find all subdirectories in the current directory
 directory = os.getcwd()
 print(directory)
-dirList = os.listdir(directory)
-dirList = [d for d in dirList if (os.path.isdir(d))]
+#dirList = os.listdir(directory)
+#dirList = [d for d in dirList if (os.path.isdir(d))]
+dirList = ["5231"]
 print(dirList)
 calcAllStats(dirList, extents, CTX, CTX9, heads)
 
