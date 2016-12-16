@@ -65,7 +65,9 @@ directory = os.getcwd()
 print(directory)
 #dirList = os.listdir(directory)
 #dirList = [d for d in dirList if (os.path.isdir(d))]
-dirList = ["5231"]
+#dirList = ["5231"]
+dirList = ["2192", "5365"]
+
 print(dirList)
 calcAllStats(dirList, extents, CTX, CTX9, heads)
 

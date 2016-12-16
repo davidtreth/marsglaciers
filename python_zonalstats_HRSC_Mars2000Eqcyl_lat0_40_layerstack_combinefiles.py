@@ -12,7 +12,7 @@ csvInFile = open('mmc1_Souness_Alldata.csv','r')
 csv_reader = csv.reader(csvInFile)
 
 #outStatsFile = "SounessCatalog_MOLA_Mars2000EqCyl_lat0_40_combinedstats.csv"
-outStatsFile = "SounessCatalog_Mars2000EqCyl_lat0_40_combinedstats_allLandSerf3.csv"
+outStatsFile = "SounessCatalog_Mars2000EqCyl_lat0_40_combinedstats_allLandSerf3_new.csv"
 #outStatsFile = "testoutstats.csv"
 
 #pathtodata = "SounessCatalog3/mexhrs_2001/data"
@@ -42,20 +42,20 @@ for row in enumerate(csv_reader):
     if row[0] == 0:
         # extend the headers in the first row
         newrow = copy.copy(origrow)
-        centres = ["centres_"+h for h in Headers_points]
+        #centres = ["centres_"+h for h in Headers_points]
         context9 = ["context9_"+h for h in Headers_areas]
         context = ["context_"+h for h in Headers_areas]
         extents = ["extent_"+h for h in Headers_areas]
-        heads5km = ["heads5km_"+h for h in Headers_areas]
+        #heads5km = ["heads5km_"+h for h in Headers_areas]
         heads = ["heads_"+h for h in Headers_points]
-        termini = ["termini_"+h for h in Headers_points]
-        newrow.extend(centres)
+        #termini = ["termini_"+h for h in Headers_points]
+        #newrow.extend(centres)
         newrow.extend(context9)
         newrow.extend(context)
         newrow.extend(extents)
-        newrow.extend(heads5km)
+        #newrow.extend(heads5km)
         newrow.extend(heads)
-        newrow.extend(termini)
+        #newrow.extend(termini)
         print(newrow)
         outRows.append(newrow)
     else:
@@ -66,10 +66,10 @@ for row in enumerate(csv_reader):
         if newrow[17][0:4].lower() == 'none':
             continue
         dirField = str(newrow[17][1:5])
-        print dirField
+        print(dirField)
         os.chdir(dirField)
         os.chdir("LandSerf")
-        print "Row number %d" %	(row[0]-1)
+        print("Row number %d" %	(row[0]-1))
         #searchstrN = "SounessROI*_N_stats.csv"
         #searchstrS = "SounessROI*_S_stats.csv"
         searchstr = "h*layerstack_SounessROI*_LandSerf3_stats.csv"
@@ -88,7 +88,7 @@ for row in enumerate(csv_reader):
                     if int(srow[0])+1 == row[0]:
                         # if this is the same GLF as in index
                         # from the csvInfile                        
-                        print newrow, srow
+                        print(newrow, srow)
                         newrow.extend(srow)
         statsInFile.close()
         print(newrow)
@@ -96,7 +96,7 @@ for row in enumerate(csv_reader):
         os.chdir("../..")
 
 os.chdir(outstatspath)
-with open(outStatsFile, 'wb') as csvfile:
+with open(outStatsFile, 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',',
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
     for r in outRows:

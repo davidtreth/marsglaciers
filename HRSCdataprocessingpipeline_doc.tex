@@ -18,7 +18,7 @@
 \begin{abstract}
 This is an attempt to document the data processing of the 179 High Resolution 
 and Stereo Camera fields used in my 2014 MSc dissertation. The scripts processing the data were written on 
-a somewhat ad-hoc basis at the time. To some extent the processing was documented in the dissertation itself, but this document will cover it at a more low level, as well as work done since the dissertation, such as the Top Trumps webpages.
+a somewhat ad-hoc basis at the time. To some extent the processing was documented in the dissertation itself, but this document will cover it at a more low level, as well as work done since the dissertation, such as the Top Trumps webpages. The scripts themselves are not very well written, and often do things like hard-code file paths in an idiosyncratic way.
 \end{abstract}
 
 \section{Top-level summary of steps.}
@@ -61,14 +61,73 @@ This is a list of the steps involved.
 Data is obtained from \href{http://ode.rsl.wustl.edu/mars/}{Mars Orbital Data Explorer}, using Data Product Search, selecting under the Mars Express heading `DTMRDR - Digital Terrain Map Reduced Data Record'. Originally when doing this manually, find footprints with `Find by Location or Feature', specifying the latitude and logitude range. When filling in a few gaps where better coverage of a Souness GLF was found, I already know the product ID, so used `Filter by Product ID'.
 
 Use the panchromatic nadir image and the areoid digital terrain model. These are the Product IDs that end in `ND4.IMG' and `DA4.IMG' respectively.
+
+Each of the tiles was put in a series of directories, which were named nnnn for the digits in the product ID. These were the only directories immediately under the top-level of the processing directory. Many of the scripts processing the data lived in this same directory, which is currently {\tt /media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci\_MSc/SounessCatalog3\_backup}. 
+
 \section{Reprojection and resampling}
+The panchromatic nadir image and the areoid digital terrain model were reprojected using {\tt gdalwarp} to a common system, which is an equirectangular projection, at a standard latitude of 40 \textdegree. They are also converted from {\tt .img} format (ERDAS imagine format) to {\tt .kea}. A copy of the nadir image is created resampled to the DTM resolution, which is discovered via {\tt gdalinfo}.
+
+A script entitled {\tt python\_gdalwarp\_reprojMars\_eqcyl\_midlat\_all.py} did this for all tiles under the top-level data directory, by calling the following commands. 
+\begin{verbatim}
+ 	gdalwarp_cmdbase = "gdalwarp -srcnodata -32768 -dstnodata -9999 -ot Int16 -t_srs '+proj=eqc +lat_ts="+lat_0+" +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +a=3396190 +b=3376200 +units=m +no_defs' -r cubicspline -of KEA -overwrite"
+	gdalwarp_cmdbase_nd4 = "gdalwarp -srcnodata 0 -dstnodata -9999 -ot Int16 -t_srs '+proj=eqc +lat_ts="+lat_0+" +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +a=3396190 +b=3376200 +units=m +no_defs' -r cubicspline -of KEA -overwrite"
+	targetres = ' -tr '+str(tres)+' '+str(tres*-1)
+	gdalwarp_cmdnd4 = gdalwarp_cmdbase_nd4 + ' ' + inputfilename_nd4 + ' ' + outputfilename_nd4
+	gdalwarp_cmdnd4_resam = gdalwarp_cmdbase_nd4 + targetres + ' ' + inputfilename_nd4 + ' ' + outputfilename_nd4_resam
+	gdalwarp_cmdda4 = gdalwarp_cmdbase + targetres + ' ' + inputfilename_da4 + ' ' + outputfilename_da4
+\end{verbatim}
+The variable {\tt tres} is the resolution of the DTM, which was read via {\tt gdalinfo}.
 \section{Creating derived topographic layers}
+The derived topographic layers are created in LandSerf. This was done by running a script for each individual tile, in the Landscript language used in the program. This can however be generated for each tile using Python.
+The scripts are currently in a directory in my home drive {\tt ~/ioSafeBackup/RemoteSensingPlanSci\_MSc/RemoteSensing\_fromDropbox/RemoteSensing\_fromDropbox\_backup/LandSerfScripts}
+The DTM is converted from .kea to .asc using {\tt gdal\_translate} for processing in LandSerf, using the following command {\tt gdaltranscmd = "gdal\_translate -of AAIGrid "+DTMinFile+" "+ascOutFile
+}.
+The following layers were generated:
+\begin{itemize}
+ \item Slope
+ \item Aspect
+ \item Profile Curvature
+ \item Plan Curvature
+ \item Cross-sectional Curvature
+ \item Longitudinal Curvature
+ \item Mean Curvature
+ \item LandSerf features (with a 1500m window)
+\end{itemize}
+The layers are described in the PhD thesis of Jo Wood. The aspect layer is later converted to absolute aspect from north. The main processing was done with a 6 band layerstack, which had 
+\begin{itemize}
+ \item Nadir image resampled to DTM resolution
+ \item DTM elevation
+ \item slope
+ \item aspect from N (or the original aspect - these were created as 2 variants)
+ \item Cross-sectional curvature
+ \item Longitudinal curvature.
+\end{itemize}
+{\tt gdal\_calc} is used to calculate the absolute aspect from north, and {\tt gdal\_merge} to create a layerstack.
 \section{Layerstacking}
+Files ending in {\tt LandSerfLayerstack2.kea} are 10 band layerstacks, with absolute aspect from N (generated with {\tt gdalmerge\_Landserf2\_python3.py}), files ending in {\tt LandSerfLayerstack3} are 6 band layerstacks with absolute aspect from N (generated with {\tt gdalmerge\_Landserf3\_python3.py}), files with {\tt LandSerfLayerstack\_rawAsp.kea} are 6 band layerstacks with the raw aspect (generated with {\tt gdalmerge\_Landserf\_rawAspect\_python3.py}). This last script also generates a version with 9999 added, so that 0 becomes the no data value, and the values for all features are positive.
 \section{RSGISlib segmentation}
+Segmentation was done using {\tt RSGISLib}, as described in \href{http://rsgislib.org/rsgislib\_segmentation.html}{http://rsgislib.org/rsgislib\_segmentation.html}. The script {\tt segmentation\_mars\_version008b\_allLandSerf.py} is the version used in the dissertation. This works with the 6 band layerstacks, with absolute aspect from north, and 9999 added. The script {\tt segmentation\_mars\_version010\_rawasp\_LandSerf.py} uses the 6 band raw aspect version of the layerstacks, with 9999 added.
+A minimum object size of 0.2 km$^2$ was used in the dissertation.
 \section{Populating segment stats}
+This was done with the {\tt rastergis} module of {\tt rsgislib}. The main script was {\tt PopulateStats\_HRSC\_Mars2000EqCyl\_lat0\_40\_2e5sqm\_only\_add9999\_allLandSerfLayerstacks.py}. This populates the raster attribute table of the segment clumps file with stats of each band. The minimum, maximium, mean and standard deviation in each band is calculated within each segment. The stats are populated based on the layerstack before 9999 was added.
 \section{Convert segments to shapefile, and zonal stats}
+This was probably not the best way to do this. What I did in the dissertation is convert the segment clumps file to a shapefile, and the raster attribute table to plain text. The main script was {\tt python\_gdal\_polygonize\_Mars2000EqCyl\_lat0\_40\_objectsz\_2e5sqm\_only\_add9999\_allLandSerfLayerstacks.py}
+
+Zonal stats were calculated with the Souness extents and head areas, based on the layerstack before 9999 is added. The script for this is in a different place, at {\tt ~/ioSafeBackup/RemoteSensingPlanSci\_MSc/PythonScripts/MarsPythonScripts/marsglaciers} on the main hard drive rather than the external one. The original version was accidentally deleted. 
+
+
 \section{Collating the stats}
+The zonal stats for the different files are collated together with the script {\tt python\_zonalstats\_HRSC\_Mars2000Eqcyl\_lat0\_40\_layerstack\_combinefiles.py}. Again the original was accidentally deleted.
 \section{Creating the classifier function}
+The next step is to compare zonal stats for the Souness objects with the overall histograms of the HRSC tiles. Scripts such as {\tt plot\_histograms\_allfields\_ratios\_totaltiles\_SounessGLFs\_extents\_gaussians\_v2.py} are used. A different script is written for each of heads, extents, contexts, context9s, and heads5km, though heads and extents are what are really of interest. This creates a 4 component gaussian fit to the ratio of the GLF distribution as a function of each feature variable.
+
+The script {\tt CSVfile\_addGaussianClassifier\_allLandSerfLayerstacksMars2000\_lat0\_40\_noNDR\_short.py} uses these fits to write the classifier function to the ASCII table. This version doesn't use the nadir image digital number, since these are scaled locally so not globally comparable.
+
 \section{Visualisation and statistical tests}
+Visualisation in QGIS, done via joining shapefile to ASCII file so that the classifier can be visualised. Intersecting the shapefile with the context9 shapefiles, and joining to the ASCII file was done automatically as a QGIS script. This is also used by the Top Trumps.
+\section{HRSC tile image histograms}
+In script {\tt rsgislib\_imagehistogram.py}.
 \section{Top Trumps}
+{\tt subset\_nd4\_test.py} clips nadir image to bounding box around context, and similarly for a 3 band subset of the layerstack, and rasterize the extents, head, left and right mid-channel, and terminus. convert LnK shapefile (expect joined isectCtx9) to raster.
+Colorise DTM with another script.
 \end{document}

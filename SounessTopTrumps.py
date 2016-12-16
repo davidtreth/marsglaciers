@@ -886,7 +886,7 @@ with open(Gfilein) as csvfile:
                 os.chdir(sounessGLFFilePath) """
 
 with open(SounessJSONFile, "w") as outFile:
-    SounessJSON = json.dump(SounessJSON, outFile, indent=3, sort_keys=True, separators=(',', ': '))
+    SounessJSON = json.dump(SounessJSON, outFile, indent=None, sort_keys=True, separators=(',', ': '))
     
 
 #while(True):
