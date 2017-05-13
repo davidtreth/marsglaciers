@@ -523,12 +523,12 @@ def writefootprintstoSHP(csvInFile, shpOutFile,shpOutFileCTX,shpOutFileCTX9,
         prj.close()
         
         w_midchL.save(shpPath+shpOutFileLMCH)
-        prj=open(prjfilenameMCH,"w")
+        prj=open(prjfilenameLMCH,"w")
         prj.write(prjString)
         prj.close()
         
         w_midchR.save(shpPath+shpOutFileRMCH)
-        prj=open(prjfilenameMCH,"w")
+        prj=open(prjfilenameRMCH,"w")
         prj.write(prjString)
         prj.close()
         

@@ -250,14 +250,15 @@ for feature in layer:
             #    SounessDict[sounessobjID]['prodIDs_partial'] = prodIDs_partial
             for a, c, extURL in zip(prodIDs, contains, linkHTMLs):
                 a5 = a[:5]
-                if isectlayer == "dtm" and urltype == "b" and a5 not in DTMresDict:
-                    DTMres = readBerlin.getAreoidDTMres(extURL)
-                elif isinstance(DTMresDict[a5], float):
-                    DTMres = DTMresDict.pop(a5)
-                    DTMresDict[a5] = {}
-                    DTMresDict[a5]['resolution'] = DTMres
-                    DTMresDict[a5]['prodID'] = a
-                    DTMresDict[a5]['url'] = extURL
+                if isectlayer == "dtm":
+                    if urltype == "b" and a5 not in DTMresDict:
+                        DTMres = readBerlin.getAreoidDTMres(extURL)
+                    elif isinstance(DTMresDict[a5], float):
+                        DTMres = DTMresDict.pop(a5)
+                        DTMresDict[a5] = {}
+                        DTMresDict[a5]['resolution'] = DTMres
+                        DTMresDict[a5]['prodID'] = a
+                        DTMresDict[a5]['url'] = extURL
                     
                 if sounessobjID not in isectLayerDict[a5]:
                     isectLayerDict[a5].append(sounessobjID)
