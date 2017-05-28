@@ -45,7 +45,7 @@ fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','
 # headers in HiRISE_kw.csv
 HiRISEkw_headers = ['N', 'imageID', 'URL', 'anaglyphURL', 'Deskrifans', 'Dorhys', 'Dorhys180', 'Dorles']
 
-HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img']
+HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img', 'ContainsArr']
 HRSC_ND3_EXT_headers = ['CatNum', 'HRSC_img']
 
 Sindex = {}
@@ -240,17 +240,19 @@ def writeHTMLbuttons(bounds=None, outHTML=None, writeonly3D=True, allowCTX9=Fals
                 if writeonly3D:
                     b = ''
                     if allowCTX9:
-                        if row['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(catnum):
+                        if row['HiRISE_anaglyph'] != '' or catnum in HiRISE_anaglyph_index:
                             # set a different CSS class for GLFs with anaglyphs
                             #b = printButton(row,"anaglink")
                             b = printAnaglyphLink(row, True)
                     else:
-                        if HiRISE_ext_anaglyph_index.has_key(catnum):
+                        #if HiRISE_ext_anaglyph_index.has_key(catnum):
+                        if catnum in HiRISE_ext_anaglyph_index:
                             #b = printButton(row,"anaglink")
                             b = printAnaglyphLink(row, False)
                     
                 else:
-                    if HiRISE_ext_anaglyph_index.has_key(catnum):
+                    #if HiRISE_ext_anaglyph_index.has_key(catnum):
+                    if catnum in HiRISE_ext_anaglyph_index:
                         c = "Sbutton3D"
                     else:
                         c = "Sbutton"
@@ -284,11 +286,11 @@ def writeHTML(GLF):
         nextn = num+1
     else:
         nextn = num
-    if Sindex[str(prev)]['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(str(prev)):
+    if Sindex[str(prev)]['HiRISE_anaglyph'] != '' or str(prev) in HiRISE_anaglyph_index:
         previous = printButton(Sindex[str(prev)],'Sbutton3D')
     else:
         previous = printButton(Sindex[str(prev)])
-    if Sindex[str(nextn)]['HiRISE_anaglyph'] != '' or HiRISE_anaglyph_index.has_key(str(nextn)):
+    if Sindex[str(nextn)]['HiRISE_anaglyph'] != '' or str(nextn) in HiRISE_anaglyph_index:
         nextone = printButton(Sindex[str(nextn)],'Sbutton3D')
     else:        
         nextone = printButton(Sindex[str(nextn)])

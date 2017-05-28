@@ -77,7 +77,7 @@ HiRISE_index = {}
 HiRISE_anaglyph_index = {}
 HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
 HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
-HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img']
+HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img', 'ContainsArr']
 with open(HiRISE_CTX9) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
     for row in spamreader:
@@ -343,10 +343,12 @@ with open(Gfilein) as csvfile:
                       imageutils.stretchImage(outLMidCrast,outLMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outRMidCrast,outRMidCrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       imageutils.stretchImage(outEXTALLrast,outEXTALLrast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
-                      if catnum in HiRISE_index:
-                              imageutils.stretchImage(outHiRISErast,outHiRISErast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
-                      if catnum in HiRISE_anaglyph_index:
-                              imageutils.stretchImage(outHiRISEArast,outHiRISEArast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+
+                      # don't do stretch step for HiRISE and HiRISE anaglyph - was unnecessary and avoids problem when HiRISE contains bounding box of ctx
+                      #if catnum in HiRISE_index:
+                      #        imageutils.stretchImage(outHiRISErast,outHiRISErast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
+                      #if catnum in HiRISE_anaglyph_index:
+                      #        imageutils.stretchImage(outHiRISEArast,outHiRISEArast_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
                       if not(MGSmode):
                         imageutils.stretchImage(rastVecPolysLnK_a,rastVecPolysLnK_s,False,'',False,True,'GTiff',rsgislib.TYPE_8INT,imageutils.STRETCH_LINEARMINMAX)
 
@@ -368,14 +370,21 @@ with open(Gfilein) as csvfile:
                       convertR = "convert {i} +level-colors black,yellow {o}".format(i=outRMidCrast_s.replace(".tif",".png"), o=outRMidCrast_s.replace("2.tif",".png"))
                       
                       convertLnKHead = "convert {i} +level-colors black,red {o}".format(i=rastVecPolysLnK_s.replace(".tif",".png"), o=rastVecPolysLnK_s.replace("2.tif",".png"))
-                      convertHi = "convert {i} +level-colors black,yellow {o}".format(i=outHiRISErast_s.replace(".tif",".png"), o=outHiRISErast_s.replace("2.tif",".png"))
-                      convertHiA = "convert {i} +level-colors black,red {o}".format(i=outHiRISEArast_s.replace(".tif",".png"), o=outHiRISEArast_s.replace("2.tif",".png"))
+                      # don't do stretch step for HiRISE and HiRISE anaglyph - was unnecessary and avoids problem when HiRISE contains bounding box of ctx
+                      # adjust argument of level-colors to cope with all-white image
+                      #convertHi = "convert {i} +level-colors black,yellow {o}".format(i=outHiRISErast_s.replace(".tif",".png"), o=outHiRISErast_s.replace("2.tif",".png"))
+                      #convertHiA = "convert {i} +level-colors black,red {o}".format(i=outHiRISEArast_s.replace(".tif",".png"), o=outHiRISEArast_s.replace("2.tif",".png"))
+                      convertHi = "convert {i} +level-colors ,yellow {o}".format(i=outHiRISErast_s.replace(".tif",".png"), o=outHiRISErast_s.replace("2.tif",".png"))
+                      convertHiA = "convert {i} +level-colors ,red {o}".format(i=outHiRISEArast_s.replace(".tif",".png"), o=outHiRISEArast_s.replace("2.tif",".png"))
                       
                       gdaltranscmd3 = "gdal_translate -of PNG -outsize {scalex:.2}\% {scaley:.2}\% {c} {cP}".format(c=outDTM_s,cP = outDTM_s.replace(".tif",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
                       # extents of all subsetted to bounding box of each context
                       gdaltranscmd4 = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outEXTALLrast_s,cP = outEXTALLrast_s.replace(".tif",".png"))
-                      gdaltranscmdHi = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISErast_s,cP = outHiRISErast_s.replace(".tif",".png"))
-                      gdaltranscmdHiA = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISEArast_s,cP = outHiRISEArast_s.replace(".tif",".png"))
+                      # don't do stretch step for HiRISE and HiRISE anaglyph - was unnecessary and avoids problem when HiRISE contains bounding box of ctx
+                      #gdaltranscmdHi = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISErast_s,cP = outHiRISErast_s.replace(".tif",".png"))
+                      #gdaltranscmdHiA = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISEArast_s,cP = outHiRISEArast_s.replace(".tif",".png"))
+                      gdaltranscmdHi = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISErast,cP = outHiRISErast_s.replace(".tif",".png"))
+                      gdaltranscmdHiA = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=outHiRISEArast,cP = outHiRISEArast_s.replace(".tif",".png"))
                       
                       gdaltranscmd_vpoly = "gdal_translate -of PNG {c} {cP} -a_nodata 0".format(c=rastVecPolysLnK_s,cP = rastVecPolysLnK_s.replace(".tif",".png"))
                       gdaltranscmd_LyrSt = "gdal_translate -of PNG {c} -outsize {scalex:.2}\% {scaley:.2}\% {cP} -a_nodata 0".format(c=outLyrSt_s,cP = outLyrSt_s.replace(".kea",".png"), scalex=scalefactor*100, scaley=scalefactor*100)
@@ -442,10 +451,10 @@ with open(Gfilein) as csvfile:
                       os.remove(outEXTALLrast_s)
                       if catnum in HiRISE_index:
                         os.remove(outHiRISErast)
-                        os.remove(outHiRISErast_s)
+                      #  os.remove(outHiRISErast_s)
                       if catnum in HiRISE_anaglyph_index:
                         os.remove(outHiRISEArast)
-                        os.remove(outHiRISEArast_s)
+                      #  os.remove(outHiRISEArast_s)
                       if not(MGSmode):
                         os.remove(rastVecPolysLnK)
                         os.remove(rastVecPolysLnK_a)

@@ -258,12 +258,16 @@ for feature in layer:
                         DTMresDict[a5] = {}
                         DTMresDict[a5]['resolution'] = DTMres
                         DTMresDict[a5]['prodID'] = a
-                        DTMresDict[a5]['url'] = extURL
-                    
-                if sounessobjID not in isectLayerDict[a5]:
-                    isectLayerDict[a5].append(sounessobjID)
-                if c and (sounessobjID not in containsLayerDict[a5]):
-                    containsLayerDict[a5].append(sounessobjID)
+                        DTMresDict[a5]['url'] = extURL                    
+                    if sounessobjID not in isectLayerDict[a5]:
+                        isectLayerDict[a5].append(sounessobjID)
+                    if c and (sounessobjID not in containsLayerDict[a5]):
+                        containsLayerDict[a5].append(sounessobjID)
+                else:
+                    if sounessobjID not in isectLayerDict[a]:
+                        isectLayerDict[a].append(sounessobjID)
+                    if c and (sounessobjID not in containsLayerDict[a]):
+                        containsLayerDict[a].append(sounessobjID)
                     
                     
     """
@@ -300,13 +304,15 @@ if outputmode == "c":
     isectLayer_outfn += ".csv"
     with open(souness_outfn, "w") as outFile:
         spamwriter = csv.writer(outFile, delimiter=",")
+        outRow1 = ['CatNum', 'HiRISE_img', 'ContainsArr']
+        spamwriter.writerow(outRow1)
         for s in SounessDict:
-            outRow =[s, SounessDict[s]['prodIDs'], SounessDict[s]['containsArr']]
+            outRow =[s, ",".join(SounessDict[s]['prodIDs']), ",".join([str(c) for c in SounessDict[s]['containsArr']])]
             spamwriter.writerow(outRow)
     with open(isectLayer_outfn, "w") as outFile:
         spamwriter = csv.writer(outFile, delimiter=",")
         for i in isectLayerDict:            
-            outRow =[i, isectLayerDict[i]]
+            outRow =[i, ",".join(isectLayerDict[i])]
             spamwriter.writerow(outRow)
         
     
