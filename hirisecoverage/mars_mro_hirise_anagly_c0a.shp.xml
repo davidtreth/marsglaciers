@@ -2,9 +2,9 @@
 <!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
 <metadata xml:lang="en">
 	<Esri>
-		<CreaDate>201755/4/2017 12:00:00 AM</CreaDate>
-		<CreaTime>15390</CreaTime>
-		<DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\RepairGeometry" Date="20170504" Time="153914">RepairGeometry //phobos/projects/ode4/ode-live/ode_mars/processed_data/derived_products/coverageshapefilesfull/mars/mro/hirise/anagly/mars_mro_hirise_anagly_c0a.shp DELETE_NULL</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddSpatialIndex" Date="20170504" Time="153918">AddSpatialIndex //phobos/projects/ode4/ode-live/ode_mars/processed_data/derived_products/coverageshapefilesfull/mars/mro/hirise/anagly/mars_mro_hirise_anagly_c0a.shp 0 0 0</Process></lineage></DataProperties></Esri>
+		<CreaDate>201999/1/2019 12:00:00 AM</CreaDate>
+		<CreaTime>22743</CreaTime>
+		<DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\RepairGeometry" Date="20190901" Time="022802">RepairGeometry //phobos/projects/ode4/ode-live/ode_mars/processed_data/derived_products/coverageshapefilesfull/mars/mro/hirise/anagly/mars_mro_hirise_anagly_c0a.shp DELETE_NULL</Process><Process ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddSpatialIndex" Date="20190901" Time="022807">AddSpatialIndex //phobos/projects/ode4/ode-live/ode_mars/processed_data/derived_products/coverageshapefilesfull/mars/mro/hirise/anagly/mars_mro_hirise_anagly_c0a.shp 0 0 0</Process></lineage></DataProperties></Esri>
 	<dataIdInfo>
 		<idCitation>
 			<resTitle>NASA's Planetary Data System Geosciences Node Orbital Data Explorer (ODE) Product Coverage Shapefile for mars_mro_hirise_anagly_c0a</resTitle>
@@ -17,7 +17,7 @@ on instrument host MRO
 viewing Mars.  
 All latitudes are planetocentric.  
 This coverage is valid for center longitude 0 cylindrical projections with positive east, -180 to 180, longitudes. 
-The shapefile was generated from PDS Geosciences Orbital Data Explorer (ODE) on 2017-05-04T15:39:00.332.  
+The shapefile was generated from PDS Geosciences Orbital Data Explorer (ODE) on 2019-09-01T02:27:43.663.  
  Links: 
    NASA Planetary Data System: http://pds.jpl.nasa.gov/
    Geosciences Node: http://geo.pds.nasa.gov/
