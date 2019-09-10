@@ -1,5 +1,9 @@
 from bs4 import BeautifulSoup
-from urllib import urlopen
+import sys
+if sys.version_info[0] < 3:
+	from urllib import urlopen
+else:
+	from urllib.request import urlopen
 import time
 import random
 

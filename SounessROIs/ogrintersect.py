@@ -7,6 +7,7 @@ import os
 import json
 import csv
 import readBerlin
+import argparse
 
 ### from https://github.com/csterling/Morps/blob/master/morps.py
 ### This function checks two features in a file to see if they intersect.
@@ -98,6 +99,29 @@ isectLayerDict = defaultdict(list)
 containsLayerDict = defaultdict(list)
 
 sounesslayer = ""
+isectlayer = ""
+urltype = ""
+outputmode = ""
+
+# Create the command line options parser.
+parser = argparse.ArgumentParser()
+# take the input from a file specified
+# by a command line argument
+parser.add_argument("-s", type=str,
+					help="Specify the Souness object extent (e), context (c), context9 (9).")
+parser.add_argument("-c", type=str,
+					help="Specify the type of coverage layer (HiRise image (hi), Anaglyph (a), HiRISE DTM (d), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).")
+parser.add_argument("-url", type=str,
+					help="Specify URL link to use (for HRSC ND, DTM or SR) b=Berlin, o = NASA PDS orbital data explorer, a=Arizona State University")
+parser.add_argument("-out", type=str,
+					help="Specify output mode (c=csv, j=JSON)")
+args = parser.parse_args()
+
+sounesslayer = args.s.lower()
+isectlayer = args.c.lower()
+urltype = args.url.lower()
+outputmode = args.out.lower()
+
 while sounesslayer not in ["e", "c", "9"]:
     sounesslayer = raw_input("Choose Mode (intersect with Souness extents, contexts, or context9 shapefiles. e=extents, c=context 9=context9.\n")
     sounesslayer = sounesslayer.lower()
@@ -118,22 +142,22 @@ layer = dataSource.GetLayer()
 #    isectmode = raw_input("Choose intersect mode (i), contains (c), or partial (p) - does the souness object need to be wholly within the coverage geome#try? If 'p' is selected, only partial coverage is returned")
     
     
-isectlayer = ""
+
 while isectlayer not in ["hi", "a", "d", "nd", "sr", "dtm"]:
     isectlayer = raw_input("Choose Mode (intersect with Hirise image (hi), Hirise anaglyph (a), Hirise DTM (d), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).\n")
     isectlayer = isectlayer.lower()
 
-
-
 if isectlayer in ["nd", "dtm"]:
-    urltype = raw_input("Use Freie Universitat Berlin URL (b) , NASA PDS orbital data explorer (o) or Arizona State University (a)?")
+	while urltype not in ["b", "o", "a"]:
+		urltype = raw_input("Use Freie Universitat Berlin URL (b) , NASA PDS orbital data explorer (o) or Arizona State University (a)?")
 elif isectlayer == "sr":
-    urltype = raw_input("Use NASA PDS orbital data explorer (o) or Arizona State University (a)?") 
+	while urltype not in ["o", "a"]:		
+		urltype = raw_input("Use NASA PDS orbital data explorer (o) or Arizona State University (a)?") 
 
 
     
 print(len(layer))
-outputmode = ""
+
 while outputmode.lower() not in ["j", "c"]:#, "h"]:
     outputmode = raw_input("Use csv output mode (c), JSON mode (j)?")#, HTML mode (h)?")
 

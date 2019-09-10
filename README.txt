@@ -148,5 +148,43 @@ longitude (dorhys) and latitude (dorles)
 DTMcmap.py
 ============
 converts a series of greyscale images to pseudocolour.
+
 Used for the output DTM images.
+
+SounessROIs/ogrintersect.py
+============
+check for intersection between the footprints of the Souness objects,
+and the HiRISE and HRSC footprints from https://ode.rsl.wustl.edu/mars/coverage/ODE_Mars_shapefile.html
+
+SounessROIs/readBerlin.py
+===========================
+reads DTM resolution from Freie Universität Berlin website
+
+
+Summary of steps involved
+=========================
+Get latest coverage shapefiles from https://ode.rsl.wustl.edu/mars/coverage/ODE_Mars_shapefile.html
+
+use the c0a files
+
+HiRISE image - 
+https://ode.rsl.wustl.edu/mars/datafile/derived_products/coverageshapefiles/mars/mro/hirise/rdrv11/
+
+HiRISE anaglyphs -
+https://ode.rsl.wustl.edu/mars/datafile/derived_products/coverageshapefiles/mars/mro/hirise/anagly/
+
+HiRISE DTMs-
+https://ode.rsl.wustl.edu/mars/datafile/derived_products/coverageshapefiles/mars/mro/hirise/dtm/
+
+HRSC images -
+https://ode.rsl.wustl.edu/mars/datafile/derived_products/coverageshapefiles/mars/mex/hrsc/refdr3/
+
+select out the nadir image and the "super-resolution" ones by viewing the attribute table in QGIS
+
+Make sure copies of the files are in the hirisecoverage/ and HRSCimagecoverage/ directories
+
+Run the ogrintersect.py file and select options interactively.
+
+For the Top Trumps website, run for each of extents, context, and context9 in csv mode
+could automate this...
 
