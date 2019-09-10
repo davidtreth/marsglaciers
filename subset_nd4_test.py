@@ -16,7 +16,7 @@ import os.path
 import glob
 
 # file paths hard-coded
-sounessGLFFilePath = "/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/"
+sounessGLFFilePath = "/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/"
 sounessGLFFile="mmc1_HRSC+HiRISE_coverage_duplicates_possible_typos.csv"
 inND4path =  '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/SounessCatalog3_backup/'
 outND4path = 'context_subsets/'
@@ -27,21 +27,23 @@ inMOLALyrSt_N = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc
 inMOLALyrSt_S = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/MOLA_128/MOLA_128_SmidlataspectN.kea'
 
 # locations of Souness GLF individual shapefiles
-contextpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/SounessROIs_individual/Individual/Context/'
-extentpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/SounessROIs_individual/Individual/Extent/'
-headpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/RemoteSensing_fromDropbox/RemoteSensing_fromDropbox_backup/SounessROIs_individual/Individual/heads/'
+contextpath = 'SounessROIs_individual/Individual/Context/'
+extentpath = 'SounessROIs_individual/Individual/Extent/'
+headpath = 'SounessROIs_individual/Individual/heads/'
 
 # location of all Souness extents shapefile
 
-extent_allpath = '/home/davydh/ioSafeBackup/RemoteSensingPlanSci_MSc/PythonScripts/MarsPythonScripts/marsglaciers/SounessROIs/'
+extent_allpath = 'SounessROIs/'
 extent_allfile = 'SounessROIextents_all_Mars2000EqCyl_lat0_40.shp'
 extent_all = extent_allpath + extent_allfile
 
+heads_allfile = 'SounessROIheads_all_Mars2000EqCyl_lat0_40.shp' 
 centres_allfile = 'SounessROIcentres_all_Mars2000EqCyl_lat0_40.shp' 
 termini_allfile = 'SounessROItermini_all_Mars2000EqCyl_lat0_40.shp'
 midchL_allfile = 'SounessROIleftmidchannel_all_Mars2000EqCyl_lat0_40.shp'
 midchR_allfile = 'SounessROIrightmidchannel_all_Mars2000EqCyl_lat0_40.shp'
 
+heads_all = extent_allpath + heads_allfile 
 centres_all = extent_allpath + centres_allfile 
 termini_all = extent_allpath + termini_allfile
 midchL_all = extent_allpath + midchL_allfile
@@ -75,8 +77,10 @@ CatNumsForceMGS = []#[206, 228, 231, 262, 687, 688, 912, 1153]
 #ctx9
 HiRISE_index = {}
 HiRISE_anaglyph_index = {}
-HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
-HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
+#HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
+HiRISE_CTX9 = 'SounessROIs/souness_context9_HiRISEimg_tiles.csv'
+#HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
+HiRISE_anaglyph_CTX9 = 'SounessROIs/souness_context9_HiRISEana_tiles.csv'
 HiRISE_CTX9_headers = ['CatNum', 'HiRISE_img', 'ContainsArr']
 with open(HiRISE_CTX9) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
@@ -194,6 +198,7 @@ with open(Gfilein) as csvfile:
                         # if possible, work in rsgislib but fall back on gdalwarp if needed
                         imageutils.subset(inND4,contextvect,outND4,'GTiff',rsgislib.TYPE_8INT)
                       except:
+                        input("imageutils.subset not working")
                         gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inND4.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outND4)
                         print(gdwarpcmd)
                         subprocess.call(gdwarpcmd, shell=True)
@@ -204,6 +209,7 @@ with open(Gfilein) as csvfile:
                               imageutils.selectImageBands(inDTM, DTMband, 'GTiff', rsgislib.TYPE_32FLOAT, [2])
                            imageutils.subset(DTMband,contextvect,outDTM,'GTiff',rsgislib.TYPE_32FLOAT)
                         except:
+                           input("imageutils.selectImageBands or imageutils.subset not working")
                            gdwarpcmd = "gdalwarp -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=DTMband.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outDTM)
                            print(gdwarpcmd)
                            subprocess.call(gdwarpcmd, shell=True)
@@ -225,9 +231,9 @@ with open(Gfilein) as csvfile:
                            imageutils.popImageStats(outLyrSt2, True, 0, True)
                         except:                        
                            input("subset not working")
-                           #gdwarpcmd = "gdalwarp -of KEA -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inLyrSt.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outLyrSt)
-                           #print(gdwarpcmd)
-                           #subprocess.call(gdwarpcmd, shell=True)
+                           gdwarpcmd = "gdalwarp -of KEA -cutline {c} -crop_to_cutline {i} {out}".format(c=contextvect, i=inLyrSt.replace("TOSHIBA EXT", "TOSHIBA\ EXT"), out=outLyrSt)
+                           print(gdwarpcmd)
+                           subprocess.call(gdwarpcmd, shell=True)
                            skipLyrSt = True
                       else:
                         skipLyrSt = True
@@ -274,22 +280,29 @@ with open(Gfilein) as csvfile:
                         scalefactor = 1.8331153488468312    
                       
                       # rasterize the shapefile
-                      #gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -tr {x} {y} {vc} {vcrst}".format(x=x, y=y, vc = contextvect, vcrst = outCTXrast)
+                      #gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -tr {x} {y} {vc} {vcrst}".format(x=x, y=y, vc = contextvect, vcrst = outCTXrast)                                          
                       gdalrastcmd = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extentvect, vcrst = outEXTrast)
+                      print(gdalrastcmd)
                       subprocess.call(gdalrastcmd, shell=True)
-                      gdalrastcmdH = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = headvect, vcrst = outHeadrast)
+                      #head
+                      gdalrastcmdH = 'gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where "OBJ_ID=\'{cnum}\'" -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}'.format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = heads_all, vcrst = outHeadrast)
+                      print(gdalrastcmdH)
                       subprocess.call(gdalrastcmdH, shell=True)
                       #centre
-                      gdalrastcmdC = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where 'OBJ_ID=\"{cnum}\"' -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = centres_all, vcrst = outCentrast)
+                      gdalrastcmdC = 'gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where "OBJ_ID=\'{cnum}\'" -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}'.format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = centres_all, vcrst = outCentrast)
+                      print(gdalrastcmdC)
                       subprocess.call(gdalrastcmdC, shell=True)
                       #terminus
-                      gdalrastcmdT = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where 'OBJ_ID=\"{cnum}\"' -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = termini_all, vcrst = outTermrast)
+                      gdalrastcmdT = 'gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where "OBJ_ID=\'{cnum}\'" -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}'.format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = termini_all, vcrst = outTermrast)
+                      print(gdalrastcmdT)
                       subprocess.call(gdalrastcmdT, shell=True)
                       #leftMid
-                      gdalrastcmdL = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where 'OBJ_ID=\"{cnum}\"' -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = midchL_all, vcrst = outLMidCrast)
+                      gdalrastcmdL = 'gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where "OBJ_ID=\'{cnum}\'" -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}'.format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = midchL_all, vcrst = outLMidCrast)
+                      print(gdalrastcmdL)
                       subprocess.call(gdalrastcmdL, shell=True)
                       #rightMid
-                      gdalrastcmdR = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where 'OBJ_ID=\"{cnum}\"' -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = midchR_all, vcrst = outRMidCrast)
+                      gdalrastcmdR = 'gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -where "OBJ_ID=\'{cnum}\'" -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}'.format(cnum = catnum, xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = midchR_all, vcrst = outRMidCrast)
+                      print(gdalrastcmdR)
                       subprocess.call(gdalrastcmdR, shell=True)
 
                       gdalrastcmd2 = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extent_all, vcrst = outEXTALLrast)

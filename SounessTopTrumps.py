@@ -25,14 +25,23 @@ HRSCPath = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/Soun
 Gfilein = sounessGLFFile
 print(Gfilein)
 HiRISE_kw = 'HiRISE_kw.csv'
-HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
-HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
-HiRISE_DTM_CTX9 = 'SounessROIs/hiriseDTMs_ctx9.csv'
-HiRISE_EXT = 'SounessROIs/hirise_ext.csv'
-HiRISE_anaglyph_EXT = 'SounessROIs/hirise_anaglyph_ext.csv'
+#HiRISE_CTX9 = 'SounessROIs/hirise_ctx9.csv'
+#HiRISE_anaglyph_CTX9 = 'SounessROIs/hirise_anaglyph_ctx9.csv'
+#HiRISE_DTM_CTX9 = 'SounessROIs/hiriseDTMs_ctx9.csv'
+#HiRISE_EXT = 'SounessROIs/hirise_ext.csv'
+#HiRISE_anaglyph_EXT = 'SounessROIs/hirise_anaglyph_ext.csv'
 
-HRSC_ND3 = 'SounessROIs/HRSC_ND3_ext.csv'
-HRSC_SR3 = 'SounessROIs/HRSC_SR3_ext.csv'
+#HRSC_ND3 = 'SounessROIs/HRSC_ND3_ext.csv'
+#HRSC_SR3 = 'SounessROIs/HRSC_SR3_ext.csv'
+
+HiRISE_CTX9 = 'SounessROIs/souness_context9_HiRISEimg_tiles.csv'
+HiRISE_anaglyph_CTX9 = 'SounessROIs/souness_context9_HiRISEana_tiles.csv'
+HiRISE_DTM_CTX9 = 'SounessROIs/souness_context9_HiRISEdtm_tiles.csv.csv'
+HiRISE_EXT = 'SounessROIs/souness_extent_HiRISEimg_tiles.csv'
+HiRISE_anaglyph_EXT = 'SounessROIs/souness_extent_HiRISEimg_tiles.csv'
+
+HRSC_ND3 = 'SounessROIs/souness_extent_HRSCnd3_tiles.csv'
+HRSC_SR3 = 'SounessROIs/souness_extent_HRSCsr3_tiles.csv'
 
 # the headers in sounessGLFFile
 fieldnames=['CatNum','CTXimg','Typo','offcent','Duplicate','HRSC_DTM','DTMres','HiRISE',

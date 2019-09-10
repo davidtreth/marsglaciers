@@ -108,13 +108,13 @@ parser = argparse.ArgumentParser()
 # take the input from a file specified
 # by a command line argument
 parser.add_argument("-s", type=str,
-					help="Specify the Souness object extent (e), context (c), context9 (9).")
+                    help="Specify the Souness object extent (e), context (c), context9 (9).")
 parser.add_argument("-c", type=str,
-					help="Specify the type of coverage layer (HiRise image (hi), Anaglyph (a), HiRISE DTM (d), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).")
+                    help="Specify the type of coverage layer (HiRise image (hi), Anaglyph (a), HiRISE DTM (d), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).")
 parser.add_argument("-url", type=str,
-					help="Specify URL link to use (for HRSC ND, DTM or SR) b=Berlin, o = NASA PDS orbital data explorer, a=Arizona State University")
+                    help="Specify URL link to use (for HRSC ND, DTM or SR) b=Berlin, o = NASA PDS orbital data explorer, a=Arizona State University")
 parser.add_argument("-out", type=str,
-					help="Specify output mode (c=csv, j=JSON)")
+                    help="Specify output mode (c=csv, j=JSON)")
 args = parser.parse_args()
 
 sounesslayer = args.s.lower()
@@ -148,11 +148,11 @@ while isectlayer not in ["hi", "a", "d", "nd", "sr", "dtm"]:
     isectlayer = isectlayer.lower()
 
 if isectlayer in ["nd", "dtm"]:
-	while urltype not in ["b", "o", "a"]:
-		urltype = raw_input("Use Freie Universitat Berlin URL (b) , NASA PDS orbital data explorer (o) or Arizona State University (a)?")
+    while urltype not in ["b", "o", "a"]:
+        urltype = raw_input("Use Freie Universitat Berlin URL (b) , NASA PDS orbital data explorer (o) or Arizona State University (a)?")
 elif isectlayer == "sr":
-	while urltype not in ["o", "a"]:		
-		urltype = raw_input("Use NASA PDS orbital data explorer (o) or Arizona State University (a)?") 
+    while urltype not in ["o", "a"]:        
+        urltype = raw_input("Use NASA PDS orbital data explorer (o) or Arizona State University (a)?") 
 
 
     
@@ -279,10 +279,12 @@ for feature in layer:
                         DTMres = readBerlin.getAreoidDTMres(extURL)
                     elif isinstance(DTMresDict[a5], float):
                         DTMres = DTMresDict.pop(a5)
-                        DTMresDict[a5] = {}
-                        DTMresDict[a5]['resolution'] = DTMres
-                        DTMresDict[a5]['prodID'] = a
-                        DTMresDict[a5]['url'] = extURL                    
+                    elif isinstance(DTMresDict[a5]['resolution'], float):
+                        DTMres = DTMresDict[a5]['resolution']
+                    DTMresDict[a5] = {}
+                    DTMresDict[a5]['resolution'] = DTMres
+                    DTMresDict[a5]['prodID'] = a
+                    DTMresDict[a5]['url'] = extURL                    
                     if sounessobjID not in isectLayerDict[a5]:
                         isectLayerDict[a5].append(sounessobjID)
                     if c and (sounessobjID not in containsLayerDict[a5]):
@@ -309,6 +311,7 @@ containsLayer_outfn = "{fp}_tiles_contains_{e}_sounessobjs".format(e=sounesslaye
 if outputmode == "j":
     souness_outfn += ".json"
     isectLayer_outfn += ".json"
+    containsLayer_outfn += ".json"
     print(SounessDict)
     with open(souness_outfn, "w") as outFile:
         SounessJSON = json.dump(SounessDict, outFile)
