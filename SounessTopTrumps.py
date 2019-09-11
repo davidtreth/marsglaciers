@@ -16,7 +16,7 @@ import json
 sounessGLFFile="mmc1_HRSC+HiRISE_coverage_duplicates_possible_typos.csv"
 #sounessGLFFile="mmc1_HRSC+HiRISE_coverage_forsummarystats_cleaned.csv"
 
-ExtSHPsPath = "SounessROIs_individual/Individual/Extent"
+ExtSHPsPath = "SounessROIs_individual/Individual/Extent/"
 CtxSHPsPath = "SounessROIs_individual/Individual/Context/"
 # path to root of HRSC images
 HRSCPath = '/media/davydh/TOSHIBA EXT/ioSafeBackup/RemoteSensingPlanSci_MSc/SounessCatalog3_backup/'
@@ -36,7 +36,7 @@ HiRISE_kw = 'HiRISE_kw.csv'
 
 HiRISE_CTX9 = 'SounessROIs/souness_context9_HiRISEimg_tiles.csv'
 HiRISE_anaglyph_CTX9 = 'SounessROIs/souness_context9_HiRISEana_tiles.csv'
-HiRISE_DTM_CTX9 = 'SounessROIs/souness_context9_HiRISEdtm_tiles.csv.csv'
+HiRISE_DTM_CTX9 = 'SounessROIs/souness_context9_HiRISEdtm_tiles.csv'
 HiRISE_EXT = 'SounessROIs/souness_extent_HiRISEimg_tiles.csv'
 HiRISE_anaglyph_EXT = 'SounessROIs/souness_extent_HiRISEimg_tiles.csv'
 
@@ -203,11 +203,11 @@ def printHiRISE_kw(bounds=None):
                 if checkinbounds(lng, lat, bounds):
                     output += "<div class='HiRISErow'>"
                     print("<div class='HiRISErow'>")
-                    print("<div class='HiRISEkw'><a href='{u}'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng)))
-                    output += "<div class='HiRISEkw'><a href='{u}'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng))
+                    print("<div class='HiRISEkw'><a href='{u}' target='_blank'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng)))
+                    output += "<div class='HiRISEkw'><a href='{u}' target='_blank'>{d}</a>. <div class='latlong'>Lat: {t}, Long: {n}</div></div>".format(u=row['URL'], d=row['Deskrifans'], t=int(lat), n=int(lng))
                     if row['anaglyphURL'] != "":
-                        print("<div class='HiRISE3D'><a href='{u}'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph"))
-                        output += "\n<div class='HiRISE3D'><a href='{u}'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph")
+                        print("<div class='HiRISE3D'><a href='{u}' target='_blank'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph"))
+                        output += "\n<div class='HiRISE3D'><a href='{u}' target='_blank'>{an}</a></div>".format(u=row['anaglyphURL'], an="Red/blue 3D anaglyph")
                     print("</div>")
                     output += "</div>\n"
     return output
@@ -320,10 +320,10 @@ def writeHTML(GLF):
       </ul>
     </nav>
         <nav class="horiz horizL2">
-	  <ul>
-	<li ><a href="index.html">Martian Glacier index map<br><div class="transtext">Map Rewivaow Meurth</div></a></li>
-	<li><a href="hemispheres.html">Martian Hemispheric zoomable maps<br><div class="transtext">Mappys Zoumadow Hanter-Bys Meurth</div></a></li>
-	<li><a href="regions.html">Martian Regional zoomable maps<br><div class="transtext">Mappys Zoumadow Ranndiryel Meurth</div></a></li>
+      <ul>
+    <li ><a href="index.html">Martian Glacier index map<br><div class="transtext">Map Rewivaow Meurth</div></a></li>
+    <li><a href="hemispheres.html">Martian Hemispheric zoomable maps<br><div class="transtext">Mappys Zoumadow Hanter-Bys Meurth</div></a></li>
+    <li><a href="regions.html">Martian Regional zoomable maps<br><div class="transtext">Mappys Zoumadow Ranndiryel Meurth</div></a></li>
         <li class="activenav"><a href="sounesstoptrumps.html">Souness Catalogue Top Trump index<br><div class=transtext>Menegva Top Trump Souness</div></a></li>
         <!--<li><a href="mappys/osm_names_kw/index.html">Map source data<br><div class="transtext">Fenten data an mappys</div></a></li>-->
       </ul>
@@ -584,7 +584,7 @@ def createJSONObj(GLF):
         HRSC_ND3_URLs_ODE.append(HRSC_URL_o)
         HRSC_ND3_URLs_ASU.append(HRSC_URL_a)
         HRSC_ND3_URLs_BER.append(HRSC_URL_b)
-    HRSC_tuples = zip(HRSC_ND3imgs, HRSC_ND3_URLs_ODE, HRSC_ND3_URLs_ASU, HRSC_ND3_URLs_BER)
+    HRSC_tuples = list(zip(HRSC_ND3imgs, HRSC_ND3_URLs_ODE, HRSC_ND3_URLs_ASU, HRSC_ND3_URLs_BER))
     glfJSON['HRSC_ND3'] = HRSC_tuples
                         
     # HRSC SR3 images
@@ -596,7 +596,7 @@ def createJSONObj(GLF):
         HRSC_URL_a = makeURL("a", himg)
         HRSC_SR3_URLs_ODE.append(HRSC_URL_o)
         HRSC_SR3_URLs_ASU.append(HRSC_URL_a)
-    HRSC_tuples = zip(HRSC_SR3imgs, HRSC_SR3_URLs_ODE, HRSC_SR3_URLs_ASU)
+    HRSC_tuples = list(zip(HRSC_SR3imgs, HRSC_SR3_URLs_ODE, HRSC_SR3_URLs_ASU))
     glfJSON['HRSC_SR3'] = HRSC_tuples    
     
     # HiRISE
@@ -614,13 +614,13 @@ def createJSONObj(GLF):
         hiriseurl = "http://hirise.lpl.arizona.edu/" + himg[:15]
         hiriseurls.append(hiriseurl)
     hiriseimgs = [h[:15] for h in hiriseimgs]
-    hirise_tuples = zip(hiriseimgs, hiriseurls)
+    hirise_tuples = list(zip(hiriseimgs, hiriseurls))
     glfJSON['HiRISE'] = hirise_tuples
 
     hiriseimgs_ext = HiRISE_ext_index.get(GLF['CatNum'], [])
     hiriseimgs_ext = [h[:15] for h in hiriseimgs_ext if "COLOR" not in h]
     hiriseurls2 = ["http://hirise.lpl.arizona.edu/"+h for h in hiriseimgs_ext]
-    hirise_tuples2 = zip(hiriseimgs_ext, hiriseurls2)
+    hirise_tuples2 = list(zip(hiriseimgs_ext, hiriseurls2))
     glfJSON['HiRISE_ext'] = hirise_tuples2
     
     # HiRISE anaglyphs
@@ -640,12 +640,12 @@ def createJSONObj(GLF):
         leftobs = aimg[:15]
         anaglyphurl = anaglyphurl+leftobs
         anaglyphurls.append(anaglyphurl)
-    anaglyph_tuples = zip(anaglyphimgs, anaglyphurls)
+    anaglyph_tuples = list(zip(anaglyphimgs, anaglyphurls))
     glfJSON['anaglyph'] = anaglyph_tuples
 
     hiriseanags_ext = HiRISE_ext_anaglyph_index.get(GLF['CatNum'], [])
     anaglyphurls2 = ["http://hirise.lpl.arizona.edu/anaglyph/singula.php?ID="+h[:15] for h in hiriseanags_ext]
-    anaglyph_tuples2 = zip(hiriseanags_ext, anaglyphurls2)
+    anaglyph_tuples2 = list(zip(hiriseanags_ext, anaglyphurls2))
     glfJSON['anaglyph_ext'] = anaglyph_tuples2
     
     # HiRISE DTMs
@@ -675,7 +675,7 @@ def createJSONObj(GLF):
         except:
             DTMurl = ''
         DTMurls.append(DTMurl)
-    DTM_tuples = zip(hiriseDTMs, DTMurls)
+    DTM_tuples = list(zip(hiriseDTMs, DTMurls))
     glfJSON['HiRISE_DTM'] = DTM_tuples
     glfJSON['Length'] = "{l:.2f} km".format(l=float(GLF['Length']))
     glfJSON['Width'] = "{w:.2f} km".format(w=float(GLF['Width']))
@@ -806,13 +806,13 @@ with open(HRSC_SR3) as csvfile:
 with open(Gfilein) as csvfile:
      # write the buttons for the index page
      writeHTMLbuttons(None, "sounessallbuttons.html", writeonly3D=False, allowCTX9=False)
-     raw_input()
+     input()
 with open(Gfilein) as csvfile:
      writeHTMLbuttons(None, "souness_anaglyphbuttons.html", allowCTX9=False)
-     raw_input()
+     input()
 with open(Gfilein) as csvfile:     
      writeHTMLbuttons(None, "souness_anaglyph_ctx9buttons.html", allowCTX9=True)
-     raw_input()
+     input()
 
 # long+lat bounds for regions
 # regions altered to make them non-overlapping
@@ -835,27 +835,45 @@ proton = [40, 60, 20, 70]
 nilosyrtis = [60, 100, 20, 70]
 #utopiaphlegra = [110, 180, 20, 70]
 utopiaphlegra = [100, 180, 20, 70]
-regions = [tharsis, argyre, whellas, ehellas, sehighland, olympus, mareotis, deuteron, proton, nilosyrtis, utopiaphlegra]
-regionnames = ["Tharsis", "Argyre", "West of Hellas", "East of Hellas", "SE Highlands", "Olympus Mons and surrounding area", "Mareotis Fossae", "Deuteronilus Mensae", "Protonilus Mensae", "Nilosyrtis Mensae", "Utopia Planitia and Phlegra Montes"]
+npolar = [-180, 180, 70, 90]
+spolar = [-180, 180, -90, -70]
+
+regions = [tharsis, argyre, whellas, ehellas, sehighland, olympus, mareotis, deuteron, proton, nilosyrtis, utopiaphlegra, npolar, spolar]
+regionnames = ["Tharsis", "Argyre", "West of Hellas", "East of Hellas", "SE Highlands", "Olympus Mons and surrounding area", "Mareotis Fossae", "Deuteronilus Mensae", "Protonilus Mensae", "Nilosyrtis Mensae", "Utopia Planitia and Phlegra Montes", "North Polar", "South Polar"]
 regionURLs = ["stharsis.html", "argyre.html", "whellas.html", "ehellas.html", "sehighlands.html", "olympus.html", "mareotis.html",
-              "deuteron.html", "proton.html", "nilosyrtis.html", "elysium.html"]
+              "deuteron.html", "proton.html", "nilosyrtis.html", "elysium.html", "npolar.html", "spolar.html"]
+
 regions_outHTML = [r.replace(".html","list.html") for r in regionURLs]
 regionURLs = ["http://taklowkernewek.neocities.org/mars/"+u for u in regionURLs]
 
 regiondict = {key:value for (key, value) in zip(regionnames, regions)}
 regionURLdict = {key:value for (key, value) in zip(regionnames, regionURLs)}
-        
-for r,h in zip(regions,regions_outHTML):
+
+
+outFile_allHiRISEkw = "hirisekw_all.html"        
+
+outFile_all = open(outFile_allHiRISEkw, "w")
+outFile_all.write('\n<h3 id="hirisekw">Links to HiRISE images with Cornish titles</h3><p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p>\n')        
+
+for r,rn, rurl, h in zip(regions, regionnames, regionURLs, regions_outHTML):
     print(r)
     print('<h2 id="toptrumps">Links to individual pages on Souness GLFs in this region</h2>')
     with open(Gfilein) as csvfile:
-        writeHTMLbuttons(r, h)
+        writeHTMLbuttons(r, h, writeonly3D=False)
         print('<h3 id="hirisekw">Links to HiRISE images with Cornish titles</h3>')
-        print('<p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p>')
+        print('<p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p><p>See also a visual index at the <a href="https://www.uahirise.org/kw/catalog/">HiRISE Kernewek website</a>.</p>')
         hi_kw = printHiRISE_kw(r)
         outFile = open(h,"a")
-        outFile.write('\n<h3 id="hirisekw">Links to HiRISE images with Cornish titles</h3><p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p>\n')
+        outFile.write('\n<h3 id="hirisekw">Links to HiRISE images with Cornish titles</h3><p>As part of the <a href="http://www.uahirise.org/kw/">HiRISE Kernewek</a> website at the University of Arizona, the following HiRISE images have been described in Cornish. Some have red/blue 3D analgyphs which have not yet had Cornish titles added.</p><p>See also a visual index at the <a href="https://www.uahirise.org/kw/catalog/" target="_blank">HiRISE Kernewek website</a>.</p>\n')
         outFile.write(hi_kw)
+        outFile_all.write('<div class="taklowkwtextblock">\n')
+        if "polar" not in rurl:
+            outFile_all.write('<nav class="horiz horizMars"><ul><li><a href="{u}">{name}</a></li></ul></nav>\n'.format(name=rn, u=rurl))
+        else:
+            outFile_all.write('<h3>{name}</h3>\n'.format(name=rn))
+        outFile_all.write('<h5>Longitude bounds {l1}, {l2}. Latitude bounds {l3}, {l4}.</h5>\n'.format(l1=r[0], l2=r[1], l3=r[2], l4=r[3]))
+        outFile_all.write(hi_kw)
+        outFile_all.write('</div>\n')
 
         
 # start again for pages for each GLF
@@ -895,7 +913,7 @@ with open(Gfilein) as csvfile:
                 #for n in nadirIMGFile:
                 #    makeImageFileCrop(n)                    
                 os.chdir(sounessGLFFilePath) """
-
+#print(SounessJSON)
 with open(SounessJSONFile, "w") as outFile:
     SounessJSON = json.dump(SounessJSON, outFile, indent=None, sort_keys=True, separators=(',', ': '))
     

@@ -306,6 +306,7 @@ with open(Gfilein) as csvfile:
                       subprocess.call(gdalrastcmdR, shell=True)
 
                       gdalrastcmd2 = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = extent_all, vcrst = outEXTALLrast)
+                      print(gdalrastcmd2)
                       subprocess.call(gdalrastcmd2, shell=True)
 
                       gdalrastcmd_vpoly = "gdal_rasterize -a LnKHead -of GTiff -init -20 -a_nodata -20 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} '{vc}' {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax=ymax, x=x, y=y, vc = inVecPolys, vcrst = rastVecPolysLnK)
@@ -313,9 +314,11 @@ with open(Gfilein) as csvfile:
                       subprocess.call(gdalrastcmd_vpoly, shell=True)
                       if catnum in HiRISE_index:
                               gdalrastcmd_Hi = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = Hfilein, vcrst = outHiRISErast)
+                              print(gdalrastcmd_Hi)
                               subprocess.call(gdalrastcmd_Hi, shell=True)
                       if catnum in HiRISE_anaglyph_index:
                               gdalrastcmd_HiA = "gdal_rasterize -burn 255 -of GTiff -a_nodata 0 -te {xmin} {ymin} {xmax} {ymax} -tr {x} {y} {vc} {vcrst}".format(xmin=xmin, ymin=ymin, xmax=xmax, ymax= ymax, x=x, y=y, vc = HAfilein, vcrst = outHiRISEArast)
+                              print(gdalrastcmd_HiA)
                               subprocess.call(gdalrastcmd_HiA, shell=True)
                       
                       # stretch image to byte 8-bit by linear MinMax

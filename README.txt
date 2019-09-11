@@ -188,3 +188,6 @@ Run the ogrintersect.py file and select options interactively.
 For the Top Trumps website, run for each of extents, context, and context9 in csv mode
 could automate this...
 
+run the subset_nd4_test.py script to generate the various overlay PNGs
+
+run the SounessTopTrumps.py script to make a new json file

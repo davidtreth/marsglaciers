@@ -87,6 +87,8 @@ hirise = "../hirisecoverage/mars_mro_hirise_rdrv11_c0a.shp"
 anaglyph = "../hirisecoverage/mars_mro_hirise_anagly_c0a.shp"
 hirisedtm = "../hirisecoverage/mars_mro_hirise_dtm_c0a.shp"
 
+hirisekw = "../hirisecoverage/mars_mro_hirise_rdrv11_redonly_kernewek_c0a.shp"
+
 HRSCnd3 = "../HRSCimagecoverage/mars_mex_hrsc_refdr_ND3.shp"
 HRSCsr3 = "../HRSCimagecoverage/mars_mex_hrsc_refdr_SR3.shp"
 HRSCdtm = "../HRSCimagecoverage/mars_mex_hrsc_dtmrdr_c0a.shp"
@@ -110,17 +112,21 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-s", type=str,
                     help="Specify the Souness object extent (e), context (c), context9 (9).")
 parser.add_argument("-c", type=str,
-                    help="Specify the type of coverage layer (HiRise image (hi), Anaglyph (a), HiRISE DTM (d), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).")
+                    help="Specify the type of coverage layer (HiRise image (hi), Anaglyph (a), HiRISE DTM (d), HiRISE kernewek image (hikw), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).")
 parser.add_argument("-url", type=str,
                     help="Specify URL link to use (for HRSC ND, DTM or SR) b=Berlin, o = NASA PDS orbital data explorer, a=Arizona State University")
 parser.add_argument("-out", type=str,
                     help="Specify output mode (c=csv, j=JSON)")
 args = parser.parse_args()
 
-sounesslayer = args.s.lower()
-isectlayer = args.c.lower()
-urltype = args.url.lower()
-outputmode = args.out.lower()
+if args.s:
+	sounesslayer = args.s.lower()
+if args.c:
+	isectlayer = args.c.lower()
+if args.url:
+	urltype = args.url.lower()
+if args.out:
+	outputmode = args.out.lower()
 
 while sounesslayer not in ["e", "c", "9"]:
     sounesslayer = raw_input("Choose Mode (intersect with Souness extents, contexts, or context9 shapefiles. e=extents, c=context 9=context9.\n")
@@ -143,8 +149,8 @@ layer = dataSource.GetLayer()
     
     
 
-while isectlayer not in ["hi", "a", "d", "nd", "sr", "dtm"]:
-    isectlayer = raw_input("Choose Mode (intersect with Hirise image (hi), Hirise anaglyph (a), Hirise DTM (d), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).\n")
+while isectlayer not in ["hi", "a", "d", "hikw", "nd", "sr", "dtm"]:
+    isectlayer = raw_input("Choose Mode (intersect with Hirise image (hi), Hirise anaglyph (a), Hirise DTM (d), HiRISE kernewek image (hikw), HRSCND3 images (nd), HRSC SR3 images (sr), HRSC DTMs (dtm)).\n")
     isectlayer = isectlayer.lower()
 
 if isectlayer in ["nd", "dtm"]:
@@ -174,6 +180,7 @@ if outputmode == "c":
 intseclyrDict = {"hi": hirise,
                  "a": anaglyph,
                  "d": hirisedtm,
+                 "hikw": hirisekw,
                  "nd": HRSCnd3,
                  "sr": HRSCsr3,
                  "dtm":HRSCdtm}
@@ -181,6 +188,7 @@ intseclyrDict = {"hi": hirise,
 intsecnameDict = {"hi": "HiRISEimg",
                  "a": "HiRISEana",
                  "d": "HiRISEdtm",
+                 "hikw": "HiRISEkw",
                  "nd": "HRSCnd3",
                  "sr": "HRSCsr3",
                  "dtm": "HRSCdtm"}

@@ -6,7 +6,7 @@
 import numpy as np
 import matplotlib.cm as cm
 import glob
-import Image
+from PIL import Image
 
 # pattern for input files is curently hard-coded
 DTMs = glob.glob("*DTM*2.png")
