@@ -37,8 +37,9 @@ HiRISE_kw = 'HiRISE_kw.csv'
 HiRISE_CTX9 = 'SounessROIs/souness_context9_HiRISEimg_tiles.csv'
 HiRISE_anaglyph_CTX9 = 'SounessROIs/souness_context9_HiRISEana_tiles.csv'
 HiRISE_DTM_CTX9 = 'SounessROIs/souness_context9_HiRISEdtm_tiles.csv'
+HiRISE_DTM_EXT = 'SounessROIs/souness_extent_HiRISEdtm_tiles.csv'
 HiRISE_EXT = 'SounessROIs/souness_extent_HiRISEimg_tiles.csv'
-HiRISE_anaglyph_EXT = 'SounessROIs/souness_extent_HiRISEimg_tiles.csv'
+HiRISE_anaglyph_EXT = 'SounessROIs/souness_extent_HiRISEana_tiles.csv'
 
 HRSC_ND3 = 'SounessROIs/souness_extent_HRSCnd3_tiles.csv'
 HRSC_SR3 = 'SounessROIs/souness_extent_HRSCsr3_tiles.csv'
@@ -145,8 +146,37 @@ def printAnaglyphLink(GLF, useCTX9=False):
         # automatically EXT intersected ones
         aglyphs = HiRISE_ext_anaglyph_index.get(GLF['CatNum'], [])
     for a in aglyphs:
+        a = a.lstrip()
         link = "<a href='http://www.uahirise.org/anaglyph/singula.php?ID={anagID}'>{anag}</a>".format(anagID=a[:15], anag=a)
         linkHTML += link
+    linkHTML += "</div>"
+    return linkHTML
+    
+def printDTMLink(GLF, useCTX9=False):
+    linkHTML = "<div class='anaglink'><h4><a href='sounesstoptrumps_js.html?S{catnum:04d}'>Souness {catnum}</a></h4>".format(catnum=int(GLF['CatNum']))
+    if useCTX9:
+        # the manually specified ones
+        dtmimgs = GLF['HiRISE_DTM'].split(',')
+        # automatically CTX9 intersected ones
+        dtmimgs2 = HiRISE_DTM_index.get(GLF['CatNum'], [])
+        for d in dtmimgs:
+            if d not in dtmimgs2:
+                dtmimgs2.append(d)
+    else:
+        # automatically EXT intersected ones
+        dtmimgs2 = HiRISE_ext_DTM_index.get(GLF['CatNum'], [])
+    for d in dtmimgs2:
+        d=d.lstrip()
+        imgn = d[6:12]
+        try:
+            if int(imgn) >= 10000:
+                dtm = d[:17].replace("DTEEC","ESP").replace("DTEED","ESP")
+            else:
+                dtm = d[:17].replace("DTEEC","PSP").replace("DTEED","ESP")         
+            link = "<a href='http://www.uahirise.org/dtm/dtm.php?ID={dtmID}'>{dtmfull}</a>".format(dtmID=dtm, dtmfull=d)
+            linkHTML += link
+        except:
+            pass
     linkHTML += "</div>"
     return linkHTML
     
@@ -220,7 +250,7 @@ def makeURL(urltype, prodID):
     else:
         return "http://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id="+prodID.upper()
 
-def writeHTMLbuttons(bounds=None, outHTML=None, writeonly3D=True, allowCTX9=False):
+def writeHTMLbuttons(bounds=None, outHTML=None, writeonly3D=True, writeonlyDTM = False, allowCTX9=False):
     """ write out the buttons for the Souness Top Trumps index 
     by default written in rows of 10 buttons """    
     print("<div class='GLFrow'>")
@@ -246,7 +276,19 @@ def writeHTMLbuttons(bounds=None, outHTML=None, writeonly3D=True, allowCTX9=Fals
         else:
             lng, lat = float(row['Centlon180']), float(row['Centlat'])
             if checkinbounds(lng, lat, bounds):
-                if writeonly3D:
+                if writeonlyDTM:
+                    b = ''
+                    if allowCTX9:
+                        if row['HiRISE_DTM'] != '' or catnum in HiRISE_DTM_index:
+                            # set a different CSS class for GLFs with DTMs
+                            #b = printButton(row,"anaglink")
+                            b = printDTMLink(row, True)
+                    else:
+                        #if HiRISE_ext_anaglyph_index.has_key(catnum):
+                        if catnum in HiRISE_ext_DTM_index:
+                            #b = printButton(row,"anaglink")
+                            b = printDTMLink(row, False)                    
+                elif writeonly3D:
                     b = ''
                     if allowCTX9:
                         if row['HiRISE_anaglyph'] != '' or catnum in HiRISE_anaglyph_index:
@@ -257,8 +299,7 @@ def writeHTMLbuttons(bounds=None, outHTML=None, writeonly3D=True, allowCTX9=Fals
                         #if HiRISE_ext_anaglyph_index.has_key(catnum):
                         if catnum in HiRISE_ext_anaglyph_index:
                             #b = printButton(row,"anaglink")
-                            b = printAnaglyphLink(row, False)
-                    
+                            b = printAnaglyphLink(row, False)                    
                 else:
                     #if HiRISE_ext_anaglyph_index.has_key(catnum):
                     if catnum in HiRISE_ext_anaglyph_index:
@@ -413,9 +454,9 @@ def writeHTML(GLF):
         try:
             # if there is no DTM, skip over this code
             if int(imgn) >= 10000:
-                dtm = dimg[:17].replace("DTEEC","ESP")
+                dtm = dimg[:17].replace("DTEEC","ESP").replace("DTEED","ESP")
             else:
-                dtm = dimg[:17].replace("DTEEC","PSP")
+                dtm = dimg[:17].replace("DTEEC","PSP").replace("DTEED","ESP")
             DTMurl = DTMurl + dtm
             hiriseDTM += "<a href='{dURL}'>{dimg}</a> ".format(dURL=DTMurl, dimg=dimg)
         except:
@@ -753,7 +794,7 @@ HiRISE_DTM_index = {}
 #ext
 HiRISE_ext_index = {}
 HiRISE_ext_anaglyph_index = {}
-
+HiRISE_ext_DTM_index = {}
 
 HRSC_ND3_index = {}
 HRSC_SR3_index = {}
@@ -790,6 +831,14 @@ with open(HiRISE_DTM_CTX9) as csvfile:
         catnum, img = row['CatNum'], row['HiRISE_img']
         himglist = img.split(",")
         HiRISE_DTM_index[catnum] = himglist
+        
+with open(HiRISE_DTM_EXT) as csvfile:
+    spamreader = csv.DictReader(csvfile, fieldnames=HiRISE_CTX9_headers,delimiter=',',quotechar='"')
+    for row in spamreader:
+        catnum, img = row['CatNum'], row['HiRISE_img']
+        himglist = img.split(",")
+        HiRISE_ext_DTM_index[catnum] = himglist
+                
 with open(HRSC_ND3) as csvfile:
     spamreader = csv.DictReader(csvfile, fieldnames=HRSC_ND3_EXT_headers,delimiter=',',quotechar='"')
     for row in spamreader:
@@ -806,13 +855,19 @@ with open(HRSC_SR3) as csvfile:
 with open(Gfilein) as csvfile:
      # write the buttons for the index page
      writeHTMLbuttons(None, "sounessallbuttons.html", writeonly3D=False, allowCTX9=False)
-     input()
+     #input()
 with open(Gfilein) as csvfile:
      writeHTMLbuttons(None, "souness_anaglyphbuttons.html", allowCTX9=False)
-     input()
+     #input()
 with open(Gfilein) as csvfile:     
      writeHTMLbuttons(None, "souness_anaglyph_ctx9buttons.html", allowCTX9=True)
-     input()
+     #input()
+with open(Gfilein) as csvfile:
+     writeHTMLbuttons(None, "souness_DTMbuttons.html", writeonlyDTM=True, allowCTX9=False)
+     #input()
+with open(Gfilein) as csvfile:     
+     writeHTMLbuttons(None, "souness_DTM_ctx9buttons.html", writeonlyDTM=True, allowCTX9=True)
+     #input()     
 
 # long+lat bounds for regions
 # regions altered to make them non-overlapping
